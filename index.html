@@ -256,77 +256,49 @@
         /* Pet ID Section */
         .pet-id-section {
             padding: 100px 0;
-            background: linear-gradient(135deg, #f8f4ff 0%, #e8f8f7 100%);
+            background: var(--light-gray);
         }
 
         .pet-id-section h2 {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 15px;
+            margin-bottom: 60px;
             color: var(--dark);
         }
 
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto 50px;
-        }
-
-        .pet-id-features {
+        .pet-id-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .pet-id-card {
             background: var(--light);
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .pet-id-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-        .pet-id-icon {
+        .pet-id-card .feature-icon {
+            font-size: 3rem;
             margin-bottom: 20px;
         }
 
         .pet-id-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            margin-bottom: 15px;
             color: var(--dark);
         }
 
-        .pet-id-card > p {
+        .pet-id-card p {
             color: var(--gray);
-            margin-bottom: 20px;
-        }
-
-        .pet-id-list {
-            list-style: none;
-            text-align: left;
-        }
-
-        .pet-id-list li {
-            padding: 8px 0;
-            color: var(--dark);
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .pet-id-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-weight: bold;
         }
 
         .found-pet-box {
@@ -442,50 +414,27 @@
         <!-- Pet ID Section -->
         <section class="pet-id-section" id="pet-id">
             <div class="container">
-                <h2>Lost Pet? We've Got You Covered</h2>
-                <p class="section-subtitle">Generate a QR code or NFC tag for your pet's collar. Anyone who finds your pet can scan it to contact you immediately.</p>
-
-                <div class="pet-id-features">
+                <h2>Never Lose Your Pet Again</h2>
+                <div class="pet-id-grid">
                     <div class="pet-id-card">
-                        <div class="pet-id-icon">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#9b59b6" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <rect x="7" y="7" width="3" height="3"/>
-                                <rect x="14" y="7" width="3" height="3"/>
-                                <rect x="7" y="14" width="3" height="3"/>
-                                <rect x="14" y="14" width="3" height="3"/>
-                            </svg>
-                        </div>
-                        <h3>QR Code</h3>
-                        <p>Print and attach to collar</p>
-                        <ul class="pet-id-list">
-                            <li>Works with any smartphone camera</li>
-                            <li>Contains your phone number</li>
-                            <li>Free to generate and print</li>
-                        </ul>
+                        <div class="feature-icon">📷</div>
+                        <h3>QR Code Tag</h3>
+                        <p>Generate a unique QR code for your pet's collar. Anyone with a smartphone can scan it to see your contact info instantly.</p>
                     </div>
-
                     <div class="pet-id-card">
-                        <div class="pet-id-icon">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2">
-                                <path d="M2 12h6"/>
-                                <path d="M6 8c4 0 6 4 10 4"/>
-                                <path d="M6 16c4 0 6-4 10-4"/>
-                                <path d="M16 12h6"/>
-                            </svg>
-                        </div>
+                        <div class="feature-icon">📡</div>
                         <h3>NFC Tag</h3>
-                        <p>Tap to call instantly</p>
-                        <ul class="pet-id-list">
-                            <li>Just tap phone on tag to call</li>
-                            <li>Waterproof NFC stickers</li>
-                            <li>No app needed to read</li>
-                        </ul>
+                        <p>Write your phone number to an NFC sticker. Just tap to call - no app needed. Waterproof and durable.</p>
+                    </div>
+                    <div class="pet-id-card">
+                        <div class="feature-icon">📞</div>
+                        <h3>Instant Contact</h3>
+                        <p>If someone finds your lost pet, they can contact you immediately by scanning the tag. No registration required.</p>
                     </div>
                 </div>
 
                 <div class="found-pet-box">
-                    <h3>🐕 Found a lost pet with a Taillogs tag?</h3>
+                    <h3>Found a lost pet with a Taillogs tag?</h3>
                     <p>Simply scan the QR code or tap the NFC tag with your phone. You'll be able to call the owner directly!</p>
                 </div>
             </div>

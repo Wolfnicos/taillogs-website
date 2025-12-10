@@ -321,6 +321,81 @@
             font-size: 1.1rem;
         }
 
+        /* AI Section */
+        .ai-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+            color: var(--light);
+        }
+
+        .ai-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .ai-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            opacity: 0.8;
+            margin-bottom: 60px;
+        }
+
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .ai-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .ai-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .ai-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .ai-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--secondary);
+        }
+
+        .ai-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .ai-disclaimer {
+            background: rgba(78, 205, 196, 0.15);
+            border: 1px solid rgba(78, 205, 196, 0.3);
+            border-radius: 12px;
+            padding: 20px 30px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .ai-disclaimer p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -350,8 +425,9 @@
             </a>
             <nav>
                 <a href="#features">Features</a>
+                <a href="#ai">AI Assistant</a>
                 <a href="#pet-id">Pet ID</a>
-                <a href="#pro">Premium</a>
+                <a href="#pro">Trial</a>
                 <a href="privacy.html">Privacy</a>
                 <a href="terms.html">Terms</a>
                 <a href="mailto:support@taillogs.app">Support</a>
@@ -411,6 +487,41 @@
             </div>
         </section>
 
+        <!-- AI Assistant Section -->
+        <section class="ai-section" id="ai">
+            <div class="container">
+                <h2>✨ AI Pet Assistant</h2>
+                <p class="ai-subtitle">Your 24/7 veterinary guidance powered by advanced AI</p>
+
+                <div class="ai-grid">
+                    <div class="ai-card">
+                        <div class="ai-icon">🩺</div>
+                        <h3>Symptom Checker</h3>
+                        <p>Describe your pet's symptoms and get instant guidance on whether to see a vet immediately or try home remedies.</p>
+                    </div>
+                    <div class="ai-card">
+                        <div class="ai-icon">🍎</div>
+                        <h3>Food Safety</h3>
+                        <p>Not sure if a food is safe for your pet? Ask the AI and get instant answers with detailed explanations.</p>
+                    </div>
+                    <div class="ai-card">
+                        <div class="ai-icon">💬</div>
+                        <h3>Health Questions</h3>
+                        <p>Get personalized answers about your pet's breed, age, diet, exercise needs, and general wellness.</p>
+                    </div>
+                    <div class="ai-card">
+                        <div class="ai-icon">📍</div>
+                        <h3>Find Vet Clinics</h3>
+                        <p>Locate nearby veterinary clinics and emergency pet hospitals when you need them most.</p>
+                    </div>
+                </div>
+
+                <div class="ai-disclaimer">
+                    <p>💡 The AI assistant provides general guidance and is not a substitute for professional veterinary care. Always consult a veterinarian for medical decisions.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Pet ID Section -->
         <section class="pet-id-section" id="pet-id">
             <div class="container">
@@ -442,14 +553,15 @@
 
         <section class="pro-section" id="pro">
             <div class="container">
-                <h2>Premium Features</h2>
-                <p>Start your 7-day free trial and unlock everything. Cancel anytime.</p>
+                <h2>7-Day Free Trial</h2>
+                <p>Try everything free for 7 days. No commitment. Cancel anytime.</p>
                 <div class="pro-benefits">
+                    <div class="pro-benefit">✨ AI Pet Assistant</div>
                     <div class="pro-benefit">📄 PDF Health Reports</div>
                     <div class="pro-benefit">🐾 Unlimited Pets</div>
                     <div class="pro-benefit">📈 Advanced Analytics</div>
                     <div class="pro-benefit">🔔 Smart Reminders</div>
-                    <div class="pro-benefit">⭐ Priority Support</div>
+                    <div class="pro-benefit">📱 QR & NFC Tags</div>
                 </div>
             </div>
         </section>

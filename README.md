@@ -1,6 +1,6 @@
-# Taillogs Website
+# PetNudge Website
 
-Official website for [Taillogs](https://taillogs.app) - Your Pet's Health Companion iOS App.
+Official website for [PetNudge](https://petnudge.fr) - Your Pet's Health Companion iOS App.
 
 ## Pages
 
@@ -19,9 +19,9 @@ Official website for [Taillogs](https://taillogs.app) - Your Pet's Health Compan
 
 ## Custom Domain Setup
 
-1. In your domain registrar (where you bought taillogs.app), add these DNS records:
+1. In your domain registrar (where you bought petnudge.fr), add these DNS records:
 
-   **For apex domain (taillogs.app):**
+   **For apex domain (petnudge.fr):**
    ```
    A     @     185.199.108.153
    A     @     185.199.109.153
@@ -35,7 +35,7 @@ Official website for [Taillogs](https://taillogs.app) - Your Pet's Health Compan
    ```
 
 2. In GitHub repository Settings > Pages:
-   - Enter `taillogs.app` in "Custom domain"
+   - Enter `petnudge.fr` in "Custom domain"
    - Check "Enforce HTTPS" (after DNS propagates)
 
 3. Wait for DNS propagation (can take up to 24-48 hours)
@@ -57,4 +57,4 @@ taillogs-website/
 
 ## Contact
 
-support@taillogs.app
+support@petnudge.fr

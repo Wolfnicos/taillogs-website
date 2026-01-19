@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Profile - PetNudge</title>
+    <meta name="description" content="Found a lost pet? Contact the owner instantly.">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- CloudKit JS -->
+    <script src="https://cdn.apple-cloudkit.com/ck/2/cloudkit.js"></script>
+
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --primary-light: #FF8F66;
+            --success: #28a745;
+            --danger: #dc3545;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #1a1a1a;
+            --text-secondary: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            min-height: 100vh;
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Loading State */
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            gap: 16px;
+        }
+
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e9ecef;
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Error State */
+        .error {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .error-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        .error h2 {
+            color: var(--danger);
+            margin-bottom: 8px;
+        }
+
+        /* Lost Mode Banner */
+        .lost-banner {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .lost-banner h2 {
+            font-size: 20px;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lost-banner p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Pet Card */
+        .pet-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .pet-photo-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #e9ecef, #dee2e6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pet-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pet-photo-placeholder {
+            font-size: 80px;
+            opacity: 0.5;
+        }
+
+        .pet-info {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .pet-name {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .pet-details {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .pet-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e9ecef;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* Reward Box */
+        .reward-box {
+            background: linear-gradient(135deg, #ffc107, #ffca2c);
+            padding: 16px;
+            border-radius: 12px;
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        .reward-box h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .reward-box p {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* Call Button */
+        .call-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--success), #218838);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 16px;
+        }
+
+        .call-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .call-button:active {
+            transform: scale(0.98);
+        }
+
+        /* Instructions */
+        .instructions {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .instructions h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .instructions ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .instructions li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .step-number {
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* App Promo */
+        .app-promo {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .app-promo h3 {
+            margin-bottom: 8px;
+        }
+
+        .app-promo p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .app-store-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Hidden by default */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Loading pet profile...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="error hidden">
+            <div class="error-icon">🐾</div>
+            <h2>Profile Not Found</h2>
+            <p>This pet profile may have been removed or the link is incorrect.</p>
+        </div>
+
+        <!-- Pet Profile -->
+        <div id="profile" class="hidden">
+            <!-- Lost Mode Banner (shown if lost) -->
+            <div id="lostBanner" class="lost-banner hidden">
+                <h2>🚨 LOST PET</h2>
+                <p>This pet is missing. Please help reunite them with their family!</p>
+            </div>
+
+            <!-- Pet Card -->
+            <div class="pet-card">
+                <div class="pet-photo-container">
+                    <img id="petPhoto" class="pet-photo hidden" alt="Pet photo">
+                    <div id="petPhotoPlaceholder" class="pet-photo-placeholder">🐾</div>
+                </div>
+
+                <div class="pet-info">
+                    <h1 id="petName" class="pet-name">Loading...</h1>
+                    <p id="petDetails" class="pet-details"></p>
+                    <div id="microchipBadge" class="pet-chip hidden">
+                        <span>📟</span>
+                        <span id="microchipID"></span>
+                    </div>
+
+                    <!-- Reward Box (shown if lost with reward) -->
+                    <div id="rewardBox" class="reward-box hidden">
+                        <h3>💰 Reward Offered</h3>
+                        <p id="rewardText"></p>
+                    </div>
+
+                    <!-- Call Button -->
+                    <a id="callButton" href="tel:" class="call-button">
+                        📞 Call Owner
+                    </a>
+                </div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="instructions">
+                <h3>ℹ️ What To Do</h3>
+                <ul>
+                    <li>
+                        <span class="step-number">1</span>
+                        <span>Call the owner immediately using the button above</span>
+                    </li>
+                    <li>
+                        <span class="step-number">2</span>
+                        <span>Keep the pet safe until the owner arrives</span>
+                    </li>
+                    <li>
+                        <span class="step-number">3</span>
+                        <span>Share your location if possible to help them find you</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- App Promo -->
+            <div class="app-promo">
+                <h3>Protect Your Pet Too</h3>
+                <p>Create smart tags for your pets with PetNudge - free to use!</p>
+                <a href="https://apps.apple.com/app/petnudge" class="app-store-button">
+                    Get PetNudge
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Powered by <a href="https://petnudge.fr">PetNudge</a></p>
+        </div>
+    </div>
+
+    <script>
+        // CloudKit Configuration
+        const CONTAINER_ID = 'iCloud.fr.petnudge.app';
+        const API_TOKEN = '7976e424627da49a13a3a0e9fe03be305011a88378440648d249dbb834d1fb6b';
+        const ENVIRONMENT = 'production';
+
+        // Get profile ID from URL
+        // Supports both /pet/ABC123 and /pet.html?id=ABC123
+        function getProfileID() {
+            // Try query parameter first
+            const params = new URLSearchParams(window.location.search);
+            if (params.has('id')) {
+                return params.get('id');
+            }
+
+            // Try path-based URL
+            const path = window.location.pathname;
+            const match = path.match(/\/pet\/([A-Z0-9]+)/i);
+            return match ? match[1] : null;
+        }
+
+        // Show/hide elements
+        function show(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function hide(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        // Format phone number for display
+        function formatPhone(phone) {
+            return phone.replace(/(\d{2})(?=\d)/g, '$1 ').trim();
+        }
+
+        // Load pet profile using fetch (CloudKit Web Services)
+        async function loadProfile() {
+            const profileID = getProfileID();
+
+            if (!profileID) {
+                hide('loading');
+                show('error');
+                return;
+            }
+
+            try {
+                // CloudKit Web Services URL
+                const url = `https://api.apple-cloudkit.com/database/1/${CONTAINER_ID}/${ENVIRONMENT}/public/records/lookup?ckAPIToken=${API_TOKEN}`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        records: [{
+                            recordName: profileID
+                        }]
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.records && data.records.length > 0 && !data.records[0].serverErrorCode) {
+                    displayProfile(data.records[0]);
+                } else {
+                    throw new Error('Profile not found');
+                }
+            } catch (error) {
+                console.error('Error loading profile:', error);
+                hide('loading');
+                show('error');
+            }
+        }
+
+        // Display pet profile
+        function displayProfile(record) {
+            const fields = record.fields;
+
+            // Pet name
+            document.getElementById('petName').textContent = fields.petName?.value || 'Unknown';
+
+            // Pet details (species, breed)
+            const species = fields.species?.value || '';
+            const breed = fields.breed?.value || '';
+            let details = species;
+            if (breed) details += ` • ${breed}`;
+            document.getElementById('petDetails').textContent = details;
+
+            // Owner phone
+            const phone = fields.ownerPhone?.value || '';
+            if (phone) {
+                document.getElementById('callButton').href = `tel:${phone.replace(/\s/g, '')}`;
+                document.getElementById('callButton').innerHTML = `📞 Call ${fields.ownerName?.value || 'Owner'}`;
+            }
+
+            // Photo
+            if (fields.photo?.value?.downloadURL) {
+                const photoEl = document.getElementById('petPhoto');
+                photoEl.src = fields.photo.value.downloadURL;
+                photoEl.onload = () => {
+                    show('petPhoto');
+                    hide('petPhotoPlaceholder');
+                };
+            }
+
+            // Microchip
+            if (fields.microchipID?.value) {
+                document.getElementById('microchipID').textContent = fields.microchipID.value;
+                show('microchipBadge');
+            }
+
+            // Lost Mode
+            if (fields.isLostMode?.value === 1) {
+                show('lostBanner');
+
+                // Reward
+                if (fields.rewardText?.value) {
+                    document.getElementById('rewardText').textContent = fields.rewardText.value;
+                    show('rewardBox');
+                }
+            }
+
+            // Show profile, hide loading
+            hide('loading');
+            show('profile');
+        }
+
+        // Fallback: If CloudKit API token is not set, show a simpler version
+        function showFallback() {
+            const profileID = getProfileID();
+            if (!profileID) {
+                hide('loading');
+                show('error');
+                return;
+            }
+
+            // Show a message that the profile exists but can't be loaded
+            document.getElementById('petName').textContent = 'Pet Profile';
+            document.getElementById('petDetails').textContent = 'Profile ID: ' + profileID;
+            document.getElementById('callButton').classList.add('hidden');
+
+            hide('loading');
+            show('profile');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check if API token is configured
+            if (API_TOKEN === 'YOUR_CLOUDKIT_WEB_TOKEN') {
+                // Show fallback until token is configured
+                console.log('CloudKit API token not configured. Using fallback.');
+                showFallback();
+            } else {
+                loadProfile();
+            }
+        });
+    </script>
+</body>
+</html>

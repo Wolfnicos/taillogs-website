@@ -279,12 +279,23 @@
             </ul>
 
             <h2>Data Storage</h2>
-            <p>PetNudge uses Apple's SwiftData framework to store all your pet information securely on your device. This means:</p>
+            <p>PetNudge uses Apple's SwiftData framework to store most of your pet information securely on your device. This means:</p>
             <ul>
-                <li>Your data never leaves your device unless you explicitly choose to export it.</li>
-                <li>We cannot access, read, or recover your data.</li>
-                <li>If you delete the app, all data stored within it will be permanently deleted.</li>
+                <li><strong>Local Data:</strong> Health records, vaccinations, medications, and appointments are stored only on your device.</li>
+                <li>We cannot access, read, or recover your local data.</li>
+                <li>If you delete the app, all local data will be permanently deleted.</li>
             </ul>
+
+            <h2>Pet ID Profiles (QR Code & NFC)</h2>
+            <p>When you create a Pet ID Tag (QR code or NFC tag), a <strong>public profile</strong> is stored in Apple's CloudKit:</p>
+            <ul>
+                <li><strong>What is stored:</strong> Pet name, species, breed, photo, owner name, and contact phone number.</li>
+                <li><strong>What is NOT stored:</strong> Health records, vaccinations, medications, or appointments.</li>
+                <li><strong>Purpose:</strong> Allows anyone who scans your pet's tag to see the profile and contact you.</li>
+                <li><strong>Control:</strong> You can delete the profile at any time from the app.</li>
+                <li><strong>Lost Mode:</strong> When enabled, finders see an urgent "Lost Pet" alert with optional reward information.</li>
+            </ul>
+            <p>This data is stored on Apple's iCloud servers and is subject to <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a>.</p>
 
             <h2>In-App Purchases</h2>
             <p>Subscriptions are processed through Apple's App Store. We do not collect or store any payment information. All transactions are handled securely by Apple.</p>
@@ -301,6 +312,7 @@
             <h2>Third-Party Services</h2>
             <p>PetNudge uses the following third-party services:</p>
             <ul>
+                <li><strong>Apple CloudKit:</strong> For storing public Pet ID profiles (when you create QR codes or NFC tags). See <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a>.</li>
                 <li><strong>Google Gemini AI:</strong> For the AI Pet Assistant feature. Conversations are processed by Google's servers. See <a href="https://ai.google.dev/terms" target="_blank">Google's AI Terms</a>.</li>
                 <li><strong>Apple Maps:</strong> For finding veterinary clinics near you (only when you use the clinic search feature).</li>
                 <li><strong>StoreKit:</strong> For processing in-app purchases.</li>

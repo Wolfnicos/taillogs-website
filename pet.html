@@ -318,22 +318,22 @@
         <!-- Loading State -->
         <div id="loading" class="loading">
             <div class="loading-spinner"></div>
-            <p>Loading pet profile...</p>
+            <p data-i18n="loading">Loading pet profile...</p>
         </div>
 
         <!-- Error State -->
         <div id="error" class="error hidden">
             <div class="error-icon">🐾</div>
-            <h2>Profile Not Found</h2>
-            <p>This pet profile may have been removed or the link is incorrect.</p>
+            <h2 data-i18n="error.title">Profile Not Found</h2>
+            <p data-i18n="error.desc">This pet profile may have been removed or the link is incorrect.</p>
         </div>
 
         <!-- Pet Profile -->
         <div id="profile" class="hidden">
             <!-- Lost Mode Banner (shown if lost) -->
             <div id="lostBanner" class="lost-banner hidden">
-                <h2>🚨 LOST PET</h2>
-                <p>This pet is missing. Please help reunite them with their family!</p>
+                <h2 data-i18n="lost.title">🚨 LOST PET</h2>
+                <p data-i18n="lost.desc">This pet is missing. Please help reunite them with their family!</p>
             </div>
 
             <!-- Pet Card -->
@@ -353,41 +353,41 @@
 
                     <!-- Reward Box (shown if lost with reward) -->
                     <div id="rewardBox" class="reward-box hidden">
-                        <h3>💰 Reward Offered</h3>
+                        <h3 data-i18n="reward.title">💰 Reward Offered</h3>
                         <p id="rewardText"></p>
                     </div>
 
                     <!-- Call Button -->
                     <a id="callButton" href="tel:" class="call-button">
-                        📞 Call Owner
+                        📞 <span data-i18n="call.owner">Call Owner</span>
                     </a>
                 </div>
             </div>
 
             <!-- Instructions -->
             <div class="instructions">
-                <h3>ℹ️ What To Do</h3>
+                <h3>ℹ️ <span data-i18n="instructions.title">What To Do</span></h3>
                 <ul>
                     <li>
                         <span class="step-number">1</span>
-                        <span>Call the owner immediately using the button above</span>
+                        <span data-i18n="instructions.step1">Call the owner immediately using the button above</span>
                     </li>
                     <li>
                         <span class="step-number">2</span>
-                        <span>Keep the pet safe until the owner arrives</span>
+                        <span data-i18n="instructions.step2">Keep the pet safe until the owner arrives</span>
                     </li>
                     <li>
                         <span class="step-number">3</span>
-                        <span>Share your location if possible to help them find you</span>
+                        <span data-i18n="instructions.step3">Share your location if possible to help them find you</span>
                     </li>
                 </ul>
             </div>
 
             <!-- App Promo -->
             <div class="app-promo">
-                <h3>Protect Your Pet Too</h3>
-                <p>Create smart tags for your pets with PetNudge - free to use!</p>
-                <a href="https://apps.apple.com/app/petnudge" class="app-store-button">
+                <h3 data-i18n="promo.title">Protect Your Pet Too</h3>
+                <p data-i18n="promo.desc">Create smart tags for your pets with PetNudge - free to use!</p>
+                <a href="https://apps.apple.com/app/petnudge" class="app-store-button" data-i18n="promo.button">
                     Get PetNudge
                 </a>
             </div>
@@ -395,11 +395,202 @@
 
         <!-- Footer -->
         <div class="footer">
-            <p>Powered by <a href="https://petnudge.fr">PetNudge</a></p>
+            <p><span data-i18n="footer.powered">Powered by</span> <a href="https://petnudge.fr">PetNudge</a></p>
         </div>
     </div>
 
     <script>
+        // ==========================================
+        // Translations for pet profile page
+        // ==========================================
+        const translations = {
+            en: {
+                'loading': 'Loading pet profile...',
+                'error.title': 'Profile Not Found',
+                'error.desc': 'This pet profile may have been removed or the link is incorrect.',
+                'lost.title': '🚨 LOST PET',
+                'lost.desc': 'This pet is missing. Please help reunite them with their family!',
+                'reward.title': '💰 Reward Offered',
+                'call.owner': 'Call Owner',
+                'call.name': 'Call',
+                'instructions.title': 'What To Do',
+                'instructions.step1': 'Call the owner immediately using the button above',
+                'instructions.step2': 'Keep the pet safe until the owner arrives',
+                'instructions.step3': 'Share your location if possible to help them find you',
+                'promo.title': 'Protect Your Pet Too',
+                'promo.desc': 'Create smart tags for your pets with PetNudge - free to use!',
+                'promo.button': 'Get PetNudge',
+                'footer.powered': 'Powered by'
+            },
+            fr: {
+                'loading': 'Chargement du profil...',
+                'error.title': 'Profil introuvable',
+                'error.desc': 'Ce profil a peut-être été supprimé ou le lien est incorrect.',
+                'lost.title': '🚨 ANIMAL PERDU',
+                'lost.desc': 'Cet animal est porté disparu. Aidez-le à retrouver sa famille !',
+                'reward.title': '💰 Récompense offerte',
+                'call.owner': 'Appeler le propriétaire',
+                'call.name': 'Appeler',
+                'instructions.title': 'Que faire',
+                'instructions.step1': 'Appelez immédiatement le propriétaire avec le bouton ci-dessus',
+                'instructions.step2': 'Gardez l\'animal en sécurité jusqu\'à l\'arrivée du propriétaire',
+                'instructions.step3': 'Partagez votre position si possible pour faciliter la rencontre',
+                'promo.title': 'Protégez votre animal aussi',
+                'promo.desc': 'Créez des médailles intelligentes avec PetNudge - gratuit !',
+                'promo.button': 'Télécharger PetNudge',
+                'footer.powered': 'Propulsé par'
+            },
+            ro: {
+                'loading': 'Se încarcă profilul...',
+                'error.title': 'Profil negăsit',
+                'error.desc': 'Acest profil poate fi șters sau linkul este incorect.',
+                'lost.title': '🚨 ANIMAL PIERDUT',
+                'lost.desc': 'Acest animal este pierdut. Ajută-l să-și găsească familia!',
+                'reward.title': '💰 Recompensă oferită',
+                'call.owner': 'Sună proprietarul',
+                'call.name': 'Sună pe',
+                'instructions.title': 'Ce să faci',
+                'instructions.step1': 'Sună imediat proprietarul folosind butonul de mai sus',
+                'instructions.step2': 'Păstrează animalul în siguranță până ajunge proprietarul',
+                'instructions.step3': 'Trimite-ți locația dacă e posibil pentru a-i ajuta să te găsească',
+                'promo.title': 'Protejează-ți și tu animalul',
+                'promo.desc': 'Creează medalii inteligente cu PetNudge - gratuit!',
+                'promo.button': 'Descarcă PetNudge',
+                'footer.powered': 'Creat de'
+            },
+            es: {
+                'loading': 'Cargando perfil...',
+                'error.title': 'Perfil no encontrado',
+                'error.desc': 'Este perfil puede haber sido eliminado o el enlace es incorrecto.',
+                'lost.title': '🚨 MASCOTA PERDIDA',
+                'lost.desc': '¡Esta mascota está perdida. Ayúdala a reunirse con su familia!',
+                'reward.title': '💰 Recompensa ofrecida',
+                'call.owner': 'Llamar al dueño',
+                'call.name': 'Llamar a',
+                'instructions.title': 'Qué hacer',
+                'instructions.step1': 'Llama inmediatamente al dueño usando el botón de arriba',
+                'instructions.step2': 'Mantén a la mascota segura hasta que llegue el dueño',
+                'instructions.step3': 'Comparte tu ubicación si es posible para ayudarles a encontrarte',
+                'promo.title': 'Protege a tu mascota también',
+                'promo.desc': '¡Crea placas inteligentes con PetNudge - gratis!',
+                'promo.button': 'Descargar PetNudge',
+                'footer.powered': 'Desarrollado por'
+            },
+            de: {
+                'loading': 'Profil wird geladen...',
+                'error.title': 'Profil nicht gefunden',
+                'error.desc': 'Dieses Profil wurde möglicherweise entfernt oder der Link ist falsch.',
+                'lost.title': '🚨 TIER VERMISST',
+                'lost.desc': 'Dieses Tier wird vermisst. Bitte helfen Sie, es mit seiner Familie zu vereinen!',
+                'reward.title': '💰 Belohnung angeboten',
+                'call.owner': 'Besitzer anrufen',
+                'call.name': 'Anrufen',
+                'instructions.title': 'Was zu tun ist',
+                'instructions.step1': 'Rufen Sie sofort den Besitzer über den Button oben an',
+                'instructions.step2': 'Halten Sie das Tier sicher, bis der Besitzer eintrifft',
+                'instructions.step3': 'Teilen Sie Ihren Standort wenn möglich, um beim Finden zu helfen',
+                'promo.title': 'Schützen Sie auch Ihr Tier',
+                'promo.desc': 'Erstellen Sie smarte Marken mit PetNudge - kostenlos!',
+                'promo.button': 'PetNudge herunterladen',
+                'footer.powered': 'Bereitgestellt von'
+            },
+            it: {
+                'loading': 'Caricamento profilo...',
+                'error.title': 'Profilo non trovato',
+                'error.desc': 'Questo profilo potrebbe essere stato rimosso o il link non è corretto.',
+                'lost.title': '🚨 ANIMALE SMARRITO',
+                'lost.desc': 'Questo animale è smarrito. Aiutalo a ritrovare la sua famiglia!',
+                'reward.title': '💰 Ricompensa offerta',
+                'call.owner': 'Chiama il proprietario',
+                'call.name': 'Chiama',
+                'instructions.title': 'Cosa fare',
+                'instructions.step1': 'Chiama immediatamente il proprietario usando il pulsante sopra',
+                'instructions.step2': 'Tieni l\'animale al sicuro fino all\'arrivo del proprietario',
+                'instructions.step3': 'Condividi la tua posizione se possibile per aiutarli a trovarti',
+                'promo.title': 'Proteggi anche il tuo animale',
+                'promo.desc': 'Crea medaglie intelligenti con PetNudge - gratis!',
+                'promo.button': 'Scarica PetNudge',
+                'footer.powered': 'Offerto da'
+            },
+            pt: {
+                'loading': 'Carregando perfil...',
+                'error.title': 'Perfil não encontrado',
+                'error.desc': 'Este perfil pode ter sido removido ou o link está incorreto.',
+                'lost.title': '🚨 PET PERDIDO',
+                'lost.desc': 'Este pet está perdido. Ajude-o a reencontrar sua família!',
+                'reward.title': '💰 Recompensa oferecida',
+                'call.owner': 'Ligar para o dono',
+                'call.name': 'Ligar para',
+                'instructions.title': 'O que fazer',
+                'instructions.step1': 'Ligue imediatamente para o dono usando o botão acima',
+                'instructions.step2': 'Mantenha o pet seguro até o dono chegar',
+                'instructions.step3': 'Compartilhe sua localização se possível para ajudá-los a encontrar você',
+                'promo.title': 'Proteja seu pet também',
+                'promo.desc': 'Crie tags inteligentes com PetNudge - grátis!',
+                'promo.button': 'Baixar PetNudge',
+                'footer.powered': 'Desenvolvido por'
+            },
+            ja: {
+                'loading': 'プロフィール読み込み中...',
+                'error.title': 'プロフィールが見つかりません',
+                'error.desc': 'このプロフィールは削除されたか、リンクが正しくない可能性があります。',
+                'lost.title': '🚨 迷子のペット',
+                'lost.desc': 'このペットは迷子です。家族との再会にご協力ください！',
+                'reward.title': '💰 謝礼あり',
+                'call.owner': '飼い主に電話',
+                'call.name': '電話する',
+                'instructions.title': '対応方法',
+                'instructions.step1': '上のボタンですぐに飼い主に電話してください',
+                'instructions.step2': '飼い主が到着するまでペットを安全に保護してください',
+                'instructions.step3': '可能であれば位置情報を共有してください',
+                'promo.title': 'あなたのペットも守りましょう',
+                'promo.desc': 'PetNudgeでスマートタグを作成 - 無料！',
+                'promo.button': 'PetNudgeを入手',
+                'footer.powered': '提供：'
+            },
+            zh: {
+                'loading': '正在加载资料...',
+                'error.title': '未找到资料',
+                'error.desc': '此资料可能已被删除或链接不正确。',
+                'lost.title': '🚨 宠物走失',
+                'lost.desc': '这只宠物走失了。请帮助它与家人团聚！',
+                'reward.title': '💰 提供酬谢',
+                'call.owner': '联系主人',
+                'call.name': '拨打电话给',
+                'instructions.title': '该怎么做',
+                'instructions.step1': '请立即使用上方按钮联系主人',
+                'instructions.step2': '在主人到达前请保护好宠物安全',
+                'instructions.step3': '如果可能，请分享您的位置以帮助他们找到您',
+                'promo.title': '也保护您的宠物',
+                'promo.desc': '使用PetNudge创建智能标签 - 免费！',
+                'promo.button': '下载PetNudge',
+                'footer.powered': '技术支持：'
+            }
+        };
+
+        // Detect browser language
+        function detectLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const lang = browserLang.split('-')[0].toLowerCase();
+            return translations[lang] ? lang : 'en';
+        }
+
+        // Apply translations
+        function applyTranslations(lang) {
+            const t = translations[lang] || translations['en'];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) {
+                    el.textContent = t[key];
+                }
+            });
+            // Update html lang attribute
+            document.documentElement.lang = lang;
+        }
+
+        // Current language
+        let currentLang = detectLanguage();
+
         // CloudKit Configuration
         const CONTAINER_ID = 'iCloud.fr.petnudge.app';
         // API tokens for each environment
@@ -481,6 +672,7 @@
         // Display pet profile
         function displayProfile(record) {
             const fields = record.fields;
+            const t = translations[currentLang] || translations['en'];
 
             // Pet name
             document.getElementById('petName').textContent = fields.petName?.value || 'Unknown';
@@ -492,11 +684,13 @@
             if (breed) details += ` • ${breed}`;
             document.getElementById('petDetails').textContent = details;
 
-            // Owner phone
+            // Owner phone and call button
             const phone = fields.ownerPhone?.value || '';
+            const ownerName = fields.ownerName?.value || '';
             if (phone) {
                 document.getElementById('callButton').href = `tel:${phone.replace(/\s/g, '')}`;
-                document.getElementById('callButton').innerHTML = `📞 Call ${fields.ownerName?.value || 'Owner'}`;
+                const callText = ownerName ? `${t['call.name']} ${ownerName}` : t['call.owner'];
+                document.getElementById('callButton').innerHTML = `📞 ${callText}`;
             }
 
             // Photo
@@ -551,6 +745,9 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
+            // Apply translations based on browser language
+            applyTranslations(currentLang);
+
             // Check if API token is configured
             if (API_TOKEN === 'YOUR_CLOUDKIT_WEB_TOKEN') {
                 // Show fallback until token is configured

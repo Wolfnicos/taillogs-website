@@ -315,6 +315,34 @@
             font-size: 0.9rem;
         }
 
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lang-toggle:hover {
+            background: var(--primary-dark);
+        }
+
+        .lang-toggle svg {
+            width: 18px;
+            height: 18px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -339,21 +367,21 @@
                 PetNudge
             </a>
             <nav>
-                <a href="/">Home</a>
-                <a href="/#features">App Features</a>
-                <a href="shop.html">Shop</a>
-                <a href="mailto:contactpetnudge@gmail.com">Contact</a>
+                <a href="/" data-i18n="shop.nav.home">Home</a>
+                <a href="/#features" data-i18n="shop.nav.features">App Features</a>
+                <a href="shop.html" data-i18n="nav.shop">Shop</a>
+                <a href="mailto:contactpetnudge@gmail.com" data-i18n="shop.nav.contact">Contact</a>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <h1>3D Printed Pet Tags</h1>
-        <p>Smart NFC tags for your pet's collar. Anyone can tap to call you instantly.</p>
+        <h1 data-i18n="shop.hero.title">3D Printed Pet Tags</h1>
+        <p data-i18n="shop.hero.subtitle">Smart NFC tags for your pet's collar. Anyone can tap to call you instantly.</p>
     </section>
 
     <section class="products-section">
-        <h2 class="section-title">Our Products</h2>
+        <h2 class="section-title" data-i18n="shop.products.title">Our Products</h2>
         <div class="products-grid">
 
             <!-- Product 1 -->
@@ -363,13 +391,13 @@
                     🏷️
                 </div>
                 <div class="product-info">
-                    <span class="product-badge">NFC Inside</span>
-                    <h3 class="product-title">Classic Round Tag</h3>
-                    <p class="product-desc">Simple, elegant round tag with NFC chip. Fits any collar.</p>
+                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
+                    <h3 class="product-title" data-i18n="shop.product1.title">Classic Round Tag</h3>
+                    <p class="product-desc" data-i18n="shop.product1.desc">Simple, elegant round tag with NFC chip. Fits any collar.</p>
                     <div class="product-footer">
                         <span class="product-price">€9.99</span>
                         <!-- TODO: Replace with Stripe Payment Link -->
-                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Classic Round Tag" class="btn">Order</a>
+                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Classic Round Tag" class="btn" data-i18n="shop.order">Order</a>
                     </div>
                 </div>
             </div>
@@ -380,12 +408,12 @@
                     🦴
                 </div>
                 <div class="product-info">
-                    <span class="product-badge">NFC Inside</span>
-                    <h3 class="product-title">Bone Shape Tag</h3>
-                    <p class="product-desc">Fun bone-shaped tag, perfect for dogs. Includes NFC chip.</p>
+                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
+                    <h3 class="product-title" data-i18n="shop.product2.title">Bone Shape Tag</h3>
+                    <p class="product-desc" data-i18n="shop.product2.desc">Fun bone-shaped tag, perfect for dogs. Includes NFC chip.</p>
                     <div class="product-footer">
                         <span class="product-price">€11.99</span>
-                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Bone Shape Tag" class="btn">Order</a>
+                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Bone Shape Tag" class="btn" data-i18n="shop.order">Order</a>
                     </div>
                 </div>
             </div>
@@ -396,12 +424,12 @@
                     🐾
                 </div>
                 <div class="product-info">
-                    <span class="product-badge">NFC Inside</span>
-                    <h3 class="product-title">Paw Print Tag</h3>
-                    <p class="product-desc">Cute paw-shaped tag for cats and dogs. NFC enabled.</p>
+                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
+                    <h3 class="product-title" data-i18n="shop.product3.title">Paw Print Tag</h3>
+                    <p class="product-desc" data-i18n="shop.product3.desc">Cute paw-shaped tag for cats and dogs. NFC enabled.</p>
                     <div class="product-footer">
                         <span class="product-price">€11.99</span>
-                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Paw Print Tag" class="btn">Order</a>
+                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Paw Print Tag" class="btn" data-i18n="shop.order">Order</a>
                     </div>
                 </div>
             </div>
@@ -412,12 +440,12 @@
                     ❤️
                 </div>
                 <div class="product-info">
-                    <span class="product-badge">NFC Inside</span>
-                    <h3 class="product-title">Heart Tag</h3>
-                    <p class="product-desc">Heart-shaped tag showing your love. NFC chip included.</p>
+                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
+                    <h3 class="product-title" data-i18n="shop.product4.title">Heart Tag</h3>
+                    <p class="product-desc" data-i18n="shop.product4.desc">Heart-shaped tag showing your love. NFC chip included.</p>
                     <div class="product-footer">
                         <span class="product-price">€11.99</span>
-                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Heart Tag" class="btn">Order</a>
+                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Heart Tag" class="btn" data-i18n="shop.order">Order</a>
                     </div>
                 </div>
             </div>
@@ -429,61 +457,72 @@
         <div class="info-grid">
             <div class="info-item">
                 <div class="info-icon">🇫🇷</div>
-                <h3>Made in France</h3>
-                <p>Handmade with care using premium materials</p>
+                <h3 data-i18n="shop.info1.title">Made in France</h3>
+                <p data-i18n="shop.info1.desc">Handmade with care using premium materials</p>
             </div>
             <div class="info-item">
                 <div class="info-icon">📦</div>
-                <h3>Fast Shipping</h3>
-                <p>France: €3.50 / EU: €6.50<br>Ships in 3-5 business days</p>
+                <h3 data-i18n="shop.info2.title">Fast Shipping</h3>
+                <p data-i18n="shop.info2.desc">France: €3.50 / EU: €6.50 - Ships in 3-5 business days</p>
             </div>
             <div class="info-item">
                 <div class="info-icon">📱</div>
-                <h3>Works with PetNudge</h3>
-                <p>Program the tag with your pet's profile using our free app</p>
+                <h3 data-i18n="shop.info3.title">Works with PetNudge</h3>
+                <p data-i18n="shop.info3.desc">Program the tag with your pet's profile using our free app</p>
             </div>
             <div class="info-item">
                 <div class="info-icon">💧</div>
-                <h3>Durable</h3>
-                <p>Water-resistant PETG plastic. Built to last.</p>
+                <h3 data-i18n="shop.info4.title">Durable</h3>
+                <p data-i18n="shop.info4.desc">Water-resistant PETG plastic. Built to last.</p>
             </div>
         </div>
     </section>
 
     <section class="how-it-works">
-        <h2>How NFC Tags Work</h2>
+        <h2 data-i18n="shop.how.title">How NFC Tags Work</h2>
         <div class="steps">
             <div class="step">
                 <div class="step-number">1</div>
-                <h4>Receive Your Tag</h4>
-                <p>Get your 3D printed tag with NFC chip inside</p>
+                <h4 data-i18n="shop.step1.title">Receive Your Tag</h4>
+                <p data-i18n="shop.step1.desc">Get your 3D printed tag with NFC chip inside</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h4>Program with App</h4>
-                <p>Use PetNudge app to write your pet's profile to the tag</p>
+                <h4 data-i18n="shop.step2.title">Program with App</h4>
+                <p data-i18n="shop.step2.desc">Use PetNudge app to write your pet's profile to the tag</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h4>Attach to Collar</h4>
-                <p>Clip the tag to your pet's collar</p>
+                <h4 data-i18n="shop.step3.title">Attach to Collar</h4>
+                <p data-i18n="shop.step3.desc">Clip the tag to your pet's collar</p>
             </div>
             <div class="step">
                 <div class="step-number">4</div>
-                <h4>Anyone Can Scan</h4>
-                <p>If found, anyone taps the tag to call you instantly</p>
+                <h4 data-i18n="shop.step4.title">Anyone Can Scan</h4>
+                <p data-i18n="shop.step4.desc">If found, anyone taps the tag to call you instantly</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div>
-            <a href="/">Home</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="mailto:contactpetnudge@gmail.com">Contact</a>
+            <a href="/" data-i18n="shop.nav.home">Home</a>
+            <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" data-i18n="shop.footer.terms">Terms</a>
+            <a href="mailto:contactpetnudge@gmail.com" data-i18n="shop.nav.contact">Contact</a>
         </div>
         <p>&copy; 2025 PetNudge. All rights reserved.</p>
     </footer>
+
+    <!-- Language Toggle Button -->
+    <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="lang-text">EN</span>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>

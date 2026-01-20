@@ -402,9 +402,12 @@
     <script>
         // CloudKit Configuration
         const CONTAINER_ID = 'iCloud.fr.petnudge.app';
-        const API_TOKEN = '7976e424627da49a13a3a0e9fe03be305011a88378440648d249dbb834d1fb6b';
+        // API tokens for each environment
+        const DEV_TOKEN = '7976e424627da49a13a3a0e9fe03be305011a88378440648d249dbb834d1fb6b';
+        const PROD_TOKEN = '5c6c036098c286ac163ce1d62579fbd4e9da6bf17818db28fed7f7c4688ae95c';
         // Use 'development' for testing, 'production' for App Store
         const ENVIRONMENT = 'production';
+        const API_TOKEN = ENVIRONMENT === 'production' ? PROD_TOKEN : DEV_TOKEN;
 
         // Get profile ID from URL
         // Supports both /pet/ABC123 and /pet.html?id=ABC123

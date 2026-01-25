@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande confirmée | PetNudge</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop-styles.css">
+</head>
+<body class="success-page">
+    <div class="success-container">
+        <div class="success-content">
+            <!-- Success Icon -->
+            <div class="success-icon-container">
+                <div class="success-icon">✅</div>
+                <div class="success-confetti"></div>
+            </div>
+
+            <!-- Main Message -->
+            <h1 data-i18n="success.title">Merci pour votre commande!</h1>
+            <p class="success-subtitle" data-i18n="success.subtitle">Votre médaille NFC est en cours de préparation</p>
+
+            <!-- Order Info -->
+            <div class="order-info-grid">
+                <div class="order-info-item">
+                    <span class="order-info-icon">📧</span>
+                    <div class="order-info-content">
+                        <h4 data-i18n="success.email.title">Email de confirmation</h4>
+                        <p data-i18n="success.email.desc">Vous allez recevoir un email avec les détails de votre commande</p>
+                    </div>
+                </div>
+                <div class="order-info-item">
+                    <span class="order-info-icon">📦</span>
+                    <div class="order-info-content">
+                        <h4 data-i18n="success.shipping.title">Expédition</h4>
+                        <p data-i18n="success.shipping.desc">Votre commande sera expédiée sous 24-48h</p>
+                    </div>
+                </div>
+                <div class="order-info-item">
+                    <span class="order-info-icon">🚚</span>
+                    <div class="order-info-content">
+                        <h4 data-i18n="success.delivery.title">Livraison</h4>
+                        <p data-i18n="success.delivery.desc">Réception estimée en 3-5 jours ouvrés</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="next-steps-box">
+                <h3 data-i18n="success.next.title">📱 Prochaines étapes</h3>
+                <ol class="next-steps-list">
+                    <li data-i18n="success.step1">Téléchargez l'app PetNudge (si ce n'est pas déjà fait)</li>
+                    <li data-i18n="success.step2">Créez le profil de votre animal dans l'app</li>
+                    <li data-i18n="success.step3">À réception de la médaille, programmez-la avec l'app</li>
+                    <li data-i18n="success.step4">Attachez la médaille au collier - votre animal est protégé!</li>
+                </ol>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="success-actions">
+                <a href="https://apps.apple.com/app/petnudge" class="success-btn primary" target="_blank" rel="noopener">
+                    <span class="btn-icon">📱</span>
+                    <span data-i18n="success.download">Télécharger l'app</span>
+                </a>
+                <a href="index.html" class="success-btn secondary">
+                    <span class="btn-icon">🏠</span>
+                    <span data-i18n="success.home">Retour à l'accueil</span>
+                </a>
+            </div>
+
+            <!-- Support Note -->
+            <div class="support-note">
+                <p data-i18n="success.support">Une question? Contactez-nous à</p>
+                <a href="mailto:contact@petnudge.fr">contact@petnudge.fr</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="success-footer">
+            <img src="logo.png" alt="PetNudge" width="32" height="32">
+            <span>PetNudge</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="shop-translations.js"></script>
+    <script>
+        // Animation on load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.success-content').classList.add('animate-in');
+        });
+    </script>
+</body>
+</html>

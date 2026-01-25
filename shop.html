@@ -1,528 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - PetNudge 3D Printed Pet Tags</title>
-    <meta name="description" content="Custom 3D printed NFC pet tags. Tap to call the owner instantly. Handmade in France.">
+    <title>Médailles NFC Premium | PetNudge</title>
+    <meta name="description" content="Médailles NFC intelligentes pour protéger votre animal. Fabriquées en France, résistantes à l'eau. Livraison rapide.">
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="canonical" href="https://petnudge.fr/shop.html">
 
-    <meta property="og:title" content="PetNudge Shop - 3D Printed Pet Tags">
-    <meta property="og:description" content="Custom NFC pet tags. Handmade in France.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Médailles NFC Premium | PetNudge">
+    <meta property="og:description" content="Médailles NFC intelligentes pour protéger votre animal. Fabriquées en France.">
     <meta property="og:image" content="https://petnudge.fr/logo.png">
+    <meta property="og:url" content="https://petnudge.fr/shop.html">
+    <meta property="og:type" content="website">
 
-    <style>
-        :root {
-            --primary: #FF6B35;
-            --primary-dark: #E55A2B;
-            --secondary: #4ECDC4;
-            --dark: #1a1a2e;
-            --light: #ffffff;
-            --gray: #6c757d;
-            --light-gray: #f8f9fa;
-        }
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: var(--light-gray);
-        }
-
-        /* Header */
-        header {
-            background: var(--light);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .logo img {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-        }
-
-        nav a {
-            color: var(--dark);
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero */
-        .hero {
-            padding: 120px 20px 60px;
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        /* Products Grid */
-        .products-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 40px;
-            color: var(--dark);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            background: var(--light-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .product-info {
-            padding: 20px;
-        }
-
-        .product-badge {
-            display: inline-block;
-            background: var(--secondary);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .product-title {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            color: var(--dark);
-        }
-
-        .product-desc {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .product-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .product-price {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: var(--primary-dark);
-        }
-
-        /* Info Section */
-        .info-section {
-            background: white;
-            padding: 60px 20px;
-        }
-
-        .info-grid {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-
-        .info-item {
-            padding: 20px;
-        }
-
-        .info-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .info-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--dark);
-        }
-
-        .info-item p {
-            color: var(--gray);
-            font-size: 0.95rem;
-        }
-
-        /* How NFC Works */
-        .how-it-works {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .how-it-works h2 {
-            font-size: 1.8rem;
-            margin-bottom: 40px;
-        }
-
-        .steps {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .step {
-            flex: 1;
-            min-width: 200px;
-            max-width: 250px;
-        }
-
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 15px;
-        }
-
-        .step h4 {
-            margin-bottom: 8px;
-        }
-
-        .step p {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        footer p {
-            margin-top: 20px;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.9rem;
-        }
-
-        /* Language Toggle */
-        .lang-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .lang-toggle:hover {
-            background: var(--primary-dark);
-        }
-
-        .lang-toggle svg {
-            width: 18px;
-            height: 18px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            nav {
-                display: none;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop-styles.css">
 </head>
-<body>
-    <header>
-        <div class="header-container">
-            <a href="/" class="logo">
-                <img src="logo.png" alt="PetNudge">
-                PetNudge
+<body class="shop-page">
+    <!-- HEADER -->
+    <header class="shop-header">
+        <div class="shop-header-container">
+            <a href="index.html" class="shop-logo">
+                <img src="logo.png" alt="PetNudge" width="40" height="40">
+                <span>PetNudge</span>
             </a>
-            <nav>
-                <a href="/" data-i18n="shop.nav.home">Home</a>
-                <a href="/#features" data-i18n="shop.nav.features">App Features</a>
-                <a href="shop.html" data-i18n="nav.shop">Shop</a>
-                <a href="mailto:contactpetnudge@gmail.com" data-i18n="shop.nav.contact">Contact</a>
+            <nav class="shop-nav">
+                <a href="index.html" data-i18n="shop.nav.home">Accueil</a>
+                <a href="#products" data-i18n="shop.nav.products">Produits</a>
+                <a href="#faq" data-i18n="shop.nav.faq">FAQ</a>
+                <a href="mailto:contact@petnudge.fr" data-i18n="shop.nav.contact">Contact</a>
             </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <section class="hero">
-        <h1 data-i18n="shop.hero.title">3D Printed Pet Tags</h1>
-        <p data-i18n="shop.hero.subtitle">Smart NFC tags for your pet's collar. Anyone can tap to call you instantly.</p>
-    </section>
+    <!-- HERO SECTION -->
+    <section class="shop-hero">
+        <div class="shop-hero-content">
+            <h1 data-i18n="shop.hero.title">Protégez votre animal avec une médaille intelligente</h1>
+            <p class="shop-hero-subtitle" data-i18n="shop.hero.subtitle">Technologie NFC + QR Code intégrée. Un simple tap suffit pour vous contacter.</p>
 
-    <section class="products-section">
-        <h2 class="section-title" data-i18n="shop.products.title">Our Products</h2>
-        <div class="products-grid">
-
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- TODO: Replace with actual photo -->
-                    🏷️
+            <!-- Trust badges -->
+            <div class="trust-badges-hero">
+                <div class="trust-badge">
+                    <span class="trust-icon">🇫🇷</span>
+                    <span data-i18n="shop.trust.france">Fabriqué en France</span>
                 </div>
-                <div class="product-info">
-                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
-                    <h3 class="product-title" data-i18n="shop.product1.title">Classic Round Tag</h3>
-                    <p class="product-desc" data-i18n="shop.product1.desc">Simple, elegant round tag with NFC chip. Fits any collar.</p>
-                    <div class="product-footer">
-                        <span class="product-price">€9.99</span>
-                        <!-- TODO: Replace with Stripe Payment Link -->
-                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Classic Round Tag" class="btn" data-i18n="shop.order">Order</a>
-                    </div>
+                <div class="trust-badge">
+                    <span class="trust-icon">🔒</span>
+                    <span data-i18n="shop.trust.secure">Paiement sécurisé</span>
                 </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-image">
-                    🦴
+                <div class="trust-badge">
+                    <span class="trust-icon">🚚</span>
+                    <span data-i18n="shop.trust.shipping">Livraison 3-5 jours</span>
                 </div>
-                <div class="product-info">
-                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
-                    <h3 class="product-title" data-i18n="shop.product2.title">Bone Shape Tag</h3>
-                    <p class="product-desc" data-i18n="shop.product2.desc">Fun bone-shaped tag, perfect for dogs. Includes NFC chip.</p>
-                    <div class="product-footer">
-                        <span class="product-price">€11.99</span>
-                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Bone Shape Tag" class="btn" data-i18n="shop.order">Order</a>
-                    </div>
+                <div class="trust-badge">
+                    <span class="trust-icon">↩️</span>
+                    <span data-i18n="shop.trust.refund">Satisfait ou remboursé</span>
                 </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="product-image">
-                    🐾
-                </div>
-                <div class="product-info">
-                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
-                    <h3 class="product-title" data-i18n="shop.product3.title">Paw Print Tag</h3>
-                    <p class="product-desc" data-i18n="shop.product3.desc">Cute paw-shaped tag for cats and dogs. NFC enabled.</p>
-                    <div class="product-footer">
-                        <span class="product-price">€11.99</span>
-                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Paw Print Tag" class="btn" data-i18n="shop.order">Order</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <div class="product-image">
-                    ❤️
-                </div>
-                <div class="product-info">
-                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
-                    <h3 class="product-title" data-i18n="shop.product4.title">Heart Tag</h3>
-                    <p class="product-desc" data-i18n="shop.product4.desc">Heart-shaped tag showing your love. NFC chip included.</p>
-                    <div class="product-footer">
-                        <span class="product-price">€11.99</span>
-                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Heart Tag" class="btn" data-i18n="shop.order">Order</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="info-section">
-        <div class="info-grid">
-            <div class="info-item">
-                <div class="info-icon">🇫🇷</div>
-                <h3 data-i18n="shop.info1.title">Made in France</h3>
-                <p data-i18n="shop.info1.desc">Handmade with care using premium materials</p>
-            </div>
-            <div class="info-item">
-                <div class="info-icon">📦</div>
-                <h3 data-i18n="shop.info2.title">Fast Shipping</h3>
-                <p data-i18n="shop.info2.desc">France: €3.50 / EU: €6.50 - Ships in 3-5 business days</p>
-            </div>
-            <div class="info-item">
-                <div class="info-icon">📱</div>
-                <h3 data-i18n="shop.info3.title">Works with PetNudge</h3>
-                <p data-i18n="shop.info3.desc">Program the tag with your pet's profile using our free app</p>
-            </div>
-            <div class="info-item">
-                <div class="info-icon">💧</div>
-                <h3 data-i18n="shop.info4.title">Durable</h3>
-                <p data-i18n="shop.info4.desc">Water-resistant PETG plastic. Built to last.</p>
             </div>
         </div>
     </section>
 
-    <section class="how-it-works">
-        <h2 data-i18n="shop.how.title">How NFC Tags Work</h2>
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h4 data-i18n="shop.step1.title">Receive Your Tag</h4>
-                <p data-i18n="shop.step1.desc">Get your 3D printed tag with NFC chip inside</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h4 data-i18n="shop.step2.title">Program with App</h4>
-                <p data-i18n="shop.step2.desc">Use PetNudge app to write your pet's profile to the tag</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h4 data-i18n="shop.step3.title">Attach to Collar</h4>
-                <p data-i18n="shop.step3.desc">Clip the tag to your pet's collar</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h4 data-i18n="shop.step4.title">Anyone Can Scan</h4>
-                <p data-i18n="shop.step4.desc">If found, anyone taps the tag to call you instantly</p>
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="products-section">
+        <div class="products-container">
+            <h2 class="section-title" data-i18n="shop.products.title">Choisissez la taille adaptée</h2>
+            <p class="section-subtitle" data-i18n="shop.products.subtitle">Toutes nos médailles incluent la technologie NFC + QR Code</p>
+
+            <div class="products-grid">
+                <!-- SMALL -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <div class="product-image-placeholder">
+                            <div class="size-visual">
+                                <span class="size-letter">S</span>
+                                <span class="size-dimension">25mm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge cats" data-i18n="shop.badge.cats">Chats & petits chiens</span>
+                        <h3 class="product-title">Tag NFC Premium</h3>
+                        <p class="product-size">Small - 25mm</p>
+                        <p class="product-description" data-i18n="shop.product.small.desc">Parfait pour les chats et petits chiens jusqu'à 5kg</p>
+                        <div class="product-price-container">
+                            <span class="product-price">14,99 €</span>
+                            <span class="product-shipping" data-i18n="shop.shipping.included">+ livraison</span>
+                        </div>
+                        <button class="buy-button" data-product="small" data-price="1499" data-i18n="shop.buy">
+                            <span class="btn-icon">🛒</span>
+                            <span class="btn-text">Acheter maintenant</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MEDIUM (POPULAR) -->
+                <div class="product-card popular">
+                    <div class="popular-badge" data-i18n="shop.badge.popular">⭐ PLUS VENDU</div>
+                    <div class="product-image-container">
+                        <div class="product-image-placeholder">
+                            <div class="size-visual">
+                                <span class="size-letter">M</span>
+                                <span class="size-dimension">32mm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge dogs" data-i18n="shop.badge.dogs">La plupart des chiens</span>
+                        <h3 class="product-title">Tag NFC Premium</h3>
+                        <p class="product-size">Medium - 32mm</p>
+                        <p class="product-description" data-i18n="shop.product.medium.desc">Notre best-seller - convient à la majorité des chiens</p>
+                        <div class="product-price-container">
+                            <span class="product-price">17,99 €</span>
+                            <span class="product-shipping" data-i18n="shop.shipping.included">+ livraison</span>
+                        </div>
+                        <button class="buy-button" data-product="medium" data-price="1799" data-i18n="shop.buy">
+                            <span class="btn-icon">🛒</span>
+                            <span class="btn-text">Acheter maintenant</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- LARGE -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <div class="product-image-placeholder">
+                            <div class="size-visual">
+                                <span class="size-letter">L</span>
+                                <span class="size-dimension">40mm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge large" data-i18n="shop.badge.large">Grands chiens</span>
+                        <h3 class="product-title">Tag NFC Premium</h3>
+                        <p class="product-size">Large - 40mm</p>
+                        <p class="product-description" data-i18n="shop.product.large.desc">Idéal pour les grandes races: Berger, Labrador, Golden...</p>
+                        <div class="product-price-container">
+                            <span class="product-price">19,99 €</span>
+                            <span class="product-shipping" data-i18n="shop.shipping.included">+ livraison</span>
+                        </div>
+                        <button class="buy-button" data-product="large" data-price="1999" data-i18n="shop.buy">
+                            <span class="btn-icon">🛒</span>
+                            <span class="btn-text">Acheter maintenant</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div>
-            <a href="/" data-i18n="shop.nav.home">Home</a>
-            <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
-            <a href="terms.html" data-i18n="shop.footer.terms">Terms</a>
-            <a href="mailto:contactpetnudge@gmail.com" data-i18n="shop.nav.contact">Contact</a>
+    <!-- SPECS SECTION -->
+    <section class="specs-section">
+        <div class="specs-container">
+            <h2 class="section-title" data-i18n="shop.specs.title">Caractéristiques techniques</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <span class="spec-icon">📡</span>
+                    <h4>NFC NTAG215</h4>
+                    <p data-i18n="shop.spec.nfc">504 bytes - Compatible tous smartphones</p>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">🛡️</span>
+                    <h4>ASA Premium</h4>
+                    <p data-i18n="shop.spec.material">Plastique industriel résistant UV et chaleur</p>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">💧</span>
+                    <h4 data-i18n="shop.spec.water.title">Résistant à l'eau</h4>
+                    <p data-i18n="shop.spec.water">Revêtement protecteur inclus</p>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">🇫🇷</span>
+                    <h4 data-i18n="shop.spec.france.title">Made in France</h4>
+                    <p data-i18n="shop.spec.france">Fabriqué artisanalement en France</p>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">⏱️</span>
+                    <h4 data-i18n="shop.spec.lifetime.title">Durée de vie</h4>
+                    <p data-i18n="shop.spec.lifetime">10+ ans de durabilité garantie</p>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">📱</span>
+                    <h4 data-i18n="shop.spec.app.title">App gratuite</h4>
+                    <p data-i18n="shop.spec.app">Programmez facilement via PetNudge</p>
+                </div>
+            </div>
         </div>
-        <p>&copy; 2025 PetNudge. All rights reserved.</p>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section">
+        <div class="how-container">
+            <h2 class="section-title" data-i18n="shop.how.title">Comment ça marche ?</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <span class="step-icon">🛒</span>
+                    <h4 data-i18n="shop.step1.title">Commandez</h4>
+                    <p data-i18n="shop.step1.desc">Choisissez la taille adaptée à votre animal</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <span class="step-icon">📦</span>
+                    <h4 data-i18n="shop.step2.title">Recevez</h4>
+                    <p data-i18n="shop.step2.desc">Livraison chez vous en 3-5 jours ouvrés</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <span class="step-icon">📱</span>
+                    <h4 data-i18n="shop.step3.title">Programmez</h4>
+                    <p data-i18n="shop.step3.desc">Utilisez l'app PetNudge pour écrire vos infos</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <span class="step-icon">🐕</span>
+                    <h4 data-i18n="shop.step4.title">Protégez</h4>
+                    <p data-i18n="shop.step4.desc">Attachez au collier - votre animal est protégé!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST SECTION -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <span class="trust-icon-large">🔒</span>
+                    <h4 data-i18n="shop.trust.payment.title">Paiement 100% sécurisé</h4>
+                    <p data-i18n="shop.trust.payment.desc">Vos données sont protégées par Stripe</p>
+                    <div class="payment-logos">
+                        <img src="https://cdn.jsdelivr.net/gh/nicholasrobinson/payment-logos@master/stripe/visa.svg" alt="Visa" height="28">
+                        <img src="https://cdn.jsdelivr.net/gh/nicholasrobinson/payment-logos@master/stripe/mastercard.svg" alt="Mastercard" height="28">
+                        <img src="https://cdn.jsdelivr.net/gh/nicholasrobinson/payment-logos@master/stripe/amex.svg" alt="Amex" height="28">
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon-large">↩️</span>
+                    <h4 data-i18n="shop.trust.refund.title">Satisfait ou remboursé</h4>
+                    <p data-i18n="shop.trust.refund.desc">30 jours pour changer d'avis, sans condition</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon-large">🚚</span>
+                    <h4 data-i18n="shop.trust.delivery.title">Livraison suivie</h4>
+                    <p data-i18n="shop.trust.delivery.desc">Expédition sous 24-48h, suivi par email</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon-large">💬</span>
+                    <h4 data-i18n="shop.trust.support.title">Support réactif</h4>
+                    <p data-i18n="shop.trust.support.desc">Une question? Réponse sous 24h garantie</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faq-section">
+        <div class="faq-container">
+            <h2 class="section-title" data-i18n="shop.faq.title">Questions fréquentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4 data-i18n="shop.faq1.q">Comment fonctionne la médaille NFC ?</h4>
+                    <p data-i18n="shop.faq1.a">Il suffit d'approcher un smartphone de la médaille pour afficher les informations de votre animal et vos coordonnées. Aucune application n'est nécessaire pour le scanner.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="shop.faq2.q">Est-ce compatible avec mon téléphone ?</h4>
+                    <p data-i18n="shop.faq2.a">Oui! Compatible avec tous les iPhone (7 et plus) et la plupart des Android avec NFC. Pour programmer la médaille, téléchargez l'app gratuite PetNudge.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="shop.faq3.q">La médaille est-elle waterproof ?</h4>
+                    <p data-i18n="shop.faq3.a">Oui, chaque médaille est fabriquée en ASA (plastique industriel) et reçoit un revêtement protecteur. Elle résiste à la pluie, la neige et les bains.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="shop.faq4.q">Livrez-vous dans mon pays ?</h4>
+                    <p data-i18n="shop.faq4.a">Nous livrons dans toute l'Union Européenne et en Suisse. France: 3,50€ / Europe: 6,50€. Livraison en 3-5 jours ouvrés avec suivi.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="shop.faq5.q">Puis-je modifier les informations après ?</h4>
+                    <p data-i18n="shop.faq5.a">Absolument! Avec l'app PetNudge, vous pouvez modifier les informations à tout moment: numéro de téléphone, adresse, message personnalisé, etc.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="shop.faq6.q">Que se passe-t-il si je perds mon animal ?</h4>
+                    <p data-i18n="shop.faq6.a">Activez le "Mode Perdu" dans l'app. La personne qui scanne la médaille verra un message d'alerte et pourra vous contacter immédiatement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 data-i18n="shop.cta.title">Prêt à protéger votre compagnon ?</h2>
+            <p data-i18n="shop.cta.subtitle">Rejoignez des milliers de propriétaires qui font confiance à PetNudge</p>
+            <a href="#products" class="cta-button" data-i18n="shop.cta.button">Voir les médailles</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="shop-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="PetNudge" width="40" height="40">
+                        <span>PetNudge</span>
+                    </div>
+                    <p data-i18n="shop.footer.tagline">La médaille intelligente pour animaux</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="shop.footer.contact">Contact</h4>
+                    <a href="mailto:contact@petnudge.fr">contact@petnudge.fr</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="shop.footer.legal">Légal</h4>
+                    <a href="privacy.html" data-i18n="nav.privacy">Politique de confidentialité</a>
+                    <a href="terms.html" data-i18n="shop.footer.terms">Conditions générales</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="shop.footer.app">Application</h4>
+                    <a href="https://apps.apple.com/app/petnudge" target="_blank" rel="noopener">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" height="40">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 PetNudge. <span data-i18n="shop.footer.rights">Tous droits réservés.</span></p>
+                <div class="footer-payment">
+                    <img src="https://cdn.jsdelivr.net/gh/nicholasrobinson/payment-logos@master/stripe/visa.svg" alt="Visa" height="20">
+                    <img src="https://cdn.jsdelivr.net/gh/nicholasrobinson/payment-logos@master/stripe/mastercard.svg" alt="Mastercard" height="20">
+                    <img src="https://cdn.jsdelivr.net/gh/nicholasrobinson/payment-logos@master/stripe/amex.svg" alt="Amex" height="20">
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- Language Toggle Button -->
+    <!-- Language Toggle -->
     <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
             <circle cx="12" cy="12" r="10"/>
             <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
-        <span id="lang-text">EN</span>
+        <span id="lang-text">FR</span>
     </button>
 
+    <!-- Error Toast Container -->
+    <div id="toast-container"></div>
+
     <script src="script.js"></script>
+    <script src="shop-translations.js"></script>
+    <script src="shop-stripe.js"></script>
 </body>
 </html>

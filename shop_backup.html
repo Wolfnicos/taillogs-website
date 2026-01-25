@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - PetNudge 3D Printed Pet Tags</title>
+    <meta name="description" content="Custom 3D printed NFC pet tags. Tap to call the owner instantly. Handmade in France.">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <meta property="og:title" content="PetNudge Shop - 3D Printed Pet Tags">
+    <meta property="og:description" content="Custom NFC pet tags. Handmade in France.">
+    <meta property="og:image" content="https://petnudge.fr/logo.png">
+
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --primary-dark: #E55A2B;
+            --secondary: #4ECDC4;
+            --dark: #1a1a2e;
+            --light: #ffffff;
+            --gray: #6c757d;
+            --light-gray: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light-gray);
+        }
+
+        /* Header */
+        header {
+            background: var(--light);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: var(--dark);
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 120px 20px 60px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Products Grid */
+        .products-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: var(--dark);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .product-desc {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Info Section */
+        .info-section {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .info-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .info-item {
+            padding: 20px;
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .info-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .info-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* How NFC Works */
+        .how-it-works {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        .step h4 {
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        footer p {
+            margin-top: 20px;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lang-toggle:hover {
+            background: var(--primary-dark);
+        }
+
+        .lang-toggle svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="logo.png" alt="PetNudge">
+                PetNudge
+            </a>
+            <nav>
+                <a href="/" data-i18n="shop.nav.home">Home</a>
+                <a href="/#features" data-i18n="shop.nav.features">App Features</a>
+                <a href="shop.html" data-i18n="nav.shop">Shop</a>
+                <a href="mailto:contactpetnudge@gmail.com" data-i18n="shop.nav.contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1 data-i18n="shop.hero.title">3D Printed Pet Tags</h1>
+        <p data-i18n="shop.hero.subtitle">Smart NFC tags for your pet's collar. Anyone can tap to call you instantly.</p>
+    </section>
+
+    <section class="products-section">
+        <h2 class="section-title" data-i18n="shop.products.title">Our Products</h2>
+        <div class="products-grid">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <!-- TODO: Replace with actual photo -->
+                    🏷️
+                </div>
+                <div class="product-info">
+                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
+                    <h3 class="product-title" data-i18n="shop.product1.title">Classic Round Tag</h3>
+                    <p class="product-desc" data-i18n="shop.product1.desc">Simple, elegant round tag with NFC chip. Fits any collar.</p>
+                    <div class="product-footer">
+                        <span class="product-price">€9.99</span>
+                        <!-- TODO: Replace with Stripe Payment Link -->
+                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Classic Round Tag" class="btn" data-i18n="shop.order">Order</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    🦴
+                </div>
+                <div class="product-info">
+                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
+                    <h3 class="product-title" data-i18n="shop.product2.title">Bone Shape Tag</h3>
+                    <p class="product-desc" data-i18n="shop.product2.desc">Fun bone-shaped tag, perfect for dogs. Includes NFC chip.</p>
+                    <div class="product-footer">
+                        <span class="product-price">€11.99</span>
+                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Bone Shape Tag" class="btn" data-i18n="shop.order">Order</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    🐾
+                </div>
+                <div class="product-info">
+                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
+                    <h3 class="product-title" data-i18n="shop.product3.title">Paw Print Tag</h3>
+                    <p class="product-desc" data-i18n="shop.product3.desc">Cute paw-shaped tag for cats and dogs. NFC enabled.</p>
+                    <div class="product-footer">
+                        <span class="product-price">€11.99</span>
+                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Paw Print Tag" class="btn" data-i18n="shop.order">Order</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    ❤️
+                </div>
+                <div class="product-info">
+                    <span class="product-badge" data-i18n="shop.badge.nfc">NFC Inside</span>
+                    <h3 class="product-title" data-i18n="shop.product4.title">Heart Tag</h3>
+                    <p class="product-desc" data-i18n="shop.product4.desc">Heart-shaped tag showing your love. NFC chip included.</p>
+                    <div class="product-footer">
+                        <span class="product-price">€11.99</span>
+                        <a href="mailto:contactpetnudge@gmail.com?subject=Order: Heart Tag" class="btn" data-i18n="shop.order">Order</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-icon">🇫🇷</div>
+                <h3 data-i18n="shop.info1.title">Made in France</h3>
+                <p data-i18n="shop.info1.desc">Handmade with care using premium materials</p>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">📦</div>
+                <h3 data-i18n="shop.info2.title">Fast Shipping</h3>
+                <p data-i18n="shop.info2.desc">France: €3.50 / EU: €6.50 - Ships in 3-5 business days</p>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">📱</div>
+                <h3 data-i18n="shop.info3.title">Works with PetNudge</h3>
+                <p data-i18n="shop.info3.desc">Program the tag with your pet's profile using our free app</p>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">💧</div>
+                <h3 data-i18n="shop.info4.title">Durable</h3>
+                <p data-i18n="shop.info4.desc">Water-resistant PETG plastic. Built to last.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2 data-i18n="shop.how.title">How NFC Tags Work</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4 data-i18n="shop.step1.title">Receive Your Tag</h4>
+                <p data-i18n="shop.step1.desc">Get your 3D printed tag with NFC chip inside</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4 data-i18n="shop.step2.title">Program with App</h4>
+                <p data-i18n="shop.step2.desc">Use PetNudge app to write your pet's profile to the tag</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4 data-i18n="shop.step3.title">Attach to Collar</h4>
+                <p data-i18n="shop.step3.desc">Clip the tag to your pet's collar</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4 data-i18n="shop.step4.title">Anyone Can Scan</h4>
+                <p data-i18n="shop.step4.desc">If found, anyone taps the tag to call you instantly</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <a href="/" data-i18n="shop.nav.home">Home</a>
+            <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" data-i18n="shop.footer.terms">Terms</a>
+            <a href="mailto:contactpetnudge@gmail.com" data-i18n="shop.nav.contact">Contact</a>
+        </div>
+        <p>&copy; 2025 PetNudge. All rights reserved.</p>
+    </footer>
+
+    <!-- Language Toggle Button -->
+    <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="lang-text">EN</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

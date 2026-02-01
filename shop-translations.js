@@ -859,9 +859,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     console.log('✅ Shop translations extended');
 
-    // Reaplică traducerile dacă funcția există
-    if (typeof applyTranslations === 'function') {
-      applyTranslations();
-    }
+    // Reaplică traducerile - setLanguage din script.js
+    const savedLang = localStorage.getItem('petnudge-lang') ||
+                      navigator.language.split('-')[0] ||
+                      'fr';
+
+    // Aplică traducerile shop pe toate elementele
+    const lang = translations[savedLang] ? savedLang : 'en';
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    console.log('✅ Shop translations applied for: ' + lang);
   }
 });

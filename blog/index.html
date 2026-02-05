@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - PetNudge | Pet Safety Tips & Guides</title>
+  <meta name="description" content="Expert tips on pet safety, lost pet recovery, NFC tags, QR codes, and keeping your furry friends healthy and safe.">
+  <meta name="keywords" content="pet safety blog, lost pet tips, NFC pet tag guide, QR code pets, find lost dog, find lost cat">
+  <link rel="canonical" href="https://petnudge.fr/blog/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PetNudge Blog - Pet Safety Tips & Guides">
+  <meta property="og:description" content="Expert tips on pet safety, lost pet recovery, and keeping your furry friends safe.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://petnudge.fr/blog/">
+  <meta property="og:image" content="https://petnudge.fr/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="apple-touch-icon" href="../logo.png">
+  <meta name="theme-color" content="#FF6B35">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .blog-hero {
+      padding: 6rem 0 3rem;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      text-align: center;
+    }
+    .blog-hero__title {
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .blog-hero__subtitle {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      padding: 3rem 0;
+    }
+    .blog-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+    .blog-card__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #FF6B35 0%, #f093fb 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .blog-card__content {
+      padding: 1.5rem;
+    }
+    .blog-card__category {
+      display: inline-block;
+      background: #FF6B35;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .blog-card__title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: #1a1a2e;
+      line-height: 1.4;
+    }
+    .blog-card__title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .blog-card__title a:hover {
+      color: #FF6B35;
+    }
+    .blog-card__excerpt {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .blog-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: #999;
+    }
+    .blog-card__read-time {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../" class="header__logo">
+        <img src="../logo.png" alt="" class="header__logo-img" width="36" height="36">
+        <span>PetNudge</span>
+      </a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="header__nav-list">
+          <li><a href="../#features" class="header__nav-link" data-i18n="nav.features">Features</a></li>
+          <li><a href="../#how" class="header__nav-link" data-i18n="nav.how">How It Works</a></li>
+          <li><a href="../#pricing" class="header__nav-link" data-i18n="nav.pricing">Pricing</a></li>
+          <li><a href="./" class="header__nav-link header__nav-link--active" data-i18n="nav.blog">Blog</a></li>
+          <li><a href="../shop.html" class="header__nav-link" data-i18n="nav.shop">Shop</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
+          <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span id="lang-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+      <div class="container">
+        <h1 class="blog-hero__title" data-i18n="blog.title">Pet Safety Blog</h1>
+        <p class="blog-hero__subtitle" data-i18n="blog.subtitle">Tips, guides, and expert advice to keep your furry friends safe and healthy.</p>
+      </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="blog-grid">
+
+          <!-- Article 1 -->
+          <article class="blog-card">
+            <div class="blog-card__image">🐕</div>
+            <div class="blog-card__content">
+              <span class="blog-card__category" data-i18n="blog.category.safety">Lost Pet</span>
+              <h2 class="blog-card__title">
+                <a href="how-to-find-lost-dog/" data-i18n="blog.article1.title">How to Find Your Lost Dog: Complete Guide 2026</a>
+              </h2>
+              <p class="blog-card__excerpt" data-i18n="blog.article1.excerpt">Step-by-step actions to take in the first 24 hours when your dog goes missing. Maximize your chances of a happy reunion.</p>
+              <div class="blog-card__meta">
+                <span class="blog-card__read-time">📖 <span data-i18n="blog.readtime">8 min read</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="blog-card">
+            <div class="blog-card__image">📱</div>
+            <div class="blog-card__content">
+              <span class="blog-card__category" data-i18n="blog.category.tech">Technology</span>
+              <h2 class="blog-card__title">
+                <a href="qr-code-vs-microchip/" data-i18n="blog.article2.title">QR Code vs Microchip: What's Best for Your Pet?</a>
+              </h2>
+              <p class="blog-card__excerpt" data-i18n="blog.article2.excerpt">Compare the pros and cons of modern pet identification methods. Why you might want both.</p>
+              <div class="blog-card__meta">
+                <span class="blog-card__read-time">📖 <span data-i18n="blog.readtime">6 min read</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-card">
+            <div class="blog-card__image">🏷️</div>
+            <div class="blog-card__content">
+              <span class="blog-card__category" data-i18n="blog.category.tech">Technology</span>
+              <h2 class="blog-card__title">
+                <a href="nfc-tags-pets-guide/" data-i18n="blog.article3.title">NFC Tags for Pets: Everything You Need to Know</a>
+              </h2>
+              <p class="blog-card__excerpt" data-i18n="blog.article3.excerpt">What are NFC tags, how do they work, and why they're the future of pet identification.</p>
+              <div class="blog-card__meta">
+                <span class="blog-card__read-time">📖 <span data-i18n="blog.readtime">5 min read</span></span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../" class="footer__logo">
+            <img src="../logo.png" alt="" width="32" height="32">
+            <span>PetNudge</span>
+          </a>
+          <p data-i18n="footer.tagline">Smart pet identification and health companion for modern pet owners.</p>
+        </div>
+        <div class="footer__links">
+          <h4 data-i18n="footer.legal">Legal</h4>
+          <nav>
+            <a href="../privacy.html" data-i18n="nav.privacy">Privacy</a>
+            <a href="../terms.html" data-i18n="footer.terms">Terms of Use</a>
+          </nav>
+        </div>
+        <div class="footer__links">
+          <h4 data-i18n="footer.support">Support</h4>
+          <nav>
+            <a href="mailto:contact@petnudge.fr" data-i18n="footer.contact">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 PetNudge. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

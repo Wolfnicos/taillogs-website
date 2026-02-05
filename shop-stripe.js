@@ -7,11 +7,12 @@
  *
  * 1. Creează cont pe https://dashboard.stripe.com
  *
- * 2. Creează 3 produse în Stripe Dashboard:
+ * 2. Creează 4 produse în Stripe Dashboard:
  *    - Dashboard → Products → Add product
- *    - Nume: "Tag NFC Premium - Small (25mm)" - Preț: 14.99 EUR
- *    - Nume: "Tag NFC Premium - Medium (32mm)" - Preț: 17.99 EUR
- *    - Nume: "Tag NFC Premium - Large (40mm)" - Preț: 19.99 EUR
+ *    - Nume: "Tag NFC Premium - Patte (30mm)" - Preț: 14.99 EUR
+ *    - Nume: "Tag NFC Premium - Os (35mm)" - Preț: 14.99 EUR
+ *    - Nume: "Tag NFC Premium - Coeur (28mm)" - Preț: 14.99 EUR
+ *    - Nume: "Tag NFC Premium - Classique (32mm)" - Preț: 14.99 EUR
  *
  * 3. Pentru fiecare produs, copiază Price ID:
  *    - Click pe produs → Pricing → Copy price ID (începe cu "price_")
@@ -21,9 +22,8 @@
  *
  * 5. Înlocuiește valorile PLACEHOLDER de mai jos cu cheile tale reale
  *
- * 6. Configurează Shipping în Stripe:
- *    - Dashboard → Settings → Shipping rates
- *    - Adaugă: France 3.50€, Europe 6.50€
+ * 6. Prețul include livrarea pentru Franța (all-in)
+ *    - Pentru restul Europei, configurează Shipping în Stripe: 3€
  *
  * ============================================
  */
@@ -39,9 +39,10 @@ const STRIPE_CONFIG = {
     // Înlocuiește cu Price IDs din Stripe Dashboard
     // Format: price_XXXXXXXXXXXXXXXXXXXXXXXX
     priceIds: {
-        small: 'price_XXXXXXXXXXXXXXXXXXXXXXXX',   // Tag Small 25mm - 14.99€
-        medium: 'price_XXXXXXXXXXXXXXXXXXXXXXXX',  // Tag Medium 32mm - 17.99€
-        large: 'price_XXXXXXXXXXXXXXXXXXXXXXXX'    // Tag Large 40mm - 19.99€
+        paw: 'price_XXXXXXXXXXXXXXXXXXXXXXXX',     // Tag Patte 30mm - 14.99€
+        bone: 'price_XXXXXXXXXXXXXXXXXXXXXXXX',    // Tag Os 35mm - 14.99€
+        heart: 'price_XXXXXXXXXXXXXXXXXXXXXXXX',   // Tag Coeur 28mm - 14.99€
+        round: 'price_XXXXXXXXXXXXXXXXXXXXXXXX'    // Tag Classique 32mm - 14.99€
     },
 
     // URLs pentru redirect după plată
@@ -167,9 +168,10 @@ function setupBuyButtons() {
  */
 function fallbackToEmail(product) {
     const productNames = {
-        small: 'Tag NFC Premium - Small (25mm) - 14.99€',
-        medium: 'Tag NFC Premium - Medium (32mm) - 17.99€',
-        large: 'Tag NFC Premium - Large (40mm) - 19.99€'
+        paw: 'Tag NFC Premium - Patte (30mm) - 14.99€',
+        bone: 'Tag NFC Premium - Os (35mm) - 14.99€',
+        heart: 'Tag NFC Premium - Coeur (28mm) - 14.99€',
+        round: 'Tag NFC Premium - Classique (32mm) - 14.99€'
     };
 
     const subject = encodeURIComponent(`Commande: ${productNames[product] || product}`);

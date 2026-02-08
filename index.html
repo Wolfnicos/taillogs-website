@@ -32,6 +32,51 @@
 
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://apps.apple.com">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://petnudge.fr/#org",
+        "name": "PetNudge",
+        "url": "https://petnudge.fr/",
+        "logo": "https://petnudge.fr/logo.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://petnudge.fr/#website",
+        "url": "https://petnudge.fr/",
+        "name": "PetNudge",
+        "publisher": {"@id": "https://petnudge.fr/#org"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://petnudge.fr/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does PetNudge help if my pet is lost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PetNudge uses QR and NFC tags so anyone who finds your pet can instantly contact you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a battery or an app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No battery is required and the finder does not need an app. They just scan the tag."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Skip to content for accessibility -->

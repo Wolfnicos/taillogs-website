@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technologie NFC Expliquee : Comment Fonctionne l'Identification Connectee pour Chien | PetNudge</title>
+  <meta name="description" content="Decouvrez comment fonctionne un collier NFC pour chien. Guide complet sur la technologie NFC, la programmation des tags et les avantages pour l'identification animale.">
+  <meta name="keywords" content="comment fonctionne un collier NFC pour chien, tag NFC chien, identification NFC animal, collier connecte chien, NFC animaux de compagnie">
+  <link rel="canonical" href="https://petnudge.fr/blog/technologie-nfc-identification-chien/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Technologie NFC Expliquee : Comment Fonctionne l'Identification Connectee pour Chien">
+  <meta property="og:description" content="Guide complet pour comprendre comment fonctionne un collier NFC pour chien. Technologie, programmation, avantages et comparaison avec GPS et Bluetooth.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://petnudge.fr/blog/technologie-nfc-identification-chien/">
+  <meta property="og:image" content="https://petnudge.fr/logo.png">
+  <meta property="article:published_time" content="2026-02-20">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../logo.png">
+  <link rel="apple-touch-icon" href="../../logo.png">
+  <meta name="theme-color" content="#FF6B35">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .article-hero {
+      padding: 6rem 0 3rem;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+    .article-hero__category {
+      display: inline-block;
+      background: #FF6B35;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .article-hero__title {
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      max-width: 800px;
+    }
+    .article-hero__meta {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .article-content {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    .article-content h2 {
+      font-size: 1.75rem;
+      color: #1a1a2e;
+      margin: 2.5rem 0 1rem;
+      padding-top: 1rem;
+    }
+    .article-content h3 {
+      font-size: 1.35rem;
+      color: #1a1a2e;
+      margin: 2rem 0 0.75rem;
+    }
+    .article-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+    .article-content ul, .article-content ol {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+    }
+    .article-content li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 0.75rem;
+    }
+    .article-content strong {
+      color: #1a1a2e;
+    }
+    .tip-box {
+      background: linear-gradient(135deg, #FFF5F0 0%, #FFE8E0 100%);
+      border-left: 4px solid #FF6B35;
+      padding: 1.5rem;
+      border-radius: 0 12px 12px 0;
+      margin: 2rem 0;
+    }
+    .tip-box__title {
+      font-weight: 700;
+      color: #FF6B35;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tip-box p {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 2rem;
+      border-radius: 16px;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta-box__title {
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .cta-box__text {
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1.5rem;
+    }
+    .cta-box .btn {
+      display: inline-flex;
+    }
+    .breadcrumb {
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+    .breadcrumb a {
+      color: #666;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      color: #FF6B35;
+    }
+    .breadcrumb span {
+      color: #999;
+      margin: 0 0.5rem;
+    }
+  </style>
+
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Technologie NFC Expliquee : Comment Fonctionne l'Identification Connectee pour Chien",
+    "description": "Decouvrez comment fonctionne un collier NFC pour chien. Guide complet sur la technologie NFC, la programmation des tags et les avantages pour l'identification animale.",
+    "author": {
+      "@type": "Organization",
+      "name": "PetNudge"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PetNudge",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://petnudge.fr/logo.png"
+      }
+    },
+    "datePublished": "2026-02-20",
+    "dateModified": "2026-02-20",
+    "inLanguage": "fr"
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Un tag NFC pour chien a-t-il besoin de batterie ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non, un tag NFC est un composant entierement passif. Il ne possede ni batterie ni source d'alimentation. Le tag tire son energie du champ electromagnetique emis par le smartphone au moment de la lecture. C'est pourquoi il fonctionne indefiniment sans aucun entretien ni remplacement de pile."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Le NFC est-il dangereux pour mon chien ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolument pas. Le tag NFC n'emet aucun signal de maniere autonome. Il repond uniquement lorsqu'un smartphone est place a moins de 4 cm. L'energie impliquee est infime, bien en dessous des seuils de securite. C'est la meme technologie utilisee pour les paiements sans contact que des milliards de personnes utilisent quotidiennement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que se passe-t-il si le tag NFC est mouille ou sale ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contrairement aux QR codes, le NFC fonctionne parfaitement meme si le tag est mouille, sale ou couvert de boue. La communication se fait par ondes radio a travers le materiau du tag, pas par lecture optique. Les tags NFC de qualite sont egalement resistants a l'eau et conçus pour supporter les conditions exterieures."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="sr-only">Aller au contenu principal</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../../" class="header__logo">
+        <img src="../../logo.png" alt="" class="header__logo-img" width="36" height="36">
+        <span>PetNudge</span>
+      </a>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <ul class="header__nav-list">
+          <li><a href="../../#features" class="header__nav-link" data-i18n="nav.features">Features</a></li>
+          <li><a href="../../#how" class="header__nav-link" data-i18n="nav.how">How It Works</a></li>
+          <li><a href="../../#pricing" class="header__nav-link" data-i18n="nav.pricing">Pricing</a></li>
+          <li><a href="../" class="header__nav-link header__nav-link--active" data-i18n="nav.blog">Blog</a></li>
+          <li><a href="../../shop.html" class="header__nav-link" data-i18n="nav.shop">Shop</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Changer de langue">
+          <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span id="lang-text">FR</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Breadcrumb -->
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="../../">Accueil</a>
+        <span>></span>
+        <a href="../">Blog</a>
+        <span>></span>
+        <span aria-current="page">Technologie NFC pour Chien</span>
+      </nav>
+    </div>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+      <div class="container">
+        <span class="article-hero__category">Technologie</span>
+        <h1 class="article-hero__title">Technologie NFC Expliquee : Comment Fonctionne l'Identification Connectee pour Chien</h1>
+        <div class="article-hero__meta">
+          <span>20 fevrier 2026</span>
+          <span>7 min de lecture</span>
+          <span>Identification Animale</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content">
+      <p><strong>Vous vous demandez comment fonctionne un collier NFC pour chien ?</strong> La technologie NFC transforme radicalement la maniere dont nous identifions et protegeons nos animaux de compagnie. Fini les etiquettes gravees qui s'effacent avec le temps ou les puces electroniques qui necessitent un lecteur specialise chez le veterinaire. Aujourd'hui, un simple smartphone suffit pour acceder instantanement aux informations de votre animal.</p>
+
+      <p>Dans ce guide complet, nous allons explorer en detail le fonctionnement de la technologie NFC appliquee a l'identification canine, ses avantages par rapport aux autres solutions, et comment programmer votre propre tag NFC avec l'application PetNudge.</p>
+
+      <h2>Qu'est-ce que le NFC ? (Near Field Communication)</h2>
+
+      <p>Le NFC, ou <strong>Near Field Communication</strong> (communication en champ proche), est une technologie de transmission de donnees sans fil a tres courte portee. Elle permet a deux appareils de communiquer lorsqu'ils sont places a moins de 4 centimetres l'un de l'autre.</p>
+
+      <p>Vous utilisez probablement deja le NFC au quotidien sans le savoir :</p>
+
+      <ul>
+        <li><strong>Paiement sans contact</strong> : Apple Pay, Google Pay, cartes bancaires</li>
+        <li><strong>Transports en commun</strong> : badges Navigo, cartes de transport</li>
+        <li><strong>Badges d'acces</strong> : entree au bureau, chambres d'hotel</li>
+        <li><strong>Identification animale</strong> : tags connectes pour colliers de chiens et chats</li>
+      </ul>
+
+      <p>La technologie NFC repose sur le principe de l'induction electromagnetique. Un appareil actif (votre smartphone) genere un champ magnetique qui alimente le composant passif (le tag NFC sur le collier). Cette interaction permet l'echange de donnees sans qu'aucune batterie ne soit necessaire dans le tag.</p>
+
+      <h2>Comment fonctionne un tag NFC pour chien : etape par etape</h2>
+
+      <p>Comprendre <strong>comment fonctionne un collier NFC pour chien</strong> est remarquablement simple. Voici ce qui se passe concretement lorsqu'une personne trouve votre animal :</p>
+
+      <ol>
+        <li><strong>Approche du smartphone</strong> : la personne place son telephone a proximite du tag NFC fixe au collier de votre chien (moins de 4 cm)</li>
+        <li><strong>Activation automatique</strong> : le champ electromagnetique du telephone alimente la puce NFC du tag, qui s'active instantanement</li>
+        <li><strong>Transmission des donnees</strong> : le tag transmet un identifiant unique au smartphone en moins d'une seconde</li>
+        <li><strong>Affichage du profil</strong> : une notification apparait sur l'ecran avec un lien vers le profil de votre animal, incluant votre numero de telephone, les informations medicales et une option d'appel direct</li>
+        <li><strong>Contact immediat</strong> : en un seul tap, la personne peut vous appeler directement pour vous reunir avec votre compagnon</li>
+      </ol>
+
+      <p><strong>Temps total de l'operation : environ 5 secondes.</strong> Aucune application n'est necessaire pour le lecteur. Tous les smartphones modernes lisent les tags NFC nativement.</p>
+
+      <div class="tip-box">
+        <div class="tip-box__title">Bon a savoir</div>
+        <p>Contrairement a la <a href="../qr-code-vs-microchip/">puce electronique traditionnelle</a> qui necessite un lecteur specialise disponible uniquement chez le veterinaire, le NFC transforme chaque smartphone en lecteur d'identification. Cela multiplie considerablement les chances de retrouver un animal perdu.</p>
+      </div>
+
+      <h2>NFC vs Bluetooth vs GPS : quelles differences ?</h2>
+
+      <p>Pour bien comprendre comment fonctionne un collier NFC pour chien, il est utile de le comparer aux autres technologies sans fil utilisees pour les animaux de compagnie.</p>
+
+      <h3>NFC (Near Field Communication)</h3>
+      <ul>
+        <li><strong>Portee</strong> : 1 a 4 cm</li>
+        <li><strong>Batterie</strong> : aucune (composant passif)</li>
+        <li><strong>Duree de vie</strong> : illimitee (10 ans et plus)</li>
+        <li><strong>Cout</strong> : tres faible</li>
+        <li><strong>Usage</strong> : identification instantanee au contact</li>
+      </ul>
+
+      <h3>Bluetooth (trackers type AirTag)</h3>
+      <ul>
+        <li><strong>Portee</strong> : 10 a 30 metres (directe), reseau etendu via crowd-sourcing</li>
+        <li><strong>Batterie</strong> : necessaire (remplacement annuel)</li>
+        <li><strong>Duree de vie</strong> : 1 an environ par batterie</li>
+        <li><strong>Cout</strong> : moyen a eleve</li>
+        <li><strong>Usage</strong> : localisation approximative</li>
+      </ul>
+
+      <h3>GPS (trackers GPS)</h3>
+      <ul>
+        <li><strong>Portee</strong> : illimitee (via satellite)</li>
+        <li><strong>Batterie</strong> : necessaire (recharge frequente)</li>
+        <li><strong>Duree de vie</strong> : quelques jours entre chaque charge</li>
+        <li><strong>Cout</strong> : eleve (appareil + abonnement mensuel)</li>
+        <li><strong>Usage</strong> : suivi en temps reel</li>
+      </ul>
+
+      <div class="tip-box">
+        <div class="tip-box__title">Notre recommandation</div>
+        <p>Le NFC et le GPS ne sont pas concurrents mais complementaires. Le tag NFC assure l'identification instantanee au contact, tandis qu'un tracker GPS permet le suivi a distance. Pour une protection optimale, combinez les deux avec une <a href="../petnudge-complete-guide/">solution complete comme PetNudge</a>.</p>
+      </div>
+
+      <h2>Les avantages du NFC pour l'identification animale</h2>
+
+      <p>La technologie NFC presente des atouts majeurs qui en font la solution ideale pour l'identification de votre chien au quotidien.</p>
+
+      <h3>Aucune batterie necessaire</h3>
+      <p>Le tag NFC est un composant entierement passif. Il n'a besoin d'aucune source d'energie pour fonctionner. Contrairement aux trackers Bluetooth ou GPS qui necessitent des recharges regulieres ou des changements de pile, un tag NFC fonctionne indefiniment. Vous n'aurez jamais a vous soucier d'une batterie dechargee au moment ou vous en avez le plus besoin.</p>
+
+      <h3>Identification instantanee</h3>
+      <p>La lecture d'un tag NFC prend moins d'une seconde. Il suffit d'approcher un smartphone pour obtenir immediatement les informations de votre animal. Pas de temps de chargement, pas de connexion a etablir, pas d'application a telecharger. L'experience est aussi fluide que de passer une carte de transport.</p>
+
+      <h3>Compatibilite universelle</h3>
+      <p>Tous les iPhones depuis l'iPhone 7 (2016) et la grande majorite des smartphones Android fabriques apres 2015 supportent nativement le NFC. Cela represente plus de 90 % des smartphones en circulation aujourd'hui. La personne qui trouve votre chien n'a pas besoin d'installer une application specifique : le systeme d'exploitation gere tout automatiquement.</p>
+
+      <h3>Informations modifiables a tout moment</h3>
+      <p>Vous demenagez ? Vous changez de numero de telephone ? Avec un tag NFC programme via PetNudge, vous mettez a jour vos coordonnees directement depuis l'application. Le tag physique reste le meme, seules les informations associees changent. Plus besoin de commander un nouveau medaillon a chaque modification.</p>
+
+      <h3>Fonctionnement par tous les temps</h3>
+      <p>Contrairement aux QR codes qui deviennent illisibles lorsqu'ils sont sales, rayes ou mouilles, le NFC communique par ondes radio a travers le materiau du tag. Votre chien peut courir sous la pluie, se rouler dans la boue ou nager dans un lac : le tag NFC continuera de fonctionner parfaitement.</p>
+
+      <h2>Comment programmer un tag NFC avec PetNudge</h2>
+
+      <p>Configurer un tag NFC pour votre chien avec PetNudge est un processus simple qui ne prend que quelques minutes. Voici comment proceder :</p>
+
+      <ol>
+        <li><strong>Telechargez l'application PetNudge</strong> depuis l'App Store et creez votre compte gratuit</li>
+        <li><strong>Ajoutez votre animal</strong> en renseignant son nom, sa race, son age, ses informations medicales et une photo recente</li>
+        <li><strong>Configurez vos coordonnees</strong> : numero de telephone principal, contacts d'urgence secondaires et adresse</li>
+        <li><strong>Programmez le tag NFC</strong> : placez un tag NFC vierge contre votre telephone et suivez les instructions dans l'application. PetNudge ecrit automatiquement l'identifiant unique sur le tag</li>
+        <li><strong>Fixez le tag au collier</strong> de votre chien. C'est pret !</li>
+      </ol>
+
+      <p>Vous pouvez acheter des tags NFC vierges compatibles directement dans notre <a href="../../shop.html">boutique en ligne</a>, ou utiliser n'importe quel tag NFC au format NTAG215 ou NTAG216 disponible dans le commerce.</p>
+
+      <div class="tip-box">
+        <div class="tip-box__title">Astuce</div>
+        <p>PetNudge prend egalement en charge les QR codes en complement du NFC. Activez les deux methodes pour maximiser les chances que votre animal soit identifie, quelle que soit la technologie maitrisee par la personne qui le trouve. Consultez notre <a href="../nfc-tags-pets-guide/">guide complet des tags NFC</a> pour plus de details.</p>
+      </div>
+
+      <h2>Durabilite et resistance des tags NFC</h2>
+
+      <p>Un tag NFC destine a un collier de chien doit resister a des conditions difficiles : pluie, boue, chocs, baignades et activite physique intense. Voici ce qui rend ces tags remarquablement durables.</p>
+
+      <h3>Construction robuste</h3>
+      <p>Les tags NFC de qualite pour animaux sont encapsules dans des materiaux resistants comme l'epoxy, le silicone ou le plastique ABS renforce. La puce electronique et l'antenne sont protegees de l'humidite, de la poussiere et des impacts mecaniques. Certains modeles sont certifies IP67, ce qui signifie qu'ils supportent une immersion complete dans l'eau jusqu'a un metre de profondeur pendant 30 minutes.</p>
+
+      <h3>Duree de vie exceptionnelle</h3>
+      <p>En l'absence de batterie ou de piece mobile, un tag NFC ne souffre d'aucune usure electronique. La puce elle-meme est concue pour durer plus de 10 ans et supporter plus de 100 000 cycles de lecture-ecriture. Le facteur limitant est uniquement l'usure physique du boitier exterieur, qui peut etre facilement remplace.</p>
+
+      <h3>Resistance aux temperatures</h3>
+      <p>Les tags NFC fonctionnent dans une plage de temperatures allant de -25 C a +85 C, couvrant largement toutes les conditions climatiques que votre chien pourrait rencontrer, des hivers rigoureux aux etes caniculaires.</p>
+
+      <h2>Questions frequentes</h2>
+
+      <h3>Un tag NFC pour chien a-t-il besoin de batterie ?</h3>
+      <p>Non, un tag NFC est un composant entierement passif. Il ne possede ni batterie ni source d'alimentation. Le tag tire son energie du champ electromagnetique emis par le smartphone au moment de la lecture. C'est pourquoi il fonctionne indefiniment sans aucun entretien ni remplacement de pile. C'est l'un des avantages majeurs par rapport aux trackers Bluetooth ou GPS qui necessitent une alimentation reguliere.</p>
+
+      <h3>Le NFC est-il dangereux pour mon chien ?</h3>
+      <p>Absolument pas. Le tag NFC n'emet aucun signal de maniere autonome. Il repond uniquement lorsqu'un smartphone est place a moins de 4 cm, et cette interaction dure moins d'une seconde. L'energie impliquee est infime, bien en dessous de tous les seuils de securite etablis par les organismes de sante. C'est exactement la meme technologie utilisee pour les paiements sans contact que des milliards de personnes utilisent quotidiennement sans aucun risque.</p>
+
+      <h3>Que se passe-t-il si le tag NFC est mouille ou sale ?</h3>
+      <p>Contrairement aux QR codes qui necessitent une surface propre et visible pour etre scannes par une camera, le NFC fonctionne parfaitement meme si le tag est mouille, sale ou couvert de boue. La communication se fait par ondes radio a travers le materiau du tag, pas par lecture optique. Votre chien peut se baigner, courir dans les flaques et se rouler dans la terre sans compromettre le fonctionnement du tag. Les tags NFC de qualite vendus dans notre <a href="../../shop.html">boutique</a> sont egalement resistants a l'eau et conçus pour supporter les conditions exterieures les plus exigeantes.</p>
+
+      <div class="cta-box">
+        <h3 class="cta-box__title">Protegez votre chien avec la technologie NFC</h3>
+        <p class="cta-box__text">PetNudge vous permet de programmer facilement un tag NFC pour votre animal. Identification instantanee, profil medical complet et contact direct en un seul geste. Telechargez l'application gratuitement et configurez votre tag en quelques minutes.</p>
+        <a href="https://apps.apple.com/app/id6756539814" class="btn btn--primary btn--large" target="_blank" rel="noopener">
+          Telecharger PetNudge Gratuitement
+        </a>
+      </div>
+
+      <p><strong>La technologie NFC represente une avancee majeure pour l'identification animale.</strong> Simple, durable, gratuite a l'usage et universellement compatible, elle offre la meilleure combinaison de fiabilite et de facilite d'utilisation pour proteger votre chien au quotidien. En associant un tag NFC a une puce electronique traditionnelle, vous maximisez les chances de retrouver votre compagnon en cas de perte.</p>
+
+      <p>Pour en savoir plus sur la protection de votre animal, consultez egalement notre guide sur <a href="../how-to-find-lost-dog/">comment retrouver un chien perdu</a> et notre article sur le <a href="../pet-emergency-kit/">kit d'urgence pour animaux</a>.</p>
+
+      <hr style="margin: 3rem 0; border: none; border-top: 1px solid #eee;">
+
+      <p><em>Des questions sur la technologie NFC ou sur PetNudge ? Contactez-nous a <a href="mailto:contact@petnudge.fr">contact@petnudge.fr</a>. Notre equipe est la pour vous accompagner.</em></p>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../logo.png" alt="" width="32" height="32">
+            <span>PetNudge</span>
+          </a>
+          <p>Identification intelligente et compagnon de sante pour les proprietaires d'animaux modernes.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Legal</h4>
+          <nav>
+            <a href="../../privacy.html">Confidentialite</a>
+            <a href="../../terms.html">Conditions d'utilisation</a>
+          </nav>
+        </div>
+        <div class="footer__links">
+          <h4>Support</h4>
+          <nav>
+            <a href="mailto:contact@petnudge.fr">Contactez-nous</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024-2026 PetNudge. Tous droits reserves.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

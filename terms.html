@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use - PetNudge</title>
     <meta name="description" content="PetNudge Terms of Use - Read our terms and conditions for using the app.">
-    <link rel="canonical" href="https://petnudge.fr/terms">
+    <link rel="canonical" href="https://petnudge.fr/terms.html">
+    <link rel="alternate" hreflang="fr" href="https://petnudge.fr/terms.html">
+    <link rel="alternate" hreflang="en" href="https://petnudge.fr/terms.html">
+    <link rel="alternate" hreflang="x-default" href="https://petnudge.fr/terms.html">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Terms of Use - PetNudge">
@@ -391,9 +394,25 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 PetNudge. All rights reserved.</p>
+                <p>&copy; 2024-2026 PetNudge. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- RGPD Cookie Consent Banner -->
+    <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:1rem 1.5rem;z-index:9999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-size:0.9rem;">
+      <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;">
+        <p style="margin:0;flex:1;min-width:200px;">Ce site utilise des cookies pour ameliorer votre experience. <a href="privacy.html" style="color:#4ECDC4;text-decoration:underline;">Politique de confidentialite</a>.</p>
+        <div style="display:flex;gap:0.5rem;flex-shrink:0;">
+          <button onclick="acceptCookies()" style="background:#FF6B35;color:#fff;border:none;padding:0.5rem 1.2rem;border-radius:6px;cursor:pointer;font-weight:600;">Accepter</button>
+          <button onclick="refuseCookies()" style="background:transparent;color:#fff;border:1px solid #fff;padding:0.5rem 1.2rem;border-radius:6px;cursor:pointer;">Refuser</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function(){if(!localStorage.getItem('cookie_consent')){document.getElementById('cookie-banner').style.display='block';}})();
+      function acceptCookies(){localStorage.setItem('cookie_consent','accepted');document.getElementById('cookie-banner').style.display='none';}
+      function refuseCookies(){localStorage.setItem('cookie_consent','refused');document.getElementById('cookie-banner').style.display='none';}
+    </script>
 </body>
 </html>

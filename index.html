@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,9 @@
   <meta name="description" content="Create QR codes and NFC tags with the PetNudge app. Anyone who finds your pet can scan and call you instantly - no app needed for them.">
   <meta name="keywords" content="pet ID, lost pet, NFC pet tag, QR code pet, pet tracker, pet health app, dog tag, cat tag, find lost pet">
   <link rel="canonical" href="https://petnudge.fr/">
+  <link rel="alternate" hreflang="fr" href="https://petnudge.fr/">
+  <link rel="alternate" hreflang="en" href="https://petnudge.fr/">
+  <link rel="alternate" hreflang="x-default" href="https://petnudge.fr/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="PetNudge - Smart Pet ID + Lost Pet Recovery">
@@ -32,6 +35,8 @@
 
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://apps.apple.com">
+  <link rel="preload" as="style" href="styles.css">
+  <link rel="dns-prefetch" href="https://apps.apple.com">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -39,18 +44,69 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": "https://petnudge.fr/#org",
+        "@type": "LocalBusiness",
+        "@id": "https://petnudge.fr/#business",
         "name": "PetNudge",
         "url": "https://petnudge.fr/",
-        "logo": "https://petnudge.fr/logo.png"
+        "logo": "https://petnudge.fr/logo.png",
+        "image": "https://petnudge.fr/logo.png",
+        "description": "Application d'identification connectee pour animaux de compagnie. QR codes et tags NFC pour retrouver votre animal perdu instantanement.",
+        "email": "contactpetnudge@gmail.com",
+        "sameAs": [
+          "https://apps.apple.com/app/id6756539814"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "RO"
+        },
+        "priceRange": "$$"
       },
       {
         "@type": "WebSite",
         "@id": "https://petnudge.fr/#website",
         "url": "https://petnudge.fr/",
         "name": "PetNudge",
-        "publisher": {"@id": "https://petnudge.fr/#org"}
+        "description": "Smart Pet ID + Lost Pet Recovery",
+        "inLanguage": ["fr", "en"],
+        "publisher": {"@id": "https://petnudge.fr/#business"}
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://petnudge.fr/#app",
+        "name": "PetNudge",
+        "operatingSystem": "iOS",
+        "applicationCategory": "LifestyleApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "7-day free trial"
+        },
+        "downloadUrl": "https://apps.apple.com/app/id6756539814"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://petnudge.fr/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://petnudge.fr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://petnudge.fr/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Shop",
+            "item": "https://petnudge.fr/shop.html"
+          }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -58,18 +114,58 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How does PetNudge help if my pet is lost?",
+            "name": "Les personnes qui trouvent mon animal ont-elles besoin de l'application PetNudge ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "PetNudge uses QR and NFC tags so anyone who finds your pet can instantly contact you."
+              "text": "Non. Il suffit de scanner le QR code avec n'importe quel smartphone ou de toucher le tag NFC. Aucune application ni inscription requise. La personne voit vos coordonnees et peut vous appeler directement."
             }
           },
           {
             "@type": "Question",
-            "name": "Do I need a battery or an app?",
+            "name": "Quels telephones supportent les tags NFC ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No battery is required and the finder does not need an app. They just scan the tag."
+              "text": "Tous les iPhones a partir de l'iPhone 7, ainsi que la plupart des telephones Android depuis 2015. Pour les QR codes, tout smartphone avec un appareil photo fonctionne."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Est-ce que ca fonctionne sans internet ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le tag NFC declenche un appel telephonique, qui fonctionne sans internet. Les QR codes ouvrent une fiche contact qui peut necessiter une connexion, mais le numero de telephone apparait quand meme."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Que se passe-t-il quand quelqu'un scanne le tag de mon animal ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La personne voit le nom de votre animal et un bouton pour vous appeler. Si le Mode Perdu est actif, elle voit aussi une alerte urgente et le message de recompense que vous avez defini."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Puis-je utiliser ma puce electronique existante ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui ! PetNudge complete la puce electronique. Vous pouvez enregistrer le numero de puce dans l'application. Nous recommandons d'utiliser les deux : la puce pour l'identification permanente, NFC/QR pour le contact instantane."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les tags sont-ils etanches ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les autocollants NFC sont resistants a l'eau. Nous recommandons de les placer dans un support de protection ou d'utiliser un QR code plastifie pour la durabilite en exterieur."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Que se passe-t-il si j'annule mon abonnement ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vos profils d'animaux de base restent accessibles. Les QR codes et tags NFC deja crees continuent de fonctionner. Le Mode Perdu et les fonctions avancees necessitent un abonnement actif."
             }
           }
         ]
@@ -86,7 +182,7 @@
   <header class="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">
-        <img src="logo.png" alt="" class="header__logo-img" width="36" height="36">
+        <img src="logo.png" alt="PetNudge - Identification connectée pour animaux" class="header__logo-img" width="36" height="36">
         <span>PetNudge</span>
       </a>
 
@@ -612,7 +708,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="/" class="header__logo">
-            <img src="logo.png" alt="" class="header__logo-img" width="36" height="36">
+            <img src="logo.png" alt="PetNudge - Identification connectée pour animaux" class="header__logo-img" width="36" height="36">
             <span>PetNudge</span>
           </a>
           <p data-i18n="footer.tagline">Smart pet ID and health companion for modern pet owners.</p>
@@ -630,12 +726,13 @@
           <h4 data-i18n="footer.support">Support</h4>
           <nav class="footer__links">
             <a href="mailto:contactpetnudge@gmail.com" class="footer__link" data-i18n="footer.contact">Contact Us</a>
+            <span class="footer__link" style="opacity: 0.7; cursor: default;">contactpetnudge@gmail.com</span>
           </nav>
         </div>
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copyright">&copy; <span data-i18n="footer.copyright">2025 PetNudge. All rights reserved.</span></p>
+        <p class="footer__copyright">&copy; <span data-i18n="footer.copyright">2024-2026 PetNudge. All rights reserved.</span></p>
         <button type="button" class="lang-toggle" id="lang-toggle-footer" onclick="document.getElementById('lang-toggle').click()">
           <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"/>
@@ -658,7 +755,36 @@
     </div>
   </div>
 
+  <!-- RGPD Cookie Consent Banner -->
+  <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:1rem 1.5rem;z-index:9999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-size:0.9rem;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;">
+      <p style="margin:0;flex:1;min-width:200px;" id="cookie-text">
+        Ce site utilise des cookies pour ameliorer votre experience. En continuant, vous acceptez notre
+        <a href="privacy.html" style="color:#4ECDC4;text-decoration:underline;">politique de confidentialite</a>.
+      </p>
+      <div style="display:flex;gap:0.5rem;flex-shrink:0;">
+        <button onclick="acceptCookies()" style="background:#FF6B35;color:#fff;border:none;padding:0.5rem 1.2rem;border-radius:6px;cursor:pointer;font-weight:600;" id="cookie-accept">Accepter</button>
+        <button onclick="refuseCookies()" style="background:transparent;color:#fff;border:1px solid #fff;padding:0.5rem 1.2rem;border-radius:6px;cursor:pointer;" id="cookie-refuse">Refuser</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      if(!localStorage.getItem('cookie_consent')){
+        document.getElementById('cookie-banner').style.display='block';
+      }
+    })();
+    function acceptCookies(){
+      localStorage.setItem('cookie_consent','accepted');
+      document.getElementById('cookie-banner').style.display='none';
+    }
+    function refuseCookies(){
+      localStorage.setItem('cookie_consent','refused');
+      document.getElementById('cookie-banner').style.display='none';
+    }
+  </script>
+
   <!-- Scripts -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

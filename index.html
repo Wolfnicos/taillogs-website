@@ -522,73 +522,61 @@
     <section class="section section--gray" id="pricing">
       <div class="container">
         <header class="section__header">
-          <p class="section__label" data-i18n="pricing.label">Pricing</p>
-          <h2 class="section__title" data-i18n="pricing.title">Start with 7 days free</h2>
-          <p class="section__subtitle" data-i18n="pricing.subtitle">Try everything. No commitment. Cancel anytime.</p>
+          <p class="section__label" data-i18n="pricing.label">Tarifs</p>
+          <h2 class="section__title" data-i18n="pricing.title">Commencez avec 7 jours gratuits</h2>
+          <p class="section__subtitle" data-i18n="pricing.subtitle">Essayez tout. Sans engagement. Annulez à tout moment.</p>
         </header>
 
-        <div class="pricing__card">
-          <span class="pricing__badge" data-i18n="pricing.badge">7-Day Free Trial</span>
-          <h3 class="pricing__title" data-i18n="pricing.card.title">PetNudge</h3>
-          <p class="pricing__subtitle" data-i18n="pricing.card.subtitle">Full access to all features</p>
-
-          <ul class="pricing__features">
-            <li class="pricing__feature">
-              <svg class="pricing__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-              <span data-i18n="pricing.feature.1">QR Code & NFC tag generation</span>
-            </li>
-            <li class="pricing__feature">
-              <svg class="pricing__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-              <span data-i18n="pricing.feature.2">Lost Mode with scan tracking</span>
-            </li>
-            <li class="pricing__feature">
-              <svg class="pricing__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-              <span data-i18n="pricing.feature.3">AI health assistant</span>
-            </li>
-            <li class="pricing__feature">
-              <svg class="pricing__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-              <span data-i18n="pricing.feature.4">Unlimited pets</span>
-            </li>
-            <li class="pricing__feature">
-              <svg class="pricing__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-              <span data-i18n="pricing.feature.5">PDF health reports</span>
-            </li>
-            <li class="pricing__feature">
-              <svg class="pricing__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-              <span data-i18n="pricing.feature.6">Smart reminders</span>
-            </li>
-          </ul>
-
-          <div class="pricing__plans">
-            <div class="pricing__plan">
-              <span class="pricing__plan-name" data-i18n="pricing.plan.monthly">Monthly</span>
-              <span class="pricing__plan-price">4,99 €</span>
-              <span class="pricing__plan-period">/mois</span>
+        <div class="pricing-grid">
+          <!-- Monthly Plan -->
+          <div class="pricing-card">
+            <div class="pricing-card__header">
+              <h3 class="pricing-card__name" data-i18n="pricing.plan.monthly">Mensuel</h3>
+              <p class="pricing-card__desc" data-i18n="pricing.card.subtitle">Accès complet à toutes les fonctionnalités</p>
             </div>
-            <div class="pricing__plan pricing__plan--recommended">
-              <span class="pricing__plan-badge">Populaire</span>
-              <span class="pricing__plan-name" data-i18n="pricing.plan.yearly">Annual</span>
-              <span class="pricing__plan-price">39,99 €</span>
-              <span class="pricing__plan-period">/an</span>
-              <span class="pricing__plan-save">-33%</span>
-              <span class="pricing__plan-equiv">soit 3,33 €/mois</span>
+            <div class="pricing-card__price-block">
+              <span class="pricing-card__price">4,99 €</span>
+              <span class="pricing-card__period" data-i18n="pricing.period.month">/ mois</span>
             </div>
+            <ul class="pricing-card__features">
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.1">Génération QR Code & tag NFC</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.2">Mode Perdu avec suivi des scans</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.3">Assistant santé IA</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.4">Animaux illimités</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.5">Rapports de santé PDF</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.6">Rappels intelligents</span></li>
+            </ul>
+            <a href="https://apps.apple.com/app/id6756539814" class="btn btn--secondary btn--large pricing-card__btn" target="_blank" rel="noopener" data-i18n="pricing.cta">Commencer l'essai gratuit</a>
           </div>
 
-          <a href="https://apps.apple.com/app/id6756539814" class="btn btn--primary btn--large" target="_blank" rel="noopener" data-i18n="pricing.cta">Start Free Trial</a>
+          <!-- Annual Plan (Recommended) -->
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-card__ribbon" data-i18n="pricing.badge.popular">Populaire</div>
+            <div class="pricing-card__header">
+              <h3 class="pricing-card__name" data-i18n="pricing.plan.yearly">Annuel</h3>
+              <p class="pricing-card__desc" data-i18n="pricing.card.subtitle">Accès complet à toutes les fonctionnalités</p>
+            </div>
+            <div class="pricing-card__price-block">
+              <span class="pricing-card__price">39,99 €</span>
+              <span class="pricing-card__period" data-i18n="pricing.period.year">/ an</span>
+            </div>
+            <div class="pricing-card__savings">
+              <span class="pricing-card__save-badge">-33%</span>
+              <span class="pricing-card__equiv">soit 3,33 €/mois</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.1">Génération QR Code & tag NFC</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.2">Mode Perdu avec suivi des scans</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.3">Assistant santé IA</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.4">Animaux illimités</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.5">Rapports de santé PDF</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20" fill="#34C759"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.feature.6">Rappels intelligents</span></li>
+            </ul>
+            <a href="https://apps.apple.com/app/id6756539814" class="btn btn--primary btn--large pricing-card__btn" target="_blank" rel="noopener" data-i18n="pricing.cta">Commencer l'essai gratuit</a>
+          </div>
         </div>
+
+        <p class="pricing-note" data-i18n="pricing.note">Essai gratuit 7 jours inclus avec chaque forfait</p>
       </div>
     </section>
 

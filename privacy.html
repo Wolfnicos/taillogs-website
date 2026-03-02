@@ -22,257 +22,68 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.webp">
 
-    <style>
-        :root {
-            --primary: #FF6B35;
-            --primary-dark: #E55A2B;
-            --secondary: #4ECDC4;
-            --dark: #1a1a2e;
-            --light: #ffffff;
-            --gray: #6c757d;
-            --light-gray: #f8f9fa;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.8;
-            color: var(--dark);
-            background: var(--light);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: var(--light);
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-        }
-
-        nav a {
-            color: var(--dark);
-            text-decoration: none;
-            margin-left: 30px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .page-hero {
-            padding: 150px 0 60px;
-            background: linear-gradient(135deg, #fff5f2 0%, #e8f8f7 100%);
-            text-align: center;
-        }
-
-        .page-hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        .page-hero .last-updated {
-            color: var(--gray);
-            font-size: 0.95rem;
-        }
-
-        /* Content */
-        .page-content {
-            padding: 60px 0;
-            background: var(--light);
-        }
-
-        .content-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--light);
-            padding: 30px 35px;
-            border-radius: 20px;
-            margin: 0 0 50px;
-            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.2);
-        }
-
-        .highlight-box p {
-            margin: 0;
-            font-size: 1.1rem;
-        }
-
-        .page-content h2 {
-            font-size: 1.5rem;
-            margin: 50px 0 20px;
-            color: var(--dark);
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--light-gray);
-        }
-
-        .page-content h2:first-of-type {
-            margin-top: 0;
-        }
-
-        .page-content p {
-            margin-bottom: 20px;
-            color: #444;
-        }
-
-        .page-content ul {
-            margin-bottom: 20px;
-            padding-left: 0;
-            list-style: none;
-        }
-
-        .page-content li {
-            margin-bottom: 12px;
-            color: #444;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .page-content li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 8px;
-            height: 8px;
-            background: var(--secondary);
-            border-radius: 50%;
-        }
-
-        .page-content a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .page-content a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--light);
-            padding: 60px 0 30px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h4 {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-
-        .footer-section a {
-            display: block;
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            margin-bottom: 10px;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: var(--light);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.5);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .page-hero h1 {
-                font-size: 1.75rem;
-            }
-
-            nav {
-                display: none;
-            }
-
-            .highlight-box {
-                padding: 25px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">
-                <img src="logo.webp" alt="PetNudge Logo" class="logo-icon">
-                PetNudge
-            </a>
-            <nav>
-                <a href="/">Home</a>
-                <a href="shop.html">Shop</a>
-                <a href="blog/">Blog</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
-            </nav>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="/" class="header__logo">
+          <img src="logo.webp" alt="PetNudge" class="header__logo-img" width="36" height="36">
+          <span>PetNudge</span>
+        </a>
+        <nav class="header__nav" aria-label="Main navigation">
+          <ul class="header__nav-list">
+            <li><a href="/#features" class="header__nav-link" data-i18n="nav.features">Features</a></li>
+            <li><a href="/#how" class="header__nav-link" data-i18n="nav.how">How It Works</a></li>
+            <li><a href="/#pricing" class="header__nav-link" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="blog/" class="header__nav-link" data-i18n="nav.blog">Blog</a></li>
+            <li><a href="shop.html" class="header__nav-link" data-i18n="nav.shop">Shop</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
+            <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span id="lang-text">EN</span>
+          </button>
+          <button type="button" class="header__menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
         </div>
+      </div>
     </header>
 
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <button type="button" class="mobile-menu__close" id="menu-close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <nav class="mobile-menu__nav">
+        <a href="/#features" class="mobile-menu__link" data-i18n="nav.features">Features</a>
+        <a href="/#how" class="mobile-menu__link" data-i18n="nav.how">How It Works</a>
+        <a href="/#pricing" class="mobile-menu__link" data-i18n="nav.pricing">Pricing</a>
+        <a href="blog/" class="mobile-menu__link" data-i18n="nav.blog">Blog</a>
+        <a href="shop.html" class="mobile-menu__link" data-i18n="nav.shop">Shop</a>
+      </nav>
+    </div>
+
     <section class="page-hero">
-        <div class="container">
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Last updated: November 2025</p>
-        </div>
+      <div class="container">
+        <h1 class="page-hero__title">Privacy Policy</h1>
+        <p class="page-hero__subtitle">Last updated: November 2025</p>
+      </div>
     </section>
 
-    <main class="page-content">
-        <div class="content-container">
+    <main>
+        <div class="legal-content">
             <div class="highlight-box">
                 <p><strong>Your privacy is important to us.</strong> PetNudge stores all your pet data locally on your device. We do not collect, store, or share any personal information without your consent.</p>
             </div>
@@ -370,49 +181,53 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>PetNudge</h4>
-                    <p style="color: rgba(255,255,255,0.7);">Your Pet's Health Companion</p>
-                    <p style="color: rgba(255,255,255,0.5); margin-top: 10px;">Made with love for pet lovers everywhere</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Explore</h4>
-                    <a href="shop.html">NFC Medals</a>
-                    <a href="blog/">Blog</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Use</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <a href="mailto:contactpetnudge@gmail.com">Contact Us</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024-2026 PetNudge. All rights reserved.</p>
-            </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="/" class="header__logo">
+              <img src="logo.webp" alt="PetNudge" class="header__logo-img" width="36" height="36">
+              <span>PetNudge</span>
+            </a>
+            <p data-i18n="footer.tagline">Smart pet ID and health companion for modern pet owners.</p>
+          </div>
+          <div class="footer__section">
+            <h4 data-i18n="footer.legal">Legal</h4>
+            <nav class="footer__links">
+              <a href="privacy.html" class="footer__link" data-i18n="nav.privacy">Privacy Policy</a>
+              <a href="terms.html" class="footer__link">Terms of Use</a>
+            </nav>
+          </div>
+          <div class="footer__section">
+            <h4 data-i18n="footer.support">Support</h4>
+            <nav class="footer__links">
+              <a href="mailto:contactpetnudge@gmail.com" class="footer__link" data-i18n="footer.contact">Contact Us</a>
+              <span class="footer__link" style="opacity: 0.7; cursor: default;">contactpetnudge@gmail.com</span>
+            </nav>
+          </div>
         </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">&copy; <span data-i18n="footer.copyright">2024-2026 PetNudge. All rights reserved.</span></p>
+        </div>
+      </div>
     </footer>
 
     <!-- RGPD Cookie Consent Banner -->
-    <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:1rem 1.5rem;z-index:9999;box-shadow:0 -2px 10px rgba(0,0,0,0.3);font-size:0.9rem;">
-      <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;">
-        <p style="margin:0;flex:1;min-width:200px;">This site uses cookies to improve your experience. <a href="privacy.html" style="color:#4ECDC4;text-decoration:underline;">Privacy Policy</a>.</p>
-        <div style="display:flex;gap:0.5rem;flex-shrink:0;">
-          <button onclick="acceptCookies()" style="background:#FF6B35;color:#fff;border:none;padding:0.5rem 1.2rem;border-radius:6px;cursor:pointer;font-weight:600;">Accept</button>
-          <button onclick="refuseCookies()" style="background:transparent;color:#fff;border:1px solid #fff;padding:0.5rem 1.2rem;border-radius:6px;cursor:pointer;">Decline</button>
+    <div id="cookie-banner" class="cookie-banner">
+      <div class="cookie-banner__inner">
+        <p class="cookie-banner__text">This site uses cookies to improve your experience. <a href="privacy.html">Privacy Policy</a>.</p>
+        <div class="cookie-banner__actions">
+          <button onclick="acceptCookies()" class="cookie-banner__accept">Accept</button>
+          <button onclick="refuseCookies()" class="cookie-banner__decline">Decline</button>
         </div>
       </div>
     </div>
     <script>
-      (function(){if(!localStorage.getItem('cookie_consent')){document.getElementById('cookie-banner').style.display='block';}})();
+      (function(){if(!localStorage.getItem('cookie_consent')){document.getElementById('cookie-banner').style.display='flex';}})();
       function acceptCookies(){localStorage.setItem('cookie_consent','accepted');document.getElementById('cookie-banner').style.display='none';}
       function refuseCookies(){localStorage.setItem('cookie_consent','refused');document.getElementById('cookie-banner').style.display='none';}
     </script>
+
+    <script src="script.js"></script>
 </body>
 </html>

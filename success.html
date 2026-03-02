@@ -10,6 +10,54 @@
     <link rel="stylesheet" href="shop-styles.css">
 </head>
 <body class="success-page">
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="logo.webp" alt="PetNudge" class="header__logo-img" width="36" height="36">
+                <span>PetNudge</span>
+            </a>
+            <nav class="header__nav" aria-label="Main navigation">
+                <ul class="header__nav-list">
+                    <li><a href="/#features" class="header__nav-link" data-i18n="nav.features">Features</a></li>
+                    <li><a href="/#how" class="header__nav-link" data-i18n="nav.how">How It Works</a></li>
+                    <li><a href="/#pricing" class="header__nav-link" data-i18n="nav.pricing">Pricing</a></li>
+                    <li><a href="blog/" class="header__nav-link" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="shop.html" class="header__nav-link header__nav-link--active" data-i18n="nav.shop">Shop</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
+                    <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span id="lang-text">EN</span>
+                </button>
+                <button type="button" class="header__menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <button type="button" class="mobile-menu__close" id="menu-close" aria-label="Close menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+        <nav class="mobile-menu__nav">
+            <a href="/#features" class="mobile-menu__link" data-i18n="nav.features">Features</a>
+            <a href="/#how" class="mobile-menu__link" data-i18n="nav.how">How It Works</a>
+            <a href="/#pricing" class="mobile-menu__link" data-i18n="nav.pricing">Pricing</a>
+            <a href="blog/" class="mobile-menu__link" data-i18n="nav.blog">Blog</a>
+            <a href="shop.html" class="mobile-menu__link" data-i18n="nav.shop">Shop</a>
+        </nav>
+    </div>
     <div class="success-container">
         <div class="success-content">
             <!-- Success Icon -->

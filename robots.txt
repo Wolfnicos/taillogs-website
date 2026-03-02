@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /success.html
 
 Sitemap: https://petnudge.fr/sitemap.xml

@@ -265,7 +265,7 @@ function fallbackToEmail(product, custom) {
     const subject = encodeURIComponent(`Commande: ${productNames[product] || product}`);
     const body = encodeURIComponent(`Bonjour,\n\nJe souhaite commander:\n${productNames[product] || product}\n\nPersonnalisation:\n- Nom de l'animal: ${petName}\n- Couleur: ${color}\n- Icône: ${icon}\n\nAdresse de livraison:\n\n\nMerci!\n\nCordialement`);
 
-    window.location.href = `mailto:contact@petnudge.fr?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:contactpetnudge@gmail.com?subject=${subject}&body=${body}`;
 }
 
 /**

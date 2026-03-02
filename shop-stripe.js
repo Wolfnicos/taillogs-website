@@ -1,83 +1,50 @@
 /**
- * PetNudge Shop - Stripe Integration
+ * PetNudge Shop - Stripe Payment Links Integration
  *
  * ============================================
- * INSTRUCȚIUNI PENTRU CONFIGURARE STRIPE:
+ * INSTRUCȚIUNI PENTRU CONFIGURARE:
  * ============================================
  *
  * 1. Creează cont pe https://dashboard.stripe.com
  *
- * 2. Creează 4 produse în Stripe Dashboard:
- *    - Dashboard → Products → Add product
- *    - Nume: "Tag NFC Premium - Patte (30mm)" - Preț: 14.99 EUR
- *    - Nume: "Tag NFC Premium - Os (35mm)" - Preț: 14.99 EUR
- *    - Nume: "Tag NFC Premium - Coeur (28mm)" - Preț: 14.99 EUR
- *    - Nume: "Tag NFC Premium - Classique (32mm)" - Preț: 14.99 EUR
+ * 2. Creează 2 Payment Links în Stripe Dashboard:
+ *    - Dashboard → Payment Links → + New
  *
- * 3. Pentru fiecare produs, copiază Price ID:
- *    - Click pe produs → Pricing → Copy price ID (începe cu "price_")
+ *    Link 1: "1 Médaille NFC Personnalisée 34mm"
+ *      - Preț: 19.99 EUR (one-time)
+ *      - Shipping: activa "Collect shipping address"
+ *        → Allowed countries: FR, DE, BE, ES, IT, NL, PT, AT, CH, LU, IE, RO, PL, etc.
+ *      - Custom fields (Settings → After payment):
+ *        → Add custom field 1: "Nom de l'animal" (text, required)
+ *        → Add custom field 2: "Couleur (Noir/Bleu)" (text, required)
+ *        → Add custom field 3: "Icône (Coeur/Os/Étoile/Patte)" (text, required)
+ *      - After payment → Redirect: https://petnudge.fr/success.html
+ *      - Copiază link-ul generat (ex: https://buy.stripe.com/XXXXX)
  *
- * 4. Copiază Publishable Key:
- *    - Dashboard → Developers → API Keys → Publishable key (începe cu "pk_")
+ *    Link 2: "Pack 2 Médailles NFC Personnalisées 34mm"
+ *      - Preț: 34.99 EUR (one-time)
+ *      - Aceleași setări ca Link 1
+ *      - Copiază link-ul generat
  *
- * 5. Înlocuiește valorile PLACEHOLDER de mai jos cu cheile tale reale
- *
- * 6. Prețul include livrarea pentru Franța (all-in)
- *    - Pentru restul Europei, configurează Shipping în Stripe: 3€
+ * 3. Înlocuiește URL-urile PLACEHOLDER de mai jos cu link-urile tale reale
  *
  * ============================================
  */
 
 // ============================================
-// ⚠️ CONFIGURARE STRIPE - ÎNLOCUIEȘTE ACESTE VALORI
+// ⚠️ CONFIGURARE - ÎNLOCUIEȘTE CU LINK-URILE TALE
 // ============================================
 const STRIPE_CONFIG = {
-    // Înlocuiește cu Publishable Key din Stripe Dashboard
-    // Format: pk_live_XXXXXXXXXXXXXXXXXXXX sau pk_test_XXXXXXXXXXXXXXXXXXXX
-    publishableKey: 'pk_test_51StWUq8skJDhKugj9Kct7bGdlrPYEtkyAzd2hUPieWXAzNho3ftqFrDeKft0Sk4HzayYxv4Hwh96Q2mvCrLBNhVR00z48hCwnC',
-
-    // Înlocuiește cu Price IDs din Stripe Dashboard
-    // Format: price_XXXXXXXXXXXXXXXXXXXXXXXX
-    priceIds: {
-        single: 'price_1T6U7C8skJDhKugj2eW5XfG1',  // 1 Médaille NFC 34mm - 19.99€
-        pack2: 'price_1T6U818skJDhKugjur15PgrG'    // Pack 2 Médailles NFC 34mm - 34.99€
+    paymentLinks: {
+        // Înlocuiește cu Payment Link-urile tale din Stripe Dashboard
+        // Format: https://buy.stripe.com/XXXXX
+        single: 'https://buy.stripe.com/PLACEHOLDER_SINGLE',  // 1 Médaille - 19.99€
+        pack2: 'https://buy.stripe.com/PLACEHOLDER_PACK2'     // Pack 2 - 34.99€
     },
 
-    // URLs pentru redirect după plată
-    successUrl: 'https://petnudge.fr/success.html?session_id={CHECKOUT_SESSION_ID}',
-    cancelUrl: 'https://petnudge.fr/shop.html?cancelled=true',
-
-    // Țări pentru livrare (coduri ISO)
-    shippingCountries: [
-        'FR', // France
-        'DE', // Germany
-        'BE', // Belgium
-        'ES', // Spain
-        'IT', // Italy
-        'NL', // Netherlands
-        'PT', // Portugal
-        'AT', // Austria
-        'CH', // Switzerland
-        'LU', // Luxembourg
-        'IE', // Ireland
-        'RO', // Romania
-        'PL', // Poland
-        'CZ', // Czech Republic
-        'SK', // Slovakia
-        'HU', // Hungary
-        'SI', // Slovenia
-        'HR', // Croatia
-        'BG', // Bulgaria
-        'GR', // Greece
-        'SE', // Sweden
-        'DK', // Denmark
-        'FI'  // Finland
-    ]
+    cancelUrl: 'https://petnudge.fr/shop.html?cancelled=true'
 };
 // ============================================
-
-// Variabilă globală Stripe
-let stripe = null;
 
 // Selecții personalizare
 const customization = {
@@ -89,28 +56,24 @@ const customization = {
  * Selectează o opțiune din formularul de personalizare
  */
 function selectOption(element, type) {
-    // Deselectează toate opțiunile din același grup
     const group = element.closest('.custom-options');
     group.querySelectorAll('.custom-option').forEach(opt => {
         opt.classList.remove('selected');
         opt.classList.remove('error');
     });
 
-    // Selectează opțiunea curentă
     element.classList.add('selected');
     customization[type] = element.dataset.value;
 }
 
 /**
  * Validează formularul de personalizare
- * Returnează obiectul cu datele sau null dacă invalid
  */
 function validateCustomization() {
     let valid = true;
     const petNameInput = document.getElementById('pet-name');
     const petName = petNameInput ? petNameInput.value.trim() : '';
 
-    // Validare nume
     if (!petName) {
         if (petNameInput) {
             petNameInput.classList.add('error');
@@ -121,13 +84,11 @@ function validateCustomization() {
         if (petNameInput) petNameInput.classList.remove('error');
     }
 
-    // Validare culoare
     if (!customization.color) {
         document.querySelectorAll('.custom-colors .custom-option').forEach(opt => opt.classList.add('error'));
         valid = false;
     }
 
-    // Validare iconiță
     if (!customization.icon) {
         document.querySelectorAll('.custom-icons .custom-option').forEach(opt => opt.classList.add('error'));
         valid = false;
@@ -158,34 +119,13 @@ function validateCustomization() {
 }
 
 /**
- * Inițializează Stripe
- */
-function initStripe() {
-    // Verifică dacă cheia este configurată
-    if (STRIPE_CONFIG.publishableKey.includes('XXXX')) {
-        console.warn('⚠️ Stripe nu este configurat încă.');
-        console.info('📝 Urmează instrucțiunile din shop-stripe.js pentru configurare.');
-        return false;
-    }
-
-    try {
-        stripe = Stripe(STRIPE_CONFIG.publishableKey);
-        console.log('✅ Stripe inițializat cu succes');
-        return true;
-    } catch (error) {
-        console.error('❌ Eroare la inițializarea Stripe:', error);
-        return false;
-    }
-}
-
-/**
- * Configurează butoanele de cumpărare
+ * Configurează butoanele de cumpărare cu Payment Links
  */
 function setupBuyButtons() {
     const buttons = document.querySelectorAll('.buy-button');
 
     buttons.forEach(button => {
-        button.addEventListener('click', async (e) => {
+        button.addEventListener('click', (e) => {
             e.preventDefault();
 
             // Validare personalizare
@@ -193,55 +133,30 @@ function setupBuyButtons() {
             if (!custom) return;
 
             const product = button.dataset.product;
-            const priceId = STRIPE_CONFIG.priceIds[product];
+            const paymentLink = STRIPE_CONFIG.paymentLinks[product];
 
-            // Verifică configurarea Stripe
-            if (!stripe) {
-                if (!initStripe()) {
-                    // Fallback la email dacă Stripe nu e configurat
-                    fallbackToEmail(product, custom);
-                    return;
-                }
-            }
-
-            // Verifică Price ID
-            if (!priceId || priceId.includes('XXXX')) {
-                console.warn('⚠️ Price ID nu este configurat pentru:', product);
+            // Verifică dacă link-ul e configurat
+            if (!paymentLink || paymentLink.includes('PLACEHOLDER')) {
+                console.warn('⚠️ Payment Link nu este configurat pentru:', product);
                 fallbackToEmail(product, custom);
                 return;
             }
 
-            // Arată loading state
-            setButtonLoading(button, true);
+            // Salvează personalizarea în localStorage pentru success page
+            localStorage.setItem('petnudge-custom', JSON.stringify(custom));
 
-            try {
-                // Salvează personalizarea în localStorage pentru success page
-                localStorage.setItem('petnudge-custom', JSON.stringify(custom));
+            // Construiește URL-ul cu parametri pentru pre-fill
+            // client_reference_id permite identificarea comenzii
+            const colorNames = { noir: 'Noir', bleu: 'Bleu' };
+            const iconNames = { coeur: 'Coeur', os: 'Os', etoile: 'Étoile', patte: 'Patte' };
 
-                // Redirect la Stripe Checkout
-                const { error } = await stripe.redirectToCheckout({
-                    lineItems: [{
-                        price: priceId,
-                        quantity: 1
-                    }],
-                    mode: 'payment',
-                    successUrl: STRIPE_CONFIG.successUrl,
-                    cancelUrl: STRIPE_CONFIG.cancelUrl,
-                    shippingAddressCollection: {
-                        allowedCountries: STRIPE_CONFIG.shippingCountries
-                    },
-                    billingAddressCollection: 'required',
-                    locale: getStripeLocale()
-                });
+            const ref = `${custom.petName}|${colorNames[custom.color] || custom.color}|${iconNames[custom.icon] || custom.icon}`;
+            const url = new URL(paymentLink);
+            url.searchParams.set('client_reference_id', ref);
+            url.searchParams.set('locale', getStripeLocale());
 
-                if (error) {
-                    throw error;
-                }
-            } catch (error) {
-                console.error('Erreur Stripe:', error);
-                showToast(getErrorMessage(error), 'error');
-                setButtonLoading(button, false);
-            }
+            // Redirect la Stripe Payment Link
+            window.location.href = url.toString();
         });
     });
 }
@@ -269,23 +184,7 @@ function fallbackToEmail(product, custom) {
 }
 
 /**
- * Setează starea de loading pe buton
- */
-function setButtonLoading(button, isLoading) {
-    if (isLoading) {
-        button.dataset.originalHtml = button.innerHTML;
-        button.innerHTML = '<span class="loading-spinner"></span> <span>Chargement...</span>';
-        button.disabled = true;
-        button.classList.add('loading');
-    } else {
-        button.innerHTML = button.dataset.originalHtml || button.innerHTML;
-        button.disabled = false;
-        button.classList.remove('loading');
-    }
-}
-
-/**
- * Obține locale-ul pentru Stripe bazat pe limba curentă
+ * Obține locale-ul pentru Stripe
  */
 function getStripeLocale() {
     const lang = document.documentElement.lang ||
@@ -293,9 +192,7 @@ function getStripeLocale() {
                  navigator.language.split('-')[0] ||
                  'fr';
 
-    // Stripe supported locales
     const stripeLocales = ['bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'et', 'fi', 'fr', 'hr', 'hu', 'it', 'ja', 'lt', 'lv', 'ms', 'mt', 'nb', 'nl', 'pl', 'pt', 'ro', 'sk', 'sl', 'sv', 'zh'];
-
     return stripeLocales.includes(lang) ? lang : 'auto';
 }
 
@@ -304,7 +201,6 @@ function getStripeLocale() {
  */
 function getErrorMessage(error) {
     const lang = document.documentElement.lang || 'fr';
-
     const messages = {
         fr: "Une erreur est survenue. Veuillez réessayer ou nous contacter.",
         en: "An error occurred. Please try again or contact us.",
@@ -316,7 +212,6 @@ function getErrorMessage(error) {
         ja: "エラーが発生しました。もう一度お試しいただくか、お問い合わせください。",
         zh: "发生错误。请重试或联系我们。"
     };
-
     return messages[lang] || messages.fr;
 }
 
@@ -339,7 +234,6 @@ function showToast(message, type = 'info') {
 
     container.appendChild(toast);
 
-    // Auto-remove după 6 secunde
     setTimeout(() => {
         toast.classList.add('toast-fade-out');
         setTimeout(() => toast.remove(), 300);
@@ -347,7 +241,7 @@ function showToast(message, type = 'info') {
 }
 
 /**
- * Creează containerul pentru toast-uri dacă nu există
+ * Creează containerul pentru toast-uri
  */
 function createToastContainer() {
     const container = document.createElement('div');
@@ -364,7 +258,6 @@ function checkCancelledOrder() {
 
     if (params.get('cancelled') === 'true') {
         const lang = document.documentElement.lang || 'fr';
-
         const messages = {
             fr: "Votre commande a été annulée. N'hésitez pas à réessayer!",
             en: "Your order was cancelled. Feel free to try again!",
@@ -378,24 +271,7 @@ function checkCancelledOrder() {
         };
 
         showToast(messages[lang] || messages.fr, 'info');
-
-        // Curăță URL-ul
         window.history.replaceState({}, '', window.location.pathname);
-    }
-}
-
-/**
- * Mobile menu toggle
- */
-function setupMobileMenu() {
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const nav = document.querySelector('.shop-nav');
-
-    if (menuBtn && nav) {
-        menuBtn.addEventListener('click', () => {
-            menuBtn.classList.toggle('active');
-            nav.classList.toggle('active');
-        });
     }
 }
 
@@ -408,10 +284,7 @@ function setupSmoothScroll() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
@@ -421,22 +294,10 @@ function setupSmoothScroll() {
 // INIȚIALIZARE
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Inițializează Stripe
-    initStripe();
-
-    // Configurează butoanele de cumpărare
     setupBuyButtons();
-
-    // Verifică comenzi anulate
     checkCancelledOrder();
-
-    // Configurează meniul mobil
-    setupMobileMenu();
-
-    // Configurează smooth scroll
     setupSmoothScroll();
 
-    // Clear error pe input personalizare
     const petNameInput = document.getElementById('pet-name');
     if (petNameInput) {
         petNameInput.addEventListener('input', () => {

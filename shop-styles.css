@@ -1046,9 +1046,341 @@
 }
 
 /* ============================================
+   PRODUCT SHOWCASE (New Design)
+   ============================================ */
+.product-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Gallery */
+.product-gallery__main {
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+
+.product-gallery__main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.product-gallery__thumbs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.product-gallery__thumb {
+    flex: 0 0 auto;
+    width: 72px;
+    height: 54px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    padding: 0;
+    transition: border-color 0.2s, opacity 0.2s;
+    opacity: 0.6;
+}
+
+.product-gallery__thumb:hover {
+    opacity: 0.9;
+}
+
+.product-gallery__thumb.active {
+    border-color: var(--shop-primary);
+    opacity: 1;
+}
+
+.product-gallery__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Product Details */
+.product-tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 107, 53, 0.2);
+    color: var(--shop-primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.product-details__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--shop-light);
+    margin-bottom: 0.5rem;
+}
+
+.product-details__subtitle {
+    color: var(--shop-gray);
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+}
+
+.product-details__specs-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-details__specs-inline span {
+    padding: 0.3rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--shop-gray-light);
+}
+
+/* Product Highlights */
+.product-details__highlights {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0;
+}
+
+.product-details__highlights li {
+    padding: 0.6rem 0;
+    color: var(--shop-gray-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.product-details__highlights li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--shop-success);
+    font-weight: 700;
+}
+
+.product-details__highlights li strong {
+    color: var(--shop-light);
+}
+
+/* Product Offers (Pricing) */
+.product-offers {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    position: relative;
+    transition: border-color 0.2s;
+}
+
+.product-offer:hover {
+    border-color: rgba(255, 107, 53, 0.3);
+}
+
+.product-offer--best {
+    border-color: var(--shop-primary);
+    background: rgba(255, 107, 53, 0.08);
+}
+
+.product-offer__badge {
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background: var(--shop-success);
+    color: var(--shop-darker);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+}
+
+.product-offer__info h4 {
+    color: var(--shop-light);
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+}
+
+.product-offer__info p {
+    color: var(--shop-gray);
+    font-size: 0.8rem;
+}
+
+.product-offer__price-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.product-offer__price {
+    text-align: right;
+}
+
+.price-amount {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--shop-light);
+    line-height: 1.1;
+}
+
+.price-old {
+    text-decoration: line-through;
+    color: var(--shop-gray);
+    font-size: 0.85rem;
+}
+
+.price-shipping {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--shop-success);
+    font-weight: 600;
+}
+
+/* ============================================
+   COMBO SECTION (App + Medal)
+   ============================================ */
+.combo-section {
+    padding: 5rem 2rem;
+    background: var(--shop-darker);
+}
+
+.combo-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.combo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.combo-item {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.combo-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.combo-item h4 {
+    color: var(--shop-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.combo-item p {
+    color: var(--shop-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.combo-cta {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.combo-appstore img {
+    transition: transform 0.2s;
+}
+
+.combo-appstore:hover img {
+    transform: scale(1.05);
+}
+
+.combo-free {
+    color: var(--shop-gray);
+    font-size: 0.85rem;
+}
+
+/* CTA Prices */
+.cta-prices {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button--outline {
+    background: transparent !important;
+    border: 2px solid var(--shop-light);
+    color: var(--shop-light) !important;
+}
+
+.cta-button--outline:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 768px) {
+    .product-showcase {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .combo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-offer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-offer__price-action {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .product-offer__price {
+        text-align: center;
+    }
+
+    .buy-button {
+        width: 100%;
+    }
+
+    .cta-prices {
+        flex-direction: column;
+        align-items: center;
+    }
     .shop-header-container {
         padding: 0.75rem 1rem;
     }

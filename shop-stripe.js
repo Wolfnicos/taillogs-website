@@ -39,10 +39,8 @@ const STRIPE_CONFIG = {
     // Înlocuiește cu Price IDs din Stripe Dashboard
     // Format: price_XXXXXXXXXXXXXXXXXXXXXXXX
     priceIds: {
-        paw: 'price_XXXXXXXXXXXXXXXXXXXXXXXX',     // Tag Patte 30mm - 14.99€
-        bone: 'price_XXXXXXXXXXXXXXXXXXXXXXXX',    // Tag Os 35mm - 14.99€
-        heart: 'price_XXXXXXXXXXXXXXXXXXXXXXXX',   // Tag Coeur 28mm - 14.99€
-        round: 'price_XXXXXXXXXXXXXXXXXXXXXXXX'    // Tag Classique 32mm - 14.99€
+        single: 'price_XXXXXXXXXXXXXXXXXXXXXXXX',  // 1 Médaille NFC 34mm - 19.99€
+        pack2: 'price_XXXXXXXXXXXXXXXXXXXXXXXX'    // Pack 2 Médailles NFC 34mm - 34.99€
     },
 
     // URLs pentru redirect după plată
@@ -168,14 +166,12 @@ function setupBuyButtons() {
  */
 function fallbackToEmail(product) {
     const productNames = {
-        paw: 'Tag NFC Premium - Patte (30mm) - 14.99€',
-        bone: 'Tag NFC Premium - Os (35mm) - 14.99€',
-        heart: 'Tag NFC Premium - Coeur (28mm) - 14.99€',
-        round: 'Tag NFC Premium - Classique (32mm) - 14.99€'
+        single: 'Médaille NFC Personnalisée 34mm - 19.99€',
+        pack2: 'Pack 2 Médailles NFC Personnalisées 34mm - 34.99€'
     };
 
     const subject = encodeURIComponent(`Commande: ${productNames[product] || product}`);
-    const body = encodeURIComponent(`Bonjour,\n\nJe souhaite commander:\n${productNames[product] || product}\n\nMerci de me contacter pour finaliser ma commande.\n\nCordialement`);
+    const body = encodeURIComponent(`Bonjour,\n\nJe souhaite commander:\n${productNames[product] || product}\n\nPersonnalisation:\n- Nom de l'animal: \n- Couleur (Noir / Bleu): \n- Icône (Coeur / Os / Étoile / Patte): \n\nAdresse de livraison:\n\n\nMerci!\n\nCordialement`);
 
     window.location.href = `mailto:contact@petnudge.fr?subject=${subject}&body=${body}`;
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Médailles NFC Premium | PetNudge</title>
-    <meta name="description" content="Médailles NFC intelligentes pour protéger votre animal. Fabriquées en France, résistantes à l'eau. Livraison rapide.">
+    <title>Médaille NFC Personnalisée pour Animaux | PetNudge</title>
+    <meta name="description" content="Médaille NFC personnalisée 34mm avec le nom de votre animal. Impression 3D premium, résistante à l'eau. Fabriquée en France. 19,99 € livraison incluse.">
     <link rel="icon" type="image/png" href="logo.webp">
     <link rel="canonical" href="https://petnudge.fr/shop.html">
     <link rel="alternate" hreflang="fr" href="https://petnudge.fr/shop.html">
@@ -19,11 +19,11 @@
     <link rel="alternate" hreflang="x-default" href="https://petnudge.fr/shop.html">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Médailles NFC Premium | PetNudge">
-    <meta property="og:description" content="Médailles NFC intelligentes pour protéger votre animal. Fabriquées en France.">
-    <meta property="og:image" content="https://petnudge.fr/logo.webp">
+    <meta property="og:title" content="Médaille NFC Personnalisée | PetNudge">
+    <meta property="og:description" content="Médaille NFC personnalisée avec le nom de votre animal. Fabrication française, 19,99 €.">
+    <meta property="og:image" content="https://petnudge.fr/images/medal-black-heart.webp">
     <meta property="og:url" content="https://petnudge.fr/shop.html">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="product">
 
     <!-- Stripe.js -->
     <script src="https://js.stripe.com/v3/"></script>
@@ -35,53 +35,42 @@
       "@graph": [
         {
           "@type": "Product",
-          "name": "Medaille NFC PetNudge - Patte",
-          "description": "Medaille NFC intelligente en forme de patte pour animaux de compagnie. Fabrication francaise, plastique ASA premium resistant aux UV et a la chaleur. NFC + QR Code integres.",
+          "name": "Médaille NFC PetNudge - Personnalisée",
+          "description": "Médaille NFC personnalisée 34mm pour animaux de compagnie. Impression 3D premium en France, plastique ASA résistant aux UV et à l'eau. NFC + QR Code intégrés. Personnalisée avec le nom de votre animal et l'icône de votre choix.",
           "brand": {"@type": "Brand", "name": "PetNudge"},
+          "image": [
+            "https://petnudge.fr/images/medal-black-heart.webp",
+            "https://petnudge.fr/images/medal-blue-heart.webp",
+            "https://petnudge.fr/images/medal-black-bone.webp",
+            "https://petnudge.fr/images/medal-black-paw.webp"
+          ],
           "offers": {
             "@type": "Offer",
-            "price": "14.99",
+            "price": "19.99",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock",
             "shippingDetails": {
               "@type": "OfferShippingDetails",
               "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "EUR"},
+              "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "FR"},
               "deliveryTime": {"@type": "ShippingDeliveryTime", "businessDays": {"@type": "QuantitativeValue", "minValue": 3, "maxValue": 5}}
             }
-          }
+          },
+          "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Diamètre", "value": "34mm"},
+            {"@type": "PropertyValue", "name": "Matériau", "value": "ASA Premium"},
+            {"@type": "PropertyValue", "name": "Technologie", "value": "NFC NTAG215"},
+            {"@type": "PropertyValue", "name": "Fabrication", "value": "France"}
+          ]
         },
         {
           "@type": "Product",
-          "name": "Medaille NFC PetNudge - Os",
-          "description": "Medaille NFC intelligente en forme d'os pour animaux de compagnie. 35mm, fabrication francaise, plastique ASA premium.",
+          "name": "Pack 2 Médailles NFC PetNudge",
+          "description": "Pack de 2 médailles NFC personnalisées 34mm. Économisez 5 € par rapport à l'achat unitaire.",
           "brand": {"@type": "Brand", "name": "PetNudge"},
           "offers": {
             "@type": "Offer",
-            "price": "14.99",
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Product",
-          "name": "Medaille NFC PetNudge - Coeur",
-          "description": "Medaille NFC intelligente en forme de coeur pour animaux de compagnie. 28mm, fabrication francaise, plastique ASA premium.",
-          "brand": {"@type": "Brand", "name": "PetNudge"},
-          "offers": {
-            "@type": "Offer",
-            "price": "14.99",
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Product",
-          "name": "Medaille NFC PetNudge - Classique",
-          "description": "Medaille NFC intelligente classique minimaliste pour animaux de compagnie. 32mm, fabrication francaise, plastique ASA premium.",
-          "brand": {"@type": "Brand", "name": "PetNudge"},
-          "offers": {
-            "@type": "Offer",
-            "price": "14.99",
+            "price": "34.99",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock"
           }
@@ -91,7 +80,7 @@
     </script>
 
     <link rel="stylesheet" href="styles.css?v=3">
-    <link rel="stylesheet" href="shop-styles.css">
+    <link rel="stylesheet" href="shop-styles.css?v=2">
 </head>
 <body class="shop-page">
     <!-- HEADER -->
@@ -103,9 +92,9 @@
             </a>
             <nav class="shop-nav">
                 <a href="index.html" data-i18n="shop.nav.home">Accueil</a>
-                <a href="#products" data-i18n="shop.nav.products">Produits</a>
+                <a href="#product" data-i18n="shop.nav.products">Produit</a>
+                <a href="#how" data-i18n="shop.nav.how">Comment ça marche</a>
                 <a href="#faq" data-i18n="shop.nav.faq">FAQ</a>
-                <a href="mailto:contact@petnudge.fr" data-i18n="shop.nav.contact">Contact</a>
             </nav>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
                 <span></span>
@@ -118,8 +107,8 @@
     <!-- HERO SECTION -->
     <section class="shop-hero">
         <div class="shop-hero-content">
-            <h1 data-i18n="shop.hero.title">Protégez votre animal avec une médaille intelligente</h1>
-            <p class="shop-hero-subtitle" data-i18n="shop.hero.subtitle">Technologie NFC + QR Code intégrée. Un simple tap suffit pour vous contacter.</p>
+            <h1 data-i18n="shop.hero.title">La médaille qui protège votre animal</h1>
+            <p class="shop-hero-subtitle" data-i18n="shop.hero.subtitle">Personnalisée avec son nom. Un simple scan NFC suffit pour vous contacter instantanément.</p>
 
             <!-- Trust badges -->
             <div class="trust-badges-hero">
@@ -128,123 +117,191 @@
                     <span data-i18n="shop.trust.france">Fabriqué en France</span>
                 </div>
                 <div class="trust-badge">
-                    <span class="trust-icon">🔒</span>
-                    <span data-i18n="shop.trust.secure">Paiement sécurisé</span>
+                    <span class="trust-icon">✨</span>
+                    <span data-i18n="shop.trust.custom">Personnalisable</span>
                 </div>
                 <div class="trust-badge">
                     <span class="trust-icon">🚚</span>
-                    <span data-i18n="shop.trust.shipping">Livraison 3-5 jours</span>
+                    <span data-i18n="shop.trust.shipping">Livraison gratuite</span>
                 </div>
                 <div class="trust-badge">
-                    <span class="trust-icon">↩️</span>
-                    <span data-i18n="shop.trust.refund">Satisfait ou remboursé</span>
+                    <span class="trust-icon">📱</span>
+                    <span data-i18n="shop.trust.app">App gratuite incluse</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRODUCTS SECTION -->
-    <section id="products" class="products-section">
+    <!-- PRODUCT SECTION -->
+    <section id="product" class="products-section">
         <div class="products-container">
-            <h2 class="section-title" data-i18n="shop.products.title">Choisissez votre style</h2>
-            <p class="section-subtitle" data-i18n="shop.products.subtitle">Toutes nos médailles incluent la technologie NFC + QR Code</p>
 
-            <div class="products-grid products-grid-4">
-                <!-- PAW -->
-                <div class="product-card popular">
-                    <div class="popular-badge" data-i18n="shop.badge.popular">PLUS VENDU</div>
-                    <div class="product-image-container">
-                        <div class="product-image-placeholder shape-paw">
-                            <div class="shape-visual">
-                                <span class="shape-icon">🐾</span>
-                            </div>
-                        </div>
+            <!-- Product Gallery + Info -->
+            <div class="product-showcase">
+                <!-- Photo Gallery -->
+                <div class="product-gallery">
+                    <div class="product-gallery__main">
+                        <img src="images/medal-black-heart.webp" alt="Médaille NFC PetNudge personnalisée - noir avec coeur" id="gallery-main" width="800" height="600" loading="eager">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title" data-i18n="shop.product.paw.title">Patte</h3>
-                        <p class="product-size">30mm</p>
-                        <p class="product-description" data-i18n="shop.product.paw.desc">La forme emblématique - parfaite pour tous les animaux</p>
-                        <div class="product-price-container">
-                            <span class="product-price">14,99 €</span>
-                            <span class="product-shipping free" data-i18n="shop.shipping.free">Livraison gratuite</span>
-                        </div>
-                        <button class="buy-button" data-product="paw" data-price="1499" data-i18n="shop.buy">
-                            <span class="btn-icon">🛒</span>
-                            <span class="btn-text">Acheter maintenant</span>
+                    <div class="product-gallery__thumbs">
+                        <button class="product-gallery__thumb active" onclick="changeGalleryImage(this, 'images/medal-black-heart.webp', 'Médaille noire avec coeur')">
+                            <img src="images/medal-black-heart.webp" alt="Noir - Coeur" width="100" height="75" loading="lazy">
+                        </button>
+                        <button class="product-gallery__thumb" onclick="changeGalleryImage(this, 'images/medal-blue-heart.webp', 'Médaille bleue avec coeur')">
+                            <img src="images/medal-blue-heart.webp" alt="Bleu - Coeur" width="100" height="75" loading="lazy">
+                        </button>
+                        <button class="product-gallery__thumb" onclick="changeGalleryImage(this, 'images/medal-black-bone.webp', 'Médaille noire avec os')">
+                            <img src="images/medal-black-bone.webp" alt="Noir - Os" width="100" height="75" loading="lazy">
+                        </button>
+                        <button class="product-gallery__thumb" onclick="changeGalleryImage(this, 'images/medal-black-paw.webp', 'Médaille noire avec patte')">
+                            <img src="images/medal-black-paw.webp" alt="Noir - Patte" width="100" height="75" loading="lazy">
+                        </button>
+                        <button class="product-gallery__thumb" onclick="changeGalleryImage(this, 'images/medal-black-star.webp', 'Médaille noire avec étoile')">
+                            <img src="images/medal-black-star.webp" alt="Noir - Étoile" width="100" height="75" loading="lazy">
+                        </button>
+                        <button class="product-gallery__thumb" onclick="changeGalleryImage(this, 'images/medal-blue-back.webp', 'Dos de la médaille - NFC')">
+                            <img src="images/medal-blue-back.webp" alt="Dos - NFC" width="100" height="75" loading="lazy">
                         </button>
                     </div>
                 </div>
 
-                <!-- BONE -->
-                <div class="product-card">
-                    <div class="product-image-container">
-                        <div class="product-image-placeholder shape-bone">
-                            <div class="shape-visual">
-                                <span class="shape-icon">🦴</span>
+                <!-- Product Info -->
+                <div class="product-details">
+                    <span class="product-tag">NFC + QR Code</span>
+                    <h2 class="product-details__title" data-i18n="shop.product.title">Médaille NFC Personnalisée</h2>
+                    <p class="product-details__subtitle" data-i18n="shop.product.subtitle">Le nom de votre animal gravé + puce NFC intégrée</p>
+
+                    <div class="product-details__specs-inline">
+                        <span>34mm</span>
+                        <span>ASA Premium</span>
+                        <span>Résistant à l'eau</span>
+                        <span>Made in France</span>
+                    </div>
+
+                    <!-- Highlights -->
+                    <ul class="product-details__highlights">
+                        <li>
+                            <strong>Personnalisée</strong> avec le nom de votre animal et l'icône de votre choix (coeur, os, étoile, patte)
+                        </li>
+                        <li>
+                            <strong>2 couleurs</strong> disponibles : Noir ou Bleu
+                        </li>
+                        <li>
+                            <strong>Scan instantané</strong> — n'importe qui peut scanner la médaille avec son téléphone pour vous contacter
+                        </li>
+                        <li>
+                            <strong>App PetNudge gratuite</strong> pour programmer la médaille, activer le Mode Perdu et gérer la santé de votre animal
+                        </li>
+                    </ul>
+
+                    <!-- Pricing Cards -->
+                    <div class="product-offers">
+                        <!-- Single -->
+                        <div class="product-offer">
+                            <div class="product-offer__info">
+                                <h4>1 Médaille</h4>
+                                <p>Personnalisée avec nom + icône</p>
+                            </div>
+                            <div class="product-offer__price-action">
+                                <div class="product-offer__price">
+                                    <span class="price-amount">19,99 €</span>
+                                    <span class="price-shipping">Livraison gratuite</span>
+                                </div>
+                                <button class="buy-button" data-product="single" data-price="1999">
+                                    <span class="btn-text" data-i18n="shop.buy">Commander</span>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title" data-i18n="shop.product.bone.title">Os</h3>
-                        <p class="product-size">35mm</p>
-                        <p class="product-description" data-i18n="shop.product.bone.desc">Le classique des chiens - design fun et reconnaissable</p>
-                        <div class="product-price-container">
-                            <span class="product-price">14,99 €</span>
-                            <span class="product-shipping free" data-i18n="shop.shipping.free">Livraison gratuite</span>
+                        <!-- Pack 2 -->
+                        <div class="product-offer product-offer--best">
+                            <div class="product-offer__badge">-12%</div>
+                            <div class="product-offer__info">
+                                <h4>Pack 2 Médailles</h4>
+                                <p>Idéal si vous avez plusieurs animaux</p>
+                            </div>
+                            <div class="product-offer__price-action">
+                                <div class="product-offer__price">
+                                    <span class="price-amount">34,99 €</span>
+                                    <span class="price-old">39,98 €</span>
+                                    <span class="price-shipping">Économisez 5 €</span>
+                                </div>
+                                <button class="buy-button" data-product="pack2" data-price="3499">
+                                    <span class="btn-text" data-i18n="shop.buy">Commander</span>
+                                </button>
+                            </div>
                         </div>
-                        <button class="buy-button" data-product="bone" data-price="1499" data-i18n="shop.buy">
-                            <span class="btn-icon">🛒</span>
-                            <span class="btn-text">Acheter maintenant</span>
-                        </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- HEART -->
-                <div class="product-card">
-                    <div class="product-image-container">
-                        <div class="product-image-placeholder shape-heart">
-                            <div class="shape-visual">
-                                <span class="shape-icon">❤️</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title" data-i18n="shop.product.heart.title">Coeur</h3>
-                        <p class="product-size">28mm</p>
-                        <p class="product-description" data-i18n="shop.product.heart.desc">Pour montrer tout l'amour que vous portez à votre compagnon</p>
-                        <div class="product-price-container">
-                            <span class="product-price">14,99 €</span>
-                            <span class="product-shipping free" data-i18n="shop.shipping.free">Livraison gratuite</span>
-                        </div>
-                        <button class="buy-button" data-product="heart" data-price="1499" data-i18n="shop.buy">
-                            <span class="btn-icon">🛒</span>
-                            <span class="btn-text">Acheter maintenant</span>
-                        </button>
-                    </div>
+    <!-- APP + MEDAL = PROTECTION SECTION -->
+    <section class="combo-section">
+        <div class="combo-container">
+            <h2 class="section-title" data-i18n="shop.combo.title">Médaille + App = Protection complète</h2>
+            <p class="section-subtitle" data-i18n="shop.combo.subtitle">La médaille identifie votre animal. L'app PetNudge lui donne des super-pouvoirs.</p>
+
+            <div class="combo-grid">
+                <div class="combo-item">
+                    <span class="combo-icon">📡</span>
+                    <h4 data-i18n="shop.combo.scan.title">Scan instantané</h4>
+                    <p data-i18n="shop.combo.scan.desc">N'importe qui approche son téléphone de la médaille et voit immédiatement vos coordonnées. Aucune app nécessaire pour le scanner.</p>
                 </div>
+                <div class="combo-item">
+                    <span class="combo-icon">🚨</span>
+                    <h4 data-i18n="shop.combo.lost.title">Mode Perdu</h4>
+                    <p data-i18n="shop.combo.lost.desc">Activez le Mode Perdu dans l'app. Chaque scan vous envoie une alerte avec la localisation. La personne qui trouve votre animal peut vous appeler en un tap.</p>
+                </div>
+                <div class="combo-item">
+                    <span class="combo-icon">🔄</span>
+                    <h4 data-i18n="shop.combo.update.title">Infos modifiables</h4>
+                    <p data-i18n="shop.combo.update.desc">Changement de numéro ? Déménagement ? Modifiez vos coordonnées à tout moment dans l'app. La médaille se met à jour instantanément.</p>
+                </div>
+                <div class="combo-item">
+                    <span class="combo-icon">🏥</span>
+                    <h4 data-i18n="shop.combo.health.title">Suivi santé IA</h4>
+                    <p data-i18n="shop.combo.health.desc">L'app PetNudge inclut un assistant santé IA, des rappels de vaccins, et des rapports PDF pour le vétérinaire. Tout ça, gratuit.</p>
+                </div>
+            </div>
 
-                <!-- ROUND -->
-                <div class="product-card">
-                    <div class="product-image-container">
-                        <div class="product-image-placeholder shape-round">
-                            <div class="shape-visual">
-                                <span class="shape-icon">⭕</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title" data-i18n="shop.product.round.title">Classique</h3>
-                        <p class="product-size">32mm</p>
-                        <p class="product-description" data-i18n="shop.product.round.desc">Design élégant et minimaliste - convient à tous les styles</p>
-                        <div class="product-price-container">
-                            <span class="product-price">14,99 €</span>
-                            <span class="product-shipping free" data-i18n="shop.shipping.free">Livraison gratuite</span>
-                        </div>
-                        <button class="buy-button" data-product="round" data-price="1499" data-i18n="shop.buy">
-                            <span class="btn-icon">🛒</span>
-                            <span class="btn-text">Acheter maintenant</span>
-                        </button>
-                    </div>
+            <div class="combo-cta">
+                <a href="https://apps.apple.com/app/id6756539814" class="combo-appstore" target="_blank" rel="noopener">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Télécharger sur l'App Store" height="44">
+                </a>
+                <span class="combo-free" data-i18n="shop.combo.free">Gratuite - Aucun abonnement requis pour la médaille</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="how-section">
+        <div class="how-container">
+            <h2 class="section-title" data-i18n="shop.how.title">Comment ça marche ?</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <span class="step-icon">🛒</span>
+                    <h4 data-i18n="shop.step1.title">Commandez</h4>
+                    <p data-i18n="shop.step1.desc">Choisissez couleur, icône et le nom de votre animal</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <span class="step-icon">📱</span>
+                    <h4 data-i18n="shop.step2.title">Téléchargez l'app</h4>
+                    <p data-i18n="shop.step2.desc">Créez le profil de votre animal dans PetNudge (gratuit)</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <span class="step-icon">📦</span>
+                    <h4 data-i18n="shop.step3.title">Recevez & programmez</h4>
+                    <p data-i18n="shop.step3.desc">Approchez la médaille de votre téléphone pour la programmer via l'app</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <span class="step-icon">🛡️</span>
+                    <h4 data-i18n="shop.step4.title">Protégé !</h4>
+                    <p data-i18n="shop.step4.desc">Attachez au collier. Votre animal est identifiable et retrouvable</p>
                 </div>
             </div>
         </div>
@@ -253,70 +310,37 @@
     <!-- SPECS SECTION -->
     <section class="specs-section">
         <div class="specs-container">
-            <h2 class="section-title" data-i18n="shop.specs.title">Caractéristiques techniques</h2>
+            <h2 class="section-title" data-i18n="shop.specs.title">Caractéristiques</h2>
             <div class="specs-grid">
                 <div class="spec-item">
                     <span class="spec-icon">📡</span>
                     <h4>NFC NTAG215</h4>
-                    <p data-i18n="shop.spec.nfc">504 bytes - Compatible tous smartphones</p>
+                    <p data-i18n="shop.spec.nfc">Compatible tous smartphones NFC</p>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">📐</span>
+                    <h4>34mm</h4>
+                    <p data-i18n="shop.spec.size">Diamètre idéal pour chiens et chats</p>
                 </div>
                 <div class="spec-item">
                     <span class="spec-icon">🛡️</span>
                     <h4>ASA Premium</h4>
-                    <p data-i18n="shop.spec.material">Plastique industriel résistant UV et chaleur</p>
+                    <p data-i18n="shop.spec.material">Plastique résistant UV, chaleur et chocs</p>
                 </div>
                 <div class="spec-item">
                     <span class="spec-icon">💧</span>
-                    <h4 data-i18n="shop.spec.water.title">Résistant à l'eau</h4>
-                    <p data-i18n="shop.spec.water">Revêtement protecteur inclus</p>
+                    <h4 data-i18n="shop.spec.water.title">Waterproof</h4>
+                    <p data-i18n="shop.spec.water">Résiste à la pluie, neige et bains</p>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">🖨️</span>
+                    <h4 data-i18n="shop.spec.print.title">Impression 3D</h4>
+                    <p data-i18n="shop.spec.print">Gravure du nom en relief, durable</p>
                 </div>
                 <div class="spec-item">
                     <span class="spec-icon">🇫🇷</span>
                     <h4 data-i18n="shop.spec.france.title">Made in France</h4>
-                    <p data-i18n="shop.spec.france">Fabriqué artisanalement en France</p>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-icon">⏱️</span>
-                    <h4 data-i18n="shop.spec.lifetime.title">Durée de vie</h4>
-                    <p data-i18n="shop.spec.lifetime">10+ ans de durabilité garantie</p>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-icon">📱</span>
-                    <h4 data-i18n="shop.spec.app.title">App gratuite</h4>
-                    <p data-i18n="shop.spec.app">Programmez facilement via PetNudge</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="how-section">
-        <div class="how-container">
-            <h2 class="section-title" data-i18n="shop.how.title">Comment ça marche ?</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <span class="step-icon">🛒</span>
-                    <h4 data-i18n="shop.step1.title">Commandez</h4>
-                    <p data-i18n="shop.step1.desc">Choisissez la forme qui vous plaît</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <span class="step-icon">📦</span>
-                    <h4 data-i18n="shop.step2.title">Recevez</h4>
-                    <p data-i18n="shop.step2.desc">Livraison chez vous en 3-5 jours ouvrés</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <span class="step-icon">📱</span>
-                    <h4 data-i18n="shop.step3.title">Programmez</h4>
-                    <p data-i18n="shop.step3.desc">Utilisez l'app PetNudge pour écrire vos infos</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">4</div>
-                    <span class="step-icon">🐕</span>
-                    <h4 data-i18n="shop.step4.title">Protégez</h4>
-                    <p data-i18n="shop.step4.desc">Attachez au collier - votre animal est protégé!</p>
+                    <p data-i18n="shop.spec.france">Fabrication artisanale en France</p>
                 </div>
             </div>
         </div>
@@ -328,8 +352,8 @@
             <div class="trust-grid">
                 <div class="trust-item">
                     <span class="trust-icon-large">🔒</span>
-                    <h4 data-i18n="shop.trust.payment.title">Paiement 100% sécurisé</h4>
-                    <p data-i18n="shop.trust.payment.desc">Vos données sont protégées par Stripe</p>
+                    <h4 data-i18n="shop.trust.payment.title">Paiement sécurisé</h4>
+                    <p data-i18n="shop.trust.payment.desc">Vos données protégées par Stripe</p>
                     <div class="payment-logos">
                         <img src="https://cdn.jsdelivr.net/gh/nicholasrobinson/payment-logos@master/stripe/visa.svg" alt="Visa" height="28">
                         <img src="https://cdn.jsdelivr.net/gh/nicholasrobinson/payment-logos@master/stripe/mastercard.svg" alt="Mastercard" height="28">
@@ -339,17 +363,17 @@
                 <div class="trust-item">
                     <span class="trust-icon-large">↩️</span>
                     <h4 data-i18n="shop.trust.refund.title">Satisfait ou remboursé</h4>
-                    <p data-i18n="shop.trust.refund.desc">30 jours pour changer d'avis, sans condition</p>
+                    <p data-i18n="shop.trust.refund.desc">30 jours pour changer d'avis</p>
                 </div>
                 <div class="trust-item">
                     <span class="trust-icon-large">🚚</span>
                     <h4 data-i18n="shop.trust.delivery.title">Livraison suivie</h4>
-                    <p data-i18n="shop.trust.delivery.desc">Expédition sous 24-48h, suivi par email</p>
+                    <p data-i18n="shop.trust.delivery.desc">Expédition sous 24-48h, 3-5 jours ouvrés</p>
                 </div>
                 <div class="trust-item">
                     <span class="trust-icon-large">💬</span>
                     <h4 data-i18n="shop.trust.support.title">Support réactif</h4>
-                    <p data-i18n="shop.trust.support.desc">Une question? Réponse sous 24h garantie</p>
+                    <p data-i18n="shop.trust.support.desc">Réponse sous 24h à contact@petnudge.fr</p>
                 </div>
             </div>
         </div>
@@ -362,27 +386,27 @@
             <div class="faq-grid">
                 <div class="faq-item">
                     <h4 data-i18n="shop.faq1.q">Comment fonctionne la médaille NFC ?</h4>
-                    <p data-i18n="shop.faq1.a">Il suffit d'approcher un smartphone de la médaille pour afficher les informations de votre animal et vos coordonnées. Aucune application n'est nécessaire pour le scanner.</p>
+                    <p data-i18n="shop.faq1.a">Il suffit d'approcher n'importe quel smartphone de la médaille pour afficher les informations de votre animal et vos coordonnées. Aucune application n'est nécessaire pour scanner — seul le propriétaire a besoin de l'app pour programmer la médaille.</p>
                 </div>
                 <div class="faq-item">
-                    <h4 data-i18n="shop.faq2.q">Est-ce compatible avec mon téléphone ?</h4>
-                    <p data-i18n="shop.faq2.a">Oui! Compatible avec tous les iPhone (7 et plus) et la plupart des Android avec NFC. Pour programmer la médaille, téléchargez l'app gratuite PetNudge.</p>
+                    <h4 data-i18n="shop.faq2.q">Pourquoi ai-je besoin de l'app PetNudge ?</h4>
+                    <p data-i18n="shop.faq2.a">L'app gratuite PetNudge vous permet de programmer la médaille avec vos coordonnées, d'activer le Mode Perdu avec alerte de localisation, et de gérer la santé de votre animal (rappels, suivi IA, rapports PDF). La personne qui trouve votre animal n'a PAS besoin de l'app — un simple scan suffit.</p>
                 </div>
                 <div class="faq-item">
-                    <h4 data-i18n="shop.faq3.q">La médaille est-elle waterproof ?</h4>
-                    <p data-i18n="shop.faq3.a">Oui, chaque médaille est fabriquée en ASA (plastique industriel) et reçoit un revêtement protecteur. Elle résiste à la pluie, la neige et les bains.</p>
+                    <h4 data-i18n="shop.faq3.q">La médaille est-elle résistante ?</h4>
+                    <p data-i18n="shop.faq3.a">Oui ! Fabriquée en ASA (plastique industriel haut de gamme), elle résiste aux UV, à la chaleur, à la pluie, à la neige et aux bains. Le nom est gravé en relief par impression 3D, il ne s'efface pas.</p>
                 </div>
                 <div class="faq-item">
-                    <h4 data-i18n="shop.faq4.q">Livrez-vous dans mon pays ?</h4>
-                    <p data-i18n="shop.faq4.a">Nous livrons dans toute l'Union Européenne et en Suisse. Livraison gratuite en France, 3€ pour l'Europe. Livraison en 3-5 jours ouvrés avec suivi.</p>
+                    <h4 data-i18n="shop.faq4.q">Comment personnaliser ma médaille ?</h4>
+                    <p data-i18n="shop.faq4.a">Après votre commande, indiquez-nous le nom de votre animal, la couleur (noir ou bleu) et l'icône souhaitée (coeur, os, étoile ou patte). Chaque médaille est fabriquée sur mesure pour vous.</p>
                 </div>
                 <div class="faq-item">
                     <h4 data-i18n="shop.faq5.q">Puis-je modifier les informations après ?</h4>
-                    <p data-i18n="shop.faq5.a">Absolument! Avec l'app PetNudge, vous pouvez modifier les informations à tout moment: numéro de téléphone, adresse, message personnalisé, etc.</p>
+                    <p data-i18n="shop.faq5.a">Absolument ! Le nom gravé sur la médaille reste, mais toutes les coordonnées numériques (téléphone, adresse, message) peuvent être modifiées à tout moment via l'app PetNudge.</p>
                 </div>
                 <div class="faq-item">
-                    <h4 data-i18n="shop.faq6.q">Que se passe-t-il si je perds mon animal ?</h4>
-                    <p data-i18n="shop.faq6.a">Activez le "Mode Perdu" dans l'app. La personne qui scanne la médaille verra un message d'alerte et pourra vous contacter immédiatement.</p>
+                    <h4 data-i18n="shop.faq6.q">Livrez-vous dans toute l'Europe ?</h4>
+                    <p data-i18n="shop.faq6.a">Oui ! Livraison gratuite en France, 3 € pour le reste de l'Europe et la Suisse. Expédition sous 24-48h avec suivi. Réception en 3-5 jours ouvrés.</p>
                 </div>
             </div>
         </div>
@@ -391,9 +415,12 @@
     <!-- CTA FINAL -->
     <section class="cta-section">
         <div class="cta-container">
-            <h2 data-i18n="shop.cta.title">Prêt à protéger votre compagnon ?</h2>
-            <p data-i18n="shop.cta.subtitle">Rejoignez des milliers de propriétaires qui font confiance à PetNudge</p>
-            <a href="#products" class="cta-button" data-i18n="shop.cta.button">Voir les médailles</a>
+            <h2 data-i18n="shop.cta.title">Protégez votre compagnon dès aujourd'hui</h2>
+            <p data-i18n="shop.cta.subtitle">Médaille personnalisée + App gratuite = Tranquillité d'esprit</p>
+            <div class="cta-prices">
+                <a href="#product" class="cta-button" data-i18n="shop.cta.single">1 Médaille — 19,99 €</a>
+                <a href="#product" class="cta-button cta-button--outline" data-i18n="shop.cta.pack">Pack 2 — 34,99 €</a>
+            </div>
         </div>
     </section>
 
@@ -406,11 +433,8 @@
                         <img src="logo.webp" alt="PetNudge" width="40" height="40">
                         <span>PetNudge</span>
                     </div>
-                    <p data-i18n="shop.footer.tagline">La médaille intelligente pour animaux</p>
-                </div>
-                <div class="footer-col">
-                    <h4 data-i18n="shop.footer.contact">Contact</h4>
-                    <a href="mailto:contact@petnudge.fr">contact@petnudge.fr</a>
+                    <p data-i18n="shop.footer.tagline">La médaille connectée pour animaux</p>
+                    <p><a href="mailto:contact@petnudge.fr">contact@petnudge.fr</a></p>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="shop.footer.legal">Légal</h4>
@@ -419,13 +443,13 @@
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="shop.footer.app">Application</h4>
-                    <a href="https://apps.apple.com/app/petnudge" target="_blank" rel="noopener">
+                    <a href="https://apps.apple.com/app/id6756539814" target="_blank" rel="noopener">
                         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" height="40">
                     </a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 PetNudge. <span data-i18n="shop.footer.rights">Tous droits réservés.</span></p>
+                <p>&copy; 2024-2026 PetNudge. <span data-i18n="shop.footer.rights">Tous droits réservés.</span></p>
                 <div class="footer-payment">
                     <img src="https://cdn.jsdelivr.net/gh/nicholasrobinson/payment-logos@master/stripe/visa.svg" alt="Visa" height="20">
                     <img src="https://cdn.jsdelivr.net/gh/nicholasrobinson/payment-logos@master/stripe/mastercard.svg" alt="Mastercard" height="20">
@@ -461,6 +485,16 @@
       (function(){if(!localStorage.getItem('cookie_consent')){document.getElementById('cookie-banner').style.display='block';}})();
       function acceptCookies(){localStorage.setItem('cookie_consent','accepted');document.getElementById('cookie-banner').style.display='none';}
       function refuseCookies(){localStorage.setItem('cookie_consent','refused');document.getElementById('cookie-banner').style.display='none';}
+    </script>
+
+    <!-- Gallery Script -->
+    <script>
+    function changeGalleryImage(thumb, src, alt) {
+        document.getElementById('gallery-main').src = src;
+        document.getElementById('gallery-main').alt = alt;
+        document.querySelectorAll('.product-gallery__thumb').forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+    }
     </script>
 
     <script src="script.js"></script>

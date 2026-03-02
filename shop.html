@@ -26,7 +26,18 @@
     <meta property="og:type" content="product">
 
     <!-- Stripe.js -->
-    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://js.stripe.com/v3/" defer></script>
+
+    <!-- Preconnect hints -->
+    <link rel="preconnect" href="https://js.stripe.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://developer.apple.com">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Médaille NFC Personnalisée | PetNudge">
+    <meta name="twitter:description" content="Médaille NFC personnalisée avec le nom de votre animal. Fabrication française, 19,99 €.">
+    <meta name="twitter:image" content="https://petnudge.fr/images/hero-lifestyle.webp">
 
     <!-- Schema.org Product Structured Data -->
     <script type="application/ld+json">
@@ -500,8 +511,8 @@
     }
     </script>
 
-    <script src="script.js"></script>
-    <script src="shop-translations.js"></script>
-    <script src="shop-stripe.js"></script>
+    <script src="script.js" defer></script>
+    <script src="shop-translations.js" defer></script>
+    <script src="shop-stripe.js" defer></script>
 </body>
 </html>

@@ -124,7 +124,18 @@ const shopTranslationsExtended = {
     'success.step4': 'Attach the tag to the collar - your pet is protected!',
     'success.download': 'Download the app',
     'success.home': 'Back to home',
-    'success.support': 'Question? Contact us at'
+    'success.support': 'Question? Contact us at',
+
+    // Customization form
+    'shop.custom.title': 'Customize your tag',
+    'shop.custom.name': 'Pet name',
+    'shop.custom.name.hint': '12 characters max — engraved on the tag',
+    'shop.custom.color': 'Color',
+    'shop.custom.icon': 'Icon',
+    'shop.custom.icon.heart': 'Heart',
+    'shop.custom.icon.bone': 'Bone',
+    'shop.custom.icon.star': 'Star',
+    'shop.custom.icon.paw': 'Paw'
   },
 
   // ========== FRENCH ==========
@@ -224,7 +235,18 @@ const shopTranslationsExtended = {
     'success.step4': 'Attachez la médaille au collier - votre animal est protégé!',
     'success.download': 'Télécharger l\'app',
     'success.home': 'Retour à l\'accueil',
-    'success.support': 'Une question? Contactez-nous à'
+    'success.support': 'Une question? Contactez-nous à',
+
+    // Customization form
+    'shop.custom.title': 'Personnalisez votre médaille',
+    'shop.custom.name': 'Nom de l\'animal',
+    'shop.custom.name.hint': '12 caractères maximum — gravé en relief sur la médaille',
+    'shop.custom.color': 'Couleur',
+    'shop.custom.icon': 'Icône',
+    'shop.custom.icon.heart': 'Coeur',
+    'shop.custom.icon.bone': 'Os',
+    'shop.custom.icon.star': 'Étoile',
+    'shop.custom.icon.paw': 'Patte'
   },
 
   // ========== GERMAN ==========
@@ -324,7 +346,18 @@ const shopTranslationsExtended = {
     'success.step4': 'Befestigen Sie den Anhänger am Halsband - Ihr Tier ist geschützt!',
     'success.download': 'App herunterladen',
     'success.home': 'Zurück zur Startseite',
-    'success.support': 'Fragen? Kontaktieren Sie uns unter'
+    'success.support': 'Fragen? Kontaktieren Sie uns unter',
+
+    // Customization form
+    'shop.custom.title': 'Personalisieren Sie Ihren Anhänger',
+    'shop.custom.name': 'Tiername',
+    'shop.custom.name.hint': 'Maximal 12 Zeichen — auf dem Anhänger graviert',
+    'shop.custom.color': 'Farbe',
+    'shop.custom.icon': 'Symbol',
+    'shop.custom.icon.heart': 'Herz',
+    'shop.custom.icon.bone': 'Knochen',
+    'shop.custom.icon.star': 'Stern',
+    'shop.custom.icon.paw': 'Pfote'
   },
 
   // ========== ROMANIAN ==========
@@ -424,7 +457,18 @@ const shopTranslationsExtended = {
     'success.step4': 'Atașează medalia la zgardă - animalul tău e protejat!',
     'success.download': 'Descarcă aplicația',
     'success.home': 'Înapoi acasă',
-    'success.support': 'Întrebări? Contactează-ne la'
+    'success.support': 'Întrebări? Contactează-ne la',
+
+    // Customization form
+    'shop.custom.title': 'Personalizează-ți medalia',
+    'shop.custom.name': 'Numele animalului',
+    'shop.custom.name.hint': 'Maximum 12 caractere — gravat pe medalie',
+    'shop.custom.color': 'Culoare',
+    'shop.custom.icon': 'Pictogramă',
+    'shop.custom.icon.heart': 'Inimă',
+    'shop.custom.icon.bone': 'Os',
+    'shop.custom.icon.star': 'Stea',
+    'shop.custom.icon.paw': 'Lăbuță'
   },
 
   // ========== SPANISH ==========
@@ -524,7 +568,18 @@ const shopTranslationsExtended = {
     'success.step4': '¡Adjunta la medalla al collar - tu mascota está protegida!',
     'success.download': 'Descargar la app',
     'success.home': 'Volver al inicio',
-    'success.support': '¿Preguntas? Contáctanos en'
+    'success.support': '¿Preguntas? Contáctanos en',
+
+    // Customization form
+    'shop.custom.title': 'Personaliza tu medalla',
+    'shop.custom.name': 'Nombre de la mascota',
+    'shop.custom.name.hint': 'Máximo 12 caracteres — grabado en la medalla',
+    'shop.custom.color': 'Color',
+    'shop.custom.icon': 'Icono',
+    'shop.custom.icon.heart': 'Corazón',
+    'shop.custom.icon.bone': 'Hueso',
+    'shop.custom.icon.star': 'Estrella',
+    'shop.custom.icon.paw': 'Huella'
   },
 
   // ========== ITALIAN ==========
@@ -624,7 +679,18 @@ const shopTranslationsExtended = {
     'success.step4': 'Attacca la medaglietta al collare - il tuo animale è protetto!',
     'success.download': 'Scarica l\'app',
     'success.home': 'Torna alla home',
-    'success.support': 'Domande? Contattaci a'
+    'success.support': 'Domande? Contattaci a',
+
+    // Customization form
+    'shop.custom.title': 'Personalizza la tua medaglietta',
+    'shop.custom.name': 'Nome dell\'animale',
+    'shop.custom.name.hint': 'Massimo 12 caratteri — inciso sulla medaglietta',
+    'shop.custom.color': 'Colore',
+    'shop.custom.icon': 'Icona',
+    'shop.custom.icon.heart': 'Cuore',
+    'shop.custom.icon.bone': 'Osso',
+    'shop.custom.icon.star': 'Stella',
+    'shop.custom.icon.paw': 'Zampa'
   },
 
   // ========== PORTUGUESE ==========
@@ -724,7 +790,18 @@ const shopTranslationsExtended = {
     'success.step4': 'Prenda a medalha na coleira - seu pet está protegido!',
     'success.download': 'Baixar o app',
     'success.home': 'Voltar ao início',
-    'success.support': 'Dúvidas? Entre em contato em'
+    'success.support': 'Dúvidas? Entre em contato em',
+
+    // Customization form
+    'shop.custom.title': 'Personalize sua medalha',
+    'shop.custom.name': 'Nome do pet',
+    'shop.custom.name.hint': 'Máximo 12 caracteres — gravado na medalha',
+    'shop.custom.color': 'Cor',
+    'shop.custom.icon': 'Ícone',
+    'shop.custom.icon.heart': 'Coração',
+    'shop.custom.icon.bone': 'Osso',
+    'shop.custom.icon.star': 'Estrela',
+    'shop.custom.icon.paw': 'Patinha'
   },
 
   // ========== JAPANESE ==========
@@ -824,7 +901,18 @@ const shopTranslationsExtended = {
     'success.step4': '首輪にタグを取り付け - ペットは保護されています！',
     'success.download': 'アプリをダウンロード',
     'success.home': 'ホームに戻る',
-    'success.support': 'ご質問は'
+    'success.support': 'ご質問は',
+
+    // Customization form
+    'shop.custom.title': 'タグをカスタマイズ',
+    'shop.custom.name': 'ペットの名前',
+    'shop.custom.name.hint': '最大12文字 — タグに刻印されます',
+    'shop.custom.color': '色',
+    'shop.custom.icon': 'アイコン',
+    'shop.custom.icon.heart': 'ハート',
+    'shop.custom.icon.bone': '骨',
+    'shop.custom.icon.star': '星',
+    'shop.custom.icon.paw': '肉球'
   },
 
   // ========== CHINESE ==========
@@ -924,7 +1012,18 @@ const shopTranslationsExtended = {
     'success.step4': '将标签挂在项圈上 - 您的宠物受到保护！',
     'success.download': '下载应用',
     'success.home': '返回首页',
-    'success.support': '有问题请联系'
+    'success.support': '有问题请联系',
+
+    // Customization form
+    'shop.custom.title': '定制您的标签',
+    'shop.custom.name': '宠物名字',
+    'shop.custom.name.hint': '最多12个字符 — 刻在标签上',
+    'shop.custom.color': '颜色',
+    'shop.custom.icon': '图标',
+    'shop.custom.icon.heart': '爱心',
+    'shop.custom.icon.bone': '骨头',
+    'shop.custom.icon.star': '星星',
+    'shop.custom.icon.paw': '爪印'
   }
 };
 

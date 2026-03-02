@@ -34,13 +34,13 @@
 const STRIPE_CONFIG = {
     // Înlocuiește cu Publishable Key din Stripe Dashboard
     // Format: pk_live_XXXXXXXXXXXXXXXXXXXX sau pk_test_XXXXXXXXXXXXXXXXXXXX
-    publishableKey: 'pk_live_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+    publishableKey: 'pk_test_51StWUq8skJDhKugj9Kct7bGdlrPYEtkyAzd2hUPieWXAzNho3ftqFrDeKft0Sk4HzayYxv4Hwh96Q2mvCrLBNhVR00z48hCwnC',
 
     // Înlocuiește cu Price IDs din Stripe Dashboard
     // Format: price_XXXXXXXXXXXXXXXXXXXXXXXX
     priceIds: {
-        single: 'price_XXXXXXXXXXXXXXXXXXXXXXXX',  // 1 Médaille NFC 34mm - 19.99€
-        pack2: 'price_XXXXXXXXXXXXXXXXXXXXXXXX'    // Pack 2 Médailles NFC 34mm - 34.99€
+        single: 'price_1T6U7C8skJDhKugj2eW5XfG1',  // 1 Médaille NFC 34mm - 19.99€
+        pack2: 'price_1T6U818skJDhKugjur15PgrG'    // Pack 2 Médailles NFC 34mm - 34.99€
     },
 
     // URLs pentru redirect după plată
@@ -79,6 +79,84 @@ const STRIPE_CONFIG = {
 // Variabilă globală Stripe
 let stripe = null;
 
+// Selecții personalizare
+const customization = {
+    color: null,
+    icon: null
+};
+
+/**
+ * Selectează o opțiune din formularul de personalizare
+ */
+function selectOption(element, type) {
+    // Deselectează toate opțiunile din același grup
+    const group = element.closest('.custom-options');
+    group.querySelectorAll('.custom-option').forEach(opt => {
+        opt.classList.remove('selected');
+        opt.classList.remove('error');
+    });
+
+    // Selectează opțiunea curentă
+    element.classList.add('selected');
+    customization[type] = element.dataset.value;
+}
+
+/**
+ * Validează formularul de personalizare
+ * Returnează obiectul cu datele sau null dacă invalid
+ */
+function validateCustomization() {
+    let valid = true;
+    const petNameInput = document.getElementById('pet-name');
+    const petName = petNameInput ? petNameInput.value.trim() : '';
+
+    // Validare nume
+    if (!petName) {
+        if (petNameInput) {
+            petNameInput.classList.add('error');
+            petNameInput.focus();
+        }
+        valid = false;
+    } else {
+        if (petNameInput) petNameInput.classList.remove('error');
+    }
+
+    // Validare culoare
+    if (!customization.color) {
+        document.querySelectorAll('.custom-colors .custom-option').forEach(opt => opt.classList.add('error'));
+        valid = false;
+    }
+
+    // Validare iconiță
+    if (!customization.icon) {
+        document.querySelectorAll('.custom-icons .custom-option').forEach(opt => opt.classList.add('error'));
+        valid = false;
+    }
+
+    if (!valid) {
+        const lang = document.documentElement.lang || 'fr';
+        const messages = {
+            fr: "Veuillez remplir tous les champs de personnalisation.",
+            en: "Please fill in all customization fields.",
+            de: "Bitte füllen Sie alle Personalisierungsfelder aus.",
+            es: "Por favor, complete todos los campos de personalización.",
+            it: "Si prega di compilare tutti i campi di personalizzazione.",
+            pt: "Por favor, preencha todos os campos de personalização.",
+            ro: "Vă rugăm să completați toate câmpurile de personalizare.",
+            ja: "すべてのカスタマイズフィールドに入力してください。",
+            zh: "请填写所有定制字段。"
+        };
+        showToast(messages[lang] || messages.fr, 'error');
+        return null;
+    }
+
+    return {
+        petName: petName,
+        color: customization.color,
+        icon: customization.icon
+    };
+}
+
 /**
  * Inițializează Stripe
  */
@@ -110,6 +188,10 @@ function setupBuyButtons() {
         button.addEventListener('click', async (e) => {
             e.preventDefault();
 
+            // Validare personalizare
+            const custom = validateCustomization();
+            if (!custom) return;
+
             const product = button.dataset.product;
             const priceId = STRIPE_CONFIG.priceIds[product];
 
@@ -117,7 +199,7 @@ function setupBuyButtons() {
             if (!stripe) {
                 if (!initStripe()) {
                     // Fallback la email dacă Stripe nu e configurat
-                    fallbackToEmail(product);
+                    fallbackToEmail(product, custom);
                     return;
                 }
             }
@@ -125,7 +207,7 @@ function setupBuyButtons() {
             // Verifică Price ID
             if (!priceId || priceId.includes('XXXX')) {
                 console.warn('⚠️ Price ID nu este configurat pentru:', product);
-                fallbackToEmail(product);
+                fallbackToEmail(product, custom);
                 return;
             }
 
@@ -133,6 +215,9 @@ function setupBuyButtons() {
             setButtonLoading(button, true);
 
             try {
+                // Salvează personalizarea în localStorage pentru success page
+                localStorage.setItem('petnudge-custom', JSON.stringify(custom));
+
                 // Redirect la Stripe Checkout
                 const { error } = await stripe.redirectToCheckout({
                     lineItems: [{
@@ -164,14 +249,21 @@ function setupBuyButtons() {
 /**
  * Fallback la comandă prin email
  */
-function fallbackToEmail(product) {
+function fallbackToEmail(product, custom) {
     const productNames = {
         single: 'Médaille NFC Personnalisée 34mm - 19.99€',
         pack2: 'Pack 2 Médailles NFC Personnalisées 34mm - 34.99€'
     };
 
+    const colorNames = { noir: 'Noir', bleu: 'Bleu' };
+    const iconNames = { coeur: 'Coeur', os: 'Os', etoile: 'Étoile', patte: 'Patte' };
+
+    const petName = custom ? custom.petName : '';
+    const color = custom ? (colorNames[custom.color] || '') : '';
+    const icon = custom ? (iconNames[custom.icon] || '') : '';
+
     const subject = encodeURIComponent(`Commande: ${productNames[product] || product}`);
-    const body = encodeURIComponent(`Bonjour,\n\nJe souhaite commander:\n${productNames[product] || product}\n\nPersonnalisation:\n- Nom de l'animal: \n- Couleur (Noir / Bleu): \n- Icône (Coeur / Os / Étoile / Patte): \n\nAdresse de livraison:\n\n\nMerci!\n\nCordialement`);
+    const body = encodeURIComponent(`Bonjour,\n\nJe souhaite commander:\n${productNames[product] || product}\n\nPersonnalisation:\n- Nom de l'animal: ${petName}\n- Couleur: ${color}\n- Icône: ${icon}\n\nAdresse de livraison:\n\n\nMerci!\n\nCordialement`);
 
     window.location.href = `mailto:contact@petnudge.fr?subject=${subject}&body=${body}`;
 }
@@ -343,6 +435,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Configurează smooth scroll
     setupSmoothScroll();
+
+    // Clear error pe input personalizare
+    const petNameInput = document.getElementById('pet-name');
+    if (petNameInput) {
+        petNameInput.addEventListener('input', () => {
+            petNameInput.classList.remove('error');
+        });
+    }
 
     console.log('🛒 PetNudge Shop loaded');
 });

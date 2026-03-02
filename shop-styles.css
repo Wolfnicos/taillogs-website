@@ -1147,6 +1147,137 @@
 }
 
 /* ============================================
+   CUSTOMIZATION FORM
+   ============================================ */
+.customization-form {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.custom-form__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--shop-light);
+    margin-bottom: 1.5rem;
+}
+
+.custom-field {
+    margin-bottom: 1.5rem;
+}
+
+.custom-field:last-child {
+    margin-bottom: 0;
+}
+
+.custom-field label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--shop-gray-light);
+    margin-bottom: 0.5rem;
+}
+
+.custom-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: var(--shop-light);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-input::placeholder {
+    color: var(--shop-gray);
+}
+
+.custom-input:focus {
+    outline: none;
+    border-color: var(--shop-primary);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+.custom-input.error {
+    border-color: #ff4444;
+    box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.15);
+}
+
+.custom-hint {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--shop-gray);
+    margin-top: 0.4rem;
+}
+
+.custom-options {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.custom-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--shop-gray-light);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    min-width: 100px;
+    justify-content: center;
+}
+
+.custom-option:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.custom-option.selected {
+    border-color: var(--shop-primary);
+    background: rgba(255, 107, 53, 0.12);
+    color: var(--shop-light);
+}
+
+.custom-option.error {
+    border-color: #ff4444;
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.color-noir {
+    background: #1a1a1a;
+}
+
+.color-bleu {
+    background: #2563eb;
+}
+
+.icon-preview {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.custom-icons .custom-option {
+    flex: 1;
+    min-width: 70px;
+}
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 768px) {
@@ -1281,5 +1412,29 @@
 
     .toast {
         max-width: 100%;
+    }
+
+    .customization-form {
+        padding: 1.5rem;
+    }
+
+    .custom-options {
+        gap: 0.5rem;
+    }
+
+    .custom-option {
+        padding: 0.6rem 0.8rem;
+        min-width: 0;
+        flex: 1;
+    }
+
+    .custom-icons .custom-option {
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.6rem 0.5rem;
+    }
+
+    .icon-preview {
+        font-size: 1.3rem;
     }
 }

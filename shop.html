@@ -198,6 +198,56 @@
                         </li>
                     </ul>
 
+                    <!-- Customization Form -->
+                    <div class="customization-form" id="customization-form">
+                        <h3 class="custom-form__title" data-i18n="shop.custom.title">Personnalisez votre médaille</h3>
+
+                        <!-- Pet Name -->
+                        <div class="custom-field">
+                            <label for="pet-name" data-i18n="shop.custom.name">Nom de l'animal</label>
+                            <input type="text" id="pet-name" maxlength="12" placeholder="Ex: Max, Luna, Milo..." class="custom-input" required>
+                            <span class="custom-hint" data-i18n="shop.custom.name.hint">12 caractères maximum — gravé en relief sur la médaille</span>
+                        </div>
+
+                        <!-- Color -->
+                        <div class="custom-field">
+                            <label data-i18n="shop.custom.color">Couleur</label>
+                            <div class="custom-options custom-colors">
+                                <button type="button" class="custom-option custom-color" data-value="noir" onclick="selectOption(this, 'color')">
+                                    <span class="color-swatch color-noir"></span>
+                                    <span>Noir</span>
+                                </button>
+                                <button type="button" class="custom-option custom-color" data-value="bleu" onclick="selectOption(this, 'color')">
+                                    <span class="color-swatch color-bleu"></span>
+                                    <span>Bleu</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Icon -->
+                        <div class="custom-field">
+                            <label data-i18n="shop.custom.icon">Icône</label>
+                            <div class="custom-options custom-icons">
+                                <button type="button" class="custom-option custom-icon" data-value="coeur" onclick="selectOption(this, 'icon')">
+                                    <span class="icon-preview">&#10084;</span>
+                                    <span data-i18n="shop.custom.icon.heart">Coeur</span>
+                                </button>
+                                <button type="button" class="custom-option custom-icon" data-value="os" onclick="selectOption(this, 'icon')">
+                                    <span class="icon-preview">&#9988;</span>
+                                    <span data-i18n="shop.custom.icon.bone">Os</span>
+                                </button>
+                                <button type="button" class="custom-option custom-icon" data-value="etoile" onclick="selectOption(this, 'icon')">
+                                    <span class="icon-preview">&#9733;</span>
+                                    <span data-i18n="shop.custom.icon.star">Étoile</span>
+                                </button>
+                                <button type="button" class="custom-option custom-icon" data-value="patte" onclick="selectOption(this, 'icon')">
+                                    <span class="icon-preview">&#128062;</span>
+                                    <span data-i18n="shop.custom.icon.paw">Patte</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Pricing Cards -->
                     <div class="product-offers">
                         <!-- Single -->

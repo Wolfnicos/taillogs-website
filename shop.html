@@ -233,68 +233,22 @@
                         </li>
                     </ul>
 
-                    <!-- Customization Form -->
-                    <div class="customization-form" id="customization-form">
-                        <h3 class="custom-form__title" data-i18n="shop.custom.title">Personnalisez votre médaille</h3>
-
-                        <!-- Pet Name -->
-                        <div class="custom-field">
-                            <label for="pet-name" data-i18n="shop.custom.name">Nom de l'animal</label>
-                            <input type="text" id="pet-name" maxlength="12" placeholder="Ex: Max, Luna, Milo..." class="custom-input" required>
-                            <span class="custom-hint" data-i18n="shop.custom.name.hint">12 caractères maximum — gravé en relief sur la médaille</span>
-                        </div>
-
-                        <!-- Color -->
-                        <div class="custom-field">
-                            <label data-i18n="shop.custom.color">Couleur</label>
-                            <div class="custom-options custom-colors">
-                                <button type="button" class="custom-option custom-color" data-value="noir" onclick="selectOption(this, 'color')">
-                                    <span class="color-swatch color-noir"></span>
-                                    <span>Noir</span>
-                                </button>
-                                <button type="button" class="custom-option custom-color" data-value="bleu" onclick="selectOption(this, 'color')">
-                                    <span class="color-swatch color-bleu"></span>
-                                    <span>Bleu</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Icon -->
-                        <div class="custom-field">
-                            <label data-i18n="shop.custom.icon">Icône</label>
-                            <div class="custom-options custom-icons">
-                                <button type="button" class="custom-option custom-icon" data-value="coeur-rouge" onclick="selectOption(this, 'icon')">
-                                    <span class="icon-preview" style="color:#FF3B30">&#10084;</span>
-                                    <span data-i18n="shop.custom.icon.heart">Coeur Rouge</span>
-                                </button>
-                                <button type="button" class="custom-option custom-icon" data-value="os-blanc" onclick="selectOption(this, 'icon')">
-                                    <span class="icon-preview" style="color:#FFFFFF; -webkit-text-stroke:1px #ccc">🦴</span>
-                                    <span data-i18n="shop.custom.icon.bone">Os Blanc</span>
-                                </button>
-                                <button type="button" class="custom-option custom-icon" data-value="etoile-jaune" onclick="selectOption(this, 'icon')">
-                                    <span class="icon-preview" style="color:#FFD700">&#9733;</span>
-                                    <span data-i18n="shop.custom.icon.star">Étoile Jaune</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Pricing Cards -->
                     <div class="product-offers">
                         <!-- Single -->
                         <div class="product-offer">
                             <div class="product-offer__info">
                                 <h4>1 Médaille</h4>
-                                <p>Personnalisée avec nom + icône</p>
+                                <p data-i18n="shop.offer.single.desc">Personnalisée avec nom + icône</p>
                             </div>
                             <div class="product-offer__price-action">
                                 <div class="product-offer__price">
                                     <span class="price-amount">19,99 €</span>
-                                    <span class="price-shipping">Livraison gratuite</span>
+                                    <span class="price-shipping" data-i18n="shop.offer.free.shipping">Livraison gratuite</span>
                                 </div>
-                                <button class="buy-button" data-product="single" data-price="1999">
+                                <a href="https://buy.stripe.com/test_eVq9AN0fC8NXbER9u877O04" class="buy-button" target="_blank" rel="noopener">
                                     <span class="btn-text" data-i18n="shop.buy">Commander</span>
-                                </button>
+                                </a>
                             </div>
                         </div>
                         <!-- Pack 2 -->
@@ -302,17 +256,17 @@
                             <div class="product-offer__badge">-12%</div>
                             <div class="product-offer__info">
                                 <h4>Pack 2 Médailles</h4>
-                                <p>Idéal si vous avez plusieurs animaux</p>
+                                <p data-i18n="shop.offer.pack.desc">Idéal si vous avez plusieurs animaux</p>
                             </div>
                             <div class="product-offer__price-action">
                                 <div class="product-offer__price">
                                     <span class="price-amount">34,99 €</span>
                                     <span class="price-old">39,98 €</span>
-                                    <span class="price-shipping">Économisez 5 €</span>
+                                    <span class="price-shipping" data-i18n="shop.offer.save">Économisez 5 €</span>
                                 </div>
-                                <button class="buy-button" data-product="pack2" data-price="3499">
+                                <a href="https://buy.stripe.com/test_fZu4gt5zWaW5dMZ9u877O05" class="buy-button" target="_blank" rel="noopener">
                                     <span class="btn-text" data-i18n="shop.buy">Commander</span>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -582,6 +536,5 @@
 
     <script src="script.js" defer></script>
     <script src="shop-translations.js" defer></script>
-    <script src="shop-stripe.js" defer></script>
 </body>
 </html>

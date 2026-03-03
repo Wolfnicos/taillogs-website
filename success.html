@@ -95,25 +95,6 @@
                 </div>
             </div>
 
-            <!-- Order Summary (populated from localStorage) -->
-            <div class="next-steps-box" id="order-summary" style="display:none">
-                <h3 data-i18n="success.summary.title">🏷️ Votre personnalisation</h3>
-                <div style="display:flex;flex-direction:column;gap:0.5rem;margin-top:0.75rem">
-                    <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid #eee">
-                        <span style="color:#666" data-i18n="success.summary.name">Nom de l'animal</span>
-                        <strong id="summary-name"></strong>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid #eee">
-                        <span style="color:#666" data-i18n="success.summary.color">Couleur</span>
-                        <strong id="summary-color"></strong>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;padding:0.5rem 0">
-                        <span style="color:#666" data-i18n="success.summary.icon">Icône</span>
-                        <strong id="summary-icon"></strong>
-                    </div>
-                </div>
-            </div>
-
             <!-- Action Buttons -->
             <div class="success-actions">
                 <a href="shop.html" class="success-btn primary">
@@ -145,21 +126,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.success-content').classList.add('animate-in');
-
-            // Show order summary from localStorage
-            const raw = localStorage.getItem('petnudge-custom');
-            if (raw) {
-                try {
-                    const data = JSON.parse(raw);
-                    const colorLabels = { noir: 'Noir', bleu: 'Bleu' };
-                    const iconLabels = { 'coeur-rouge': 'Coeur Rouge', 'os-blanc': 'Os Blanc', 'etoile-jaune': 'Étoile Jaune' };
-                    document.getElementById('summary-name').textContent = data.petName || '';
-                    document.getElementById('summary-color').textContent = colorLabels[data.color] || data.color || '';
-                    document.getElementById('summary-icon').textContent = iconLabels[data.icon] || data.icon || '';
-                    document.getElementById('order-summary').style.display = '';
-                    localStorage.removeItem('petnudge-custom');
-                } catch (e) {}
-            }
         });
     </script>
 </body>

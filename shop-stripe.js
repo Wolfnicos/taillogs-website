@@ -38,8 +38,8 @@ const STRIPE_CONFIG = {
     paymentLinks: {
         // Înlocuiește cu Payment Link-urile tale din Stripe Dashboard
         // Format: https://buy.stripe.com/XXXXX
-        single: 'https://buy.stripe.com/PLACEHOLDER_SINGLE',  // 1 Médaille - 19.99€
-        pack2: 'https://buy.stripe.com/PLACEHOLDER_PACK2'     // Pack 2 - 34.99€
+        single: 'https://buy.stripe.com/test_eVq9AN0fC8NXbER9u877004',  // 1 Médaille - 19.99€
+        pack2: 'https://buy.stripe.com/test_fZu4gt5zWaW5dMZ9u877O05'   // Pack 2 - 34.99€
     },
 
     cancelUrl: 'https://petnudge.fr/shop.html?cancelled=true'

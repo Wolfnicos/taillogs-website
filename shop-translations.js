@@ -132,10 +132,9 @@ const shopTranslationsExtended = {
     'shop.custom.name.hint': '12 characters max — engraved on the tag',
     'shop.custom.color': 'Color',
     'shop.custom.icon': 'Icon',
-    'shop.custom.icon.heart': 'Heart',
-    'shop.custom.icon.bone': 'Bone',
-    'shop.custom.icon.star': 'Star',
-    'shop.custom.icon.paw': 'Paw'
+    'shop.custom.icon.heart': 'Red Heart',
+    'shop.custom.icon.bone': 'White Bone',
+    'shop.custom.icon.star': 'Gold Star',
   },
 
   // ========== FRENCH ==========
@@ -243,10 +242,9 @@ const shopTranslationsExtended = {
     'shop.custom.name.hint': '12 caractères maximum — gravé en relief sur la médaille',
     'shop.custom.color': 'Couleur',
     'shop.custom.icon': 'Icône',
-    'shop.custom.icon.heart': 'Coeur',
-    'shop.custom.icon.bone': 'Os',
-    'shop.custom.icon.star': 'Étoile',
-    'shop.custom.icon.paw': 'Patte'
+    'shop.custom.icon.heart': 'Coeur Rouge',
+    'shop.custom.icon.bone': 'Os Blanc',
+    'shop.custom.icon.star': 'Étoile Jaune',
   },
 
   // ========== GERMAN ==========
@@ -354,10 +352,9 @@ const shopTranslationsExtended = {
     'shop.custom.name.hint': 'Maximal 12 Zeichen — auf dem Anhänger graviert',
     'shop.custom.color': 'Farbe',
     'shop.custom.icon': 'Symbol',
-    'shop.custom.icon.heart': 'Herz',
-    'shop.custom.icon.bone': 'Knochen',
-    'shop.custom.icon.star': 'Stern',
-    'shop.custom.icon.paw': 'Pfote'
+    'shop.custom.icon.heart': 'Rotes Herz',
+    'shop.custom.icon.bone': 'Weißer Knochen',
+    'shop.custom.icon.star': 'Goldener Stern',
   },
 
   // ========== ROMANIAN ==========
@@ -465,10 +462,9 @@ const shopTranslationsExtended = {
     'shop.custom.name.hint': 'Maximum 12 caractere — gravat pe medalie',
     'shop.custom.color': 'Culoare',
     'shop.custom.icon': 'Pictogramă',
-    'shop.custom.icon.heart': 'Inimă',
-    'shop.custom.icon.bone': 'Os',
-    'shop.custom.icon.star': 'Stea',
-    'shop.custom.icon.paw': 'Lăbuță'
+    'shop.custom.icon.heart': 'Inimă Roșie',
+    'shop.custom.icon.bone': 'Os Alb',
+    'shop.custom.icon.star': 'Stea Aurie',
   },
 
   // ========== SPANISH ==========
@@ -576,10 +572,9 @@ const shopTranslationsExtended = {
     'shop.custom.name.hint': 'Máximo 12 caracteres — grabado en la medalla',
     'shop.custom.color': 'Color',
     'shop.custom.icon': 'Icono',
-    'shop.custom.icon.heart': 'Corazón',
-    'shop.custom.icon.bone': 'Hueso',
-    'shop.custom.icon.star': 'Estrella',
-    'shop.custom.icon.paw': 'Huella'
+    'shop.custom.icon.heart': 'Corazón Rojo',
+    'shop.custom.icon.bone': 'Hueso Blanco',
+    'shop.custom.icon.star': 'Estrella Dorada',
   },
 
   // ========== ITALIAN ==========
@@ -687,10 +682,9 @@ const shopTranslationsExtended = {
     'shop.custom.name.hint': 'Massimo 12 caratteri — inciso sulla medaglietta',
     'shop.custom.color': 'Colore',
     'shop.custom.icon': 'Icona',
-    'shop.custom.icon.heart': 'Cuore',
-    'shop.custom.icon.bone': 'Osso',
-    'shop.custom.icon.star': 'Stella',
-    'shop.custom.icon.paw': 'Zampa'
+    'shop.custom.icon.heart': 'Cuore Rosso',
+    'shop.custom.icon.bone': 'Osso Bianco',
+    'shop.custom.icon.star': 'Stella Dorata',
   },
 
   // ========== PORTUGUESE ==========
@@ -798,10 +792,9 @@ const shopTranslationsExtended = {
     'shop.custom.name.hint': 'Máximo 12 caracteres — gravado na medalha',
     'shop.custom.color': 'Cor',
     'shop.custom.icon': 'Ícone',
-    'shop.custom.icon.heart': 'Coração',
-    'shop.custom.icon.bone': 'Osso',
-    'shop.custom.icon.star': 'Estrela',
-    'shop.custom.icon.paw': 'Patinha'
+    'shop.custom.icon.heart': 'Coração Vermelho',
+    'shop.custom.icon.bone': 'Osso Branco',
+    'shop.custom.icon.star': 'Estrela Dourada',
   },
 
   // ========== JAPANESE ==========
@@ -909,10 +902,9 @@ const shopTranslationsExtended = {
     'shop.custom.name.hint': '最大12文字 — タグに刻印されます',
     'shop.custom.color': '色',
     'shop.custom.icon': 'アイコン',
-    'shop.custom.icon.heart': 'ハート',
-    'shop.custom.icon.bone': '骨',
-    'shop.custom.icon.star': '星',
-    'shop.custom.icon.paw': '肉球'
+    'shop.custom.icon.heart': '赤いハート',
+    'shop.custom.icon.bone': '白い骨',
+    'shop.custom.icon.star': '金の星',
   },
 
   // ========== CHINESE ==========
@@ -1020,10 +1012,9 @@ const shopTranslationsExtended = {
     'shop.custom.name.hint': '最多12个字符 — 刻在标签上',
     'shop.custom.color': '颜色',
     'shop.custom.icon': '图标',
-    'shop.custom.icon.heart': '爱心',
-    'shop.custom.icon.bone': '骨头',
-    'shop.custom.icon.star': '星星',
-    'shop.custom.icon.paw': '爪印'
+    'shop.custom.icon.heart': '红色爱心',
+    'shop.custom.icon.bone': '白色骨头',
+    'shop.custom.icon.star': '金色星星',
   }
 };
 

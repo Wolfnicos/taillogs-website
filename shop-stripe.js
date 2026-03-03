@@ -148,7 +148,7 @@ function setupBuyButtons() {
             // Construiește URL-ul cu parametri pentru pre-fill
             // client_reference_id permite identificarea comenzii
             const colorNames = { noir: 'Noir', bleu: 'Bleu' };
-            const iconNames = { coeur: 'Coeur', os: 'Os', etoile: 'Étoile', patte: 'Patte' };
+            const iconNames = { 'coeur-rouge': 'Coeur Rouge', 'os-blanc': 'Os Blanc', 'etoile-jaune': 'Étoile Jaune' };
 
             const ref = `${custom.petName}|${colorNames[custom.color] || custom.color}|${iconNames[custom.icon] || custom.icon}`;
             const url = new URL(paymentLink);
@@ -171,7 +171,7 @@ function fallbackToEmail(product, custom) {
     };
 
     const colorNames = { noir: 'Noir', bleu: 'Bleu' };
-    const iconNames = { coeur: 'Coeur', os: 'Os', etoile: 'Étoile', patte: 'Patte' };
+    const iconNames = { 'coeur-rouge': 'Coeur Rouge', 'os-blanc': 'Os Blanc', 'etoile-jaune': 'Étoile Jaune' };
 
     const petName = custom ? custom.petName : '';
     const color = custom ? (colorNames[custom.color] || '') : '';

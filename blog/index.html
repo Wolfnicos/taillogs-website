@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog - PetNudge | Conseils Sécurité & Santé Animaux</title>
   <meta name="description" content="Conseils d'experts sur la sécurité des animaux, la récupération d'animaux perdus, les tags NFC et garder vos compagnons en bonne santé.">
-  <meta name="keywords" content="pet safety blog, lost pet tips, NFC pet tag guide, NFC medal pets, find lost dog, find lost cat">
+  <meta name="keywords" content="pet safety blog, lost pet tips, NFC pet tag guide, pet health app, vaccination tracker, medication reminder">
   <link rel="canonical" href="https://petnudge.fr/blog/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="PetNudge Blog - Pet Safety Tips & Guides">
-  <meta property="og:description" content="Expert tips on pet safety, lost pet recovery, and keeping your furry friends safe.">
+  <meta property="og:title" content="PetNudge Blog - Pet Safety & Health Tips">
+  <meta property="og:description" content="Expert tips on pet safety, health tracking, AI assistant, and keeping your furry friends safe.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://petnudge.fr/blog/">
   <meta property="og:image" content="https://petnudge.fr/logo.webp">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PetNudge Blog - Pet Safety Tips & Guides">
-    <meta name="twitter:description" content="Expert tips on pet safety, lost pet recovery, and keeping your furry friends safe.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PetNudge Blog - Pet Safety & Health Tips">
+  <meta name="twitter:description" content="Expert tips on pet safety, health tracking, and keeping your furry friends safe.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../logo.webp">
@@ -29,22 +29,26 @@
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "PetNudge Blog",
-    "description": "Expert tips on pet safety, lost pet recovery, NFC tags and keeping your furry friends healthy.",
+    "description": "Expert tips on pet safety, lost pet recovery, NFC tags, health tracking, and keeping your furry friends healthy.",
     "url": "https://petnudge.fr/blog/",
+    "inLanguage": ["fr", "en", "ro", "es", "de", "it", "pt", "ja", "zh"],
     "publisher": {
       "@type": "Organization",
       "name": "PetNudge",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://petnudge.fr/logo.webp"
-      }
+      "logo": {"@type": "ImageObject", "url": "https://petnudge.fr/logo.webp"}
     }
   }
   </script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="../styles.css?v=3">
-    <script defer data-domain="petnudge.fr" src="https://signallensai.com:8443/js/script.js"></script>
+  <style>
+    .blog-card[data-lang] { display: none; }
+    .blog-card[data-lang].blog-card--visible { display: flex; }
+    .blog-card[data-lang="all"] { display: flex; }
+    .blog-card[data-lang="all"].blog-card--visible { display: flex; }
+  </style>
+  <script defer data-domain="petnudge.fr" src="https://signallensai.com:8443/js/script.js"></script>
 </head>
 <body>
   <a href="#main" class="sr-only">Skip to main content</a>
@@ -89,335 +93,250 @@
     <!-- Blog Grid -->
     <section class="section">
       <div class="container">
-        <div class="blog-grid">
+        <div class="blog-grid" id="blog-grid">
 
-          <!-- Featured: PetNudge Complete Guide -->
-          <article class="blog-card" style="grid-column: 1 / -1; max-width: 100%;">
+          <!-- ====== FEATURED (all languages) ====== -->
+          <article class="blog-card blog-card--visible" data-lang="all" style="grid-column: 1 / -1; max-width: 100%;">
             <div class="blog-card__image" style="background: linear-gradient(135deg, #FF6B35 0%, #0A0A0A 100%);">🐾</div>
             <div class="blog-card__content">
               <span class="blog-card__category" style="background: #0A0A0A;" data-i18n="blogApp.badge">Complete Guide</span>
               <h2 class="blog-card__title">
                 <a href="petnudge-complete-guide/" data-i18n="blogApp.title">PetNudge: The Complete Pet Safety & Health Companion</a>
               </h2>
-              <p class="blog-card__excerpt" data-i18n="blogApp.intro">PetNudge is more than just a pet ID tag app. It's a complete companion for modern pet owners who want to keep their furry friends safe and healthy.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>10 min read</span></span>
-              </div>
+              <p class="blog-card__excerpt" data-i18n="blogApp.intro">PetNudge is more than just a pet ID tag app. It's a complete companion for modern pet owners.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 10 min</span></div>
             </div>
           </article>
 
-          <!-- Article 1 -->
-          <article class="blog-card">
+          <!-- ====== ENGLISH ARTICLES ====== -->
+          <article class="blog-card" data-lang="en">
             <div class="blog-card__image">🐕</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.category.safety">Lost Pet</span>
-              <h2 class="blog-card__title">
-                <a href="how-to-find-lost-dog/" data-i18n="blog.article1.title">How to Find Your Lost Dog: Complete Guide 2026</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.article1.excerpt">Step-by-step actions to take in the first 24 hours when your dog goes missing. Maximize your chances of a happy reunion.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span data-i18n="blog.readtime">8 min read</span></span>
-              </div>
+              <span class="blog-card__category">Lost Pet</span>
+              <h2 class="blog-card__title"><a href="how-to-find-lost-dog/">How to Find Your Lost Dog: Complete Guide 2026</a></h2>
+              <p class="blog-card__excerpt">Step-by-step actions to take in the first 24 hours when your dog goes missing.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 8 min read</span></div>
             </div>
           </article>
 
-          <!-- Article 2 -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="en">
             <div class="blog-card__image">📱</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.category.tech">Technology</span>
-              <h2 class="blog-card__title">
-                <a href="qr-code-vs-microchip/" data-i18n="blog.article2.title">QR Code vs Microchip: What's Best for Your Pet?</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.article2.excerpt">Compare the pros and cons of modern pet identification methods. Why you might want both.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span data-i18n="blog.readtime">6 min read</span></span>
-              </div>
+              <span class="blog-card__category">Technology</span>
+              <h2 class="blog-card__title"><a href="qr-code-vs-microchip/">QR Code vs Microchip: What's Best for Your Pet?</a></h2>
+              <p class="blog-card__excerpt">Compare the pros and cons of modern pet identification methods.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 6 min read</span></div>
             </div>
           </article>
 
-          <!-- Article 3 -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="en">
             <div class="blog-card__image">🏷️</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.category.tech">Technology</span>
-              <h2 class="blog-card__title">
-                <a href="nfc-tags-pets-guide/" data-i18n="blog.article3.title">NFC Tags for Pets: Everything You Need to Know</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.article3.excerpt">What are NFC tags, how do they work, and why they're the future of pet identification.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span data-i18n="blog.readtime">5 min read</span></span>
-              </div>
+              <span class="blog-card__category">Technology</span>
+              <h2 class="blog-card__title"><a href="nfc-tags-pets-guide/">NFC Tags for Pets: Everything You Need to Know</a></h2>
+              <p class="blog-card__excerpt">What are NFC tags, how do they work, and why they're the future of pet identification.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 5 min read</span></div>
             </div>
           </article>
 
-          <!-- Article 4 -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="en">
             <div class="blog-card__image">🚨</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.category.emergency">Emergency</span>
-              <h2 class="blog-card__title">
-                <a href="pet-emergency-kit/" data-i18n="blog.article4.title">Pet Emergency Kit: What Every Owner Needs</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.article4.excerpt">Essential items to prepare for any pet emergency. Be ready when it matters most.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span data-i18n="blog.article4.readtime">7 min read</span></span>
-              </div>
+              <span class="blog-card__category">Emergency</span>
+              <h2 class="blog-card__title"><a href="pet-emergency-kit/">Pet Emergency Kit: What Every Owner Needs</a></h2>
+              <p class="blog-card__excerpt">Essential items to prepare for any pet emergency. Be ready when it matters most.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 7 min read</span></div>
             </div>
           </article>
 
-          <!-- Article 5 -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="en">
             <div class="blog-card__image">✈️</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.category.travel">Travel</span>
-              <h2 class="blog-card__title">
-                <a href="pet-travel-checklist/" data-i18n="blog.article5.title">Traveling with Your Pet: Complete Checklist 2026</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.article5.excerpt">Everything you need to know before hitting the road or flying with your furry friend.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span data-i18n="blog.article5.readtime">9 min read</span></span>
-              </div>
+              <span class="blog-card__category">Travel</span>
+              <h2 class="blog-card__title"><a href="pet-travel-checklist/">Traveling with Your Pet: Complete Checklist 2026</a></h2>
+              <p class="blog-card__excerpt">Everything you need to know before hitting the road or flying with your furry friend.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 9 min read</span></div>
             </div>
           </article>
 
-          <!-- Article 6 -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="en">
             <div class="blog-card__image">🩺</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.category.health">Health</span>
-              <h2 class="blog-card__title">
-                <a href="signs-pet-needs-vet/" data-i18n="blog.article6.title">10 Signs Your Pet Needs to See the Vet Immediately</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.article6.excerpt">Recognize these warning signs that require immediate veterinary attention.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span data-i18n="blog.article6.readtime">6 min read</span></span>
-              </div>
+              <span class="blog-card__category">Health</span>
+              <h2 class="blog-card__title"><a href="signs-pet-needs-vet/">10 Signs Your Pet Needs to See the Vet Immediately</a></h2>
+              <p class="blog-card__excerpt">Recognize these warning signs that require immediate veterinary attention.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 6 min read</span></div>
             </div>
           </article>
 
-          <!-- NEW: Found Lost Pet -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="en">
             <div class="blog-card__image">🐕</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.newA1.cat">Pet Safety</span>
-              <h2 class="blog-card__title">
-                <a href="found-lost-pet-what-to-do/" data-i18n="blog.newA1.title">What to Do When You Find a Lost Pet on the Street</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.newA1.excerpt">Step-by-step guide on what to do if you find a stray or lost pet, from safety checks to reuniting them with their owner.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>8 min read</span></span>
-              </div>
+              <span class="blog-card__category">Pet Safety</span>
+              <h2 class="blog-card__title"><a href="found-lost-pet-what-to-do/">What to Do When You Find a Lost Pet on the Street</a></h2>
+              <p class="blog-card__excerpt">Step-by-step guide on what to do if you find a stray or lost pet.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 8 min read</span></div>
             </div>
           </article>
 
-          <!-- NEW: Toxic Plants -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="en">
             <div class="blog-card__image">🌿</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.newA2.cat">Pet Health</span>
-              <h2 class="blog-card__title">
-                <a href="toxic-plants-dogs-cats/" data-i18n="blog.newA2.title">Top 10 Toxic Plants for Dogs and Cats</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.newA2.excerpt">Discover the most dangerous household and garden plants for pets. Learn symptoms, first aid, and safe alternatives.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>9 min read</span></span>
-              </div>
+              <span class="blog-card__category">Pet Health</span>
+              <h2 class="blog-card__title"><a href="toxic-plants-dogs-cats/">Top 10 Toxic Plants for Dogs and Cats</a></h2>
+              <p class="blog-card__excerpt">Discover the most dangerous household and garden plants for pets.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 9 min read</span></div>
             </div>
           </article>
 
-          <!-- NEW: Summer Vacation -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="en">
             <div class="blog-card__image">☀️</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.newA3.cat">Travel</span>
-              <h2 class="blog-card__title">
-                <a href="prepare-pet-summer-vacation/" data-i18n="blog.newA3.title">How to Prepare Your Pet for Summer Vacation</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.newA3.excerpt">Complete guide to traveling with your pet in summer, from car safety to finding pet-friendly accommodation.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>8 min read</span></span>
-              </div>
+              <span class="blog-card__category">Travel</span>
+              <h2 class="blog-card__title"><a href="prepare-pet-summer-vacation/">How to Prepare Your Pet for Summer Vacation</a></h2>
+              <p class="blog-card__excerpt">Complete guide to traveling with your pet in summer.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 8 min read</span></div>
             </div>
           </article>
 
-          <!-- NEW: Dog Socialization -->
-          <article class="blog-card">
-            <div class="blog-card__image">🐶</div>
+          <article class="blog-card" data-lang="en">
+            <div class="blog-card__image">💊</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.newA4.cat">Dog Training</span>
-              <h2 class="blog-card__title">
-                <a href="dog-socialization-complete-guide/" data-i18n="blog.newA4.title">Complete Guide to Dog Socialization</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.newA4.excerpt">Learn why socialization matters, critical periods, step-by-step plans, and how to socialize adult dogs safely.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>10 min read</span></span>
-              </div>
+              <span class="blog-card__category">Pet Health</span>
+              <h2 class="blog-card__title"><a href="how-to-track-pet-vaccinations-app/">How to Track Pet Vaccinations: Complete Guide 2026</a></h2>
+              <p class="blog-card__excerpt">Why tracking vaccinations matters and how PetNudge makes it effortless.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 10 min read</span></div>
             </div>
           </article>
 
-          <!-- NEW: Cats Hide When Sick -->
-          <article class="blog-card">
-            <div class="blog-card__image">🐱</div>
+          <article class="blog-card" data-lang="en">
+            <div class="blog-card__image">📱</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.newA5.cat">Cat Health</span>
-              <h2 class="blog-card__title">
-                <a href="why-cats-hide-when-sick/" data-i18n="blog.newA5.title">Why Cats Hide When They're Sick</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.newA5.excerpt">Understanding feline instincts, recognizing subtle illness signs, and knowing when to call the vet.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>7 min read</span></span>
-              </div>
+              <span class="blog-card__category">App Review</span>
+              <h2 class="blog-card__title"><a href="best-pet-health-app-iphone-ipad/">Best Pet Health App for iPhone & iPad in 2026</a></h2>
+              <p class="blog-card__excerpt">What to look for in a pet health app and why PetNudge stands out.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 10 min read</span></div>
             </div>
           </article>
 
-          <!-- NEW: Choose Pet Food -->
-          <article class="blog-card">
-            <div class="blog-card__image">🍖</div>
+          <article class="blog-card" data-lang="en">
+            <div class="blog-card__image">⚖️</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.newA6.cat">Pet Nutrition</span>
-              <h2 class="blog-card__title">
-                <a href="choose-right-pet-food/" data-i18n="blog.newA6.title">How to Choose the Right Food for Your Pet</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.newA6.excerpt">Read labels like a pro, understand nutritional needs by age and breed, and avoid common diet mistakes.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>9 min read</span></span>
-              </div>
+              <span class="blog-card__category">Pet Health</span>
+              <h2 class="blog-card__title"><a href="dog-weight-tracking-chart-guide/">Dog Weight Tracking: Why It Matters & How to Start</a></h2>
+              <p class="blog-card__excerpt">Ideal weight ranges, health risks of obesity, and how to track weight trends.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 9 min read</span></div>
             </div>
           </article>
 
-          <!-- NEW: Spaying/Neutering -->
-          <article class="blog-card">
-            <div class="blog-card__image">🏥</div>
+          <article class="blog-card" data-lang="en">
+            <div class="blog-card__image">💊</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.newA7.cat">Pet Health</span>
-              <h2 class="blog-card__title">
-                <a href="benefits-spaying-neutering-pets/" data-i18n="blog.newA7.title">Benefits of Spaying and Neutering Your Pet</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.newA7.excerpt">Health benefits, behavioral improvements, and what to expect before, during, and after the procedure.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>8 min read</span></span>
-              </div>
+              <span class="blog-card__category">Pet Care</span>
+              <h2 class="blog-card__title"><a href="pet-medication-reminder-app-guide/">Never Miss a Pet Medication Dose: Reminder App Guide</a></h2>
+              <p class="blog-card__excerpt">Why doses get missed and how smart reminders solve the problem.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 9 min read</span></div>
             </div>
           </article>
 
-          <!-- NEW: New Puppy -->
-          <article class="blog-card">
-            <div class="blog-card__image">🐾</div>
+          <article class="blog-card" data-lang="en">
+            <div class="blog-card__image">🤖</div>
             <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.newA8.cat">New Pet Owner</span>
-              <h2 class="blog-card__title">
-                <a href="prepare-home-new-puppy/" data-i18n="blog.newA8.title">How to Prepare Your Home for a New Puppy</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.newA8.excerpt">Puppy-proofing checklist, essential supplies, first vet visit, and surviving the first night with your new pup.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>9 min read</span></span>
-              </div>
+              <span class="blog-card__category">AI & Technology</span>
+              <h2 class="blog-card__title"><a href="ai-pet-health-assistant-food-safety/">AI Pet Health Assistant: Food Safety & Symptoms</a></h2>
+              <p class="blog-card__excerpt">How AI helps pet owners check food safety and analyze symptoms instantly.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 10 min read</span></div>
             </div>
           </article>
 
-          <!-- NEW: Separation Anxiety -->
-          <article class="blog-card">
-            <div class="blog-card__image">😟</div>
-            <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.newA9.cat">Dog Behavior</span>
-              <h2 class="blog-card__title">
-                <a href="dog-separation-anxiety-solutions/" data-i18n="blog.newA9.title">Dog Separation Anxiety: Signs, Causes, and Solutions</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.newA9.excerpt">Recognize separation anxiety symptoms and learn proven techniques to help your dog feel calm when alone.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>8 min read</span></span>
-              </div>
-            </div>
-          </article>
-
-          <!-- NEW: Extreme Heat -->
-          <article class="blog-card">
-            <div class="blog-card__image">🌡️</div>
-            <div class="blog-card__content">
-              <span class="blog-card__category" data-i18n="blog.newA10.cat">Pet Safety</span>
-              <h2 class="blog-card__title">
-                <a href="protect-pet-extreme-heat/" data-i18n="blog.newA10.title">How to Protect Your Pet from Extreme Heat</a>
-              </h2>
-              <p class="blog-card__excerpt" data-i18n="blog.newA10.excerpt">Heatstroke signs, hot pavement dangers, hydration tips, and emergency first aid for overheated pets.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>7 min read</span></span>
-              </div>
-            </div>
-          </article>
-
-          <!-- NEW: Article FR 1 -->
-          <article class="blog-card">
+          <!-- ====== FRENCH ARTICLES ====== -->
+          <article class="blog-card" data-lang="fr">
             <div class="blog-card__image">🔬</div>
             <div class="blog-card__content">
               <span class="blog-card__category">Technologie</span>
-              <h2 class="blog-card__title">
-                <a href="puce-electronique-vs-qr-code/">Puce Electronique vs QR Code : Quelle Solution pour Identifier Votre Chien ?</a>
-              </h2>
-              <p class="blog-card__excerpt">Comparez les avantages et inconvenients de la puce electronique, du QR code et du tag NFC pour l'identification de votre animal.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>8 min</span></span>
-              </div>
+              <h2 class="blog-card__title"><a href="puce-electronique-vs-qr-code/">Puce Électronique vs QR Code : Quelle Solution pour Votre Chien ?</a></h2>
+              <p class="blog-card__excerpt">Comparez les avantages de la puce électronique, du QR code et du tag NFC pour l'identification animale.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 8 min de lecture</span></div>
             </div>
           </article>
 
-          <!-- NEW: Article FR 2 -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="fr">
             <div class="blog-card__image">🚨</div>
             <div class="blog-card__content">
               <span class="blog-card__category">Animaux Perdus</span>
-              <h2 class="blog-card__title">
-                <a href="guide-urgence-chien-perdu/">Guide d'Urgence : 7 Etapes si Votre Chien est Perdu</a>
-              </h2>
-              <p class="blog-card__excerpt">Que faire dans les premieres 24 heures quand votre chien disparait ? Actions concretes etape par etape.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>10 min</span></span>
-              </div>
+              <h2 class="blog-card__title"><a href="guide-urgence-chien-perdu/">Guide d'Urgence : 7 Étapes si Votre Chien est Perdu</a></h2>
+              <p class="blog-card__excerpt">Que faire dans les premières 24 heures quand votre chien disparaît ?</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 10 min de lecture</span></div>
             </div>
           </article>
 
-          <!-- NEW: Article FR 3 -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="fr">
             <div class="blog-card__image">🐱</div>
             <div class="blog-card__content">
               <span class="blog-card__category">Technologie</span>
-              <h2 class="blog-card__title">
-                <a href="etiquette-nfc-chat/">Etiquettes NFC pour Chats : Protection Intelligente pour Votre Felin</a>
-              </h2>
-              <p class="blog-card__excerpt">Pourquoi le NFC est ideal pour les chats et comment installer un tag sur le collier de votre felin.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>6 min</span></span>
-              </div>
+              <h2 class="blog-card__title"><a href="etiquette-nfc-chat/">Étiquettes NFC pour Chats : Protection Intelligente</a></h2>
+              <p class="blog-card__excerpt">Pourquoi le NFC est idéal pour les chats et comment installer un tag sur le collier.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 6 min de lecture</span></div>
             </div>
           </article>
 
-          <!-- NEW: Article FR 4 -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="fr">
             <div class="blog-card__image">📱</div>
             <div class="blog-card__content">
               <span class="blog-card__category">Guide</span>
-              <h2 class="blog-card__title">
-                <a href="application-animaux-perdus-france/">PetNudge : L'Application pour Retrouver Vos Animaux Perdus</a>
-              </h2>
-              <p class="blog-card__excerpt">Decouvrez comment PetNudge utilise le NFC pour proteger vos animaux de compagnie.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>7 min</span></span>
-              </div>
+              <h2 class="blog-card__title"><a href="application-animaux-perdus-france/">PetNudge : L'Application pour Retrouver Vos Animaux Perdus</a></h2>
+              <p class="blog-card__excerpt">Découvrez comment PetNudge utilise le NFC pour protéger vos animaux de compagnie.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 7 min de lecture</span></div>
             </div>
           </article>
 
-          <!-- NEW: Article FR 5 -->
-          <article class="blog-card">
+          <article class="blog-card" data-lang="fr">
             <div class="blog-card__image">📡</div>
             <div class="blog-card__content">
               <span class="blog-card__category">Technologie</span>
-              <h2 class="blog-card__title">
-                <a href="technologie-nfc-identification-chien/">Technologie NFC : Comment Fonctionne l'Identification Connectee pour Chien</a>
-              </h2>
-              <p class="blog-card__excerpt">Tout comprendre sur le NFC, son fonctionnement et ses avantages pour l'identification animale.</p>
-              <div class="blog-card__meta">
-                <span class="blog-card__read-time">📖 <span>7 min</span></span>
-              </div>
+              <h2 class="blog-card__title"><a href="technologie-nfc-identification-chien/">Technologie NFC : Identification Connectée pour Chien</a></h2>
+              <p class="blog-card__excerpt">Tout comprendre sur le NFC et ses avantages pour l'identification animale.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 7 min de lecture</span></div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-lang="fr">
+            <div class="blog-card__image">😟</div>
+            <div class="blog-card__content">
+              <span class="blog-card__category">Comportement</span>
+              <h2 class="blog-card__title"><a href="anxiete-separation-chien-solutions/">Anxiété de Séparation du Chien : Signes et Solutions</a></h2>
+              <p class="blog-card__excerpt">Reconnaissez les signes d'anxiété et découvrez des solutions éprouvées.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 8 min de lecture</span></div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-lang="fr">
+            <div class="blog-card__image">🌿</div>
+            <div class="blog-card__content">
+              <span class="blog-card__category">Santé</span>
+              <h2 class="blog-card__title"><a href="plantes-toxiques-chiens-chats/">10 Plantes Toxiques pour Chiens et Chats</a></h2>
+              <p class="blog-card__excerpt">Découvrez les plantes les plus dangereuses et les alternatives sûres.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 9 min de lecture</span></div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-lang="fr">
+            <div class="blog-card__image">🐶</div>
+            <div class="blog-card__content">
+              <span class="blog-card__category">Éducation</span>
+              <h2 class="blog-card__title"><a href="socialisation-chien-guide-complet/">Guide Complet de la Socialisation du Chien</a></h2>
+              <p class="blog-card__excerpt">Périodes critiques, plans étape par étape et socialisation des chiens adultes.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 10 min de lecture</span></div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-lang="fr">
+            <div class="blog-card__image">☀️</div>
+            <div class="blog-card__content">
+              <span class="blog-card__category">Voyages</span>
+              <h2 class="blog-card__title"><a href="voyager-animal-europe-reglementation/">Voyager avec son Animal en Europe : Guide Réglementations</a></h2>
+              <p class="blog-card__excerpt">Tout ce que vous devez savoir avant de voyager avec votre compagnon.</p>
+              <div class="blog-card__meta"><span class="blog-card__read-time">📖 9 min de lecture</span></div>
             </div>
           </article>
 
@@ -452,12 +371,12 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 PetNudge. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <p>© 2024-2026 PetNudge. <span data-i18n="footer.rights">All rights reserved.</span></p>
       </div>
     </div>
   </footer>
 
-  <!-- RGPD Cookie Consent Banner -->
+  <!-- RGPD Cookie Consent -->
   <div id="cookie-banner" class="cookie-banner">
     <div class="cookie-banner__inner">
       <p class="cookie-banner__text">This site uses cookies to improve your experience. <a href="../privacy.html">Privacy Policy</a>.</p>
@@ -474,5 +393,63 @@
   </script>
 
   <script src="../script.js"></script>
+
+  <!-- Blog language filter -->
+  <script>
+    (function() {
+      function filterBlogByLang() {
+        var lang = localStorage.getItem('petnudge_lang') || navigator.language.substring(0, 2) || 'en';
+        // Map language codes
+        var langMap = { 'pt': 'pt-BR', 'zh': 'zh-Hans', 'ja': 'ja' };
+        lang = langMap[lang] || lang;
+        // Simplify to base language for matching
+        var baseLang = lang.split('-')[0];
+        if (baseLang === 'pt') baseLang = 'pt-BR';
+
+        var cards = document.querySelectorAll('.blog-card[data-lang]');
+        cards.forEach(function(card) {
+          var cardLang = card.getAttribute('data-lang');
+          if (cardLang === 'all') {
+            card.classList.add('blog-card--visible');
+          } else if (cardLang === baseLang || cardLang === lang) {
+            card.classList.add('blog-card--visible');
+          } else {
+            card.classList.remove('blog-card--visible');
+          }
+        });
+
+        // If no articles for this language, show English as fallback
+        var visible = document.querySelectorAll('.blog-card--visible[data-lang]:not([data-lang="all"])');
+        if (visible.length === 0) {
+          cards.forEach(function(card) {
+            if (card.getAttribute('data-lang') === 'en') {
+              card.classList.add('blog-card--visible');
+            }
+          });
+        }
+      }
+
+      // Run on load
+      filterBlogByLang();
+
+      // Re-run when language changes (observe lang-text changes)
+      var observer = new MutationObserver(function() {
+        setTimeout(filterBlogByLang, 100);
+      });
+      var langText = document.getElementById('lang-text');
+      if (langText) {
+        observer.observe(langText, { childList: true, characterData: true, subtree: true });
+      }
+
+      // Also listen for storage changes
+      window.addEventListener('storage', filterBlogByLang);
+      // Re-check periodically for language toggle clicks
+      document.addEventListener('click', function(e) {
+        if (e.target.closest('.lang-toggle') || e.target.closest('.lang-menu')) {
+          setTimeout(filterBlogByLang, 300);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

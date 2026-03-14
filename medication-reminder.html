@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Medication Reminder App - Smart Dose Tracking | PetNudge</title>
+  <meta name="description" content="Never miss a dose with PetNudge's pet medication reminder. Smart scheduling for daily, weekly, or monthly medications. Track doses, set reminders, and keep your pet healthy.">
+  <meta name="keywords" content="pet medication reminder app, dog pill reminder, medication tracker for pets, never miss pet medication, pet medicine schedule, dog medication app, cat medication reminder">
+  <link rel="canonical" href="https://petnudge.fr/medication-reminder.html">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://petnudge.fr/medication-reminder.html">
+  <link rel="alternate" hreflang="x-default" href="https://petnudge.fr/medication-reminder.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pet Medication Reminder App - Smart Dose Tracking | PetNudge">
+  <meta property="og:description" content="Never miss a dose. Smart medication reminders with dose tracking, scheduling, and history for dogs, cats, and all pets.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://petnudge.fr/medication-reminder.html">
+  <meta property="og:image" content="https://petnudge.fr/logo.webp">
+  <meta property="og:site_name" content="PetNudge">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pet Medication Reminder App - Smart Dose Tracking | PetNudge">
+  <meta name="twitter:description" content="Never miss a dose. Smart medication reminders with dose tracking, scheduling, and history for dogs, cats, and all pets.">
+  <meta name="twitter:image" content="https://petnudge.fr/logo.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.webp">
+  <link rel="apple-touch-icon" href="logo.webp">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#FF6B35">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://apps.apple.com">
+  <link rel="dns-prefetch" href="https://apps.apple.com">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://petnudge.fr/medication-reminder.html#app",
+        "name": "PetNudge - Pet Medication Reminder",
+        "operatingSystem": "iOS",
+        "applicationCategory": "HealthApplication",
+        "description": "Smart medication reminder app for pets with dose scheduling, mark as taken, snooze, skip, and complete medication history. Supports daily, weekly, monthly, and custom frequencies.",
+        "offers": {
+          "@type": "Offer",
+          "price": "4.99",
+          "priceCurrency": "EUR",
+          "description": "Monthly subscription with 7-day free trial"
+        },
+        "downloadUrl": "https://apps.apple.com/app/id6756539814",
+        "featureList": "Medication reminders, Dose scheduling, Mark as taken, Snooze and skip, Medication history, Multiple pet support, PDF health reports"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://petnudge.fr/medication-reminder.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What types of pet medications can I track?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PetNudge can track any medication your pet takes: prescription drugs, flea and tick prevention, heartworm pills, joint supplements, vitamins, eye drops, ear drops, antibiotics, pain medications, allergy medications, insulin, thyroid medications, and more. You create custom entries with the medication name, dosage, and schedule."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What reminder frequencies does PetNudge support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PetNudge supports all common medication schedules: once daily, twice daily, three times daily, every other day, weekly, bi-weekly, monthly, and custom intervals. You can set the exact time for each reminder and adjust it anytime. For medications with end dates, you can set a course duration and the app will stop reminders automatically when the course is complete."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can multiple family members receive medication reminders?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Currently, PetNudge sends push notifications to the device where the medication is set up. If multiple family members share the same PetNudge account on different devices, all devices will receive the notifications. This ensures that someone in the household is always alerted when it is time for your pet's medication."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does PetNudge keep a history of administered medications?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every time you mark a dose as taken, skip a dose, or snooze a reminder, PetNudge logs the action with a timestamp. This creates a complete medication history that you can review at any time. The history is also included in PDF health reports that you can share with your veterinarian, which is particularly helpful for monitoring chronic conditions or adjusting treatment plans."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://petnudge.fr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Medication Reminder",
+            "item": "https://petnudge.fr/medication-reminder.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script defer data-domain="petnudge.fr" src="https://signallensai.com:8443/js/script.js"></script>
+</head>
+<body>
+  <!-- Skip to content for accessibility -->
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <img src="logo.webp" alt="PetNudge - Smart Pet Health App" class="header__logo-img" width="36" height="36">
+        <span>PetNudge</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="header__nav-list">
+          <li><a href="/#features" class="header__nav-link">Features</a></li>
+          <li><a href="/#how" class="header__nav-link">How It Works</a></li>
+          <li><a href="/#pricing" class="header__nav-link">Pricing</a></li>
+          <li><a href="/#faq" class="header__nav-link">FAQ</a></li>
+          <li><a href="blog/" class="header__nav-link">Blog</a></li>
+          <li><a href="shop.html" class="header__nav-link">Shop</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
+          <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span id="lang-text">EN</span>
+        </button>
+
+        <button type="button" class="header__menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button type="button" class="mobile-menu__close" id="menu-close" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <nav class="mobile-menu__nav">
+      <a href="/#features" class="mobile-menu__link">Features</a>
+      <a href="/#how" class="mobile-menu__link">How It Works</a>
+      <a href="/#pricing" class="mobile-menu__link">Pricing</a>
+      <a href="/#faq" class="mobile-menu__link">FAQ</a>
+      <a href="blog/" class="mobile-menu__link">Blog</a>
+      <a href="shop.html" class="mobile-menu__link">Shop</a>
+      <a href="privacy.html" class="mobile-menu__link">Privacy</a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <span class="hero__badge">Smart Medication Management</span>
+        <h1 class="hero__title">
+          <span>Never Miss a Dose.</span><br>
+          <span class="hero__title-highlight">Smart Medication Reminders for Your Pet.</span>
+        </h1>
+        <p class="hero__subtitle">
+          PetNudge makes it easy to manage your pet's medications. Set up schedules, get push notifications, mark doses as taken, and keep a complete history. From daily pills to monthly treatments, every medication is tracked.
+        </p>
+        <div class="hero__actions">
+          <a href="https://apps.apple.com/app/id6756539814" class="btn btn--appstore btn--large" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span>Download on App Store</span>
+          </a>
+          <a href="#features" class="btn btn--secondary btn--large">See All Features</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Medication Adherence Matters -->
+    <section class="section section--gray">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">The Problem</p>
+          <h2 class="section__title">Why medication adherence matters for your pet</h2>
+          <p class="section__subtitle">Missed doses can reduce the effectiveness of treatment, allow parasites to return, or cause dangerous gaps in chronic disease management.</p>
+        </header>
+
+        <div class="problem__grid">
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">⏰</div>
+            <div class="problem__content">
+              <h3>Inconsistent dosing reduces effectiveness</h3>
+              <p>Many pet medications need to be given at consistent intervals to maintain therapeutic levels in your pet's system. Antibiotics, for example, require precise timing to fully eliminate an infection. Missing doses or giving them at irregular intervals can allow bacteria to develop resistance, turning a simple infection into a stubborn one that requires stronger and more expensive treatment. Flea and tick medications lose their protective barrier when doses are late, leaving your pet vulnerable to infestations and the diseases parasites carry.</p>
+            </div>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">📉</div>
+            <div class="problem__content">
+              <h3>Chronic conditions require strict schedules</h3>
+              <p>Pets with chronic conditions like diabetes, thyroid disease, epilepsy, or heart disease depend on medication given at the same time every day. A missed insulin dose can cause dangerous blood sugar spikes. A forgotten thyroid pill can trigger lethargy and weight gain. An epilepsy medication gap can lead to breakthrough seizures. For these pets, a reliable reminder system is not a convenience; it is a medical necessity that directly impacts their quality of life and longevity.</p>
+            </div>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">🐾</div>
+            <div class="problem__content">
+              <h3>Multiple pets multiply the complexity</h3>
+              <p>If you have more than one pet, each with their own medications and schedules, keeping track of everything in your head becomes nearly impossible. One dog might need a daily joint supplement and monthly heartworm pill while another needs twice-daily allergy medication and a weekly ear drop. Mix in a cat on thyroid medication and you have a scheduling challenge that demands a proper system. Pet owners who rely on memory alone inevitably make mistakes, and those mistakes can have real health consequences.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Features</p>
+          <h2 class="section__title">Everything you need to manage pet medications</h2>
+          <p class="section__subtitle">PetNudge handles the complexity so you can focus on giving your pet the care they need.</p>
+        </header>
+
+        <div class="solution__grid">
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">📅</div>
+            <h3>Smart Dose Scheduling</h3>
+            <p>Set up medication schedules in seconds. Choose the medication name, dosage amount, and frequency. PetNudge calculates the exact times for each dose and sends push notifications to your phone so you never have to rely on memory. You can set up as many medications as your pet needs, each with its own independent schedule.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">&#10003;</div>
+            <h3>Mark as Taken</h3>
+            <p>When you give your pet their medication, tap to mark the dose as taken. PetNudge records the exact time and updates the schedule. This gives you a clear, auditable log of every dose your pet has received. If a family member gives the dose, they can mark it too, so everyone stays in sync and no one accidentally gives a double dose.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">💤</div>
+            <h3>Snooze Reminders</h3>
+            <p>If you cannot give the medication right when the reminder fires, snooze it for a few minutes. The app will remind you again so the dose does not slip through the cracks. Snooze is perfect for those moments when you are in the middle of something and need a few minutes before you can get to the medication.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">⏭️</div>
+            <h3>Skip with a Reason</h3>
+            <p>Sometimes a dose needs to be skipped, whether your pet had a stomach upset, the vet advised a pause, or the medication ran out. PetNudge lets you skip a dose and optionally record why. This information appears in your pet's medication history, which is valuable context when reviewing the treatment plan with your veterinarian.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">📊</div>
+            <h3>Complete Dose History</h3>
+            <p>Every action is logged: doses taken, doses skipped, snoozes, and schedule changes. You can scroll through the full medication history for any pet at any time. This history is invaluable for vet visits, showing exactly which medications were given when, and any gaps or irregularities in the schedule.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">📄</div>
+            <h3>PDF Health Reports</h3>
+            <p>Export a professional PDF report that includes your pet's complete medication history alongside vaccination records and weight tracking. Share it with your vet before appointments so they have the full picture. The report is also useful for boarding, travel, and pet insurance documentation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supported Frequencies -->
+    <section class="section section--gray" id="frequencies">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Flexible Scheduling</p>
+          <h2 class="section__title">Every medication schedule, supported</h2>
+          <p class="section__subtitle">Whether your pet takes a pill once a day or a treatment once a month, PetNudge adapts to the exact schedule your vet prescribes.</p>
+        </header>
+
+        <div class="solution__grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+          <article class="solution__card" style="padding: var(--space-6);">
+            <div class="solution__icon" aria-hidden="true">1x</div>
+            <h3>Once Daily</h3>
+            <p>Ideal for most prescription medications, daily supplements, and maintenance drugs. Set the time that works best for your routine.</p>
+          </article>
+
+          <article class="solution__card" style="padding: var(--space-6);">
+            <div class="solution__icon" aria-hidden="true">2x</div>
+            <h3>Twice Daily</h3>
+            <p>Common for antibiotics, pain medications, and some chronic condition drugs. PetNudge spaces the two reminders at consistent intervals.</p>
+          </article>
+
+          <article class="solution__card" style="padding: var(--space-6);">
+            <div class="solution__icon" aria-hidden="true">3x</div>
+            <h3>Three Times Daily</h3>
+            <p>Some medications require three doses spread throughout the day. PetNudge ensures even spacing and sends a reminder for each dose.</p>
+          </article>
+
+          <article class="solution__card" style="padding: var(--space-6);">
+            <div class="solution__icon" aria-hidden="true">7d</div>
+            <h3>Weekly</h3>
+            <p>Perfect for weekly treatments like certain joint supplements, ear cleaning routines, or weekly heartworm prevention for some brands.</p>
+          </article>
+
+          <article class="solution__card" style="padding: var(--space-6);">
+            <div class="solution__icon" aria-hidden="true">30d</div>
+            <h3>Monthly</h3>
+            <p>The most common schedule for flea and tick prevention, heartworm pills, and some allergy injections. Easy to forget without a reminder.</p>
+          </article>
+
+          <article class="solution__card" style="padding: var(--space-6);">
+            <div class="solution__icon" aria-hidden="true">...</div>
+            <h3>As Needed</h3>
+            <p>For medications that are given only when symptoms appear, like anti-nausea pills for car rides or rescue medications for seizures. Log each dose manually.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+      <div class="container container--narrow">
+        <header class="section__header">
+          <p class="section__label">How It Works</p>
+          <h2 class="section__title">Set up medication tracking in minutes</h2>
+          <p class="section__subtitle">Getting started is quick and straightforward. Here is the process from download to your first reminder.</p>
+        </header>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step__number">1</div>
+            <div class="step__content">
+              <h3>Download PetNudge and add your pet</h3>
+              <p>Install PetNudge from the App Store and create a profile for your pet. Add their name, breed, age, weight, and a photo. If you have multiple pets, create a profile for each one. All profiles are managed from a single, easy-to-navigate interface.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step__number">2</div>
+            <div class="step__content">
+              <h3>Add medications and set schedules</h3>
+              <p>For each medication, enter the name, dosage, and how often it should be given. Choose from preset frequencies like once daily, twice daily, weekly, or monthly, or set a custom interval. Pick the time of day for each dose. PetNudge starts sending reminders immediately. You can add notes about special instructions, such as "give with food" or "shake well before use."</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step__number">3</div>
+            <div class="step__content">
+              <h3>Receive reminders and log each dose</h3>
+              <p>When it is time for a dose, PetNudge sends a push notification to your phone. Open the app and tap to mark the dose as taken, snooze for later, or skip with a reason. Each action is recorded in your pet's medication history. Over time, you build a complete log that your vet can reference to evaluate treatment effectiveness and make informed adjustments.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Medications Section -->
+    <section class="section section--gray">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Common Uses</p>
+          <h2 class="section__title">Medications pet owners commonly track</h2>
+          <p class="section__subtitle">PetNudge works for any medication. Here are some of the most popular uses among pet owners.</p>
+        </header>
+
+        <div class="solution__grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🐛</div>
+            <h3>Flea & Tick Prevention</h3>
+            <p>Monthly treatments like Frontline, NexGard, Bravecto, or Simparica need consistent timing to maintain protection. A day late means a gap in coverage where fleas and ticks can latch on and transmit diseases. PetNudge reminds you on the exact day each month.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">❤️</div>
+            <h3>Heartworm Prevention</h3>
+            <p>Monthly heartworm pills like Heartgard, Interceptor, or Sentinel must be given within a precise window. Missing a dose can expose your pet to heartworm infection, which is expensive and difficult to treat. A simple monthly reminder eliminates the risk of forgetting.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">💊</div>
+            <h3>Prescription Medications</h3>
+            <p>Daily medications for conditions like hypothyroidism, diabetes, epilepsy, allergies, or arthritis require strict adherence. PetNudge helps you maintain the exact schedule your vet prescribed, and the dose history gives your vet the data they need to fine-tune the treatment.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">💧</div>
+            <h3>Eye & Ear Drops</h3>
+            <p>Drops for infections, glaucoma, dry eye, or chronic ear conditions often require multiple doses per day at specific intervals. PetNudge handles multi-dose schedules with ease, sending a separate reminder for each administration throughout the day.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🦴</div>
+            <h3>Joint Supplements</h3>
+            <p>Glucosamine, chondroitin, fish oil, and other joint supplements are typically given daily for the life of the pet. While not as time-critical as prescription drugs, consistent daily dosing is what makes supplements effective over the long term.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🧪</div>
+            <h3>Post-Surgery Medications</h3>
+            <p>After surgery, pets often need a course of antibiotics, anti-inflammatories, and pain medication, sometimes all at once with different schedules. PetNudge manages the complexity so you can focus on your pet's recovery rather than juggling pill bottles.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integration with Vet Appointments -->
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Vet Integration</p>
+          <h2 class="section__title">Better vet visits with complete medication data</h2>
+          <p class="section__subtitle">PetNudge bridges the gap between home care and veterinary appointments by keeping an accurate record of everything your pet takes.</p>
+        </header>
+
+        <div class="problem__grid">
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">📋</div>
+            <div class="problem__content">
+              <h3>Share accurate medication history</h3>
+              <p>Before your next vet appointment, export a PDF health report from PetNudge. It includes every medication your pet is taking, the dosage, the schedule, and the complete dose history showing when each dose was given, skipped, or missed. Your vet gets a clear picture of your pet's medication adherence without relying on your memory or handwritten notes. This level of detail helps your vet make better treatment decisions.</p>
+            </div>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">📅</div>
+            <div class="problem__content">
+              <h3>Coordinate with the health calendar</h3>
+              <p>PetNudge's visual health calendar shows all upcoming medications, vaccinations, and vet appointments in one view. You can see the big picture of your pet's health schedule at a glance. When your vet prescribes a new medication, add it to PetNudge during the appointment so reminders start immediately, before you even leave the clinic.</p>
+            </div>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">🏥</div>
+            <div class="problem__content">
+              <h3>Find nearby veterinary clinics</h3>
+              <p>PetNudge includes a built-in vet finder that shows nearby veterinary clinics and emergency animal hospitals based on your location. If your pet needs a refill or you notice side effects from a medication, you can quickly find the closest clinic and contact them directly from the app. Opening hours, phone numbers, and directions are all available.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--primary">
+      <div class="container">
+        <div class="waitlist__content">
+          <span class="waitlist__icon" aria-hidden="true">💊</span>
+          <p class="section__label">Start Today</p>
+          <h2 class="section__title">Your pet's medications, perfectly managed</h2>
+          <p class="section__subtitle">Download PetNudge and set up medication reminders in minutes. Free 7-day trial, cancel anytime.</p>
+          <a href="https://apps.apple.com/app/id6756539814" class="btn btn--primary btn--large" style="margin-top: var(--space-4);" target="_blank" rel="noopener">Download on App Store</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Questions</p>
+          <h2 class="section__title">Frequently asked questions about medication reminders</h2>
+        </header>
+
+        <div class="faq__list">
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>What types of pet medications can I track?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              PetNudge can track any medication your pet takes: prescription drugs, flea and tick prevention, heartworm pills, joint supplements, vitamins, eye drops, ear drops, antibiotics, pain medications, allergy medications, insulin, thyroid medications, and more. You create custom entries with the medication name, dosage, and schedule. There is no limit to the number of medications you can track per pet.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>What reminder frequencies does PetNudge support?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              PetNudge supports all common medication schedules: once daily, twice daily, three times daily, every other day, weekly, bi-weekly, monthly, and custom intervals. You set the exact time for each reminder and can adjust it at any time. For medications with end dates, such as a 10-day antibiotic course, you can set a course duration and the app will stop reminders automatically when the course is complete.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>Can multiple family members receive medication reminders?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              Currently, PetNudge sends push notifications to the device where the medication is set up. If multiple family members share the same PetNudge account on different devices, all devices will receive the notifications. This ensures that someone in the household is always alerted when it is time for your pet's medication, reducing the chance that a dose is missed because the primary caregiver was unavailable.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>Does PetNudge keep a history of administered medications?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              Yes. Every time you mark a dose as taken, skip a dose, or snooze a reminder, PetNudge logs the action with a timestamp. This creates a complete medication history that you can review at any time within the app. The history is also included in PDF health reports that you can export and share with your veterinarian, which is particularly helpful for monitoring chronic conditions, evaluating treatment effectiveness, and making informed adjustments to your pet's care plan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="header__logo">
+            <img src="logo.webp" alt="PetNudge - Smart Pet Health App" class="header__logo-img" width="36" height="36">
+            <span>PetNudge</span>
+          </a>
+          <p>Smart pet ID and health companion for modern pet owners.</p>
+        </div>
+
+        <div class="footer__section">
+          <h4>Legal</h4>
+          <nav class="footer__links">
+            <a href="privacy.html" class="footer__link">Privacy Policy</a>
+            <a href="terms.html" class="footer__link">Terms of Use</a>
+          </nav>
+        </div>
+
+        <div class="footer__section">
+          <h4>Support</h4>
+          <nav class="footer__links">
+            <a href="mailto:contactpetnudge@gmail.com" class="footer__link">Contact Us</a>
+            <span class="footer__link" style="opacity: 0.7; cursor: default;">contactpetnudge@gmail.com</span>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024-2026 PetNudge. All rights reserved.</p>
+        <button type="button" class="lang-toggle" id="lang-toggle-footer" onclick="document.getElementById('lang-toggle').click()">
+          <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span>EN / FR</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta" aria-hidden="true">
+    <div class="sticky-cta__inner">
+      <div class="sticky-cta__text">
+        <strong>Never miss a dose again</strong>
+        <span>7-day free trial, cancel anytime</span>
+      </div>
+      <a href="https://apps.apple.com/app/id6756539814" class="btn btn--primary" target="_blank" rel="noopener">Download Free</a>
+    </div>
+  </div>
+
+  <!-- RGPD Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text" id="cookie-text">
+        This site uses cookies to improve your experience. By continuing, you accept our
+        <a href="privacy.html">privacy policy</a>.
+      </p>
+      <div class="cookie-banner__actions">
+        <button onclick="acceptCookies()" class="cookie-banner__accept" id="cookie-accept">Accept</button>
+        <button onclick="refuseCookies()" class="cookie-banner__decline" id="cookie-refuse">Decline</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      if(!localStorage.getItem('cookie_consent')){
+        document.getElementById('cookie-banner').style.display='flex';
+      }
+    })();
+    function acceptCookies(){
+      localStorage.setItem('cookie_consent','accepted');
+      document.getElementById('cookie-banner').style.display='none';
+    }
+    function refuseCookies(){
+      localStorage.setItem('cookie_consent','refused');
+      document.getElementById('cookie-banner').style.display='none';
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>

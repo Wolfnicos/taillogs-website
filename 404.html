@@ -4,19 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found - PetNudge</title>
-  <meta name="description" content="The page you're looking for doesn't exist. Return to PetNudge homepage.">
+  <meta name="description" content="The page you're looking for doesn't exist. Return to PetNudge homepage to discover our pet health app with vaccination tracking, AI assistant, and NFC lost pet recovery.">
   <link rel="icon" type="image/png" href="logo.webp">
-  <meta name="robots" content="noindex">
+  <link rel="apple-touch-icon" href="logo.webp">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#FF6B35">
   <link rel="stylesheet" href="styles.css?v=3">
-    <script defer data-domain="petnudge.fr" src="https://signallensai.com:8443/js/script.js"></script>
+  <script defer data-domain="petnudge.fr" src="https://signallensai.com:8443/js/script.js"></script>
 </head>
 <body>
   <div class="error-page">
     <a href="/" class="error-page__logo">
-      <img src="logo.webp" alt="PetNudge">
+      <img src="logo.webp" alt="PetNudge" width="36" height="36">
       PetNudge
     </a>
-    <div class="error-page__icon">🐾</div>
+    <div class="error-page__icon" aria-hidden="true">🐾</div>
     <h1 class="error-page__title">404 - Page Not Found</h1>
     <p class="error-page__subtitle">Looks like this page wandered off! Let's get you back on track.</p>
     <div class="error-page__links">
@@ -24,6 +26,14 @@
       <a href="/blog/" class="error-page__link error-page__link--secondary">Read Our Blog</a>
       <a href="/shop.html" class="error-page__link error-page__link--secondary">Shop NFC Medals</a>
     </div>
+    <nav aria-label="Popular pages" style="margin-top:2rem;">
+      <p style="font-size:0.9rem;color:#666;">Popular pages:</p>
+      <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;justify-content:center;font-size:0.85rem;">
+        <li><a href="/vaccination-tracker.html" style="color:#FF6B35;">Vaccination Tracker</a></li>
+        <li><a href="/ai-pet-assistant.html" style="color:#FF6B35;">AI Pet Assistant</a></li>
+        <li><a href="/medication-reminder.html" style="color:#FF6B35;">Medication Reminders</a></li>
+      </ul>
+    </nav>
   </div>
 </body>
 </html>

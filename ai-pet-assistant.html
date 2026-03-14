@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Pet Health Assistant - Food Safety & Symptom Checker | PetNudge</title>
+  <meta name="description" content="Ask anything about your pet's health with PetNudge's AI assistant. Check food safety with your camera, analyze symptoms, and get instant guidance for dogs and cats.">
+  <meta name="keywords" content="AI pet health assistant, is this food safe for my dog, pet symptom checker app, AI vet chat, dog food safety checker, cat symptom analyzer, pet health AI">
+  <link rel="canonical" href="https://petnudge.fr/ai-pet-assistant.html">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://petnudge.fr/ai-pet-assistant.html">
+  <link rel="alternate" hreflang="x-default" href="https://petnudge.fr/ai-pet-assistant.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Pet Health Assistant - Food Safety & Symptom Checker | PetNudge">
+  <meta property="og:description" content="Ask anything about your pet's health. Check food safety with your camera, analyze symptoms, and get instant AI-powered guidance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://petnudge.fr/ai-pet-assistant.html">
+  <meta property="og:image" content="https://petnudge.fr/logo.webp">
+  <meta property="og:site_name" content="PetNudge">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Pet Health Assistant - Food Safety & Symptom Checker | PetNudge">
+  <meta name="twitter:description" content="Ask anything about your pet's health. Check food safety with your camera, analyze symptoms, and get instant AI-powered guidance.">
+  <meta name="twitter:image" content="https://petnudge.fr/logo.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.webp">
+  <link rel="apple-touch-icon" href="logo.webp">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#FF6B35">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://apps.apple.com">
+  <link rel="dns-prefetch" href="https://apps.apple.com">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://petnudge.fr/ai-pet-assistant.html#app",
+        "name": "PetNudge - AI Pet Health Assistant",
+        "operatingSystem": "iOS",
+        "applicationCategory": "HealthApplication",
+        "description": "AI-powered pet health assistant with food safety camera checker, symptom analysis, and instant chat for all your dog and cat health questions.",
+        "offers": {
+          "@type": "Offer",
+          "price": "4.99",
+          "priceCurrency": "EUR",
+          "description": "Monthly subscription with 7-day free trial"
+        },
+        "downloadUrl": "https://apps.apple.com/app/id6756539814",
+        "featureList": "AI pet health chat, Food safety camera checker, Symptom analysis, Breed-specific guidance, Multilingual support"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://petnudge.fr/ai-pet-assistant.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the AI pet assistant a replacement for a veterinarian?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. PetNudge's AI assistant provides general guidance and educational information about pet health. It is not a substitute for professional veterinary advice, diagnosis, or treatment. For emergencies, sudden behavioral changes, severe symptoms, or any situation where your pet appears to be in distress, always contact your veterinarian or an emergency animal hospital immediately."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How accurate is the food safety checker?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The food safety checker uses AI image recognition combined with a comprehensive database of foods known to be toxic, unsafe, or safe for dogs and cats. It provides a safety rating (safe, caution, or toxic) along with an explanation. While highly accurate for common foods, we always recommend double-checking with your vet for unusual items or if your pet has specific dietary restrictions or allergies."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What kind of questions can I ask the AI assistant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can ask about virtually any pet health or care topic: nutrition and diet questions, behavioral concerns, exercise needs, grooming tips, breed-specific health risks, first aid guidance, training advice, and general wellness questions. The AI assistant draws on extensive veterinary knowledge to provide helpful, actionable answers tailored to your specific pet's breed and age."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the AI assistant work for all pet types?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The AI assistant is optimized for dogs and cats, which represent the vast majority of pet health questions. It can also provide general guidance for other common pets like rabbits, hamsters, and birds. The food safety checker is specifically designed for dogs and cats, as toxicity levels vary significantly between species."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://petnudge.fr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AI Pet Assistant",
+            "item": "https://petnudge.fr/ai-pet-assistant.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script defer data-domain="petnudge.fr" src="https://signallensai.com:8443/js/script.js"></script>
+</head>
+<body>
+  <!-- Skip to content for accessibility -->
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <img src="logo.webp" alt="PetNudge - Smart Pet Health App" class="header__logo-img" width="36" height="36">
+        <span>PetNudge</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="header__nav-list">
+          <li><a href="/#features" class="header__nav-link">Features</a></li>
+          <li><a href="/#how" class="header__nav-link">How It Works</a></li>
+          <li><a href="/#pricing" class="header__nav-link">Pricing</a></li>
+          <li><a href="/#faq" class="header__nav-link">FAQ</a></li>
+          <li><a href="blog/" class="header__nav-link">Blog</a></li>
+          <li><a href="shop.html" class="header__nav-link">Shop</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
+          <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span id="lang-text">EN</span>
+        </button>
+
+        <button type="button" class="header__menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button type="button" class="mobile-menu__close" id="menu-close" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <nav class="mobile-menu__nav">
+      <a href="/#features" class="mobile-menu__link">Features</a>
+      <a href="/#how" class="mobile-menu__link">How It Works</a>
+      <a href="/#pricing" class="mobile-menu__link">Pricing</a>
+      <a href="/#faq" class="mobile-menu__link">FAQ</a>
+      <a href="blog/" class="mobile-menu__link">Blog</a>
+      <a href="shop.html" class="mobile-menu__link">Shop</a>
+      <a href="privacy.html" class="mobile-menu__link">Privacy</a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <span class="hero__badge">AI-Powered Pet Care</span>
+        <h1 class="hero__title">
+          <span>Ask Anything About</span><br>
+          <span class="hero__title-highlight">Your Pet's Health.</span>
+        </h1>
+        <p class="hero__subtitle">
+          PetNudge's AI assistant gives you instant answers about food safety, symptoms, nutrition, and everyday pet care. Scan food with your camera. Describe symptoms in plain language. Get guidance you can trust.
+        </p>
+        <div class="hero__actions">
+          <a href="https://apps.apple.com/app/id6756539814" class="btn btn--appstore btn--large" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span>Download on App Store</span>
+          </a>
+          <a href="#what-ai-can-do" class="btn btn--secondary btn--large">Explore AI Features</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What the AI Can Do -->
+    <section class="section section--gray" id="what-ai-can-do">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Capabilities</p>
+          <h2 class="section__title">What the AI pet assistant can do</h2>
+          <p class="section__subtitle">Three powerful tools in one app, designed to help you make better decisions about your pet's health every day.</p>
+        </header>
+
+        <div class="solution__grid">
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">💬</div>
+            <h3>AI Health Chat</h3>
+            <p>Ask any question about your pet's health, behavior, nutrition, exercise, grooming, or training. The AI draws on extensive veterinary knowledge and tailors its responses to your pet's specific breed, age, and size. Whether you are wondering about the right portion size for your golden retriever or how to handle your kitten's nighttime energy, the assistant has you covered.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">📸</div>
+            <h3>Food Safety Camera</h3>
+            <p>Point your iPhone camera at any food and get an instant safety verdict. The AI identifies the food and tells you whether it is safe, requires caution, or is toxic for your dog or cat. No more frantic Googling when your pet is eyeing your dinner plate. Just scan, read the result, and decide with confidence.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🩺</div>
+            <h3>Symptom Analysis</h3>
+            <p>Describe your pet's symptoms in your own words and receive structured guidance. The AI helps you understand what might be going on, how urgently you should act, and what information to bring to your vet. It is not a diagnosis, but it helps you know when to wait, when to call, and when to rush to the emergency clinic.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food Safety Checker Deep Dive -->
+    <section class="section" id="food-safety">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Food Safety</p>
+          <h2 class="section__title">Is this food safe for my dog? Now you can check instantly.</h2>
+          <p class="section__subtitle">The food safety checker is one of the most-used features in PetNudge. Here is how it works and why pet owners love it.</p>
+        </header>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step__number">1</div>
+            <div class="step__content">
+              <h3>Open the food safety scanner</h3>
+              <p>Tap the AI assistant in PetNudge and select the food safety camera option. The scanner activates your iPhone camera and is ready to identify food items in real time. It works in any lighting condition and can recognize hundreds of common foods.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step__number">2</div>
+            <div class="step__content">
+              <h3>Point your camera at the food</h3>
+              <p>Hold your phone over the food you want to check. The AI identifies it within seconds. You can scan fresh fruits and vegetables, cooked dishes, snacks, packaged foods, and even items from your own plate. If the AI is not sure what it is looking at, it will ask you to describe the food in text instead.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step__number">3</div>
+            <div class="step__content">
+              <h3>Get your safety verdict</h3>
+              <p>The result appears instantly with a clear safety rating. A green result means the food is safe for your pet. Yellow means caution is needed, typically in terms of quantity or preparation. Red means the food is toxic and should be kept away from your pet entirely. Each result includes a detailed explanation of why the food is safe or dangerous, what symptoms to watch for if your pet has already eaten it, and what to do next.</p>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-12);">
+          <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-6);">Common foods pet owners ask about</h3>
+          <div class="solution__grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+            <article class="solution__card" style="padding: var(--space-4);">
+              <h4 style="color: var(--color-error);">Toxic for Dogs</h4>
+              <ul style="list-style: none; text-align: left; padding: 0; margin-top: var(--space-3);">
+                <li style="padding: var(--space-1) 0;">&#10007; Chocolate (theobromine)</li>
+                <li style="padding: var(--space-1) 0;">&#10007; Grapes and raisins</li>
+                <li style="padding: var(--space-1) 0;">&#10007; Onions and garlic</li>
+                <li style="padding: var(--space-1) 0;">&#10007; Xylitol (artificial sweetener)</li>
+                <li style="padding: var(--space-1) 0;">&#10007; Macadamia nuts</li>
+                <li style="padding: var(--space-1) 0;">&#10007; Avocado (persin)</li>
+              </ul>
+            </article>
+
+            <article class="solution__card" style="padding: var(--space-4);">
+              <h4 style="color: var(--color-warning);">Use Caution</h4>
+              <ul style="list-style: none; text-align: left; padding: 0; margin-top: var(--space-3);">
+                <li style="padding: var(--space-1) 0;">&#9888; Cheese (small amounts OK)</li>
+                <li style="padding: var(--space-1) 0;">&#9888; Peanut butter (check for xylitol)</li>
+                <li style="padding: var(--space-1) 0;">&#9888; Bread (plain, small amounts)</li>
+                <li style="padding: var(--space-1) 0;">&#9888; Eggs (cooked only)</li>
+                <li style="padding: var(--space-1) 0;">&#9888; Milk (many pets are lactose intolerant)</li>
+                <li style="padding: var(--space-1) 0;">&#9888; Tomatoes (ripe fruit only)</li>
+              </ul>
+            </article>
+
+            <article class="solution__card" style="padding: var(--space-4);">
+              <h4 style="color: var(--color-success);">Safe for Dogs</h4>
+              <ul style="list-style: none; text-align: left; padding: 0; margin-top: var(--space-3);">
+                <li style="padding: var(--space-1) 0;">&#10003; Carrots</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Blueberries</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Watermelon (seedless)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Cooked chicken (plain)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Sweet potato (cooked)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Apple slices (no seeds)</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Symptom Checker Deep Dive -->
+    <section class="section section--gray" id="symptom-checker">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Symptom Analysis</p>
+          <h2 class="section__title">Describe symptoms. Get structured guidance.</h2>
+          <p class="section__subtitle">When your pet is not acting like themselves, the AI symptom checker helps you understand what might be happening and how to respond.</p>
+        </header>
+
+        <div class="problem__grid">
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">📝</div>
+            <div class="problem__content">
+              <h3>Describe in plain language</h3>
+              <p>You do not need medical terminology. Just describe what you observe. "My dog has been vomiting since this morning and seems tired." "My cat is scratching her ear constantly and shaking her head." "My puppy has not eaten in two days." The AI understands natural language and asks follow-up questions when more detail would help provide a better response.</p>
+            </div>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">📊</div>
+            <div class="problem__content">
+              <h3>Receive structured analysis</h3>
+              <p>The AI provides a clear breakdown: possible causes ranked by likelihood, recommended next steps, urgency level (monitor at home, schedule a vet visit, or seek emergency care), and what information to prepare for your vet. This structured format helps you make calm, informed decisions rather than panicking or dismissing something that needs attention.</p>
+            </div>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">🏥</div>
+            <div class="problem__content">
+              <h3>Find nearby veterinarians</h3>
+              <p>If the AI determines that your pet's symptoms warrant professional attention, PetNudge can show you nearby veterinary clinics and emergency animal hospitals. You get directions, phone numbers, and opening hours so you can act quickly when time matters. The nearby vet finder works with your location to surface the closest options.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- When to Use AI vs When to See a Vet -->
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Important Guidance</p>
+          <h2 class="section__title">When to use the AI assistant vs. when to see the vet</h2>
+          <p class="section__subtitle">The AI assistant is a powerful tool for everyday pet care questions, but it is not a substitute for professional veterinary care. Here is how to use it responsibly.</p>
+        </header>
+
+        <div class="solution__grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🤖</div>
+            <h3>Great for the AI assistant</h3>
+            <div style="text-align: left; margin-top: var(--space-4);">
+              <ul style="list-style: none; padding: 0;">
+                <li style="padding: var(--space-2) 0;">&#10003; "Can my dog eat this food?"</li>
+                <li style="padding: var(--space-2) 0;">&#10003; "How much should I feed my 3-year-old Labrador?"</li>
+                <li style="padding: var(--space-2) 0;">&#10003; "Why does my cat knead blankets?"</li>
+                <li style="padding: var(--space-2) 0;">&#10003; "What are common allergies in French Bulldogs?"</li>
+                <li style="padding: var(--space-2) 0;">&#10003; "How often should I brush my dog's teeth?"</li>
+                <li style="padding: var(--space-2) 0;">&#10003; "Is it normal for puppies to sleep this much?"</li>
+                <li style="padding: var(--space-2) 0;">&#10003; "What supplements are good for senior cats?"</li>
+                <li style="padding: var(--space-2) 0;">&#10003; General nutrition and diet guidance</li>
+                <li style="padding: var(--space-2) 0;">&#10003; Training tips and behavioral questions</li>
+                <li style="padding: var(--space-2) 0;">&#10003; Grooming schedules and coat care</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🏥</div>
+            <h3>See your veterinarian</h3>
+            <div style="text-align: left; margin-top: var(--space-4);">
+              <ul style="list-style: none; padding: 0;">
+                <li style="padding: var(--space-2) 0;">&#10060; Persistent vomiting or diarrhea</li>
+                <li style="padding: var(--space-2) 0;">&#10060; Difficulty breathing or choking</li>
+                <li style="padding: var(--space-2) 0;">&#10060; Seizures or loss of consciousness</li>
+                <li style="padding: var(--space-2) 0;">&#10060; Ingestion of a known toxic substance</li>
+                <li style="padding: var(--space-2) 0;">&#10060; Bleeding that does not stop</li>
+                <li style="padding: var(--space-2) 0;">&#10060; Sudden inability to walk or stand</li>
+                <li style="padding: var(--space-2) 0;">&#10060; Eye injuries or sudden blindness</li>
+                <li style="padding: var(--space-2) 0;">&#10060; Refusing food and water for 24+ hours</li>
+                <li style="padding: var(--space-2) 0;">&#10060; Signs of extreme pain (whimpering, hiding)</li>
+                <li style="padding: var(--space-2) 0;">&#10060; Any situation that feels like an emergency</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p style="text-align: center; color: var(--color-gray-500); margin-top: var(--space-8); font-size: var(--font-size-lg); max-width: 700px; margin-left: auto; margin-right: auto;">
+          When in doubt, always err on the side of caution and consult your veterinarian. The AI assistant will always recommend professional care when symptoms suggest a potentially serious condition.
+        </p>
+      </div>
+    </section>
+
+    <!-- Additional AI Capabilities -->
+    <section class="section section--gray">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">More Than Chat</p>
+          <h2 class="section__title">A complete pet health companion</h2>
+          <p class="section__subtitle">The AI assistant works alongside PetNudge's other health features to give you a comprehensive view of your pet's wellbeing.</p>
+        </header>
+
+        <div class="solution__grid">
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">💉</div>
+            <h3>Vaccination Tracking</h3>
+            <p>Keep a complete record of all your pet's vaccinations with overdue alerts and due-soon reminders. The AI assistant can answer questions about specific vaccines and their schedules.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">💊</div>
+            <h3>Medication Reminders</h3>
+            <p>Set up smart reminders for flea treatments, heartworm prevention, and prescription medications. Never miss a dose with push notifications and dose logging.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">⚖️</div>
+            <h3>Weight Monitoring</h3>
+            <p>Track weight changes over time with visual charts. The AI can help you understand whether your pet is at a healthy weight and suggest dietary adjustments if needed.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">📄</div>
+            <h3>PDF Health Reports</h3>
+            <p>Export comprehensive health reports including vaccination records, weight history, and medication logs. Share with your vet, boarding facilities, or keep for your own records.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">📡</div>
+            <h3>NFC Lost Pet Recovery</h3>
+            <p>Program an NFC tag for your pet's collar. If they go missing, anyone who finds them can scan and contact you instantly. No app required for finders.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🌍</div>
+            <h3>Available in 9 Languages</h3>
+            <p>Use the AI assistant and all features in English, French, Romanian, German, Spanish, Italian, Portuguese, Japanese, or Chinese. The AI responds in whatever language you write in.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--primary">
+      <div class="container">
+        <div class="waitlist__content">
+          <span class="waitlist__icon" aria-hidden="true">🤖</span>
+          <p class="section__label">Try the AI Assistant</p>
+          <h2 class="section__title">Your pet's health questions, answered instantly</h2>
+          <p class="section__subtitle">Download PetNudge and start asking the AI assistant about food safety, symptoms, nutrition, and more. Free 7-day trial, cancel anytime.</p>
+          <a href="https://apps.apple.com/app/id6756539814" class="btn btn--primary btn--large" style="margin-top: var(--space-4);" target="_blank" rel="noopener">Download on App Store</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Questions</p>
+          <h2 class="section__title">Frequently asked questions about the AI assistant</h2>
+        </header>
+
+        <div class="faq__list">
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>Is the AI pet assistant a replacement for a veterinarian?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              No. PetNudge's AI assistant provides general guidance and educational information about pet health. It is not a substitute for professional veterinary advice, diagnosis, or treatment. For emergencies, sudden behavioral changes, severe symptoms, or any situation where your pet appears to be in distress, always contact your veterinarian or an emergency animal hospital immediately. The AI will always recommend professional care when it detects potentially serious symptoms.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>How accurate is the food safety checker?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              The food safety checker uses AI image recognition combined with a comprehensive database of foods known to be toxic, unsafe, or safe for dogs and cats. It provides a clear safety rating (safe, caution, or toxic) along with a detailed explanation. While highly accurate for common foods, we always recommend double-checking with your vet for unusual items or if your pet has specific dietary restrictions or allergies. The database is continuously updated as new research becomes available.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>What kind of questions can I ask the AI assistant?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              You can ask about virtually any pet health or care topic: nutrition and diet questions, behavioral concerns, exercise needs, grooming tips, breed-specific health risks, first aid guidance, training advice, and general wellness questions. The AI assistant draws on extensive veterinary knowledge to provide helpful, actionable answers tailored to your specific pet's breed, age, and size. You can also ask follow-up questions to dig deeper into any topic.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>Does the AI assistant work for all pet types?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              The AI assistant is optimized for dogs and cats, which represent the vast majority of pet health questions. It can also provide general guidance for other common pets like rabbits, hamsters, guinea pigs, and birds. The food safety checker is specifically designed for dogs and cats, as toxicity levels vary significantly between species. If you have an exotic pet, the AI will still do its best to help but will recommend consulting a specialist vet for specific medical questions.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="header__logo">
+            <img src="logo.webp" alt="PetNudge - Smart Pet Health App" class="header__logo-img" width="36" height="36">
+            <span>PetNudge</span>
+          </a>
+          <p>Smart pet ID and health companion for modern pet owners.</p>
+        </div>
+
+        <div class="footer__section">
+          <h4>Legal</h4>
+          <nav class="footer__links">
+            <a href="privacy.html" class="footer__link">Privacy Policy</a>
+            <a href="terms.html" class="footer__link">Terms of Use</a>
+          </nav>
+        </div>
+
+        <div class="footer__section">
+          <h4>Support</h4>
+          <nav class="footer__links">
+            <a href="mailto:contactpetnudge@gmail.com" class="footer__link">Contact Us</a>
+            <span class="footer__link" style="opacity: 0.7; cursor: default;">contactpetnudge@gmail.com</span>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024-2026 PetNudge. All rights reserved.</p>
+        <button type="button" class="lang-toggle" id="lang-toggle-footer" onclick="document.getElementById('lang-toggle').click()">
+          <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span>EN / FR</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta" aria-hidden="true">
+    <div class="sticky-cta__inner">
+      <div class="sticky-cta__text">
+        <strong>Try the AI pet assistant</strong>
+        <span>7-day free trial, cancel anytime</span>
+      </div>
+      <a href="https://apps.apple.com/app/id6756539814" class="btn btn--primary" target="_blank" rel="noopener">Download Free</a>
+    </div>
+  </div>
+
+  <!-- RGPD Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text" id="cookie-text">
+        This site uses cookies to improve your experience. By continuing, you accept our
+        <a href="privacy.html">privacy policy</a>.
+      </p>
+      <div class="cookie-banner__actions">
+        <button onclick="acceptCookies()" class="cookie-banner__accept" id="cookie-accept">Accept</button>
+        <button onclick="refuseCookies()" class="cookie-banner__decline" id="cookie-refuse">Decline</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      if(!localStorage.getItem('cookie_consent')){
+        document.getElementById('cookie-banner').style.display='flex';
+      }
+    })();
+    function acceptCookies(){
+      localStorage.setItem('cookie_consent','accepted');
+      document.getElementById('cookie-banner').style.display='none';
+    }
+    function refuseCookies(){
+      localStorage.setItem('cookie_consent','refused');
+      document.getElementById('cookie-banner').style.display='none';
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>

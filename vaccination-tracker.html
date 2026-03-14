@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Vaccination Tracker App - Never Miss a Shot | PetNudge</title>
+  <meta name="description" content="Track your pet's vaccinations, get reminders before they're due, and keep a complete immunization history. Dog & cat vaccination schedule app with overdue alerts.">
+  <meta name="keywords" content="pet vaccination tracker, dog vaccination schedule app, cat vaccination reminder, track pet vaccinations, pet immunization record, puppy vaccination tracker, kitten vaccine schedule">
+  <link rel="canonical" href="https://petnudge.fr/vaccination-tracker.html">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://petnudge.fr/vaccination-tracker.html">
+  <link rel="alternate" hreflang="x-default" href="https://petnudge.fr/vaccination-tracker.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pet Vaccination Tracker App - Never Miss a Shot | PetNudge">
+  <meta property="og:description" content="Track your pet's vaccinations, get reminders before they're due, and keep a complete immunization history for dogs and cats.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://petnudge.fr/vaccination-tracker.html">
+  <meta property="og:image" content="https://petnudge.fr/logo.webp">
+  <meta property="og:site_name" content="PetNudge">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pet Vaccination Tracker App - Never Miss a Shot | PetNudge">
+  <meta name="twitter:description" content="Track your pet's vaccinations, get reminders before they're due, and keep a complete immunization history for dogs and cats.">
+  <meta name="twitter:image" content="https://petnudge.fr/logo.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.webp">
+  <link rel="apple-touch-icon" href="logo.webp">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#FF6B35">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://apps.apple.com">
+  <link rel="dns-prefetch" href="https://apps.apple.com">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://petnudge.fr/vaccination-tracker.html#app",
+        "name": "PetNudge - Pet Vaccination Tracker",
+        "operatingSystem": "iOS",
+        "applicationCategory": "HealthApplication",
+        "description": "Track your pet's vaccinations with smart reminders, overdue alerts, and a complete immunization history. Supports dogs, cats, and other pets with breed-specific vaccination schedules.",
+        "offers": {
+          "@type": "Offer",
+          "price": "4.99",
+          "priceCurrency": "EUR",
+          "description": "Monthly subscription with 7-day free trial"
+        },
+        "downloadUrl": "https://apps.apple.com/app/id6756539814",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "150"
+        },
+        "featureList": "Vaccination tracking, Overdue alerts, Due soon warnings, Vet info storage, Batch number recording, PDF health reports"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://petnudge.fr/vaccination-tracker.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What vaccinations can I track with PetNudge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PetNudge supports all common dog vaccinations (Rabies, DHPP/DA2PP, Bordetella, Leptospirosis, Canine Influenza, Lyme Disease) and cat vaccinations (Rabies, FVRCP, FeLV, FIV). You can also add custom vaccinations for any pet type."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do vaccination reminders work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When you log a vaccination, PetNudge automatically calculates the next due date based on the vaccine type and schedule. You receive push notifications when a vaccination is approaching and again if it becomes overdue. Vaccinations are color-coded: green for up-to-date, yellow for due soon, and red for overdue."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I share vaccination records with my veterinarian?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. PetNudge lets you export a complete PDF health report that includes all vaccination records, dates, batch numbers, and administering vet details. This report is accepted by most veterinary clinics and is useful for travel, boarding, or daycare requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does PetNudge work for multiple pets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. PetNudge supports unlimited pet profiles. Each pet has its own vaccination history, reminders, and health records. You can quickly switch between pets and see all upcoming vaccinations across all your animals in one view."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://petnudge.fr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Vaccination Tracker",
+            "item": "https://petnudge.fr/vaccination-tracker.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script defer data-domain="petnudge.fr" src="https://signallensai.com:8443/js/script.js"></script>
+</head>
+<body>
+  <!-- Skip to content for accessibility -->
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <img src="logo.webp" alt="PetNudge - Smart Pet Health App" class="header__logo-img" width="36" height="36">
+        <span>PetNudge</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="header__nav-list">
+          <li><a href="/#features" class="header__nav-link">Features</a></li>
+          <li><a href="/#how" class="header__nav-link">How It Works</a></li>
+          <li><a href="/#pricing" class="header__nav-link">Pricing</a></li>
+          <li><a href="/#faq" class="header__nav-link">FAQ</a></li>
+          <li><a href="blog/" class="header__nav-link">Blog</a></li>
+          <li><a href="shop.html" class="header__nav-link">Shop</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
+          <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span id="lang-text">EN</span>
+        </button>
+
+        <button type="button" class="header__menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button type="button" class="mobile-menu__close" id="menu-close" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <nav class="mobile-menu__nav">
+      <a href="/#features" class="mobile-menu__link">Features</a>
+      <a href="/#how" class="mobile-menu__link">How It Works</a>
+      <a href="/#pricing" class="mobile-menu__link">Pricing</a>
+      <a href="/#faq" class="mobile-menu__link">FAQ</a>
+      <a href="blog/" class="mobile-menu__link">Blog</a>
+      <a href="shop.html" class="mobile-menu__link">Shop</a>
+      <a href="privacy.html" class="mobile-menu__link">Privacy</a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <span class="hero__badge">Vaccination Tracking Made Simple</span>
+        <h1 class="hero__title">
+          <span>Track Every Vaccination.</span><br>
+          <span class="hero__title-highlight">Get Reminders Before They're Due.</span>
+        </h1>
+        <p class="hero__subtitle">
+          PetNudge keeps a complete vaccination history for your dog or cat. See what's overdue, what's coming up, and never let your pet fall behind on their shots again.
+        </p>
+        <div class="hero__actions">
+          <a href="https://apps.apple.com/app/id6756539814" class="btn btn--appstore btn--large" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span>Download on App Store</span>
+          </a>
+          <a href="#how-it-works" class="btn btn--secondary btn--large">See How It Works</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Vaccination Tracking Matters -->
+    <section class="section section--gray">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">The Problem</p>
+          <h2 class="section__title">Why vaccination tracking matters</h2>
+          <p class="section__subtitle">Keeping your pet's vaccinations up to date is one of the most important things you can do as a pet owner, but it's easy to fall behind.</p>
+        </header>
+
+        <div class="problem__grid">
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">📊</div>
+            <div class="problem__content">
+              <h3>30% of pets are behind on vaccinations</h3>
+              <p>Studies show that nearly one in three pets is not current on their core vaccinations. Busy schedules, lost paperwork, and confusing booster timelines all contribute to the problem. A single missed vaccine can leave your pet vulnerable to serious, sometimes fatal, diseases like parvovirus, distemper, or rabies.</p>
+            </div>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">📋</div>
+            <div class="problem__content">
+              <h3>Paper records get lost or damaged</h3>
+              <p>Vaccination cards from the vet can be misplaced, damaged by water, or forgotten in a drawer. When you need proof of vaccination for boarding, daycare, grooming, or international travel, scrambling to find records creates unnecessary stress. A digital vaccination tracker keeps everything accessible from your phone, anywhere you go.</p>
+            </div>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">🗓️</div>
+            <div class="problem__content">
+              <h3>Booster schedules are confusing</h3>
+              <p>Different vaccines have different schedules. Some require annual boosters, others every three years. Puppies and kittens need a series of shots at specific intervals. Without a system to track it all, it is easy to miss a critical window and have to restart the vaccination series from scratch.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Features</p>
+          <h2 class="section__title">Everything you need to stay on top of vaccinations</h2>
+          <p class="section__subtitle">PetNudge gives you a clear, organized view of every vaccination for every pet in your household.</p>
+        </header>
+
+        <div class="solution__grid">
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🔴</div>
+            <h3>Overdue Alerts</h3>
+            <p>Vaccinations that are past their due date are flagged in red so you can see at a glance what needs immediate attention. Push notifications make sure you never miss the alert, even if you have not opened the app recently.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🟡</div>
+            <h3>Due Soon Warnings</h3>
+            <p>Approaching vaccinations are highlighted in yellow, giving you time to schedule an appointment before they become overdue. You choose the notification window: one week, two weeks, or a month ahead of the due date.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🟢</div>
+            <h3>Sort by Status</h3>
+            <p>View all vaccinations sorted by urgency. Overdue items appear first, followed by due soon, and then up-to-date shots. This prioritized view makes it easy to decide which vet appointment to book next.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🏥</div>
+            <h3>Vet Information</h3>
+            <p>Store the name and details of the administering veterinarian alongside each vaccination record. When you switch vets or need to share your pet's history, every detail is already recorded and ready to share.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🔢</div>
+            <h3>Batch Numbers</h3>
+            <p>Record vaccine batch numbers and manufacturers for complete traceability. In the rare event of a vaccine recall or adverse reaction, you have the exact batch information at your fingertips without needing to contact your vet.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">📄</div>
+            <h3>PDF Health Reports</h3>
+            <p>Export a professional PDF document with your pet's complete vaccination history. Perfect for boarding facilities, groomers, dog parks, pet sitters, and international travel documentation. Share via email, AirDrop, or print.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section--gray" id="how-it-works">
+      <div class="container container--narrow">
+        <header class="section__header">
+          <p class="section__label">How It Works</p>
+          <h2 class="section__title">Start tracking in 3 simple steps</h2>
+          <p class="section__subtitle">Setting up vaccination tracking takes less than two minutes. Here's how to get started.</p>
+        </header>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step__number">1</div>
+            <div class="step__content">
+              <h3>Download PetNudge and create your pet's profile</h3>
+              <p>Install PetNudge from the App Store and add your pet. Enter their name, breed, date of birth, and a photo. The app supports dogs, cats, and other companion animals. You can add as many pets as you like with an active subscription.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step__number">2</div>
+            <div class="step__content">
+              <h3>Log existing vaccinations</h3>
+              <p>Add your pet's vaccination history. For each vaccine, enter the name, date administered, next due date, vet name, and batch number. PetNudge automatically color-codes each record: green if current, yellow if due soon, and red if overdue. You can enter past vaccinations from your paper records to build a complete digital history.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step__number">3</div>
+            <div class="step__content">
+              <h3>Receive reminders and stay current</h3>
+              <p>PetNudge sends push notifications when vaccinations are approaching their due date. When it is time for a booster, you will know well in advance so you can schedule an appointment. After the vet visit, log the new vaccination and the cycle continues automatically. No more guessing, no more missed shots.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supported Vaccines -->
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Complete Coverage</p>
+          <h2 class="section__title">Supported vaccines for dogs and cats</h2>
+          <p class="section__subtitle">PetNudge comes with built-in support for all standard vaccinations. You can also add custom entries for any vaccine not listed.</p>
+        </header>
+
+        <div class="solution__grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🐶</div>
+            <h3>Dog Vaccinations</h3>
+            <div style="text-align: left; margin-top: var(--space-4);">
+              <p style="margin-bottom: var(--space-2);"><strong>Core vaccines:</strong></p>
+              <ul style="list-style: none; padding: 0;">
+                <li style="padding: var(--space-1) 0;">&#10003; Rabies (required by law in most regions)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; DHPP / DA2PP (Distemper, Hepatitis, Parvovirus, Parainfluenza)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Canine Parvovirus</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Canine Distemper</li>
+              </ul>
+              <p style="margin-bottom: var(--space-2); margin-top: var(--space-4);"><strong>Non-core vaccines:</strong></p>
+              <ul style="list-style: none; padding: 0;">
+                <li style="padding: var(--space-1) 0;">&#10003; Bordetella (Kennel Cough)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Leptospirosis</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Canine Influenza (H3N2, H3N8)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Lyme Disease (Borrelia)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Canine Coronavirus</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🐱</div>
+            <h3>Cat Vaccinations</h3>
+            <div style="text-align: left; margin-top: var(--space-4);">
+              <p style="margin-bottom: var(--space-2);"><strong>Core vaccines:</strong></p>
+              <ul style="list-style: none; padding: 0;">
+                <li style="padding: var(--space-1) 0;">&#10003; Rabies (required by law in most regions)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; FVRCP (Feline Viral Rhinotracheitis, Calicivirus, Panleukopenia)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Feline Panleukopenia (Feline Distemper)</li>
+              </ul>
+              <p style="margin-bottom: var(--space-2); margin-top: var(--space-4);"><strong>Non-core vaccines:</strong></p>
+              <ul style="list-style: none; padding: 0;">
+                <li style="padding: var(--space-1) 0;">&#10003; FeLV (Feline Leukemia Virus)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; FIV (Feline Immunodeficiency Virus)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Feline Chlamydia</li>
+                <li style="padding: var(--space-1) 0;">&#10003; Bordetella (Feline)</li>
+                <li style="padding: var(--space-1) 0;">&#10003; FIP (Feline Infectious Peritonitis)</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p style="text-align: center; color: var(--color-gray-500); margin-top: var(--space-8); font-size: var(--font-size-lg);">
+          Plus full support for custom vaccine entries for rabbits, ferrets, horses, and any other pet.
+        </p>
+      </div>
+    </section>
+
+    <!-- Benefits / Why PetNudge -->
+    <section class="section section--gray">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Why PetNudge</p>
+          <h2 class="section__title">More than just a vaccination log</h2>
+          <p class="section__subtitle">PetNudge is a complete pet health companion. Vaccination tracking is just the beginning.</p>
+        </header>
+
+        <div class="solution__grid">
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">⚖️</div>
+            <h3>Weight Monitoring</h3>
+            <p>Track your pet's weight over time with visual charts. Spot trends early and share progress with your vet at every checkup.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">💊</div>
+            <h3>Medication Reminders</h3>
+            <p>Never miss a dose of flea treatment, heartworm prevention, or any other medication. Set custom schedules and get notified on time.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🤖</div>
+            <h3>AI Health Assistant</h3>
+            <p>Ask questions about your pet's health, check if foods are safe, and get guidance on symptoms. Available anytime directly in the app.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">📅</div>
+            <h3>Health Calendar</h3>
+            <p>See all upcoming vaccinations, medications, and vet appointments on a visual calendar. Plan ahead with confidence.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">📡</div>
+            <h3>NFC Lost Pet Recovery</h3>
+            <p>Attach an NFC tag to your pet's collar. If they go missing, anyone who finds them can scan and contact you instantly. No app required for finders.</p>
+          </article>
+
+          <article class="solution__card">
+            <div class="solution__icon" aria-hidden="true">🌍</div>
+            <h3>9 Languages Supported</h3>
+            <p>PetNudge is available in English, French, Romanian, German, Spanish, Italian, Portuguese, Japanese, and Chinese. Use it in your preferred language.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--primary">
+      <div class="container">
+        <div class="waitlist__content">
+          <span class="waitlist__icon" aria-hidden="true">💉</span>
+          <p class="section__label">Start Tracking Today</p>
+          <h2 class="section__title">Keep your pet's vaccinations on track</h2>
+          <p class="section__subtitle">Download PetNudge and set up vaccination tracking in under two minutes. Free 7-day trial, cancel anytime.</p>
+          <a href="https://apps.apple.com/app/id6756539814" class="btn btn--primary btn--large" style="margin-top: var(--space-4);" target="_blank" rel="noopener">Download on App Store</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">Questions</p>
+          <h2 class="section__title">Frequently asked questions about vaccination tracking</h2>
+        </header>
+
+        <div class="faq__list">
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>What vaccinations can I track with PetNudge?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              PetNudge supports all common dog vaccinations including Rabies, DHPP/DA2PP, Bordetella, Leptospirosis, Canine Influenza, and Lyme Disease. For cats, you can track Rabies, FVRCP, FeLV, FIV, and more. You can also add custom vaccinations for any pet type, so even if your pet has a less common vaccine, you can track it in the app with full reminder support.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>How do vaccination reminders work?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              When you log a vaccination, PetNudge automatically calculates the next due date based on the vaccine type and schedule. You receive push notifications when a vaccination is approaching and again if it becomes overdue. Vaccinations are color-coded throughout the app: green for up-to-date, yellow for due soon, and red for overdue, so you always know your pet's vaccination status at a glance.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>Can I share vaccination records with my veterinarian?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              Yes. PetNudge lets you export a complete PDF health report that includes all vaccination records, dates administered, batch numbers, and administering vet details. This report is accepted by most veterinary clinics and is extremely useful for boarding reservations, grooming appointments, dog park memberships, pet daycare, and international pet travel documentation where proof of vaccination is required.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span>Does PetNudge work for multiple pets?</span>
+              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer">
+              Absolutely. PetNudge supports unlimited pet profiles with an active subscription. Each pet has its own independent vaccination history, reminder schedule, and health records. You can quickly switch between pets and see all upcoming vaccinations across all your animals in a unified view. Whether you have one dog or a house full of cats, every vaccination is tracked and organized.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="header__logo">
+            <img src="logo.webp" alt="PetNudge - Smart Pet Health App" class="header__logo-img" width="36" height="36">
+            <span>PetNudge</span>
+          </a>
+          <p>Smart pet ID and health companion for modern pet owners.</p>
+        </div>
+
+        <div class="footer__section">
+          <h4>Legal</h4>
+          <nav class="footer__links">
+            <a href="privacy.html" class="footer__link">Privacy Policy</a>
+            <a href="terms.html" class="footer__link">Terms of Use</a>
+          </nav>
+        </div>
+
+        <div class="footer__section">
+          <h4>Support</h4>
+          <nav class="footer__links">
+            <a href="mailto:contactpetnudge@gmail.com" class="footer__link">Contact Us</a>
+            <span class="footer__link" style="opacity: 0.7; cursor: default;">contactpetnudge@gmail.com</span>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024-2026 PetNudge. All rights reserved.</p>
+        <button type="button" class="lang-toggle" id="lang-toggle-footer" onclick="document.getElementById('lang-toggle').click()">
+          <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span>EN / FR</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta" aria-hidden="true">
+    <div class="sticky-cta__inner">
+      <div class="sticky-cta__text">
+        <strong>Never miss a vaccination</strong>
+        <span>7-day free trial, cancel anytime</span>
+      </div>
+      <a href="https://apps.apple.com/app/id6756539814" class="btn btn--primary" target="_blank" rel="noopener">Download Free</a>
+    </div>
+  </div>
+
+  <!-- RGPD Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text" id="cookie-text">
+        This site uses cookies to improve your experience. By continuing, you accept our
+        <a href="privacy.html">privacy policy</a>.
+      </p>
+      <div class="cookie-banner__actions">
+        <button onclick="acceptCookies()" class="cookie-banner__accept" id="cookie-accept">Accept</button>
+        <button onclick="refuseCookies()" class="cookie-banner__decline" id="cookie-refuse">Decline</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      if(!localStorage.getItem('cookie_consent')){
+        document.getElementById('cookie-banner').style.display='flex';
+      }
+    })();
+    function acceptCookies(){
+      localStorage.setItem('cookie_consent','accepted');
+      document.getElementById('cookie-banner').style.display='none';
+    }
+    function refuseCookies(){
+      localStorage.setItem('cookie_consent','refused');
+      document.getElementById('cookie-banner').style.display='none';
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>

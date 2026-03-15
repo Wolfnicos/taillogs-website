@@ -2329,6 +2329,7 @@
 
     menuBtn.addEventListener('click', function() {
       mobileMenu.classList.add('is-open');
+      mobileMenu.removeAttribute('inert');
       document.body.style.overflow = 'hidden';
     });
 
@@ -2342,6 +2343,7 @@
 
     function closeMenu() {
       mobileMenu.classList.remove('is-open');
+      mobileMenu.setAttribute('inert', '');
       document.body.style.overflow = '';
     }
   }

@@ -1,5 +1,4 @@
 User-agent: *
-Allow: /
 Disallow: /success.html
 Disallow: /pet.html
 Disallow: /google6470ab0c57e10f5e.html

@@ -2237,17 +2237,22 @@
     setLanguage(currentLang);
     updateLangToggle();
 
-    const langToggle = document.getElementById('lang-toggle');
-    if (langToggle) {
-      langToggle.addEventListener('click', function() {
-        const currentIndex = languages.indexOf(currentLang);
-        const nextIndex = (currentIndex + 1) % languages.length;
-        currentLang = languages[nextIndex];
-        localStorage.setItem('petnudge-lang', currentLang);
-        setLanguage(currentLang);
-        updateLangToggle();
-      });
-    }
+    var langToggles = [
+      document.getElementById('lang-toggle'),
+      document.getElementById('lang-toggle-footer')
+    ];
+    langToggles.forEach(function(toggle) {
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          var currentIndex = languages.indexOf(currentLang);
+          var nextIndex = (currentIndex + 1) % languages.length;
+          currentLang = languages[nextIndex];
+          localStorage.setItem('petnudge-lang', currentLang);
+          setLanguage(currentLang);
+          updateLangToggle();
+        });
+      }
+    });
   }
 
   function setLanguage(lang) {

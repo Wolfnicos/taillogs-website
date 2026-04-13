@@ -3,4 +3,23 @@ Disallow: /success.html
 Disallow: /pet.html
 Disallow: /google6470ab0c57e10f5e.html
 
+# Allow AI search crawlers for content indexing (ai-input)
+# Note: Cloudflare may override these with Content-Signal settings.
+# To fully enable AI search visibility, update Cloudflare Dashboard →
+# AI Audit → allow ai-input while keeping ai-train=no.
+User-agent: GPTBot
+Allow: /
+Disallow: /success.html
+Disallow: /pet.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /success.html
+Disallow: /pet.html
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /success.html
+Disallow: /pet.html
+
 Sitemap: https://petnudge.fr/sitemap.xml

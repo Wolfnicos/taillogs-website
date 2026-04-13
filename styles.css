@@ -506,7 +506,7 @@ ul, ol {
   background: var(--color-error);
   color: var(--color-white);
   border-radius: var(--radius-xl);
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .problem__content h3 {
@@ -547,7 +547,7 @@ ul, ol {
   margin: 0 auto var(--space-5);
   background: rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-xl);
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .solution__card h3 {
@@ -628,7 +628,7 @@ ul, ol {
 }
 
 .lost-mode__header-icon {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .lost-mode__header-text {
@@ -675,7 +675,7 @@ ul, ol {
   background: var(--color-success);
   color: var(--color-white);
   border-radius: var(--radius-full);
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .lost-mode__contact-text strong {
@@ -716,7 +716,7 @@ ul, ol {
   height: 40px;
   background: var(--color-gray-100);
   border-radius: var(--radius-lg);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .lost-mode__feature h4 {
@@ -748,7 +748,7 @@ ul, ol {
 
 .privacy__icon {
   flex-shrink: 0;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .privacy__card h4 {
@@ -782,6 +782,11 @@ ul, ol {
   box-shadow: var(--shadow-lg);
 }
 
+.feature-card--link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .feature-card__icon {
   display: flex;
   align-items: center;
@@ -791,7 +796,7 @@ ul, ol {
   background: var(--color-gray-100);
   border-radius: var(--radius-xl);
   margin-bottom: var(--space-4);
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .feature-card h3 {
@@ -1038,7 +1043,7 @@ ul, ol {
 }
 
 .waitlist__icon {
-  font-size: 48px;
+  font-size: 3rem;
   margin-bottom: var(--space-4);
 }
 
@@ -1126,6 +1131,11 @@ ul, ol {
 
 .footer__link:hover {
   color: var(--color-white);
+}
+
+.footer__link--muted {
+  opacity: 0.7;
+  cursor: default;
 }
 
 .footer__bottom {
@@ -1904,6 +1914,82 @@ ul, ol {
   .legal-content .highlight-box {
     padding: var(--space-6);
   }
+}
+
+/* ==========================================
+   Product Showcase
+   ========================================== */
+.product-showcase {
+  padding: var(--space-12) 0;
+  text-align: center;
+}
+
+.product-showcase__grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.product-showcase__img {
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+}
+
+.product-showcase__tagline {
+  color: var(--color-gray-500);
+  font-size: var(--font-size-lg);
+}
+
+.product-showcase__cta {
+  margin-top: var(--space-4);
+}
+
+/* ==========================================
+   Blog Preview Cards
+   ========================================== */
+.blog-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.blog-preview__card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition-normal);
+  display: block;
+}
+
+.blog-preview__card:hover {
+  transform: translateY(-4px);
+}
+
+.blog-preview__icon {
+  font-size: 2rem;
+}
+
+.blog-preview__title {
+  color: var(--color-gray-900);
+  font-size: var(--font-size-lg);
+  margin: var(--space-3) 0 var(--space-2);
+}
+
+.blog-preview__desc {
+  color: var(--color-gray-500);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
+.blog-preview__cta-wrap {
+  text-align: center;
+  margin-top: var(--space-8);
 }
 
 /* Print styles */

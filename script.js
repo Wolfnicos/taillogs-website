@@ -2373,6 +2373,8 @@
     menuBtn.addEventListener('click', function() {
       mobileMenu.classList.add('is-open');
       mobileMenu.removeAttribute('inert');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
     });
 
@@ -2387,6 +2389,8 @@
     function closeMenu() {
       mobileMenu.classList.remove('is-open');
       mobileMenu.setAttribute('inert', '');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     }
   }

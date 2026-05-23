@@ -2288,10 +2288,16 @@
       menu.appendChild(li);
     });
 
-    const wrapper = document.createElement('div');
-    wrapper.className = 'lang-switcher';
-    toggle.parentNode.insertBefore(wrapper, toggle);
-    wrapper.appendChild(toggle);
+    // Reuse pre-existing wrapper if HTML already provides one (avoids CLS from JS insertion)
+    let wrapper;
+    if (toggle.parentElement && toggle.parentElement.classList.contains('lang-switcher')) {
+      wrapper = toggle.parentElement;
+    } else {
+      wrapper = document.createElement('div');
+      wrapper.className = 'lang-switcher';
+      toggle.parentNode.insertBefore(wrapper, toggle);
+      wrapper.appendChild(toggle);
+    }
     wrapper.appendChild(menu);
 
     toggle.setAttribute('aria-haspopup', 'listbox');

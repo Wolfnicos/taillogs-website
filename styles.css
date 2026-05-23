@@ -501,7 +501,7 @@ ul, ol {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-primary);
+  color: var(--color-primary-text); /* WCAG AA 5.08:1 on white (was --color-primary at 2.78:1) */
   margin-bottom: var(--space-3);
 }
 

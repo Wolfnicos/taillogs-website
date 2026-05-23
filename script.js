@@ -2286,15 +2286,27 @@
   // ==========================================
   function initFAQ() {
     const faqItems = document.querySelectorAll('.faq__item');
-    faqItems.forEach(function(item) {
+    faqItems.forEach(function(item, index) {
       const question = item.querySelector('.faq__question');
+      const answer = item.querySelector('.faq__answer');
+      if (!question || !answer) return;
+
+      if (!answer.id) answer.id = 'faq-panel-' + (index + 1);
+      if (!question.id) question.id = 'faq-q-' + (index + 1);
+      question.setAttribute('aria-controls', answer.id);
+      answer.setAttribute('role', 'region');
+      answer.setAttribute('aria-labelledby', question.id);
+
       question.addEventListener('click', function() {
         const isOpen = item.classList.contains('is-open');
         faqItems.forEach(function(otherItem) {
           otherItem.classList.remove('is-open');
+          const otherBtn = otherItem.querySelector('.faq__question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
         });
         if (!isOpen) {
           item.classList.add('is-open');
+          question.setAttribute('aria-expanded', 'true');
         }
       });
     });

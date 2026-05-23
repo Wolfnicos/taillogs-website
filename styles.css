@@ -247,6 +247,7 @@ ul, ol {
   align-items: center;
   gap: var(--space-1);
   padding: var(--space-2) var(--space-3);
+  min-height: 44px;
   background: var(--color-gray-100);
   border: none;
   border-radius: var(--radius-full);
@@ -271,8 +272,8 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
@@ -1131,6 +1132,15 @@ ul, ol {
 
 .footer__link:hover {
   color: var(--color-white);
+}
+
+/* WCAG 2.5.5 — ensure footer links meet 44px tap target on touch devices */
+@media (max-width: 767px) {
+  .footer__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
 }
 
 .footer__link--muted {

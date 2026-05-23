@@ -2231,27 +2231,104 @@
   });
 
   // ==========================================
-  // Language Toggle (cycles through languages)
+  // Language Toggle (WAI-ARIA listbox dropdown)
   // ==========================================
+  const LANG_NAMES = {
+    en: 'English', fr: 'Français', ro: 'Română', es: 'Español',
+    de: 'Deutsch', it: 'Italiano', pt: 'Português', ja: '日本語', zh: '中文'
+  };
+
   function initLanguage() {
     setLanguage(currentLang);
-    updateLangToggle();
+    document.querySelectorAll('.lang-toggle').forEach(initLangDropdown);
+    document.querySelectorAll('.lang-toggle').forEach(syncToggleLabel);
+    document.addEventListener('click', closeAllLangMenus);
+  }
 
-    var langToggles = [
-      document.getElementById('lang-toggle'),
-      document.getElementById('lang-toggle-footer')
-    ];
-    langToggles.forEach(function(toggle) {
-      if (toggle) {
-        toggle.addEventListener('click', function() {
-          var currentIndex = languages.indexOf(currentLang);
-          var nextIndex = (currentIndex + 1) % languages.length;
-          currentLang = languages[nextIndex];
-          localStorage.setItem('petnudge-lang', currentLang);
-          setLanguage(currentLang);
-          updateLangToggle();
-        });
+  function initLangDropdown(toggle) {
+    const menu = document.createElement('ul');
+    menu.className = 'lang-menu';
+    menu.setAttribute('role', 'listbox');
+    menu.setAttribute('aria-label', 'Choose language');
+    menu.hidden = true;
+
+    languages.forEach(function(code) {
+      const li = document.createElement('li');
+      li.setAttribute('role', 'option');
+      li.setAttribute('data-lang', code);
+      li.setAttribute('tabindex', '-1');
+      li.textContent = LANG_NAMES[code] || code.toUpperCase();
+      if (code === currentLang) li.setAttribute('aria-selected', 'true');
+      menu.appendChild(li);
+    });
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'lang-switcher';
+    toggle.parentNode.insertBefore(wrapper, toggle);
+    wrapper.appendChild(toggle);
+    wrapper.appendChild(menu);
+
+    toggle.setAttribute('aria-haspopup', 'listbox');
+    toggle.setAttribute('aria-expanded', 'false');
+
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const wasOpen = !menu.hidden;
+      closeAllLangMenus();
+      if (!wasOpen) {
+        menu.hidden = false;
+        toggle.setAttribute('aria-expanded', 'true');
+        const sel = menu.querySelector('[aria-selected="true"]') || menu.querySelector('li');
+        if (sel) sel.focus();
       }
+    });
+
+    menu.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const li = e.target.closest('[role="option"]');
+      if (!li) return;
+      pickLanguage(li.getAttribute('data-lang'));
+      closeAllLangMenus();
+      toggle.focus();
+    });
+
+    menu.addEventListener('keydown', function(e) {
+      const opts = Array.from(menu.querySelectorAll('[role="option"]'));
+      const i = opts.indexOf(document.activeElement);
+      switch (e.key) {
+        case 'ArrowDown': e.preventDefault(); opts[(i + 1) % opts.length].focus(); break;
+        case 'ArrowUp':   e.preventDefault(); opts[(i - 1 + opts.length) % opts.length].focus(); break;
+        case 'Home':      e.preventDefault(); opts[0].focus(); break;
+        case 'End':       e.preventDefault(); opts[opts.length - 1].focus(); break;
+        case 'Enter':
+        case ' ':         e.preventDefault(); document.activeElement.click(); break;
+        case 'Escape':    e.preventDefault(); closeAllLangMenus(); toggle.focus(); break;
+      }
+    });
+  }
+
+  function pickLanguage(code) {
+    currentLang = code;
+    localStorage.setItem('petnudge-lang', currentLang);
+    setLanguage(currentLang);
+    document.querySelectorAll('.lang-toggle').forEach(syncToggleLabel);
+    document.querySelectorAll('.lang-menu [role="option"]').forEach(function(opt) {
+      opt.setAttribute('aria-selected', opt.getAttribute('data-lang') === currentLang ? 'true' : 'false');
+    });
+  }
+
+  function syncToggleLabel(toggle) {
+    const langTextEl = toggle.querySelector('[id*="lang-text"]');
+    if (langTextEl) langTextEl.textContent = currentLang.toUpperCase();
+    const visible = langTextEl ? langTextEl.textContent.trim() : currentLang.toUpperCase();
+    const fullName = LANG_NAMES[currentLang] || currentLang;
+    toggle.setAttribute('aria-label', visible + ' — ' + fullName + ' — Choose language');
+  }
+
+  function closeAllLangMenus() {
+    document.querySelectorAll('.lang-menu').forEach(function(m) { m.hidden = true; });
+    document.querySelectorAll('.lang-toggle').forEach(function(t) {
+      t.setAttribute('aria-expanded', 'false');
     });
   }
 
@@ -2274,12 +2351,6 @@
     });
   }
 
-  function updateLangToggle() {
-    const langText = document.getElementById('lang-text');
-    if (langText) {
-      langText.textContent = currentLang.toUpperCase();
-    }
-  }
 
   // ==========================================
   // FAQ Accordion

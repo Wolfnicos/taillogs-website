@@ -1,0 +1,17 @@
+# petnudge.fr
+
+> petnudge.fr — automated content site published via SignalLens AI.
+
+## Key pages
+- [Home](https://petnudge.fr/): petnudge.fr homepage
+- [Blog](https://petnudge.fr/blog/index.html): all published articles
+- [About](https://petnudge.fr/about.html): About page
+- [Support](https://petnudge.fr/support.html): Support page
+- [Privacy](https://petnudge.fr/privacy.html): Privacy page
+
+## Articles
+- [Stérilisation Chat 2026 : Coûts &amp; Avantages avec PetNudge](https://petnudge.fr/blog/sterilisation-chat-2026-couts-avantages-avec-petnudge.html) — [markdown](https://petnudge.fr/blog/sterilisation-chat-2026-couts-avantages-avec-petnudge.md)
+
+## Contact
+- Website: https://petnudge.fr
+- Generated: 2026-05-25

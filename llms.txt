@@ -10,7 +10,7 @@
 - [Privacy](https://petnudge.fr/privacy.html): Privacy page
 
 ## Articles
-- [Meilleurs Produits Animaux France: Guide d'Achat & Comparatif Expert](https://petnudge.fr/blog/meilleurs-produits-pour-animaux-de-compagnie-france.html) — [markdown](https://petnudge.fr/blog/meilleurs-produits-pour-animaux-de-compagnie-france.md)
+- [Comparatif Litières Écologiques Chat : Le Guide Ultime 2024](https://petnudge.fr/blog/comparatif-litieres-ecologiques-chat.html) — [markdown](https://petnudge.fr/blog/comparatif-litieres-ecologiques-chat.md)
 - [Bien](https://petnudge.fr/blog/animal-welfare-france.html) — [markdown](https://petnudge.fr/blog/animal-welfare-france.md)
 - [Assurance animaux Belgique 2026 : Prix & Meilleures Offres](https://petnudge.fr/blog/assurance-animaux-belgique-2026-prix-meilleures-offres.html) — [markdown](https://petnudge.fr/blog/assurance-animaux-belgique-2026-prix-meilleures-offres.md)
 - [Assurance Animaux Domestiques Prix Belgique 2026](https://petnudge.fr/blog/assurance-animaux-domestiques-prix-belgique-2026.html) — [markdown](https://petnudge.fr/blog/assurance-animaux-domestiques-prix-belgique-2026.md)
@@ -26,6 +26,7 @@
 - [Top Cliniques Vétérinaires Paris: Classement & Avis Experts](https://petnudge.fr/blog/meilleures-cliniques-veterinaires-paris.html) — [markdown](https://petnudge.fr/blog/meilleures-cliniques-veterinaires-paris.md)
 - [Meilleures Croquettes Chien Livrées Belgique 2026](https://petnudge.fr/blog/meilleures-croquettes-chien-livrees-belgique-2026.html) — [markdown](https://petnudge.fr/blog/meilleures-croquettes-chien-livrees-belgique-2026.md)
 - [Meilleures Pratiques pour Animaux de Compagnie en France : Guide Complet](https://petnudge.fr/blog/meilleures-pratiques-pour-animaux-de-compagnie-france.html) — [markdown](https://petnudge.fr/blog/meilleures-pratiques-pour-animaux-de-compagnie-france.md)
+- [Meilleurs Produits Animaux France: Guide d'Achat & Comparatif Expert](https://petnudge.fr/blog/meilleurs-produits-pour-animaux-de-compagnie-france.html) — [markdown](https://petnudge.fr/blog/meilleurs-produits-pour-animaux-de-compagnie-france.md)
 - [Guide Complet des Soins pour Animaux : Conseils d'Experts](https://petnudge.fr/blog/pet-care-tips.html) — [markdown](https://petnudge.fr/blog/pet-care-tips.md)
 - [Soins animaliers français: Guide des meilleures pratiques pour votre compagnon](https://petnudge.fr/blog/soins-animaliers-francais.html) — [markdown](https://petnudge.fr/blog/soins-animaliers-francais.md)
 - [Stérilisation Chat 2026 : Coûts & Avantages avec PetNudge](https://petnudge.fr/blog/sterilisation-chat-2026-couts-avantages-avec-petnudge.html) — [markdown](https://petnudge.fr/blog/sterilisation-chat-2026-couts-avantages-avec-petnudge.md)

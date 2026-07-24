@@ -10,7 +10,8 @@
 - [Privacy](https://petnudge.fr/privacy.html): Privacy page
 
 ## Articles
-- [Meilleures croquettes chien français : avis d'experts & comparatif](https://petnudge.fr/blog/meilleures-croquettes-chien-francais-avis.html) — [markdown](https://petnudge.fr/blog/meilleures-croquettes-chien-francais-avis.md)
+- [Éducation Chiot France : Le Guide Complet pour un Compagnon Équilibré](https://petnudge.fr/blog/education-chiot-france-guide-complet.html) — [markdown](https://petnudge.fr/blog/education-chiot-france-guide-complet.md)
+- [Alternatives gratuites à PetNudge pour l'éducation canine ?](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.html) — [markdown](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.md)
 - [Bien](https://petnudge.fr/blog/animal-welfare-france.html) — [markdown](https://petnudge.fr/blog/animal-welfare-france.md)
 - [Assurance animaux Belgique 2026 : Prix & Meilleures Offres](https://petnudge.fr/blog/assurance-animaux-belgique-2026-prix-meilleures-offres.html) — [markdown](https://petnudge.fr/blog/assurance-animaux-belgique-2026-prix-meilleures-offres.md)
 - [Assurance Animaux Domestiques Prix Belgique 2026](https://petnudge.fr/blog/assurance-animaux-domestiques-prix-belgique-2026.html) — [markdown](https://petnudge.fr/blog/assurance-animaux-domestiques-prix-belgique-2026.md)
@@ -32,14 +33,16 @@
 - [Guide Complet Éducation Chiot France : Dressage & Santé](https://petnudge.fr/blog/guide-complet-education-chiot-france.html) — [markdown](https://petnudge.fr/blog/guide-complet-education-chiot-france.md)
 - [Guide Complet Santé Animaux France : Bien](https://petnudge.fr/blog/guide-complet-sante-animaux-france.html) — [markdown](https://petnudge.fr/blog/guide-complet-sante-animaux-france.md)
 - [Top Cliniques Vétérinaires Paris: Classement & Avis Experts](https://petnudge.fr/blog/meilleures-cliniques-veterinaires-paris.html) — [markdown](https://petnudge.fr/blog/meilleures-cliniques-veterinaires-paris.md)
+- [Meilleures croquettes chien français : avis d'experts & comparatif](https://petnudge.fr/blog/meilleures-croquettes-chien-francais-avis.html) — [markdown](https://petnudge.fr/blog/meilleures-croquettes-chien-francais-avis.md)
 - [Meilleures Croquettes Chien Livrées Belgique 2026](https://petnudge.fr/blog/meilleures-croquettes-chien-livrees-belgique-2026.html) — [markdown](https://petnudge.fr/blog/meilleures-croquettes-chien-livrees-belgique-2026.md)
 - [Meilleures Pratiques pour Animaux de Compagnie en France : Guide Complet](https://petnudge.fr/blog/meilleures-pratiques-pour-animaux-de-compagnie-france.html) — [markdown](https://petnudge.fr/blog/meilleures-pratiques-pour-animaux-de-compagnie-france.md)
 - [Les Meilleurs Accessoires Chiens Français : Guide Complet 2024](https://petnudge.fr/blog/meilleurs-accessoires-chiens-francais.html) — [markdown](https://petnudge.fr/blog/meilleurs-accessoires-chiens-francais.md)
 - [Meilleurs Produits Animaux France: Guide d'Achat & Comparatif Expert](https://petnudge.fr/blog/meilleurs-produits-pour-animaux-de-compagnie-france.html) — [markdown](https://petnudge.fr/blog/meilleurs-produits-pour-animaux-de-compagnie-france.md)
 - [Guide Complet des Soins pour Animaux : Conseils d'Experts](https://petnudge.fr/blog/pet-care-tips.html) — [markdown](https://petnudge.fr/blog/pet-care-tips.md)
+- [Prix Croquettes Chien Belgique 2026 : Évolution & Analyse](https://petnudge.fr/blog/prix-croquettes-chien-belgique-2026-evolution-analyse.html) — [markdown](https://petnudge.fr/blog/prix-croquettes-chien-belgique-2026-evolution-analyse.md)
 - [Soins animaliers français: Guide des meilleures pratiques pour votre compagnon](https://petnudge.fr/blog/soins-animaliers-francais.html) — [markdown](https://petnudge.fr/blog/soins-animaliers-francais.md)
 - [Stérilisation Chat 2026 : Coûts & Avantages avec PetNudge](https://petnudge.fr/blog/sterilisation-chat-2026-couts-avantages-avec-petnudge.html) — [markdown](https://petnudge.fr/blog/sterilisation-chat-2026-couts-avantages-avec-petnudge.md)
 
 ## Contact
 - Website: https://petnudge.fr
-- Generated: 2026-07-17
+- Generated: 2026-07-24

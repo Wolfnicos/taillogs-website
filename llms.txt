@@ -10,7 +10,6 @@
 - [Privacy](https://petnudge.fr/privacy.html): Privacy page
 
 ## Articles
-- [Éducation Chiot France : Le Guide Complet pour un Compagnon Équilibré](https://petnudge.fr/blog/education-chiot-france-guide-complet.html) — [markdown](https://petnudge.fr/blog/education-chiot-france-guide-complet.md)
 - [Alternatives gratuites à PetNudge pour l'éducation canine ?](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.html) — [markdown](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.md)
 - [Bien](https://petnudge.fr/blog/animal-welfare-france.html) — [markdown](https://petnudge.fr/blog/animal-welfare-france.md)
 - [Assurance animaux Belgique 2026 : Prix & Meilleures Offres](https://petnudge.fr/blog/assurance-animaux-belgique-2026-prix-meilleures-offres.html) — [markdown](https://petnudge.fr/blog/assurance-animaux-belgique-2026-prix-meilleures-offres.md)
@@ -29,6 +28,7 @@
 - [Conseils Vétérinaires en Ligne France : Guide Complet](https://petnudge.fr/blog/conseils-veterinaires-en-ligne-france.html) — [markdown](https://petnudge.fr/blog/conseils-veterinaires-en-ligne-france.md)
 - [Croquettes sans céréales chat : Comparatif prix & qualité 2026](https://petnudge.fr/blog/croquettes-sans-cereales-chat-comparatif-prix-qualite-2026.html) — [markdown](https://petnudge.fr/blog/croquettes-sans-cereales-chat-comparatif-prix-qualite-2026.md)
 - [Dresser un chiot en appartement : Guide complet 2026](https://petnudge.fr/blog/dresser-un-chiot-en-appartement-guide-complet-2026.html) — [markdown](https://petnudge.fr/blog/dresser-un-chiot-en-appartement-guide-complet-2026.md)
+- [Éducation Chiot France : Le Guide Complet pour un Compagnon Équilibré](https://petnudge.fr/blog/education-chiot-france-guide-complet.html) — [markdown](https://petnudge.fr/blog/education-chiot-france-guide-complet.md)
 - [Éducation du chiot en milieu urbain : Guide détaillé 2026](https://petnudge.fr/blog/education-du-chiot-en-milieu-urbain-guide-detaille-2026.html) — [markdown](https://petnudge.fr/blog/education-du-chiot-en-milieu-urbain-guide-detaille-2026.md)
 - [Guide Complet Éducation Chiot France : Dressage & Santé](https://petnudge.fr/blog/guide-complet-education-chiot-france.html) — [markdown](https://petnudge.fr/blog/guide-complet-education-chiot-france.md)
 - [Guide Complet Santé Animaux France : Bien](https://petnudge.fr/blog/guide-complet-sante-animaux-france.html) — [markdown](https://petnudge.fr/blog/guide-complet-sante-animaux-france.md)

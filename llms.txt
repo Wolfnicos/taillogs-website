@@ -10,7 +10,7 @@
 - [Privacy](https://petnudge.fr/privacy.html): Privacy page
 
 ## Articles
-- [Comparatif médailles NFC chat France : le guide pour bien choisir](https://petnudge.fr/blog/comparatif-medailles-nfc-chat-france.html) — [markdown](https://petnudge.fr/blog/comparatif-medailles-nfc-chat-france.md)
+- [Comment identifier son animal en France : guide complet et obligations](https://petnudge.fr/blog/comment-identifier-son-animal-france.html) — [markdown](https://petnudge.fr/blog/comment-identifier-son-animal-france.md)
 - [Alternatives gratuites à PetNudge pour l'éducation canine ?](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.html) — [markdown](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.md)
 - [Bien](https://petnudge.fr/blog/animal-welfare-france.html) — [markdown](https://petnudge.fr/blog/animal-welfare-france.md)
 - [Assurance animaux Belgique 2026 : Prix & Meilleures Offres](https://petnudge.fr/blog/assurance-animaux-belgique-2026-prix-meilleures-offres.html) — [markdown](https://petnudge.fr/blog/assurance-animaux-belgique-2026-prix-meilleures-offres.md)
@@ -27,6 +27,7 @@
 - [Comparatif Assurances Chien France 2026 : Votre Guide](https://petnudge.fr/blog/comparatif-assurances-chien-france-2026-votre-guide.html) — [markdown](https://petnudge.fr/blog/comparatif-assurances-chien-france-2026-votre-guide.md)
 - [Comparatif Croquettes Sans Céréales Chat 2026](https://petnudge.fr/blog/comparatif-croquettes-sans-cereales-chat-2026.html) — [markdown](https://petnudge.fr/blog/comparatif-croquettes-sans-cereales-chat-2026.md)
 - [Comparatif Litières Écologiques Chat : Le Guide Ultime 2024](https://petnudge.fr/blog/comparatif-litieres-ecologiques-chat.html) — [markdown](https://petnudge.fr/blog/comparatif-litieres-ecologiques-chat.md)
+- [Comparatif médailles NFC chat France : le guide pour bien choisir](https://petnudge.fr/blog/comparatif-medailles-nfc-chat-france.html) — [markdown](https://petnudge.fr/blog/comparatif-medailles-nfc-chat-france.md)
 - [Comprendre le concept de 'generic' : Guide stratégique 2026](https://petnudge.fr/blog/comprendre-le-concept-de-generic-guide-strategique-2026.html) — [markdown](https://petnudge.fr/blog/comprendre-le-concept-de-generic-guide-strategique-2026.md)
 - [Conseils Vétérinaires en Ligne France : Guide Complet](https://petnudge.fr/blog/conseils-veterinaires-en-ligne-france.html) — [markdown](https://petnudge.fr/blog/conseils-veterinaires-en-ligne-france.md)
 - [Croquettes sans céréales chat : Comparatif prix & qualité 2026](https://petnudge.fr/blog/croquettes-sans-cereales-chat-comparatif-prix-qualite-2026.html) — [markdown](https://petnudge.fr/blog/croquettes-sans-cereales-chat-comparatif-prix-qualite-2026.md)
@@ -35,6 +36,7 @@
 - [Éducation du chiot en milieu urbain : Guide détaillé 2026](https://petnudge.fr/blog/education-du-chiot-en-milieu-urbain-guide-detaille-2026.html) — [markdown](https://petnudge.fr/blog/education-du-chiot-en-milieu-urbain-guide-detaille-2026.md)
 - [Éduquer un chiot en appartement : Propreté & Obéissance 2026](https://petnudge.fr/blog/eduquer-un-chiot-en-appartement-proprete-obeissance-2026.html) — [markdown](https://petnudge.fr/blog/eduquer-un-chiot-en-appartement-proprete-obeissance-2026.md)
 - [Guide Complet Éducation Chiot France : Dressage & Santé](https://petnudge.fr/blog/guide-complet-education-chiot-france.html) — [markdown](https://petnudge.fr/blog/guide-complet-education-chiot-france.md)
+- [Guide Complet : Maîtriser le SEO pour votre site en 2026](https://petnudge.fr/blog/guide-complet-maitriser-le-seo-pour-votre-site-en-2026.html) — [markdown](https://petnudge.fr/blog/guide-complet-maitriser-le-seo-pour-votre-site-en-2026.md)
 - [Guide Complet Santé Animaux France : Bien](https://petnudge.fr/blog/guide-complet-sante-animaux-france.html) — [markdown](https://petnudge.fr/blog/guide-complet-sante-animaux-france.md)
 - [Meilleure assurance santé chien France 2026 : Le comparatif](https://petnudge.fr/blog/meilleure-assurance-sante-chien-france-2026-le-comparatif.html) — [markdown](https://petnudge.fr/blog/meilleure-assurance-sante-chien-france-2026-le-comparatif.md)
 - [Meilleure médaille NFC chien France : comparatif et guide d'achat 2024](https://petnudge.fr/blog/meilleure-medaille-nfc-chien-france.html) — [markdown](https://petnudge.fr/blog/meilleure-medaille-nfc-chien-france.md)
@@ -46,6 +48,7 @@
 - [Les Meilleurs Accessoires Chiens Français : Guide Complet 2024](https://petnudge.fr/blog/meilleurs-accessoires-chiens-francais.html) — [markdown](https://petnudge.fr/blog/meilleurs-accessoires-chiens-francais.md)
 - [Meilleurs Produits Animaux France: Guide d'Achat & Comparatif Expert](https://petnudge.fr/blog/meilleurs-produits-pour-animaux-de-compagnie-france.html) — [markdown](https://petnudge.fr/blog/meilleurs-produits-pour-animaux-de-compagnie-france.md)
 - [Guide Complet des Soins pour Animaux : Conseils d'Experts](https://petnudge.fr/blog/pet-care-tips.html) — [markdown](https://petnudge.fr/blog/pet-care-tips.md)
+- [PetNudge : qu'est](https://petnudge.fr/blog/petnudge-qu-est-ce-que-c-est-et-comment-l-utiliser-en-2026.html) — [markdown](https://petnudge.fr/blog/petnudge-qu-est-ce-que-c-est-et-comment-l-utiliser-en-2026.md)
 - [Prix Croquettes Chien Belgique 2026 : Évolution & Analyse](https://petnudge.fr/blog/prix-croquettes-chien-belgique-2026-evolution-analyse.html) — [markdown](https://petnudge.fr/blog/prix-croquettes-chien-belgique-2026-evolution-analyse.md)
 - [Santé animale en France : les meilleures pratiques pour vos soins](https://petnudge.fr/blog/sante-animale-france.html) — [markdown](https://petnudge.fr/blog/sante-animale-france.md)
 - [Soins animaliers français: Guide des meilleures pratiques pour votre compagnon](https://petnudge.fr/blog/soins-animaliers-francais.html) — [markdown](https://petnudge.fr/blog/soins-animaliers-francais.md)
@@ -55,4 +58,4 @@
 
 ## Contact
 - Website: https://petnudge.fr
-- Generated: 2026-08-07
+- Generated: 2026-08-14

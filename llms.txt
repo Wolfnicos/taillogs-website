@@ -10,7 +10,7 @@
 - [Privacy](https://petnudge.fr/privacy.html): Privacy page
 
 ## Articles
-- [Comment identifier son animal en France : guide complet et obligations](https://petnudge.fr/blog/comment-identifier-son-animal-france.html) — [markdown](https://petnudge.fr/blog/comment-identifier-son-animal-france.md)
+- [Guide d'achat : comment choisir les meilleures médailles NFC pour chiens](https://petnudge.fr/blog/medailles-nfc-pour-chiens.html) — [markdown](https://petnudge.fr/blog/medailles-nfc-pour-chiens.md)
 - [Alternatives gratuites à PetNudge pour l'éducation canine ?](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.html) — [markdown](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.md)
 - [Bien](https://petnudge.fr/blog/animal-welfare-france.html) — [markdown](https://petnudge.fr/blog/animal-welfare-france.md)
 - [Assurance animaux Belgique 2026 : Prix & Meilleures Offres](https://petnudge.fr/blog/assurance-animaux-belgique-2026-prix-meilleures-offres.html) — [markdown](https://petnudge.fr/blog/assurance-animaux-belgique-2026-prix-meilleures-offres.md)
@@ -23,6 +23,7 @@
 - [Choisir Assurance Santé Chien France 2026 : Guide Complet](https://petnudge.fr/blog/choisir-assurance-sante-chien-france-2026-guide-complet.html) — [markdown](https://petnudge.fr/blog/choisir-assurance-sante-chien-france-2026-guide-complet.md)
 - [Choisir Assurance Santé Chien France 2026 : Guide PetNudge](https://petnudge.fr/blog/choisir-assurance-sante-chien-france-2026-guide-petnudge.html) — [markdown](https://petnudge.fr/blog/choisir-assurance-sante-chien-france-2026-guide-petnudge.md)
 - [Commandes chiot en appartement : Tutoriels efficaces 2026](https://petnudge.fr/blog/commandes-chiot-en-appartement-tutoriels-efficaces-2026.html) — [markdown](https://petnudge.fr/blog/commandes-chiot-en-appartement-tutoriels-efficaces-2026.md)
+- [Comment identifier son animal en France : guide complet et obligations](https://petnudge.fr/blog/comment-identifier-son-animal-france.html) — [markdown](https://petnudge.fr/blog/comment-identifier-son-animal-france.md)
 - [Comparatif Assurances Animaux France: Guide Complet 2024](https://petnudge.fr/blog/comparatif-assurances-animaux-france.html) — [markdown](https://petnudge.fr/blog/comparatif-assurances-animaux-france.md)
 - [Comparatif Assurances Chien France 2026 : Votre Guide](https://petnudge.fr/blog/comparatif-assurances-chien-france-2026-votre-guide.html) — [markdown](https://petnudge.fr/blog/comparatif-assurances-chien-france-2026-votre-guide.md)
 - [Comparatif Croquettes Sans Céréales Chat 2026](https://petnudge.fr/blog/comparatif-croquettes-sans-cereales-chat-2026.html) — [markdown](https://petnudge.fr/blog/comparatif-croquettes-sans-cereales-chat-2026.md)

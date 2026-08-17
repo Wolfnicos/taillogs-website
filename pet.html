@@ -347,10 +347,6 @@
                 <div class="pet-info">
                     <h1 id="petName" class="pet-name">Loading...</h1>
                     <p id="petDetails" class="pet-details"></p>
-                    <div id="microchipBadge" class="pet-chip hidden">
-                        <span>📟</span>
-                        <span id="microchipID"></span>
-                    </div>
 
                     <!-- Reward Box (shown if lost with reward) -->
                     <div id="rewardBox" class="reward-box hidden">
@@ -704,11 +700,9 @@
                 };
             }
 
-            // Microchip
-            if (fields.microchipID?.value) {
-                document.getElementById('microchipID').textContent = fields.microchipID.value;
-                show('microchipBadge');
-            }
+            // Microchip is intentionally NOT shown on the public finder page:
+            // a finder doesn't need it, and exposing it aids ownership fraud.
+            // The app no longer publishes it; this display was removed too.
 
             // Lost Mode
             if (fields.isLostMode?.value === 1) {

@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Short tag URLs: petnudge.fr/p/<id> resolves the pet finder page.
+    // GitHub Pages has no dynamic routing, so it serves 404.html for these
+    // paths; redirect straight to the canonical profile view before anything
+    // paints. Legacy pet.html?id=<id> links keep working unchanged.
+    (function () {
+      var m = location.pathname.match(/^\/p\/([A-Za-z0-9]+)\/?$/);
+      if (m) { location.replace('/pet.html?id=' + m[1]); }
+    })();
+  </script>
   <title>Page Not Found - PetNudge</title>
   <meta name="description" content="The page you're looking for doesn't exist. Return to PetNudge homepage to discover our pet health app with vaccination tracking, AI assistant, and NFC lost pet recovery.">
   <link rel="icon" type="image/png" href="logo.webp">

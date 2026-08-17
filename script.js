@@ -2499,6 +2499,10 @@
   // ==========================================
   // Waitlist Form
   // ==========================================
+  // Expose translations so page-specific extension files
+  // (shop-translations.js, home-translations.js) can merge extra keys in.
+  window.translations = translations;
+
   window.handleWaitlist = function(e) {
     e.preventDefault();
     const email = document.getElementById('waitlist-email').value;

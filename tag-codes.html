@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Tag Code Generator — PetNudge (internal)</title>
+  <style>
+    :root { --orange: #FF6B35; --ink: #1a1a1a; --muted: #6b6b6b; --line: #e6e6e6; }
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+           margin: 0; padding: 2rem 1rem; color: var(--ink); background: #faf9f7; }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    h1 { font-size: 1.4rem; margin: 0 0 .25rem; }
+    p.sub { color: var(--muted); margin: 0 0 1.5rem; font-size: .95rem; }
+    .controls { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center;
+                background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1rem; }
+    label { font-size: .9rem; color: var(--muted); }
+    input[type=number] { width: 90px; padding: .5rem; border: 1px solid var(--line);
+                         border-radius: 8px; font-size: 1rem; }
+    button { background: var(--orange); color: #fff; border: 0; border-radius: 8px;
+             padding: .6rem 1.1rem; font-size: .95rem; font-weight: 600; cursor: pointer; }
+    button.secondary { background: #fff; color: var(--orange); border: 1.5px solid var(--orange); }
+    table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; background: #fff;
+            border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    th, td { text-align: left; padding: .6rem .8rem; border-bottom: 1px solid var(--line); font-size: .9rem; }
+    th { background: #f4f2ef; font-weight: 600; }
+    td.code { font-family: ui-monospace, Menlo, monospace; font-weight: 600; }
+    td.url { color: var(--muted); font-family: ui-monospace, Menlo, monospace; }
+    tr:last-child td { border-bottom: 0; }
+    .note { margin-top: 1.25rem; font-size: .82rem; color: var(--muted); line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>🏷️ Tag Code Generator</h1>
+    <p class="sub">Internal tool. Generates unique codes to print on physical tags. Each code self-registers when a customer activates it in the PetNudge app — no upload needed.</p>
+
+    <div class="controls">
+      <label for="count">How many codes:</label>
+      <input type="number" id="count" value="50" min="1" max="2000">
+      <button onclick="generate()">Generate</button>
+      <button class="secondary" onclick="downloadCSV()">Download CSV</button>
+    </div>
+
+    <table id="out" hidden>
+      <thead><tr><th>#</th><th>Code</th><th>Tag URL (print this as a QR)</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+    <p class="note">
+      Alphabet excludes ambiguous characters (no O/0/I/1). Codes are 8 chars → 32⁸ ≈ 1.1×10¹²
+      combinations, so collisions are effectively impossible. Feed the <strong>Tag URL</strong>
+      column to your tag printer / QR service. Customers scan the printed QR in-app to link the tag
+      to their pet, or the QR opens <code>petnudge.fr/t/&lt;CODE&gt;</code> directly once activated.
+    </p>
+  </div>
+
+  <script>
+    var ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    var BASE = 'https://petnudge.fr/t/';
+    var current = [];
+
+    function makeCode() {
+      var s = '';
+      var a = new Uint32Array(8);
+      crypto.getRandomValues(a);
+      for (var i = 0; i < 8; i++) { s += ALPHABET[a[i] % ALPHABET.length]; }
+      return s;
+    }
+
+    function generate() {
+      var n = Math.max(1, Math.min(2000, parseInt(document.getElementById('count').value, 10) || 1));
+      var seen = {}; current = [];
+      while (current.length < n) {
+        var c = makeCode();
+        if (!seen[c]) { seen[c] = 1; current.push(c); }
+      }
+      var rows = current.map(function (c, i) {
+        return '<tr><td>' + (i + 1) + '</td><td class="code">' + c +
+               '</td><td class="url">' + BASE + c + '</td></tr>';
+      }).join('');
+      document.getElementById('rows').innerHTML = rows;
+      document.getElementById('out').hidden = false;
+    }
+
+    function downloadCSV() {
+      if (!current.length) { generate(); }
+      var lines = ['code,url'].concat(current.map(function (c) { return c + ',' + BASE + c; }));
+      var blob = new Blob([lines.join('\n')], { type: 'text/csv' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'petnudge-tag-codes.csv';
+      a.click();
+    }
+  </script>
+</body>
+</html>

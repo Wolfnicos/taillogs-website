@@ -10,7 +10,10 @@
     // paints. Legacy pet.html?id=<id> links keep working unchanged.
     (function () {
       var m = location.pathname.match(/^\/p\/([A-Za-z0-9]+)\/?$/);
-      if (m) { location.replace('/pet.html?id=' + m[1]); }
+      if (m) { location.replace('/pet.html?id=' + m[1]); return; }
+      // Activated tags: petnudge.fr/t/<CODE> resolves the linked pet's profile.
+      var t = location.pathname.match(/^\/t\/([A-Za-z0-9]+)\/?$/);
+      if (t) { location.replace('/pet.html?tag=' + t[1].toUpperCase()); }
     })();
   </script>
   <title>Page Not Found - PetNudge</title>

@@ -626,9 +626,37 @@
             return phone.replace(/(\d{2})(?=\d)/g, '$1 ').trim();
         }
 
+        // Resolve an activated tag code (petnudge.fr/t/<CODE>) to a pet profile ID
+        // via the public TagLink record (recordName = CODE, field profileID).
+        async function resolveTagToProfileID(code) {
+            try {
+                const url = `https://api.apple-cloudkit.com/database/1/${CONTAINER_ID}/${ENVIRONMENT}/public/records/lookup?ckAPIToken=${API_TOKEN}`;
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ records: [{ recordName: code }] })
+                });
+                const data = await response.json();
+                if (data.records && data.records.length > 0 && !data.records[0].serverErrorCode) {
+                    return data.records[0].fields?.profileID?.value || null;
+                }
+            } catch (error) {
+                console.error('Error resolving tag:', error);
+            }
+            return null;
+        }
+
         // Load pet profile using fetch (CloudKit Web Services)
         async function loadProfile() {
-            const profileID = getProfileID();
+            let profileID = getProfileID();
+
+            // If arriving via an activated tag (?tag=CODE), resolve it to a profile.
+            if (!profileID) {
+                const tag = new URLSearchParams(window.location.search).get('tag');
+                if (tag) {
+                    profileID = await resolveTagToProfileID(tag.toUpperCase());
+                }
+            }
 
             if (!profileID) {
                 hide('loading');

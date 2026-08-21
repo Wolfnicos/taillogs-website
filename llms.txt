@@ -10,7 +10,7 @@
 - [Privacy](https://petnudge.fr/privacy.html): Privacy page
 
 ## Articles
-- [Guide d'achat : bien choisir les tags d'identification pour chats](https://petnudge.fr/blog/tags-d-identification-pour-chats.html) — [markdown](https://petnudge.fr/blog/tags-d-identification-pour-chats.md)
+- [Médailles NFC pour animaux de compagnie : Le guide complet en France](https://petnudge.fr/blog/medailles-nfc-pour-animaux-de-compagnie.html) — [markdown](https://petnudge.fr/blog/medailles-nfc-pour-animaux-de-compagnie.md)
 - [Alternatives à Petnudge.fr : Quelle solution choisir en 2026 ?](https://petnudge.fr/blog/alternatives-a-petnudge-fr-quelle-solution-choisir-en-2026.html) — [markdown](https://petnudge.fr/blog/alternatives-a-petnudge-fr-quelle-solution-choisir-en-2026.md)
 - [Alternatives gratuites à PetNudge pour l'éducation canine ?](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.html) — [markdown](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.md)
 - [Bien](https://petnudge.fr/blog/animal-welfare-france.html) — [markdown](https://petnudge.fr/blog/animal-welfare-france.md)
@@ -58,6 +58,7 @@
 - [Soins vétérinaires français : le guide complet pour vos animaux](https://petnudge.fr/blog/soins-veterinaires-francais.html) — [markdown](https://petnudge.fr/blog/soins-veterinaires-francais.md)
 - [Stérilisation Chat 2026 : Coûts & Avantages avec PetNudge](https://petnudge.fr/blog/sterilisation-chat-2026-couts-avantages-avec-petnudge.html) — [markdown](https://petnudge.fr/blog/sterilisation-chat-2026-couts-avantages-avec-petnudge.md)
 - [Stérilisation chat : démarches et coûts en 2026](https://petnudge.fr/blog/sterilisation-chat-demarches-et-couts-en-2026.html) — [markdown](https://petnudge.fr/blog/sterilisation-chat-demarches-et-couts-en-2026.md)
+- [Guide d'achat : bien choisir les tags d'identification pour chats](https://petnudge.fr/blog/tags-d-identification-pour-chats.html) — [markdown](https://petnudge.fr/blog/tags-d-identification-pour-chats.md)
 - [Tutoriel d'utilisation pour débutants : Bien débuter en 2026](https://petnudge.fr/blog/tutoriel-d-utilisation-pour-debutants-bien-debuter-en-2026.html) — [markdown](https://petnudge.fr/blog/tutoriel-d-utilisation-pour-debutants-bien-debuter-en-2026.md)
 
 ## Contact

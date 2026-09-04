@@ -10,7 +10,7 @@
 - [Privacy](https://petnudge.fr/privacy.html): Privacy page
 
 ## Articles
-- [Guide pratique sécurité animaux NFC : protégez votre compagnon](https://petnudge.fr/blog/guide-pratique-securite-animaux-nfc.html) — [markdown](https://petnudge.fr/blog/guide-pratique-securite-animaux-nfc.md)
+- [Comment retrouver son animal perdu avec une médaille NFC : Le guide](https://petnudge.fr/blog/comment-retrouver-son-animal-perdu-avec-une-medaille-nfc.html) — [markdown](https://petnudge.fr/blog/comment-retrouver-son-animal-perdu-avec-une-medaille-nfc.md)
 - [Alternatives à Petnudge.fr : Quelle solution choisir en 2026 ?](https://petnudge.fr/blog/alternatives-a-petnudge-fr-quelle-solution-choisir-en-2026.html) — [markdown](https://petnudge.fr/blog/alternatives-a-petnudge-fr-quelle-solution-choisir-en-2026.md)
 - [Alternatives gratuites à PetNudge pour l'éducation canine ?](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.html) — [markdown](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.md)
 - [Bien](https://petnudge.fr/blog/animal-welfare-france.html) — [markdown](https://petnudge.fr/blog/animal-welfare-france.md)
@@ -42,6 +42,7 @@
 - [Guide Complet Éducation Chiot France : Dressage & Santé](https://petnudge.fr/blog/guide-complet-education-chiot-france.html) — [markdown](https://petnudge.fr/blog/guide-complet-education-chiot-france.md)
 - [Guide Complet : Maîtriser le SEO pour votre site en 2026](https://petnudge.fr/blog/guide-complet-maitriser-le-seo-pour-votre-site-en-2026.html) — [markdown](https://petnudge.fr/blog/guide-complet-maitriser-le-seo-pour-votre-site-en-2026.md)
 - [Guide Complet Santé Animaux France : Bien](https://petnudge.fr/blog/guide-complet-sante-animaux-france.html) — [markdown](https://petnudge.fr/blog/guide-complet-sante-animaux-france.md)
+- [Guide pratique sécurité animaux NFC : protégez votre compagnon](https://petnudge.fr/blog/guide-pratique-securite-animaux-nfc.html) — [markdown](https://petnudge.fr/blog/guide-pratique-securite-animaux-nfc.md)
 - [Médailles NFC pour animaux de compagnie : Le guide complet en France](https://petnudge.fr/blog/medailles-nfc-pour-animaux-de-compagnie.html) — [markdown](https://petnudge.fr/blog/medailles-nfc-pour-animaux-de-compagnie.md)
 - [Guide d'achat : comment choisir les meilleures médailles NFC pour chiens](https://petnudge.fr/blog/medailles-nfc-pour-chiens.html) — [markdown](https://petnudge.fr/blog/medailles-nfc-pour-chiens.md)
 - [Meilleure assurance santé chien France 2026 : Le comparatif](https://petnudge.fr/blog/meilleure-assurance-sante-chien-france-2026-le-comparatif.html) — [markdown](https://petnudge.fr/blog/meilleure-assurance-sante-chien-france-2026-le-comparatif.md)
@@ -59,8 +60,7 @@
 - [Santé animale en France : les meilleures pratiques pour vos soins](https://petnudge.fr/blog/sante-animale-france.html) — [markdown](https://petnudge.fr/blog/sante-animale-france.md)
 - [Soins animaliers français: Guide des meilleures pratiques pour votre compagnon](https://petnudge.fr/blog/soins-animaliers-francais.html) — [markdown](https://petnudge.fr/blog/soins-animaliers-francais.md)
 - [Soins vétérinaires français : le guide complet pour vos animaux](https://petnudge.fr/blog/soins-veterinaires-francais.html) — [markdown](https://petnudge.fr/blog/soins-veterinaires-francais.md)
-- [Stérilisation Chat 2026 : Coûts & Avantages avec PetNudge](https://petnudge.fr/blog/sterilisation-chat-2026-couts-avantages-avec-petnudge.html) — [markdown](https://petnudge.fr/blog/sterilisation-chat-2026-couts-avantages-avec-petnudge.md)
 
 ## Contact
 - Website: https://petnudge.fr
-- Generated: 2026-08-28
+- Generated: 2026-09-04

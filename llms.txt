@@ -10,7 +10,7 @@
 - [Privacy](https://petnudge.fr/privacy.html): Privacy page
 
 ## Articles
-- [Comment retrouver son animal perdu avec une médaille NFC : Le guide](https://petnudge.fr/blog/comment-retrouver-son-animal-perdu-avec-une-medaille-nfc.html) — [markdown](https://petnudge.fr/blog/comment-retrouver-son-animal-perdu-avec-une-medaille-nfc.md)
+- [Médailles NFC vs médailles gravées : le guide pour la sécurité de votre animal](https://petnudge.fr/blog/medailles-nfc-vs-medailles-gravees.html) — [markdown](https://petnudge.fr/blog/medailles-nfc-vs-medailles-gravees.md)
 - [Alternatives à Petnudge.fr : Quelle solution choisir en 2026 ?](https://petnudge.fr/blog/alternatives-a-petnudge-fr-quelle-solution-choisir-en-2026.html) — [markdown](https://petnudge.fr/blog/alternatives-a-petnudge-fr-quelle-solution-choisir-en-2026.md)
 - [Alternatives gratuites à PetNudge pour l'éducation canine ?](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.html) — [markdown](https://petnudge.fr/blog/alternatives-gratuites-a-petnudge-pour-l-education-canine.md)
 - [Bien](https://petnudge.fr/blog/animal-welfare-france.html) — [markdown](https://petnudge.fr/blog/animal-welfare-france.md)
@@ -26,6 +26,7 @@
 - [Choisir Assurance Santé Chien France 2026 : Guide PetNudge](https://petnudge.fr/blog/choisir-assurance-sante-chien-france-2026-guide-petnudge.html) — [markdown](https://petnudge.fr/blog/choisir-assurance-sante-chien-france-2026-guide-petnudge.md)
 - [Commandes chiot en appartement : Tutoriels efficaces 2026](https://petnudge.fr/blog/commandes-chiot-en-appartement-tutoriels-efficaces-2026.html) — [markdown](https://petnudge.fr/blog/commandes-chiot-en-appartement-tutoriels-efficaces-2026.md)
 - [Comment identifier son animal en France : guide complet et obligations](https://petnudge.fr/blog/comment-identifier-son-animal-france.html) — [markdown](https://petnudge.fr/blog/comment-identifier-son-animal-france.md)
+- [Comment retrouver son animal perdu avec une médaille NFC : Le guide](https://petnudge.fr/blog/comment-retrouver-son-animal-perdu-avec-une-medaille-nfc.html) — [markdown](https://petnudge.fr/blog/comment-retrouver-son-animal-perdu-avec-une-medaille-nfc.md)
 - [Comparatif Assurances Animaux France: Guide Complet 2024](https://petnudge.fr/blog/comparatif-assurances-animaux-france.html) — [markdown](https://petnudge.fr/blog/comparatif-assurances-animaux-france.md)
 - [Comparatif Assurances Chien France 2026 : Votre Guide](https://petnudge.fr/blog/comparatif-assurances-chien-france-2026-votre-guide.html) — [markdown](https://petnudge.fr/blog/comparatif-assurances-chien-france-2026-votre-guide.md)
 - [Comparatif Croquettes Sans Céréales Chat 2026](https://petnudge.fr/blog/comparatif-croquettes-sans-cereales-chat-2026.html) — [markdown](https://petnudge.fr/blog/comparatif-croquettes-sans-cereales-chat-2026.md)
@@ -59,7 +60,6 @@
 - [Prix Croquettes Chien Belgique 2026 : Évolution & Analyse](https://petnudge.fr/blog/prix-croquettes-chien-belgique-2026-evolution-analyse.html) — [markdown](https://petnudge.fr/blog/prix-croquettes-chien-belgique-2026-evolution-analyse.md)
 - [Santé animale en France : les meilleures pratiques pour vos soins](https://petnudge.fr/blog/sante-animale-france.html) — [markdown](https://petnudge.fr/blog/sante-animale-france.md)
 - [Soins animaliers français: Guide des meilleures pratiques pour votre compagnon](https://petnudge.fr/blog/soins-animaliers-francais.html) — [markdown](https://petnudge.fr/blog/soins-animaliers-francais.md)
-- [Soins vétérinaires français : le guide complet pour vos animaux](https://petnudge.fr/blog/soins-veterinaires-francais.html) — [markdown](https://petnudge.fr/blog/soins-veterinaires-francais.md)
 
 ## Contact
 - Website: https://petnudge.fr

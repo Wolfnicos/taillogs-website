@@ -132,3 +132,40 @@ Production HTTP verification, a production Lighthouse measurement, and actual
 Search Console submissions follow deployment and are reported by the task
 owner. Search indexing and rich-result presentation remain Google's decisions;
 this audit establishes only the tested technical state.
+
+## Publication and Google confirmation
+
+The redesign was published successfully by GitHub Pages on 9 October 2026,
+initial deployment commit `cb2b943`, workflow run `37961443350`. The public
+homepage renders the redesigned French content, with no broken images or
+horizontal overflow at the checked desktop viewport.
+
+The deployed crawl checked 201 content pages, 21 local image assets,
+robots.txt, sitemap.xml and the HTTPS www variant. All content and media
+checks passed. One temporary 503 on the medication page cleared on targeted
+retry. A genuinely missing nested route returns HTTP 404 with the custom
+noindex page. The live sitemap contains 195 canonical URLs and 17 image
+references.
+
+Google Search Console confirmed the sitemap submission and the homepage
+indexing request on 9 October. The request is queued for recrawling; this is
+not a claim that all 195 URLs are already indexed.
+
+The initial production mobile Lighthouse run scored performance 81,
+accessibility 100, best practices 100 and SEO 100 (FCP 2.0s, LCP 4.2s,
+TBT 0ms, CLS 0). Compression is active in production. This is a synthetic
+mobile measurement, not field Core Web Vitals.
+
+A final follow-up avoids replacing identical translated text, loads the
+existing analytics script asynchronously so it cannot hold the interaction
+scripts, preloads the displayed italic font and versions changed scripts.
+All nine language selections, CTA destinations/icons, mobile overflow,
+menu focus/Escape, FAQ and lost-mode demo passed again. The local Lighthouse
+comparison remained 78/100/100/100 with LCP 5.5s; no measured speed gain is
+claimed for this follow-up.
+
+Remaining infrastructure item: plain HTTP apex/www requests still stay on
+HTTP. The canonical HTTPS site and HTTPS www redirect work. Cloudflare's
+logged-in account did not contain the petnudge.fr zone, so the edge redirect
+could not be changed. Origin HTTPS enforcement was not changed blindly
+without the Cloudflare TLS mode/certificate information.

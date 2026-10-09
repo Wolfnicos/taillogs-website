@@ -825,7 +825,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (t[lang] && t[lang][key]) {
+    if (t[lang] && t[lang][key] && el.textContent !== t[lang][key]) {
       el.textContent = t[lang][key];
     }
   });

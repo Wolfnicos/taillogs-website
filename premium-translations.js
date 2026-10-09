@@ -311,7 +311,7 @@
     const lang = copy[document.documentElement.lang] ? document.documentElement.lang : 'en';
     document.querySelectorAll('[data-i18n^="premium."]').forEach(function (element) {
       const value = copy[lang][element.dataset.i18n];
-      if (value) element.textContent = value;
+      if (value && element.textContent !== value) element.textContent = value;
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply);

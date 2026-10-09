@@ -819,7 +819,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   let lang = localStorage.getItem('petnudge-lang') ||
-             navigator.language.split('-')[0] ||
+             document.documentElement.lang ||
              'fr';
   if (!t[lang]) lang = 'en';
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Tag Code Generator — PetNudge (internal)</title>
+  <title>Tag Code Generator | PetNudge Internal Tool</title>
   <style>
     :root { --orange: #FF6B35; --ink: #1a1a1a; --muted: #6b6b6b; --line: #e6e6e6; }
     * { box-sizing: border-box; }
@@ -30,10 +30,29 @@
     tr:last-child td { border-bottom: 0; }
     .note { margin-top: 1.25rem; font-size: .82rem; color: var(--muted); line-height: 1.5; }
   </style>
+  <link rel="stylesheet" href="/premium.css?v=1">
+  <link rel="stylesheet" href="/secondary.css?v=1">
+  <script src="/premium.js?v=1" defer></script>
+  <meta name="description" content="Internal PetNudge utility for generating NFC tag activation codes and exporting printable tag URLs as CSV.">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta property="og:title" content="Tag Code Generator | PetNudge Internal Tool">
+  <meta property="og:description" content="Internal PetNudge utility for generating NFC tag activation codes and exporting printable tag URLs as CSV.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PetNudge">
+  <meta property="og:image" content="https://petnudge.fr/images/social-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PetNudge — pet care and NFC identification for iPhone">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tag Code Generator | PetNudge Internal Tool">
+  <meta name="twitter:description" content="Internal PetNudge utility for generating NFC tag activation codes and exporting printable tag URLs as CSV.">
+  <meta name="twitter:image" content="https://petnudge.fr/images/social-preview.jpg">
+  <link rel="icon" href="/favicon.ico" sizes="any">
 </head>
-<body>
-  <div class="wrap">
-    <h1>🏷️ Tag Code Generator</h1>
+<body class="tag-tools-page">
+  <main class="wrap">
+    <a class="utility-brand" href="/">PetNudge <span>/ Internal tools</span></a>
+    <h1>Tag code generator</h1>
     <p class="sub">Internal tool. Generates unique codes to print on physical tags. Each code self-registers when a customer activates it in the PetNudge app — no upload needed.</p>
 
     <div class="controls">
@@ -43,10 +62,10 @@
       <button class="secondary" onclick="downloadCSV()">Download CSV</button>
     </div>
 
-    <table id="out" hidden>
+    <div class="tag-table-scroll"><table id="out" hidden>
       <thead><tr><th>#</th><th>Code</th><th>Tag URL (print this as a QR)</th></tr></thead>
       <tbody id="rows"></tbody>
-    </table>
+    </table></div>
 
     <p class="note">
       Alphabet excludes ambiguous characters (no O/0/I/1). Codes are 8 chars → 32⁸ ≈ 1.1×10¹²
@@ -54,7 +73,7 @@
       column to your tag printer / QR service. Customers scan the printed QR in-app to link the tag
       to their pet, or the QR opens <code>petnudge.fr/t/&lt;CODE&gt;</code> directly once activated.
     </p>
-  </div>
+  </main>
 
   <script>
     var ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';

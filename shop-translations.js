@@ -1208,11 +1208,10 @@ document.addEventListener('DOMContentLoaded', () => {
         Object.assign(translations[lang], shopTranslationsExtended[lang]);
       }
     });
-    console.log('✅ Shop translations extended');
 
     // Reaplică traducerile - setLanguage din script.js
     const savedLang = localStorage.getItem('petnudge-lang') ||
-                      navigator.language.split('-')[0] ||
+                      document.documentElement.lang ||
                       'fr';
 
     // Aplică traducerile shop pe toate elementele
@@ -1224,6 +1223,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    console.log('✅ Shop translations applied for: ' + lang);
   }
 });

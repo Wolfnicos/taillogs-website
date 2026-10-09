@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Profile - PetNudge</title>
-    <meta name="description" content="Found a lost pet? Contact the owner instantly.">
+    <title>Pet ID Profile | PetNudge</title>
+    <meta name="description" content="Found a pet wearing a PetNudge tag? Open their public Pet ID profile to contact the owner and help them get home.">
     <link rel="icon" type="image/png" href="logo.webp">
 
     <!-- CloudKit JS -->
@@ -313,18 +313,36 @@
         }
     </style>
     <script defer data-domain="petnudge.fr" src="https://signallensai.com:8443/js/script.js"></script>
+  <link rel="stylesheet" href="/premium.css?v=1">
+  <link rel="stylesheet" href="/secondary.css?v=1">
+  <script src="/premium.js?v=1" defer></script>
+  <meta name="robots" content="noindex, nofollow, noimageindex">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta property="og:title" content="Pet ID Profile | PetNudge">
+  <meta property="og:description" content="Found a pet wearing a PetNudge tag? Open their public Pet ID profile to contact the owner and help them get home.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PetNudge">
+  <meta property="og:image" content="https://petnudge.fr/images/social-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PetNudge — pet care and NFC identification for iPhone">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pet ID Profile | PetNudge">
+  <meta name="twitter:description" content="Found a pet wearing a PetNudge tag? Open their public Pet ID profile to contact the owner and help them get home.">
+  <meta name="twitter:image" content="https://petnudge.fr/images/social-preview.jpg">
 </head>
-<body>
-    <div class="container">
+<body class="profile-page">
+    <a class="profile-brand" href="/"><img src="/logo.webp" width="30" height="30" alt="">PetNudge<span>Pet ID</span></a>
+    <main class="container">
         <!-- Loading State -->
-        <div id="loading" class="loading">
+        <div id="loading" class="loading" role="status" aria-live="polite">
             <div class="loading-spinner"></div>
             <p data-i18n="loading">Loading pet profile...</p>
         </div>
 
         <!-- Error State -->
-        <div id="error" class="error hidden">
-            <div class="error-icon">🐾</div>
+        <div id="error" class="error hidden" role="alert">
+            <div class="error-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s8-4 8-11V5l-8-3-8 3v5c0 7 8 11 8 11Z"/><path d="m8 11 3 3 5-5"/></svg></div>
             <h2 data-i18n="error.title">Profile Not Found</h2>
             <p data-i18n="error.desc">This pet profile may have been removed or the link is incorrect.</p>
         </div>
@@ -394,7 +412,7 @@
         <div class="footer">
             <p><span data-i18n="footer.powered">Powered by</span> <a href="https://petnudge.fr">PetNudge</a></p>
         </div>
-    </div>
+    </main>
 
     <script>
         // ==========================================

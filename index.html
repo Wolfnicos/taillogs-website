@@ -1,935 +1,696 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PetNudge — Médaille NFC pour animaux + app santé | Fabriquée en France</title>
-  <meta name="description" content="Médaille NFC personnalisée (19,99 €, fabriquée en France) : celui qui trouve votre animal la scanne et vous appelle — sans application. App santé en option : Mode Perdu, rappels, assistant IA. Essai 7 jours.">
-  <meta name="keywords" content="pet ID, lost pet, NFC pet tag, pet tracker, pet health app, dog tag, cat tag, find lost pet, NFC medal, médaille NFC chien chat">
-  <link rel="canonical" href="https://petnudge.fr/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="PetNudge — La médaille qui ramène votre animal à la maison">
-  <meta property="og:description" content="Médaille NFC fabriquée en France, 19,99 €. Celui qui trouve votre animal la touche avec son téléphone — et vous appelle. Aucune application nécessaire pour lui.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://petnudge.fr/">
-  <meta property="og:image" content="https://petnudge.fr/images/hero-heart-wood.webp">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PetNudge — La médaille qui ramène votre animal à la maison">
-  <meta name="twitter:description" content="Médaille NFC fabriquée en France, 19,99 €. Celui qui trouve votre animal la scanne et vous appelle — sans application.">
-  <meta name="twitter:image" content="https://petnudge.fr/images/hero-heart-wood.webp">
-
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-  <!-- Theme Color -->
-  <meta name="theme-color" content="#FF6B35">
-
-  <!-- Search Engine Verification -->
-  <meta name="yandex-verification" content="401d95fc63a87825" />
-
-  <!-- Preload LCP image -->
-  <link rel="preload" as="image" href="images/hero-heart-wood.webp">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=6">
-  <link rel="stylesheet" href="home.css?v=1">
-
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://apps.apple.com">
-  <link rel="dns-prefetch" href="https://apps.apple.com">
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://petnudge.fr/#business",
-        "name": "PetNudge",
-        "url": "https://petnudge.fr/",
-        "logo": "https://petnudge.fr/logo.webp",
-        "image": "https://petnudge.fr/logo.webp",
-        "description": "Application d'identification connectee pour animaux de compagnie. Tags NFC pour retrouver votre animal perdu instantanement.",
-        "email": "contactpetnudge@gmail.com",
-        "sameAs": [
-          "https://apps.apple.com/app/id6756539814"
-        ]
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PetNudge — Application santé animaux et médaille NFC</title>
+<meta content="Sa santé, ses rappels et sa sécurité, réunis dans PetNudge. Découvrez votre compagnon du quotidien sur iPhone et les médailles NFC personnalisées." name="description"/>
+<meta content="pet ID, lost pet, NFC pet tag, pet tracker, pet health app, dog tag, cat tag, find lost pet, NFC medal, médaille NFC chien chat" name="keywords"/>
+<link href="https://petnudge.fr/" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="PetNudge — Application santé animaux et médaille NFC" property="og:title"/>
+<meta content="Sa santé, ses rappels et sa sécurité, réunis dans PetNudge. Découvrez votre compagnon du quotidien sur iPhone." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://petnudge.fr/" property="og:url"/>
+<meta content="https://petnudge.fr/images/social-preview.jpg" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="PetNudge — Application santé animaux et médaille NFC" name="twitter:title"/>
+<meta content="Sa santé, ses rappels et sa sécurité, réunis dans PetNudge. Votre compagnon du quotidien sur iPhone." name="twitter:description"/>
+<meta content="https://petnudge.fr/images/social-preview.jpg" name="twitter:image"/>
+<!-- Favicon -->
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<!-- Theme Color -->
+<meta content="#f6f4ef" name="theme-color"/>
+<!-- Search Engine Verification -->
+<meta content="401d95fc63a87825" name="yandex-verification"/>
+<!-- Preload LCP image -->
+<link as="image" href="/images/app/screen-6.webp" rel="preload"/>
+<!-- Styles -->
+<link href="styles.css?v=6" rel="stylesheet"/>
+<link href="home.css?v=1" rel="stylesheet"/>
+<!-- Preconnect for performance -->
+<link href="https://apps.apple.com" rel="preconnect"/>
+<link href="https://apps.apple.com" rel="dns-prefetch"/>
+<!-- Schema.org Structured Data -->
+<script data-domain="petnudge.fr" defer="" src="https://signallensai.com:8443/js/script.js"></script>
+<link href="/premium.css?v=1" rel="stylesheet"/><link href="/home-premium.css?v=1" rel="stylesheet"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://petnudge.fr/#organization",
+      "name": "PetNudge",
+      "url": "https://petnudge.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://petnudge.fr/logo.webp"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://petnudge.fr/#website",
-        "url": "https://petnudge.fr/",
-        "name": "PetNudge",
-        "description": "Médaille NFC pour animaux + application santé",
-        "inLanguage": ["fr", "en", "ro", "es", "de", "it", "pt", "ja", "zh"],
-        "publisher": {"@id": "https://petnudge.fr/#business"}
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://petnudge.fr/#app",
-        "name": "PetNudge",
-        "operatingSystem": "iOS",
-        "applicationCategory": "LifestyleApplication",
-        "description": "Complete pet health companion app featuring vaccination and medication tracking with smart reminders, AI-powered pet care assistant with food safety checker and symptom analysis, weight and vital signs monitoring with charts, visual health calendar, nearby vet clinic and dog park finder, NFC lost pet recovery with Lost Mode, and PDF health report export. Supports multiple pets with 9 languages.",
-        "offers": {
-          "@type": "Offer",
-          "price": "4.99",
-          "priceCurrency": "EUR",
-          "description": "Monthly subscription with 7-day free trial"
-        },
-        "downloadUrl": "https://apps.apple.com/app/id6756539814"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://petnudge.fr/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Accueil",
-            "item": "https://petnudge.fr/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blog",
-            "item": "https://petnudge.fr/blog/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Shop",
-            "item": "https://petnudge.fr/shop.html"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://petnudge.fr/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is the medal included in the subscription?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. The medal is a one-time purchase of 19.99 EUR in our shop. The subscription only covers the PetNudge app. The medal keeps showing your pet's profile and call button even without an active subscription."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do finders need the PetNudge app?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Finders just tap the NFC tag with any smartphone. No app download or registration required. They see your contact info and can call you directly."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which phones support NFC tags?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "All iPhones from iPhone 7 and later, plus most Android phones from 2015 onwards support NFC."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does it work without internet?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The NFC tag triggers a phone call, which works without internet. The finder sees your contact info instantly."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What happens when someone scans my pet's tag?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "They see your pet's name and a button to call you. If Lost Mode is active, they also see an urgent alert and any reward message you've set."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I use my existing microchip?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! PetNudge complements microchips. You can store your microchip number in the app. We recommend using both: microchip for permanent ID, NFC/QR for instant contact."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are the tags waterproof?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Our NFC medals are made from premium ASA plastic, resistant to UV, water, heat, and impacts. Built to last outdoors."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What if I cancel my subscription?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Your basic pet profiles remain accessible. NFC tags you've already programmed continue working. Lost Mode and advanced features require an active subscription."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does PetNudge track pet health?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. PetNudge includes comprehensive health tracking: weight and vital signs monitoring with visual charts, vaccination records, medication schedules with smart reminders, a visual health calendar, and the ability to export PDF health reports for vet visits or travel."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does PetNudge have an AI assistant?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. PetNudge features an AI-powered pet care assistant. You can chat about any pet care question, use the food safety checker to find out if a food is safe for your pet, and get symptom analysis guidance. The AI assistant is available to all subscribers."
-            }
-          }
-        ]
+      "email": "contactpetnudge@gmail.com",
+      "sameAs": [
+        "https://apps.apple.com/app/id6756539814"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://petnudge.fr/#website",
+      "name": "PetNudge",
+      "url": "https://petnudge.fr/",
+      "inLanguage": "fr",
+      "publisher": {
+        "@id": "https://petnudge.fr/#organization"
       }
-    ]
-  }
-  </script>
-    <script defer data-domain="petnudge.fr" src="https://signallensai.com:8443/js/script.js"></script>
-</head>
-<body>
-  <!-- Skip to content for accessibility -->
-  <a href="#main" class="sr-only">Skip to main content</a>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="container header__inner">
-      <a href="/" class="header__logo">
-        <img src="logo.webp" alt="PetNudge - Identification connectée pour animaux" class="header__logo-img" width="36" height="36">
-        <span>PetNudge</span>
-      </a>
-
-      <nav class="header__nav" aria-label="Main navigation">
-        <ul class="header__nav-list">
-          <li><a href="#features" class="header__nav-link" data-i18n="nav.features">Fonctionnalités</a></li>
-          <li><a href="#how" class="header__nav-link" data-i18n="nav.how">Comment ça marche</a></li>
-          <li><a href="#pricing" class="header__nav-link" data-i18n="nav.pricing">Tarifs</a></li>
-          <li><a href="#faq" class="header__nav-link" data-i18n="nav.faq">FAQ</a></li>
-          <li><a href="blog/" class="header__nav-link" data-i18n="nav.blog">Blog</a></li>
-          <li><a href="shop.html" class="header__nav-link" data-i18n="nav.shop">Boutique</a></li>
-        </ul>
-      </nav>
-
-      <div class="header__actions">
-        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
-          <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-          <span id="lang-text">FR</span>
-        </button>
-
-        <button type="button" class="header__menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu" inert aria-hidden="true">
-    <button type="button" class="mobile-menu__close" id="menu-close" aria-label="Close menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="18" y1="6" x2="6" y2="18"/>
-        <line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </button>
-    <nav class="mobile-menu__nav">
-      <a href="#features" class="mobile-menu__link" data-i18n="nav.features">Fonctionnalités</a>
-      <a href="#how" class="mobile-menu__link" data-i18n="nav.how">Comment ça marche</a>
-      <a href="#pricing" class="mobile-menu__link" data-i18n="nav.pricing">Tarifs</a>
-      <a href="#faq" class="mobile-menu__link" data-i18n="nav.faq">FAQ</a>
-      <a href="blog/" class="mobile-menu__link" data-i18n="nav.blog">Blog</a>
-      <a href="shop.html" class="mobile-menu__link" data-i18n="nav.shop">Boutique</a>
-      <a href="privacy.html" class="mobile-menu__link" data-i18n="nav.privacy">Confidentialité</a>
-    </nav>
-  </div>
-
-  <!-- Main Content -->
-  <main id="main">
-
-    <!-- 1. Hero -->
-    <section class="hero pn-hero">
-      <div class="container">
-        <div class="pn-hero__grid">
-          <div>
-            <span class="pn-hero__eyebrow">
-              <span class="pn-hero__eyebrow-dot" aria-hidden="true"></span>
-              <span data-i18n="home.hero.eyebrow">Fabriquée en France · Expédiée sous 24–48 h</span>
-            </span>
-            <h1 class="pn-hero__title">
-              <span data-i18n="home.hero.title1">La médaille qui ramène votre animal</span>
-              <em data-i18n="home.hero.title2">à la maison.</em>
-            </h1>
-            <p class="pn-hero__sub" data-i18n="home.hero.sub">
-              Médaille NFC personnalisée, imprimée en 3D en France — 19,99 €, une seule fois. Celui qui trouve votre animal l'approche de son téléphone et vous appelle. Aucune application pour lui.
-            </p>
-            <p class="pn-hero__app">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
-              <span data-i18n="home.hero.app">En option : l'app PetNudge, compagnon santé — rappels, suivi du poids, Mode Perdu. 7 jours gratuits.</span>
-            </p>
-            <div class="pn-hero__actions">
-              <a href="shop.html" class="pn-btn pn-btn--primary" data-i18n="home.hero.cta1">Commander la médaille — 19,99 €</a>
-              <a href="https://apps.apple.com/app/id6756539814" class="pn-btn pn-btn--ghost" target="_blank" rel="noopener" data-i18n="home.hero.cta2">Essayer l'app gratuitement</a>
-            </div>
-            <ul class="pn-hero__trust">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.hero.trust1">Fabriquée en France</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.hero.trust2">Étanche et résistante (ASA)</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.hero.trust3">Sans app pour celui qui trouve</span>
-              </li>
-            </ul>
-          </div>
-          <div class="pn-hero__visual">
-            <img src="images/hero-heart-wood.webp" alt="Médaille NFC PetNudge noire en forme de cœur avec le nom YUPI, sur fond bois" width="1200" height="896" class="pn-hero__img" fetchpriority="high">
-            <span class="pn-hero__chip">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 8.5a7 7 0 0 1 12 0M8.5 11.5a3.5 3.5 0 0 1 7 0M12 15h.01"/></svg>
-              <span data-i18n="home.hero.chip">NFC · iPhone & Android</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. What you buy -->
-    <section class="pn-section pn-split" id="produit">
-      <div class="container">
-        <div class="pn-center pn-reveal">
-          <p class="pn-kicker" data-i18n="home.split.label">Ce que vous achetez</p>
-          <h2 class="pn-h2" data-i18n="home.split.title">Un objet. Une app. Deux choses distinctes.</h2>
-          <p class="pn-lead" data-i18n="home.split.sub">La médaille s'achète une fois et vous appartient. L'application est un abonnement optionnel. Voici exactement ce que fait chacun des deux.</p>
-        </div>
-
-        <div class="pn-split__grid">
-          <article class="pn-card pn-reveal">
-            <span class="pn-card__tag pn-card__tag--physical" data-i18n="home.split.medal.tag">Objet physique · Achat unique</span>
-            <img src="images/medal-blue-heart.webp" alt="Médaille NFC PetNudge bleue en forme de cœur avec le nom MAX" width="600" height="600" class="pn-card__img" loading="lazy">
-            <h3 class="pn-card__title" data-i18n="home.split.medal.title">La médaille NFC</h3>
-            <p class="pn-card__price" data-i18n="home.split.medal.price">19,99 € une seule fois — livraison en France incluse</p>
-            <ul class="pn-list">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.split.medal.f1">Personnalisée avec le nom de votre animal</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.split.medal.f2">Imprimée en 3D en France, plastique ASA étanche</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.split.medal.f3">Un simple contact avec n'importe quel téléphone récent</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.split.medal.f4">Coordonnées modifiables à tout moment, sans regraver</span>
-              </li>
-            </ul>
-            <p class="pn-card__note" data-i18n="home.split.medal.note">À vous pour toujours : l'appel direct fonctionne même sans abonnement.</p>
-          </article>
-
-          <article class="pn-card pn-reveal">
-            <span class="pn-card__tag pn-card__tag--digital" data-i18n="home.split.app.tag">Service numérique · Abonnement</span>
-            <h3 class="pn-card__title" data-i18n="home.split.app.title">L'application PetNudge</h3>
-            <p class="pn-card__price" data-i18n="home.split.app.price">7 jours gratuits, puis 4,99 €/mois ou 39,99 €/an</p>
-            <ul class="pn-list">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.split.app.f1">Mode Perdu : alerte urgente + récompense + suivi des scans</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.split.app.f2">Assistant santé IA : symptômes, sécurité alimentaire</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.split.app.f3">Rappels vaccins et médicaments</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.split.app.f4">Suivi du poids + rapports PDF pour le vétérinaire</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.split.app.f5">Plusieurs animaux, données santé stockées sur votre iPhone</span>
-              </li>
-            </ul>
-            <p class="pn-card__note pn-card__note--neutral" data-i18n="home.split.app.note">Sans engagement — annulable à tout moment depuis l'App Store.</p>
-          </article>
-        </div>
-
-        <div class="pn-forever pn-reveal">
-          <div class="pn-forever__row">
-            <span class="pn-forever__badge pn-forever__badge--forever" data-i18n="home.split.badge.forever">Pour toujours</span>
-            <span data-i18n="home.split.forever1">L'appel direct depuis la médaille — avec ou sans abonnement</span>
-          </div>
-          <div class="pn-forever__row">
-            <span class="pn-forever__badge pn-forever__badge--forever" data-i18n="home.split.badge.forever">Pour toujours</span>
-            <span data-i18n="home.split.forever2">Le profil de votre animal et vos coordonnées</span>
-          </div>
-          <div class="pn-forever__row">
-            <span class="pn-forever__badge pn-forever__badge--sub" data-i18n="home.split.badge.sub">Abonnement</span>
-            <span data-i18n="home.split.sub1">Mode Perdu, suivi des scans, santé et assistant IA</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. How it works -->
-    <section class="pn-section" id="how">
-      <div class="container">
-        <div class="pn-center pn-reveal">
-          <p class="pn-kicker" data-i18n="how.label">Comment ça marche</p>
-          <h2 class="pn-h2" data-i18n="how.title">3 étapes simples pour protéger votre animal</h2>
-        </div>
-
-        <div class="pn-how__steps">
-          <article class="pn-step pn-reveal">
-            <span class="pn-step__num" aria-hidden="true">1</span>
-            <img src="images/hero-lifestyle.webp" alt="Médaille NFC PetNudge à côté d'un iPhone avec l'application ouverte" width="1200" height="896" class="pn-step__img" loading="lazy">
-            <h3 data-i18n="how.1.title">Téléchargez l'app et créez le profil</h3>
-            <p data-i18n="how.1.desc">Téléchargez PetNudge sur iPhone. Ajoutez votre animal avec photo, nom et numéro de contact.</p>
-          </article>
-
-          <article class="pn-step pn-reveal">
-            <span class="pn-step__num" aria-hidden="true">2</span>
-            <img src="images/medal-blue-heart-angle.webp" alt="Médaille NFC PetNudge bleue vue de trois quarts" width="600" height="600" class="pn-step__img" loading="lazy">
-            <h3 data-i18n="how.2.title">Programmez et attachez la médaille</h3>
-            <p data-i18n="how.2.desc">Programmez votre médaille NFC avec l'app. Attachez-la au collier.</p>
-          </article>
-
-          <article class="pn-step pn-reveal">
-            <span class="pn-step__num" aria-hidden="true">3</span>
-            <img src="images/hero-back-lifestyle.webp" alt="Dos de la médaille NFC PetNudge avec la puce intégrée" width="1200" height="896" class="pn-step__img" loading="lazy">
-            <h3 data-i18n="how.3.title">En cas de perte, activez le Mode Perdu</h3>
-            <p data-i18n="how.3.desc">Un geste affiche une alerte urgente avec récompense. Suivez les lieux de scan.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Lost Mode -->
-    <section class="pn-section pn-lost" id="lost-mode">
-      <div class="container">
-        <div class="pn-center pn-reveal">
-          <p class="pn-kicker" data-i18n="lost.label">Le vrai différenciateur</p>
-          <h2 class="pn-h2" data-i18n="lost.title">Le Mode Perdu change tout</h2>
-          <p class="pn-lead" data-i18n="lost.subtitle">Votre animal disparaît ? Activez le Mode Perdu à distance. Voici ce que voit la personne qui le trouve :</p>
-        </div>
-
-        <div class="pn-lost__grid">
-          <div class="pn-lost__demo pn-reveal">
-            <div class="pn-toggle" role="group" aria-label="Démonstration de l'écran du trouveur">
-              <button type="button" id="pn-mode-normal" aria-pressed="false" data-i18n="home.lost.toggle1">Mode normal</button>
-              <button type="button" id="pn-mode-lost" aria-pressed="true" data-i18n="home.lost.toggle2">Mode Perdu</button>
-            </div>
-
-            <div class="pn-phone" id="pn-phone" data-mode="lost">
-              <div class="pn-phone__screen">
-                <div class="pn-screen pn-screen--normal">
-                  <span class="pn-screen__notch" aria-hidden="true"></span>
-                  <span class="pn-screen__avatar" aria-hidden="true">🐾</span>
-                  <p class="pn-screen__name" data-i18n="lost.demo.name">Max</p>
-                  <p class="pn-screen__meta" data-i18n="home.lost.normal.meta">Si je suis seul, contactez mon humain</p>
-                  <span class="pn-screen__call">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02z"/></svg>
-                    <span data-i18n="lost.demo.contact">Appeler le propriétaire</span>
-                  </span>
-                </div>
-
-                <div class="pn-screen pn-screen--lost">
-                  <span class="pn-screen__notch" aria-hidden="true"></span>
-                  <div class="pn-screen__banner">
-                    <strong data-i18n="lost.demo.alert">ANIMAL PERDU</strong>
-                    <span data-i18n="lost.demo.alert.sub">Cet animal est signalé disparu</span>
-                  </div>
-                  <span class="pn-screen__avatar" aria-hidden="true">🐾</span>
-                  <p class="pn-screen__name" data-i18n="lost.demo.name">Max</p>
-                  <span class="pn-screen__call">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02z"/></svg>
-                    <span data-i18n="lost.demo.contact">Appeler le propriétaire</span>
-                  </span>
-                  <p class="pn-screen__reward" data-i18n="lost.demo.reward">Récompense offerte pour son retour</p>
-                  <p class="pn-screen__scan">
-                    <span class="pn-screen__scan-dot" aria-hidden="true"></span>
-                    <span data-i18n="home.lost.scan">Scan enregistré · Lyon, il y a 5 min</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <p class="pn-lost__caption" data-i18n="home.lost.caption">L'écran exact que voit la personne qui scanne la médaille — sans installer quoi que ce soit.</p>
-          </div>
-
-          <ul class="pn-lost__features pn-reveal">
-            <li class="pn-lost__feature">
-              <span class="pn-lost__feature-icon" aria-hidden="true">📞</span>
-              <div>
-                <h3 data-i18n="lost.feature.1.title">Contact instantané</h3>
-                <p data-i18n="lost.feature.1.desc">Un geste pour appeler. Aucun téléchargement, aucune inscription.</p>
-              </div>
-            </li>
-            <li class="pn-lost__feature">
-              <span class="pn-lost__feature-icon" aria-hidden="true">📍</span>
-              <div>
-                <h3 data-i18n="lost.feature.2.title">Suivi des scans</h3>
-                <p data-i18n="lost.feature.2.desc">Voyez quand et où votre médaille a été scannée (ville uniquement).</p>
-              </div>
-            </li>
-            <li class="pn-lost__feature">
-              <span class="pn-lost__feature-icon" aria-hidden="true">🎁</span>
-              <div>
-                <h3 data-i18n="lost.feature.3.title">Affichage de récompense</h3>
-                <p data-i18n="lost.feature.3.desc">Motivez les trouveurs avec un message de récompense optionnel.</p>
-              </div>
-            </li>
-            <li class="pn-lost__feature">
-              <span class="pn-lost__feature-icon" aria-hidden="true">🌐</span>
-              <div>
-                <h3 data-i18n="lost.feature.4.title">Activation à distance</h3>
-                <p data-i18n="lost.feature.4.desc">Activez ou désactivez le Mode Perdu depuis l'app, où que vous soyez.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. Health companion -->
-    <section class="pn-section" id="features">
-      <div class="container">
-        <div class="pn-center pn-reveal">
-          <p class="pn-kicker" data-i18n="home.health.label">L'application</p>
-          <h2 class="pn-h2" data-i18n="home.health.title">Un compagnon santé, pas un gadget</h2>
-          <p class="pn-lead" data-i18n="home.health.sub">Au-delà de l'identification : toute la santé de votre animal, organisée et rappelée au bon moment.</p>
-        </div>
-
-        <div class="pn-health__grid">
-          <a href="/vaccination-tracker.html" class="pn-health__card pn-reveal">
-            <div class="pn-health__icon" aria-hidden="true">💉</div>
-            <h3 data-i18n="features.1.title">Carnet de santé</h3>
-            <p data-i18n="features.1.desc">Vaccins, médicaments, poids et visites vétérinaires.</p>
-          </a>
-          <a href="/medication-reminder.html" class="pn-health__card pn-reveal">
-            <div class="pn-health__icon" aria-hidden="true">🔔</div>
-            <h3 data-i18n="features.2.title">Rappels intelligents</h3>
-            <p data-i18n="features.2.desc">Ne manquez plus jamais une dose ni une date de vaccin.</p>
-          </a>
-          <a href="/ai-pet-assistant.html" class="pn-health__card pn-reveal">
-            <div class="pn-health__icon" aria-hidden="true">🤖</div>
-            <h3 data-i18n="features.3.title">Assistant IA</h3>
-            <p data-i18n="features.3.desc">Conseils instantanés : symptômes et sécurité alimentaire.</p>
-          </a>
-        </div>
-
-        <div class="pn-health__privacy pn-reveal">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-          <span><strong data-i18n="privacy.1.title">Les données santé restent sur votre iPhone</strong> — <span data-i18n="privacy.1.desc">le carnet médical est stocké localement. Seul le profil (nom, photo, contact) s'affiche lors d'un scan.</span></span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. Pricing -->
-    <section class="pn-section pn-pricing" id="pricing">
-      <div class="container">
-        <div class="pn-center pn-reveal">
-          <p class="pn-kicker" data-i18n="home.pricing.label">Tarifs</p>
-          <h2 class="pn-h2" data-i18n="home.pricing.title">Transparence totale</h2>
-          <p class="pn-lead" data-i18n="home.pricing.sub">Pas de piège : la médaille est un achat unique, l'application est un abonnement séparé avec 7 jours d'essai gratuit.</p>
-        </div>
-
-        <div class="pn-pricing__grid">
-          <article class="pn-price-card pn-reveal">
-            <h3 class="pn-price-card__name" data-i18n="home.pricing.medal.name">Médaille NFC</h3>
-            <p class="pn-price-card__desc" data-i18n="home.pricing.medal.desc">Achat unique — jamais d'abonnement</p>
-            <p class="pn-price-card__amount"><strong>19,99&nbsp;€</strong> <span data-i18n="home.pricing.once">une seule fois</span></p>
-            <p class="pn-price-card__equiv" data-i18n="home.pricing.medal.ship">Livraison en France incluse</p>
-            <ul class="pn-list">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.medal.f1">Personnalisée au nom de votre animal</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.medal.f2">Imprimée en 3D en France, ASA étanche</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.medal.f3">Appel direct fonctionnel à vie</span>
-              </li>
-            </ul>
-            <a href="shop.html" class="pn-btn pn-btn--dark" data-i18n="home.pricing.medal.cta">Commander sur la boutique</a>
-          </article>
-
-          <article class="pn-price-card pn-reveal">
-            <h3 class="pn-price-card__name" data-i18n="pricing.plan.monthly">Mensuel</h3>
-            <p class="pn-price-card__desc" data-i18n="home.pricing.app.desc">L'application complète</p>
-            <p class="pn-price-card__amount"><strong>4,99&nbsp;€</strong> <span data-i18n="pricing.period.month">/ mois</span></p>
-            <p class="pn-price-card__equiv" data-i18n="home.pricing.trial">7 jours d'essai gratuit inclus</p>
-            <ul class="pn-list">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.f1">Mode Perdu avec suivi des scans</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.f2">Assistant santé IA</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.f3">Rappels vaccins et médicaments</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.f4">Suivi du poids + rapports PDF</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.f5">Animaux illimités</span>
-              </li>
-            </ul>
-            <a href="https://apps.apple.com/app/id6756539814" class="pn-btn pn-btn--ghost" target="_blank" rel="noopener" data-i18n="pricing.cta">Commencer l'essai gratuit</a>
-          </article>
-
-          <article class="pn-price-card pn-price-card--featured pn-reveal">
-            <span class="pn-price-card__ribbon" data-i18n="pricing.badge.popular">Populaire</span>
-            <h3 class="pn-price-card__name" data-i18n="pricing.plan.yearly">Annuel</h3>
-            <p class="pn-price-card__desc" data-i18n="home.pricing.app.desc">L'application complète</p>
-            <p class="pn-price-card__amount"><strong>39,99&nbsp;€</strong> <span data-i18n="pricing.period.year">/ an</span></p>
-            <p class="pn-price-card__equiv" data-i18n="home.pricing.equiv">soit 3,33 €/mois — 33 % d'économie</p>
-            <ul class="pn-list">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.f1">Mode Perdu avec suivi des scans</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.f2">Assistant santé IA</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.f3">Rappels vaccins et médicaments</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.f4">Suivi du poids + rapports PDF</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span data-i18n="home.pricing.f5">Animaux illimités</span>
-              </li>
-            </ul>
-            <a href="https://apps.apple.com/app/id6756539814" class="pn-btn pn-btn--primary" target="_blank" rel="noopener" data-i18n="pricing.cta">Commencer l'essai gratuit</a>
-          </article>
-        </div>
-
-        <div class="pn-cancel pn-reveal">
-          <h3 data-i18n="home.pricing.cancel.title">Et si vous annulez ?</h3>
-          <p data-i18n="home.pricing.cancel.desc">Votre médaille continue de fonctionner : celui qui la scanne voit toujours le profil de votre animal et peut vous appeler. Vous perdez le Mode Perdu, le suivi des scans et les fonctions santé avancées — vos profils restent accessibles dans l'app.</p>
-        </div>
-
-        <p class="pn-pricing__legal" data-i18n="home.pricing.note">La médaille (19,99 €) est vendue séparément sur la boutique et n'est incluse dans aucun abonnement.</p>
-      </div>
-    </section>
-
-    <!-- 7. Shop teaser -->
-    <section class="pn-section pn-center" id="shop">
-      <div class="container">
-        <div class="pn-reveal">
-          <p class="pn-kicker" style="justify-content:center" data-i18n="home.shop.label">La boutique</p>
-          <h2 class="pn-h2" data-i18n="home.shop.title">Fabriquée pour durer. Dessinée pour lui.</h2>
-          <p class="pn-lead" data-i18n="home.shop.sub">Cœur, patte, os ou étoile — en bleu ou noir, imprimée en 3D dans notre atelier en France, au nom de votre animal.</p>
-        </div>
-
-        <div class="pn-shop__gallery pn-reveal">
-          <img src="images/medal-blue-heart.webp" alt="Médaille NFC bleue en forme de cœur" width="600" height="600" loading="lazy">
-          <img src="images/medal-black-paw.webp" alt="Médaille NFC noire avec motif patte" width="600" height="600" loading="lazy">
-          <img src="images/medal-black-bone.webp" alt="Médaille NFC noire en forme d'os" width="600" height="600" loading="lazy">
-          <img src="images/medal-black-star.webp" alt="Médaille NFC noire en forme d'étoile" width="600" height="600" loading="lazy">
-        </div>
-
-        <div class="pn-reveal">
-          <a href="shop.html" class="pn-btn pn-btn--primary" data-i18n="home.shop.cta">Découvrir la boutique — 19,99 €</a>
-          <br>
-          <span class="pn-shop__soon">
-            <span aria-hidden="true">✨</span>
-            <span data-i18n="home.shop.soon">Bientôt : médaille unique générée à partir de la photo de votre animal (Meshy.ai + impression Bambu Lab en France)</span>
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. FAQ -->
-    <section class="pn-section" id="faq">
-      <div class="container">
-        <div class="pn-center pn-reveal">
-          <p class="pn-kicker" style="justify-content:center" data-i18n="faq.label">Questions</p>
-          <h2 class="pn-h2" data-i18n="faq.title">Questions fréquentes</h2>
-        </div>
-
-        <div class="faq__list">
-          <div class="faq__item">
-            <button type="button" class="faq__question" aria-expanded="false">
-              <span data-i18n="home.faq.0.q">La médaille est-elle incluse dans l'abonnement ?</span>
-              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-            </button>
-            <div class="faq__answer" data-i18n="home.faq.0.a">
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://petnudge.fr/#webpage",
+      "url": "https://petnudge.fr/",
+      "name": "PetNudge — Application santé animaux et médaille NFC",
+      "description": "Sa santé, ses rappels et sa sécurité, réunis dans PetNudge. Découvrez votre compagnon du quotidien sur iPhone et les médailles NFC personnalisées.",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@id": "https://petnudge.fr/#website"
+      },
+      "about": {
+        "@id": "https://petnudge.fr/#app"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://petnudge.fr/images/social-preview.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://petnudge.fr/#app",
+      "name": "PetNudge",
+      "url": "https://petnudge.fr/",
+      "operatingSystem": "iOS 17.0 or later",
+      "applicationCategory": "HealthApplication",
+      "inLanguage": [
+        "fr",
+        "en",
+        "ro",
+        "es",
+        "de",
+        "it",
+        "pt",
+        "ja",
+        "zh"
+      ],
+      "description": "Application pour organiser le suivi santé, les rappels et l’identification NFC de vos animaux. Téléchargement gratuit avec achats intégrés PetNudge Pro.",
+      "downloadUrl": "https://apps.apple.com/app/id6756539814",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "url": "https://apps.apple.com/app/id6756539814",
+        "description": "Téléchargement gratuit avec achats intégrés."
+      },
+      "screenshot": [
+        "https://petnudge.fr/images/app/screen-6.webp",
+        "https://petnudge.fr/images/app/screen-7.webp",
+        "https://petnudge.fr/images/app/screen-8.webp"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://petnudge.fr/images/social-preview.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publisher": {
+        "@id": "https://petnudge.fr/#organization"
+      }
+    }
+  ]
+}</script><meta content="index, follow, max-image-preview:large, max-snippet:-1" name="robots"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="PetNudge : sa santé et sa sécurité, dans votre main." property="og:image:alt"/><meta content="fr_FR" property="og:locale"/><meta content="PetNudge" property="og:site_name"/><meta content="PetNudge : sa santé et sa sécurité, dans votre main." name="twitter:image:alt"/><link as="font" crossorigin="anonymous" href="/assets/fonts/instrument-serif.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="anonymous" href="/assets/fonts/dm-sans-400.woff2" rel="preload" type="font/woff2"/><link href="/apple-touch-icon.png" rel="icon" sizes="180x180" type="image/png"/></head>
+<body class="pn-home">
+<!-- Skip to content for accessibility -->
+<a class="sr-only" href="#main">Skip to main content</a>
+<!-- Header -->
+<header class="header">
+<div class="container header__inner">
+<a class="header__logo" href="/">
+<img alt="PetNudge - Identification connectée pour animaux" class="header__logo-img" height="36" src="logo.webp" width="36"/>
+<span>PetNudge</span>
+</a>
+<nav aria-label="Main navigation" class="header__nav">
+<ul class="header__nav-list">
+<li><a class="header__nav-link" data-i18n="nav.features" href="#features">Fonctionnalités</a></li>
+<li><a class="header__nav-link" data-i18n="nav.pricing" href="#pricing">Tarifs</a></li>
+<li><a class="header__nav-link" data-i18n="nav.blog" href="blog/">Blog</a></li>
+<li><a class="header__nav-link" data-i18n="nav.shop" href="shop.html">Boutique</a></li>
+</ul>
+</nav>
+<div class="header__actions"><a class="header-download" href="https://apps.apple.com/app/id6756539814" rel="noopener" target="_blank"><span data-i18n="premium.getapp">Obtenir l’app</span><span aria-hidden="true">↗</span></a>
+<button aria-label="Change language" class="lang-toggle" id="lang-toggle" type="button">
+<svg class="lang-toggle__icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+</svg>
+<span id="lang-text">FR</span>
+</button>
+<button aria-expanded="false" aria-label="Open menu" class="header__menu-btn" id="menu-btn" type="button">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<!-- Mobile Menu -->
+<div aria-hidden="true" class="mobile-menu" id="mobile-menu" inert="">
+<button aria-label="Close menu" class="mobile-menu__close" id="menu-close" type="button">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+<nav class="mobile-menu__nav">
+<a class="mobile-menu__link" data-i18n="nav.features" href="#features">Fonctionnalités</a>
+<a class="mobile-menu__link" data-i18n="nav.how" href="#how">Comment ça marche</a>
+<a class="mobile-menu__link" data-i18n="nav.pricing" href="#pricing">Tarifs</a>
+<a class="mobile-menu__link" data-i18n="nav.faq" href="#faq">FAQ</a>
+<a class="mobile-menu__link" data-i18n="nav.blog" href="blog/">Blog</a>
+<a class="mobile-menu__link" data-i18n="nav.shop" href="shop.html">Boutique</a>
+<a class="mobile-menu__link" data-i18n="nav.privacy" href="privacy.html">Confidentialité</a>
+</nav>
+</div>
+<!-- Main Content -->
+<main id="main">
+<!-- 1. Hero -->
+<section aria-labelledby="hero-title" class="hero pn-hero">
+<div class="container pn-hero__grid">
+<div class="pn-hero__copy">
+<p class="pn-eyebrow"><span aria-hidden="true" class="pn-status-dot"></span><span data-i18n="premium.eyebrow">LEUR VIE. VOTRE ATTENTION.</span></p>
+<h1 class="pn-hero__title" id="hero-title"><span data-i18n="premium.title1">Tout son monde.</span><br/><span data-i18n="premium.title2">Au creux de</span><br/><em data-i18n="premium.title3">votre main.</em></h1>
+<p class="pn-hero__sub" data-i18n="premium.intro">Sa santé, ses petits rendez-vous, sa sécurité. PetNudge prend soin des détails, pour vous laisser le plus beau : la vie ensemble.</p>
+<div class="pn-hero__actions"><a class="pn-btn pn-btn--dark pn-app-button" href="https://apps.apple.com/app/id6756539814" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" height="23" viewbox="0 0 24 24" width="20"><path d="M17.05 12.54c.03 3.23 2.83 4.3 2.86 4.31-.02.08-.45 1.53-1.48 3.03-.89 1.3-1.81 2.59-3.27 2.62-1.43.03-1.89-.85-3.53-.85-1.63 0-2.14.82-3.5.88-1.4.05-2.47-1.4-3.37-2.7-1.84-2.66-3.25-7.52-1.36-10.8a5.23 5.23 0 0 1 4.43-2.69c1.39-.03 2.7.94 3.54.94.84 0 2.42-1.16 4.08-.99.7.03 2.66.28 3.92 2.13-.1.07-2.34 1.37-2.32 4.12ZM14.36 4.52c.75-.91 1.26-2.17 1.12-3.43-1.08.04-2.38.72-3.16 1.64-.69.8-1.29 2.07-1.13 3.3 1.21.09 2.44-.61 3.17-1.51Z"></path></svg><span data-i18n="premium.download">Télécharger l’app</span><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="18"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a><a class="pn-text-link" href="#features"><span data-i18n="premium.discover">Explorer PetNudge</span><span aria-hidden="true">↗</span></a></div>
+<p class="pn-hero__fine"><span data-i18n="premium.availability">Pour iPhone · Téléchargement gratuit · Achats intégrés</span></p>
+<div class="pn-hero__signature"><span aria-hidden="true" class="pn-signature-line"></span><p data-i18n="premium.signature">Pensé pour eux. Tout simplement.</p></div>
+</div>
+<div class="pn-scene" data-tilt="">
+<div aria-hidden="true" class="pn-scene__orbit pn-scene__orbit--one"></div><div aria-hidden="true" class="pn-scene__orbit pn-scene__orbit--two"></div>
+<figure class="pn-companion"><img alt="Un golden retriever tenant une fleur, assis dans un jardin" fetchpriority="high" height="1443" src="/images/companion-dog.jpg" width="900"/><figcaption><span data-i18n="premium.littleworld">Votre plus belle compagnie.</span><span aria-hidden="true">♡</span></figcaption></figure>
+<div class="pn-device-wrap"><div class="pn-device"><span aria-hidden="true" class="pn-device__button"></span><img alt="Écran réel de PetNudge : accueil, santé et rappels de Yupi" fetchpriority="high" height="1956" id="pn-app-screen" src="/images/app/screen-6.webp" width="900"/><span aria-hidden="true" class="pn-device__island"></span></div></div>
+<div class="pn-floating-note"><span aria-hidden="true" class="pn-floating-note__icon"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="18"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></span><div><strong data-i18n="premium.note.title">L’essentiel, à portée de main.</strong><span data-i18n="premium.note.text">Santé · Rappels · Médaille NFC</span></div></div>
+<span aria-hidden="true" class="pn-scene__edition">PETNUDGE — EVERY LITTLE MOMENT</span>
+</div>
+</div>
+<div class="container pn-hero__bottom"><a class="pn-scroll-cue" href="#features"><span aria-hidden="true">↓</span><span data-i18n="premium.scroll">Un peu plus de sérénité, juste ici</span></a><div aria-label="Aperçus de l’application" class="pn-scene-tabs" role="group"><button aria-pressed="true" data-screen="6" type="button"><span>01</span> <span data-i18n="premium.tab.home">Quotidien</span></button><button aria-pressed="false" data-screen="7" type="button"><span>02</span> <span data-i18n="premium.tab.health">Santé</span></button><button aria-pressed="false" data-screen="8" type="button"><span>03</span> <span data-i18n="premium.tab.safety">Sécurité</span></button></div></div>
+</section>
+<section aria-label="PetNudge en quelques mots" class="pn-values"><div class="container"><span data-i18n="premium.value1">Tous vos animaux, une seule app</span><span aria-hidden="true">✳</span><span data-i18n="premium.value2">Vos souvenirs. Vos données.</span><span aria-hidden="true">✳</span><span data-i18n="premium.value3">Disponible en 9 langues</span><span aria-hidden="true">✳</span><span data-i18n="premium.value4">Pensée pour le quotidien</span></div></section><section class="pn-section" id="features">
+<div class="container">
+<div class="pn-section-heading pn-reveal">
+<p class="pn-kicker" data-i18n="home.health.label">L'application</p>
+<h2 class="pn-h2" data-i18n="premium.features.title">Moins de choses à penser.
+Plus de moments à partager.</h2>
+<p class="pn-lead" data-i18n="premium.features.intro">Les petites attentions font les grandes histoires. Gardez tout ce qui compte au même endroit.</p>
+</div>
+<div class="pn-health__showcase" data-reveal=""><div class="pn-health__visual" data-tilt=""><p class="pn-visual-caption" data-i18n="premium.healthcaption">SON HISTOIRE, TOUJOURS AVEC VOUS.</p><div class="pn-health__device"><img alt="Capture réelle du carnet de santé PetNudge" height="1956" loading="lazy" src="/images/app/screen-7.webp" width="900"/></div><span class="pn-visual-bottom" data-i18n="premium.healthbottom">Un petit geste. Beaucoup d’amour.</span></div><div class="pn-health__details"><div class="pn-health__grid">
+<a class="pn-health__card pn-reveal" href="/vaccination-tracker.html">
+<div aria-hidden="true" class="pn-health__icon">01</div>
+<h3 data-i18n="features.1.title">Carnet de santé</h3>
+<p data-i18n="features.1.desc">Vaccins, médicaments, poids et visites vétérinaires.</p>
+<span aria-hidden="true" class="pn-card-arrow">↗</span></a>
+<a class="pn-health__card pn-reveal" href="/medication-reminder.html">
+<div aria-hidden="true" class="pn-health__icon">02</div>
+<h3 data-i18n="features.2.title">Rappels intelligents</h3>
+<p data-i18n="features.2.desc">Ne manquez plus jamais une dose ni une date de vaccin.</p>
+<span aria-hidden="true" class="pn-card-arrow">↗</span></a>
+<a class="pn-health__card pn-reveal" href="/ai-pet-assistant.html">
+<div aria-hidden="true" class="pn-health__icon">03</div>
+<h3 data-i18n="features.3.title">Assistant IA</h3>
+<p data-i18n="features.3.desc">Conseils instantanés : symptômes et sécurité alimentaire.</p>
+<span aria-hidden="true" class="pn-card-arrow">↗</span></a>
+</div></div></div>
+<div class="pn-health__privacy pn-reveal">
+<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="11" rx="2" width="16" x="4" y="10"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+<span><strong data-i18n="privacy.1.title">Les données santé restent sur votre iPhone</strong> — <span data-i18n="privacy.1.desc">le carnet médical est stocké localement. Seul le profil (nom, photo, contact) s'affiche lors d'un scan.</span></span>
+</div>
+</div>
+</section>
+<!-- 2. What you buy -->
+<!-- 3. How it works -->
+<section class="pn-section" id="how">
+<div class="container">
+<div class="pn-section-heading pn-reveal">
+<p class="pn-kicker" data-i18n="how.label">Comment ça marche</p>
+<h2 class="pn-h2" data-i18n="how.title">3 étapes simples pour protéger votre animal</h2>
+</div>
+<div class="pn-how__steps">
+<article class="pn-step pn-reveal">
+<span aria-hidden="true" class="pn-step__num">01</span>
+<h3 data-i18n="how.1.title">Téléchargez l'app et créez le profil</h3>
+<p data-i18n="how.1.desc">Téléchargez PetNudge sur iPhone. Ajoutez votre animal avec photo, nom et numéro de contact.</p>
+</article>
+<article class="pn-step pn-reveal">
+<span aria-hidden="true" class="pn-step__num">02</span>
+<h3 data-i18n="how.2.title">Programmez et attachez la médaille</h3>
+<p data-i18n="how.2.desc">Programmez votre médaille NFC avec l'app. Attachez-la au collier.</p>
+</article>
+<article class="pn-step pn-reveal">
+<span aria-hidden="true" class="pn-step__num">03</span>
+<h3 data-i18n="how.3.title">En cas de perte, activez le Mode Perdu</h3>
+<p data-i18n="how.3.desc">Un geste affiche une alerte urgente avec récompense. Suivez les lieux de scan.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- 4. Lost Mode -->
+<section class="pn-section pn-lost" id="lost-mode">
+<div class="container">
+<div class="pn-section-heading pn-reveal">
+<p class="pn-kicker" data-i18n="lost.label">Le vrai différenciateur</p>
+<h2 class="pn-h2" data-i18n="lost.title">Le Mode Perdu change tout</h2>
+<p class="pn-lead" data-i18n="lost.subtitle">Votre animal disparaît ? Activez le Mode Perdu à distance. Voici ce que voit la personne qui le trouve :</p>
+</div>
+<div class="pn-lost__grid">
+<div class="pn-lost__demo pn-reveal">
+<div aria-label="Démonstration de l'écran du trouveur" class="pn-toggle" role="group">
+<button aria-pressed="false" data-i18n="home.lost.toggle1" id="pn-mode-normal" type="button">Mode normal</button>
+<button aria-pressed="true" data-i18n="home.lost.toggle2" id="pn-mode-lost" type="button">Mode Perdu</button>
+</div>
+<div class="pn-phone" data-mode="lost" id="pn-phone">
+<div class="pn-phone__screen">
+<div class="pn-screen pn-screen--normal">
+<span aria-hidden="true" class="pn-screen__notch"></span>
+<span aria-hidden="true" class="pn-screen__avatar">M</span>
+<p class="pn-screen__name" data-i18n="lost.demo.name">Max</p>
+<p class="pn-screen__meta" data-i18n="home.lost.normal.meta">Si je suis seul, contactez mon humain</p>
+<span class="pn-screen__call">
+<svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02z"></path></svg>
+<span data-i18n="lost.demo.contact">Appeler le propriétaire</span>
+</span>
+</div>
+<div class="pn-screen pn-screen--lost">
+<span aria-hidden="true" class="pn-screen__notch"></span>
+<div class="pn-screen__banner">
+<strong data-i18n="lost.demo.alert">ANIMAL PERDU</strong>
+<span data-i18n="lost.demo.alert.sub">Cet animal est signalé disparu</span>
+</div>
+<span aria-hidden="true" class="pn-screen__avatar">M</span>
+<p class="pn-screen__name" data-i18n="lost.demo.name">Max</p>
+<span class="pn-screen__call">
+<svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02z"></path></svg>
+<span data-i18n="lost.demo.contact">Appeler le propriétaire</span>
+</span>
+<p class="pn-screen__reward" data-i18n="lost.demo.reward">Récompense offerte pour son retour</p>
+<p class="pn-screen__scan">
+<span aria-hidden="true" class="pn-screen__scan-dot"></span>
+<span data-i18n="home.lost.scan">Scan enregistré · Lyon, il y a 5 min</span>
+</p>
+</div>
+</div>
+</div>
+<p class="pn-lost__caption" data-i18n="premium.demolabel">Démonstration du profil public. Les informations affichées sont des exemples.</p>
+</div>
+<ul class="pn-lost__features pn-reveal">
+<li class="pn-lost__feature">
+<span aria-hidden="true" class="pn-lost__feature-icon">01</span>
+<div>
+<h3 data-i18n="lost.feature.1.title">Contact instantané</h3>
+<p data-i18n="lost.feature.1.desc">Un geste pour appeler. Aucun téléchargement, aucune inscription.</p>
+</div>
+</li>
+<li class="pn-lost__feature">
+<span aria-hidden="true" class="pn-lost__feature-icon">02</span>
+<div>
+<h3 data-i18n="lost.feature.2.title">Suivi des scans</h3>
+<p data-i18n="lost.feature.2.desc">Voyez quand et où votre médaille a été scannée (ville uniquement).</p>
+</div>
+</li>
+<li class="pn-lost__feature">
+<span aria-hidden="true" class="pn-lost__feature-icon">03</span>
+<div>
+<h3 data-i18n="lost.feature.3.title">Affichage de récompense</h3>
+<p data-i18n="lost.feature.3.desc">Motivez les trouveurs avec un message de récompense optionnel.</p>
+</div>
+</li>
+<li class="pn-lost__feature">
+<span aria-hidden="true" class="pn-lost__feature-icon">04</span>
+<div>
+<h3 data-i18n="lost.feature.4.title">Activation à distance</h3>
+<p data-i18n="lost.feature.4.desc">Activez ou désactivez le Mode Perdu depuis l'app, où que vous soyez.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- 5. Health companion -->
+<!-- 6. Pricing -->
+<section class="pn-section pn-pricing" id="pricing">
+<div class="container">
+<div class="pn-center pn-reveal">
+<p class="pn-kicker" data-i18n="home.pricing.label">Tarifs</p>
+<h2 class="pn-h2" data-i18n="home.pricing.title">Transparence totale</h2>
+<p class="pn-lead" data-i18n="home.pricing.sub">Pas de piège : la médaille est un achat unique, l'application est un abonnement séparé avec 7 jours d'essai gratuit.</p>
+</div>
+<div class="pn-pricing__grid">
+<article class="pn-price-card pn-reveal">
+<h3 class="pn-price-card__name" data-i18n="pricing.plan.monthly">Mensuel</h3>
+<p class="pn-price-card__desc" data-i18n="home.pricing.app.desc">L'application complète</p>
+<p class="pn-price-card__amount"><strong>4,99 €</strong> <span data-i18n="pricing.period.month">/ mois</span></p>
+<p class="pn-price-card__equiv" data-i18n="home.pricing.trial">7 jours d'essai gratuit inclus</p>
+<ul class="pn-list">
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.f1">Mode Perdu avec suivi des scans</span>
+</li>
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.f2">Assistant santé IA</span>
+</li>
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.f3">Rappels vaccins et médicaments</span>
+</li>
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.f4">Suivi du poids + rapports PDF</span>
+</li>
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.f5">Animaux illimités</span>
+</li>
+</ul>
+<a class="pn-btn pn-btn--ghost" data-i18n="pricing.cta" href="https://apps.apple.com/app/id6756539814" rel="noopener" target="_blank">Commencer l'essai gratuit</a>
+</article>
+<article class="pn-price-card pn-price-card--featured pn-reveal">
+<span class="pn-price-card__ribbon" data-i18n="pricing.badge.popular">Populaire</span>
+<h3 class="pn-price-card__name" data-i18n="pricing.plan.yearly">Annuel</h3>
+<p class="pn-price-card__desc" data-i18n="home.pricing.app.desc">L'application complète</p>
+<p class="pn-price-card__amount"><strong>39,99 €</strong> <span data-i18n="pricing.period.year">/ an</span></p>
+<p class="pn-price-card__equiv" data-i18n="home.pricing.equiv">soit 3,33 €/mois — 33 % d'économie</p>
+<ul class="pn-list">
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.f1">Mode Perdu avec suivi des scans</span>
+</li>
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.f2">Assistant santé IA</span>
+</li>
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.f3">Rappels vaccins et médicaments</span>
+</li>
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.f4">Suivi du poids + rapports PDF</span>
+</li>
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.f5">Animaux illimités</span>
+</li>
+</ul>
+<a class="pn-btn pn-btn--primary" data-i18n="pricing.cta" href="https://apps.apple.com/app/id6756539814" rel="noopener" target="_blank">Commencer l'essai gratuit</a>
+</article>
+<article class="pn-price-card pn-reveal">
+<h3 class="pn-price-card__name" data-i18n="home.pricing.medal.name">Médaille NFC</h3>
+<p class="pn-price-card__desc" data-i18n="home.pricing.medal.desc">Achat unique — jamais d'abonnement</p>
+<p class="pn-price-card__amount"><strong>19,99 €</strong> <span data-i18n="home.pricing.once">une seule fois</span></p>
+<p class="pn-price-card__equiv" data-i18n="home.pricing.medal.ship">Livraison en France incluse</p>
+<ul class="pn-list">
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.medal.f1">Personnalisée au nom de votre animal</span>
+</li>
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.medal.f2">Imprimée en 3D en France, ASA étanche</span>
+</li>
+<li>
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 20 20" width="16"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span data-i18n="home.pricing.medal.f3">Appel direct fonctionnel à vie</span>
+</li>
+</ul>
+<a class="pn-btn pn-btn--dark" data-i18n="home.pricing.medal.cta" href="shop.html">Commander sur la boutique</a>
+</article></div>
+<div class="pn-cancel pn-reveal">
+<h3 data-i18n="home.pricing.cancel.title">Et si vous annulez ?</h3>
+<p data-i18n="home.pricing.cancel.desc">Votre médaille continue de fonctionner : celui qui la scanne voit toujours le profil de votre animal et peut vous appeler. Vous perdez le Mode Perdu, le suivi des scans et les fonctions santé avancées — vos profils restent accessibles dans l'app.</p>
+</div>
+<p class="pn-pricing__legal" data-i18n="home.pricing.note">La médaille (19,99 €) est vendue séparément sur la boutique et n'est incluse dans aucun abonnement.</p>
+</div>
+</section>
+<!-- 7. Shop teaser -->
+<section class="pn-section pn-center" id="shop">
+<div class="container">
+<div class="pn-reveal">
+<p class="pn-kicker" data-i18n="home.shop.label">La boutique</p>
+<h2 class="pn-h2" data-i18n="home.shop.title">Fabriquée pour durer. Dessinée pour lui.</h2>
+<p class="pn-lead" data-i18n="home.shop.sub">Cœur, patte, os ou étoile — en bleu ou noir, imprimée en 3D dans notre atelier en France, au nom de votre animal.</p>
+</div>
+<div class="pn-shop__gallery pn-reveal">
+<img alt="Médaille NFC bleue en forme de cœur" height="600" loading="lazy" src="images/medal-blue-heart.webp" width="600"/>
+<img alt="Médaille NFC noire avec motif patte" height="600" loading="lazy" src="images/medal-black-paw.webp" width="600"/>
+<img alt="Médaille NFC noire en forme d'os" height="600" loading="lazy" src="images/medal-black-bone.webp" width="600"/>
+<img alt="Médaille NFC noire en forme d'étoile" height="600" loading="lazy" src="images/medal-black-star.webp" width="600"/>
+</div>
+<div class="pn-reveal">
+<a class="pn-btn pn-btn--primary" data-i18n="home.shop.cta" href="shop.html">Découvrir la boutique — 19,99 €</a>
+<br/>
+</div>
+</div>
+</section>
+<!-- 8. FAQ -->
+<section class="pn-section" id="faq">
+<div class="container">
+<div class="pn-center pn-reveal">
+<p class="pn-kicker" data-i18n="faq.label">Questions</p>
+<h2 class="pn-h2" data-i18n="faq.title">Questions fréquentes</h2>
+</div>
+<div class="faq__list">
+<div class="faq__item">
+<button aria-expanded="false" class="faq__question" type="button">
+<span data-i18n="home.faq.0.q">La médaille est-elle incluse dans l'abonnement ?</span>
+<svg class="faq__icon" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+<div class="faq__answer" data-i18n="home.faq.0.a">
               Non. La médaille est un achat unique de 19,99 € sur la boutique. L'abonnement ne couvre que l'application. La médaille continue d'afficher le profil de votre animal et le bouton d'appel même sans abonnement actif.
             </div>
-          </div>
-
-          <div class="faq__item">
-            <button type="button" class="faq__question" aria-expanded="false">
-              <span data-i18n="faq.7.q">Que se passe-t-il si j'annule mon abonnement ?</span>
-              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-            </button>
-            <div class="faq__answer" data-i18n="faq.7.a">
+</div>
+<div class="faq__item">
+<button aria-expanded="false" class="faq__question" type="button">
+<span data-i18n="faq.7.q">Que se passe-t-il si j'annule mon abonnement ?</span>
+<svg class="faq__icon" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+<div class="faq__answer" data-i18n="faq.7.a">
               Vos profils de base restent accessibles. Les médailles NFC déjà programmées continuent de fonctionner. Le Mode Perdu et les fonctions avancées nécessitent un abonnement actif.
             </div>
-          </div>
-
-          <div class="faq__item">
-            <button type="button" class="faq__question" aria-expanded="false">
-              <span data-i18n="faq.1.q">La personne qui trouve mon animal a-t-elle besoin de l'app ?</span>
-              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-            </button>
-            <div class="faq__answer" data-i18n="faq.1.a">
+</div>
+<div class="faq__item">
+<button aria-expanded="false" class="faq__question" type="button">
+<span data-i18n="faq.1.q">La personne qui trouve mon animal a-t-elle besoin de l'app ?</span>
+<svg class="faq__icon" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+<div class="faq__answer" data-i18n="faq.1.a">
               Non. Il suffit d'approcher son téléphone de la médaille NFC. Aucun téléchargement ni inscription. La personne voit vos coordonnées et peut vous appeler directement.
             </div>
-          </div>
-
-          <div class="faq__item">
-            <button type="button" class="faq__question" aria-expanded="false">
-              <span data-i18n="faq.2.q">Quels téléphones sont compatibles NFC ?</span>
-              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-            </button>
-            <div class="faq__answer" data-i18n="faq.2.a">
+</div>
+<div class="faq__item">
+<button aria-expanded="false" class="faq__question" type="button">
+<span data-i18n="faq.2.q">Quels téléphones sont compatibles NFC ?</span>
+<svg class="faq__icon" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+<div class="faq__answer" data-i18n="faq.2.a">
               Tous les iPhone depuis l'iPhone 7, et la plupart des téléphones Android depuis 2015.
             </div>
-          </div>
-
-          <div class="faq__item">
-            <button type="button" class="faq__question" aria-expanded="false">
-              <span data-i18n="faq.3.q">Ça marche sans internet ?</span>
-              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-            </button>
-            <div class="faq__answer" data-i18n="faq.3.a">
+</div>
+<div class="faq__item">
+<button aria-expanded="false" class="faq__question" type="button">
+<span data-i18n="faq.3.q">Ça marche sans internet ?</span>
+<svg class="faq__icon" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+<div class="faq__answer" data-i18n="faq.3.a">
               La médaille NFC déclenche un appel téléphonique, qui fonctionne sans internet. La personne voit vos coordonnées instantanément.
             </div>
-          </div>
-
-          <div class="faq__item">
-            <button type="button" class="faq__question" aria-expanded="false">
-              <span data-i18n="faq.4.q">Que voit la personne qui scanne la médaille ?</span>
-              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-            </button>
-            <div class="faq__answer" data-i18n="faq.4.a">
+</div>
+<div class="faq__item">
+<button aria-expanded="false" class="faq__question" type="button">
+<span data-i18n="faq.4.q">Que voit la personne qui scanne la médaille ?</span>
+<svg class="faq__icon" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+<div class="faq__answer" data-i18n="faq.4.a">
               Le nom de votre animal et un bouton pour vous appeler. Si le Mode Perdu est actif, elle voit aussi une alerte urgente et votre message de récompense.
             </div>
-          </div>
-
-          <div class="faq__item">
-            <button type="button" class="faq__question" aria-expanded="false">
-              <span data-i18n="faq.5.q">Puis-je garder ma puce électronique ?</span>
-              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-            </button>
-            <div class="faq__answer" data-i18n="faq.5.a">
+</div>
+<div class="faq__item">
+<button aria-expanded="false" class="faq__question" type="button">
+<span data-i18n="faq.5.q">Puis-je garder ma puce électronique ?</span>
+<svg class="faq__icon" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+<div class="faq__answer" data-i18n="faq.5.a">
               Oui ! PetNudge complète la puce. Vous pouvez enregistrer son numéro dans l'app. Nous recommandons les deux : la puce pour l'identification permanente, le NFC pour le contact instantané.
             </div>
-          </div>
-
-          <div class="faq__item">
-            <button type="button" class="faq__question" aria-expanded="false">
-              <span data-i18n="faq.6.q">Les médailles sont-elles étanches ?</span>
-              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-            </button>
-            <div class="faq__answer" data-i18n="faq.6.a">
+</div>
+<div class="faq__item">
+<button aria-expanded="false" class="faq__question" type="button">
+<span data-i18n="faq.6.q">Les médailles sont-elles étanches ?</span>
+<svg class="faq__icon" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+<div class="faq__answer" data-i18n="faq.6.a">
               Nos médailles NFC sont en plastique ASA premium, résistant aux UV, à l'eau, à la chaleur et aux chocs. Conçues pour la vie dehors.
             </div>
-          </div>
-
-          <div class="faq__item">
-            <button type="button" class="faq__question" aria-expanded="false">
-              <span data-i18n="faq.8.q">PetNudge suit-il la santé de mon animal ?</span>
-              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-            </button>
-            <div class="faq__answer" data-i18n="faq.8.a">
+</div>
+<div class="faq__item">
+<button aria-expanded="false" class="faq__question" type="button">
+<span data-i18n="faq.8.q">PetNudge suit-il la santé de mon animal ?</span>
+<svg class="faq__icon" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+<div class="faq__answer" data-i18n="faq.8.a">
               Oui ! Suivi complet : poids et signes vitaux avec graphiques, carnet de vaccination, médicaments avec rappels intelligents, calendrier santé visuel, et export PDF pour le vétérinaire ou les voyages.
             </div>
-          </div>
-
-          <div class="faq__item">
-            <button type="button" class="faq__question" aria-expanded="false">
-              <span data-i18n="faq.9.q">PetNudge a-t-il un assistant IA ?</span>
-              <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-            </button>
-            <div class="faq__answer" data-i18n="faq.9.a">
+</div>
+<div class="faq__item">
+<button aria-expanded="false" class="faq__question" type="button">
+<span data-i18n="faq.9.q">PetNudge a-t-il un assistant IA ?</span>
+<svg class="faq__icon" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+<div class="faq__answer" data-i18n="faq.9.a">
               Oui ! PetNudge intègre un assistant IA : posez vos questions sur les soins, vérifiez si un aliment est sûr pour votre animal, et obtenez une analyse de symptômes.
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 9. Blog preview -->
-    <section class="pn-section" id="blog-preview">
-      <div class="container">
-        <div class="pn-center pn-reveal">
-          <p class="pn-kicker" style="justify-content:center" data-i18n="blog.preview.label">Sur notre blog</p>
-          <h2 class="pn-h2" data-i18n="blog.preview.title">Guides d'experts pour votre animal</h2>
-          <p class="pn-lead" data-i18n="blog.preview.subtitle">Des conseils pratiques pour garder vos animaux en sécurité et en bonne santé.</p>
-        </div>
-        <div class="blog-preview__grid">
-          <a href="blog/toxic-plants-dogs-cats/" class="blog-preview__card">
-            <span class="blog-preview__icon">🌿</span>
-            <h3 class="blog-preview__title" data-i18n="blog.preview.a1.title">Top 10 des plantes toxiques pour les animaux</h3>
-            <p class="blog-preview__desc" data-i18n="blog.preview.a1.desc">Les plantes dangereuses chez vous et au jardin. Symptômes et alternatives sûres.</p>
-          </a>
-          <a href="blog/found-lost-pet-what-to-do/" class="blog-preview__card">
-            <span class="blog-preview__icon">🐕</span>
-            <h3 class="blog-preview__title" data-i18n="blog.preview.a2.title">Vous avez trouvé un animal perdu ?</h3>
-            <p class="blog-preview__desc" data-i18n="blog.preview.a2.desc">Guide étape par étape pour aider un animal errant à retrouver son foyer.</p>
-          </a>
-          <a href="blog/nfc-tags-pets-guide/" class="blog-preview__card">
-            <span class="blog-preview__icon">🏷️</span>
-            <h3 class="blog-preview__title" data-i18n="blog.preview.a3.title">Médailles NFC pour animaux : guide complet</h3>
-            <p class="blog-preview__desc" data-i18n="blog.preview.a3.desc">Comment la technologie NFC protège votre animal. Compatible médailles PetNudge.</p>
-          </a>
-          <a href="blog/protect-pet-extreme-heat/" class="blog-preview__card">
-            <span class="blog-preview__icon">🌡️</span>
-            <h3 class="blog-preview__title" data-i18n="blog.preview.a4.title">Protéger votre animal de la canicule</h3>
-            <p class="blog-preview__desc" data-i18n="blog.preview.a4.desc">Signes de coup de chaleur, dangers du bitume chaud et premiers secours.</p>
-          </a>
-        </div>
-        <div class="blog-preview__cta-wrap pn-center">
-          <a href="blog/" class="pn-btn pn-btn--ghost" data-i18n="blog.preview.cta">Voir tous les articles</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="/" class="header__logo">
-            <img src="logo.webp" alt="PetNudge - Identification connectée pour animaux" class="header__logo-img" width="36" height="36">
-            <span>PetNudge</span>
-          </a>
-          <p data-i18n="footer.tagline">Identification connectée et compagnon santé pour animaux.</p>
-        </div>
-
-        <div class="footer__section">
-          <p data-i18n="footer.legal"><strong>Légal</strong></p>
-          <nav class="footer__links">
-            <a href="privacy.html" class="footer__link" data-i18n="nav.privacy">Politique de confidentialité</a>
-            <a href="terms.html" class="footer__link">Conditions d'utilisation</a>
-          </nav>
-        </div>
-
-        <div class="footer__section">
-          <p data-i18n="footer.support"><strong>Support</strong></p>
-          <nav class="footer__links">
-            <a href="mailto:contactpetnudge@gmail.com" class="footer__link" data-i18n="footer.contact">Nous contacter</a>
-            <span class="footer__link footer__link--muted">contactpetnudge@gmail.com</span>
-          </nav>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <p class="footer__copyright">&copy; <span data-i18n="footer.copyright">2024-2026 PetNudge. Tous droits réservés.</span></p>
-        <button type="button" class="lang-toggle" id="lang-toggle-footer" aria-label="Change language">
-          <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-          <span id="lang-text-footer">FR</span>
-        </button>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Sticky CTA -->
-  <div class="sticky-cta" role="complementary" aria-label="Download CTA">
-    <div class="sticky-cta__inner">
-      <div class="sticky-cta__text">
-        <strong data-i18n="sticky.title">Protégez votre animal dès aujourd'hui</strong>
-        <span data-i18n="sticky.subtitle">Essai gratuit 7 jours, annulable à tout moment</span>
-      </div>
-      <a href="https://apps.apple.com/app/id6756539814" class="btn btn--primary" target="_blank" rel="noopener" data-i18n="sticky.cta">Télécharger</a>
-    </div>
-  </div>
-
-  <!-- RGPD Cookie Consent Banner -->
-  <div id="cookie-banner" class="cookie-banner">
-    <div class="cookie-banner__inner">
-      <p class="cookie-banner__text" id="cookie-text">
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Blog preview -->
+<section class="pn-section" id="blog-preview">
+<div class="container">
+<div class="pn-center pn-reveal">
+<p class="pn-kicker" data-i18n="blog.preview.label">Sur notre blog</p>
+<h2 class="pn-h2" data-i18n="blog.preview.title">Guides d'experts pour votre animal</h2>
+<p class="pn-lead" data-i18n="blog.preview.subtitle">Des conseils pratiques pour garder vos animaux en sécurité et en bonne santé.</p>
+</div>
+<div class="blog-preview__grid">
+<a class="blog-preview__card" href="blog/plantes-toxiques-chiens-chats/">
+<span class="blog-preview__icon">01</span>
+<h3 class="blog-preview__title" data-i18n="blog.preview.a1.title">Top 10 des plantes toxiques pour les animaux</h3>
+<p class="blog-preview__desc" data-i18n="blog.preview.a1.desc">Les plantes dangereuses chez vous et au jardin. Symptômes et alternatives sûres.</p>
+</a>
+<a class="blog-preview__card" href="blog/animal-perdu-trouve-que-faire/">
+<span class="blog-preview__icon">02</span>
+<h3 class="blog-preview__title" data-i18n="blog.preview.a2.title">Vous avez trouvé un animal perdu ?</h3>
+<p class="blog-preview__desc" data-i18n="blog.preview.a2.desc">Guide étape par étape pour aider un animal errant à retrouver son foyer.</p>
+</a>
+<a class="blog-preview__card" href="blog/nfc-tags-pets-guide/">
+<span class="blog-preview__icon">03</span>
+<h3 class="blog-preview__title" data-i18n="blog.preview.a3.title">Médailles NFC pour animaux : guide complet</h3>
+<p class="blog-preview__desc" data-i18n="blog.preview.a3.desc">Comment la technologie NFC protège votre animal. Compatible médailles PetNudge.</p>
+</a>
+<a class="blog-preview__card" href="blog/proteger-animal-chaleur-extreme/">
+<span class="blog-preview__icon">04</span>
+<h3 class="blog-preview__title" data-i18n="blog.preview.a4.title">Protéger votre animal de la canicule</h3>
+<p class="blog-preview__desc" data-i18n="blog.preview.a4.desc">Signes de coup de chaleur, dangers du bitume chaud et premiers secours.</p>
+</a>
+</div>
+<div class="blog-preview__cta-wrap pn-center">
+<a class="pn-btn pn-btn--ghost" data-i18n="blog.preview.cta" href="blog/">Voir tous les articles</a>
+</div>
+</div>
+</section>
+<section class="pn-final"><div class="container"><div aria-hidden="true" class="pn-final__mark">p.</div><p class="pn-eyebrow" data-i18n="premium.final.eyebrow">CHAQUE JOUR, UN PEU PLUS PRÈS.</p><h2><span data-i18n="premium.final.title">Sa plus belle vie.</span><br/><em data-i18n="premium.final.em">Avec vous.</em></h2><a class="pn-btn pn-btn--dark pn-app-button" href="https://apps.apple.com/app/id6756539814" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" height="23" viewbox="0 0 24 24" width="20"><path d="M17.05 12.54c.03 3.23 2.83 4.3 2.86 4.31-.02.08-.45 1.53-1.48 3.03-.89 1.3-1.81 2.59-3.27 2.62-1.43.03-1.89-.85-3.53-.85-1.63 0-2.14.82-3.5.88-1.4.05-2.47-1.4-3.37-2.7-1.84-2.66-3.25-7.52-1.36-10.8a5.23 5.23 0 0 1 4.43-2.69c1.39-.03 2.7.94 3.54.94.84 0 2.42-1.16 4.08-.99.7.03 2.66.28 3.92 2.13-.1.07-2.34 1.37-2.32 4.12ZM14.36 4.52c.75-.91 1.26-2.17 1.12-3.43-1.08.04-2.38.72-3.16 1.64-.69.8-1.29 2.07-1.13 3.3 1.21.09 2.44-.61 3.17-1.51Z"></path></svg><span data-i18n="premium.download">Télécharger l’app</span><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="18"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a><p class="pn-final__fine" data-i18n="premium.availability">Pour iPhone · Téléchargement gratuit · Achats intégrés</p></div></section></main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer__grid">
+<div class="footer__brand">
+<a class="header__logo" href="/">
+<img alt="PetNudge - Identification connectée pour animaux" class="header__logo-img" height="36" src="logo.webp" width="36"/>
+<span>PetNudge</span>
+</a>
+<p data-i18n="footer.tagline">Identification connectée et compagnon santé pour animaux.</p>
+</div>
+<div class="footer__section">
+<p data-i18n="footer.legal"><strong>Légal</strong></p>
+<nav class="footer__links">
+<a class="footer__link" data-i18n="nav.privacy" href="privacy.html">Politique de confidentialité</a>
+<a class="footer__link" href="terms.html">Conditions d'utilisation</a>
+</nav>
+</div>
+<div class="footer__section">
+<p data-i18n="footer.support"><strong>Support</strong></p>
+<nav class="footer__links">
+<a class="footer__link" data-i18n="footer.contact" href="mailto:contactpetnudge@gmail.com">Nous contacter</a>
+<span class="footer__link footer__link--muted">contactpetnudge@gmail.com</span>
+</nav>
+</div>
+</div>
+<div class="footer__bottom">
+<p class="footer__copyright">© <span data-i18n="footer.copyright">2024-2026 PetNudge. Tous droits réservés.</span></p>
+<button aria-label="Change language" class="lang-toggle" id="lang-toggle-footer" type="button">
+<svg class="lang-toggle__icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+</svg>
+<span id="lang-text-footer">FR</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- Sticky CTA -->
+<div aria-label="Download CTA" class="sticky-cta" role="complementary">
+<div class="sticky-cta__inner">
+<div class="sticky-cta__text">
+<strong data-i18n="sticky.title">Protégez votre animal dès aujourd'hui</strong>
+<span data-i18n="sticky.subtitle">Essai gratuit 7 jours, annulable à tout moment</span>
+</div>
+<a class="btn btn--primary" data-i18n="sticky.cta" href="https://apps.apple.com/app/id6756539814" rel="noopener" target="_blank">Télécharger</a>
+</div>
+</div>
+<!-- RGPD Cookie Consent Banner -->
+<div class="cookie-banner" id="cookie-banner">
+<div class="cookie-banner__inner">
+<p class="cookie-banner__text" id="cookie-text">
         Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre
         <a href="privacy.html">politique de confidentialité</a>.
       </p>
-      <div class="cookie-banner__actions">
-        <button onclick="acceptCookies()" class="cookie-banner__accept" id="cookie-accept">Accepter</button>
-        <button onclick="refuseCookies()" class="cookie-banner__decline" id="cookie-refuse">Refuser</button>
-      </div>
-    </div>
-  </div>
-  <script>
+<div class="cookie-banner__actions">
+<button class="cookie-banner__accept" id="cookie-accept" onclick="acceptCookies()">Accepter</button>
+<button class="cookie-banner__decline" id="cookie-refuse" onclick="refuseCookies()">Refuser</button>
+</div>
+</div>
+</div>
+<script>
     (function(){
       if(!localStorage.getItem('cookie_consent')){
         document.getElementById('cookie-banner').style.display='flex';
@@ -944,10 +705,9 @@
       document.getElementById('cookie-banner').style.display='none';
     }
   </script>
-
-  <!-- Scripts -->
-  <script src="script.js" defer></script>
-  <script src="home-translations.js" defer></script>
-  <script src="home.js" defer></script>
-</body>
+<!-- Scripts -->
+<script defer="" src="script.js"></script>
+<script defer="" src="home-translations.js"></script>
+<script defer="" src="home.js"></script>
+<script defer="" src="/premium-translations.js?v=1"></script><script defer="" src="/premium.js?v=1"></script></body>
 </html>

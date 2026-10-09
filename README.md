@@ -1,153 +1,44 @@
-# PetNudge Website
+# PetNudge website
 
-Official website for [PetNudge](https://petnudge.fr) - Smart Pet ID + Lost Pet Recovery iOS App.
+Static, multilingual website for [PetNudge](https://petnudge.fr), the iPhone pet health and NFC identification app. Hosted on GitHub Pages; no framework, package installation or build step.
 
-## Features
+## Preview
 
-- **Multilingual**: English (EN) and French (FR) with language toggle
-- **Mobile-first**: Responsive design optimized for all devices
-- **Accessible**: WCAG-compliant, screen reader friendly
-- **Fast**: No heavy frameworks, optimized for Lighthouse scores
-- **Premium**: Apple-like aesthetic matching the iOS app
-
-## File Structure
-
-```
-taillogs-website/
-├── index.html          # Main landing page
-├── styles.css          # All styles (CSS custom properties)
-├── script.js           # Language toggle, FAQ, sticky CTA
-├── privacy.html        # Privacy Policy
-├── terms.html          # Terms of Use
-├── logo.png            # App logo
-├── CNAME               # Custom domain (petnudge.fr)
-├── README.md           # This file
-└── assets/
-    └── README.md       # Instructions for adding screenshots
-```
-
-## Information Architecture
-
-1. **Hero**: Smart Pet ID + Lost Pet Recovery + 2 CTAs
-2. **Problem**: Why microchips and engraved tags fail
-3. **Solution**: QR + NFC + Lost Mode (3 benefits)
-4. **How It Works**: 3 simple steps
-5. **Lost Mode**: The differentiator (demo card + features)
-6. **Privacy**: Local-first, no public health data
-7. **Features**: Health + Reminders + AI (secondary)
-8. **Pricing**: 7-day free trial (no prices shown)
-9. **FAQ**: 7 common questions
-10. **Footer**: Legal links + contact
-11. **Smart Tags**: Waitlist section (Coming Soon)
-
-## Local Development
-
-Open `index.html` in a browser. No build step required.
-
-For live reload during development:
-```bash
-# Using Python
+```sh
 python3 -m http.server 8000
-
-# Using Node.js (npx)
-npx serve .
 ```
 
-Then open http://localhost:8000
+Open http://localhost:8000. Serve from the repository root because shared assets use absolute paths.
 
-## GitHub Pages Deployment
+## Design and page structure
 
-### Initial Setup (Already Done)
+The site uses a warm ivory and olive palette, locally hosted DM Sans and Instrument Serif, actual App Store screenshots, CSS 3D perspective, pointer interaction and scroll reveals. Motion respects the operating system's reduced-motion preference; content remains readable without JavaScript.
 
-1. Repository Settings > Pages
-2. Source: Deploy from branch
-3. Branch: `main` / `/ (root)`
-4. Save
+- `index.html`, `home.css`, `home-premium.css`, `home.js`: application-first homepage, interactive app previews, Lost Mode demonstration, plans, medal collection, FAQ and journal.
+- `premium.css`, `premium.js`: shared design tokens, fonts, navigation, keyboard menu handling and progressive motion.
+- `styles.css`, `script.js`: retained base components and language/FAQ behavior.
+- `home-translations.js`, `premium-translations.js`: homepage translations in nine languages. Merge additions into the shared translation dictionary before subsequent language selection.
+- `secondary.css`: feature pages, shop, legal pages and utility surfaces. Static English pages declare `data-page-language="en"` so a saved preference cannot mislabel their content.
+- `shop.html`, `shop-styles.css`, `shop-translations.js`: product gallery, existing checkout links and localized product information.
+- `blog/index.html`, `blog-design.css`, `blog/journal.js`: searchable journal with language and topic filters, progressive pagination and reading navigation. All 189 article URLs are preserved; 187 on-topic articles appear in discovery. Article bodies keep their own language.
+- `pet.html`, `404.html`: existing public pet profile and short-link recovery flow.
+- `tag-codes.html`: tag-generation utility.
+- `privacy.html`, `terms.html`, `success.html`: supporting pages.
 
-### Custom Domain Setup (Already Done)
+## Verification
 
-**CNAME file contains:** `petnudge.fr`
-
-**DNS Records at domain registrar:**
-```
-A     @     185.199.108.153
-A     @     185.199.109.153
-A     @     185.199.110.153
-A     @     185.199.111.153
-CNAME www   lupudragos.github.io
-```
-
-**In GitHub Settings > Pages:**
-- Custom domain: `petnudge.fr`
-- Enforce HTTPS: Enabled
-
-### Deploy Changes
-
-```bash
-cd /Users/lupudragos/Desktop/Taillogs/taillogs-website
-
-# Check status
-git status
-
-# Add all changes
-git add -A
-
-# Commit
-git commit -m "Update website with new design"
-
-# Push to GitHub
-git push
-
-# Changes will be live within 1-2 minutes
+```sh
+python3 scripts/build-sitemap.py
+python3 scripts/audit-site.py --strict
+python3 scripts/audit-seo.py --strict
 ```
 
-## Adding Screenshots (Optional)
+The audit walks every HTML file and checks local links, fragments, assets, page structure and App Store destinations. Use `--json` for the complete route inventory. See `docs/redesign-audit.md` for desktop/mobile browser coverage and functional checks.
 
-See `assets/README.md` for instructions on adding app screenshots.
+## Assets
 
-## Customization
+Application screenshots and fonts are hosted locally. Sources and font licenses are recorded in [assets/SOURCES.md](assets/SOURCES.md). Existing physical-product photographs remain in `images/`. The blog uses a text-led layout after a visual review identified many irrelevant remote illustrations.
 
-### Colors
+## Publication
 
-Edit CSS custom properties in `styles.css`:
-```css
-:root {
-  --color-primary: #FF6B35;      /* Orange */
-  --color-secondary: #4ECDC4;    /* Teal */
-  --color-gray-900: #0A0A0A;     /* Near black */
-}
-```
-
-### Translations
-
-Edit translations in `script.js`:
-```javascript
-const translations = {
-  en: { ... },
-  fr: { ... }
-};
-```
-
-### Adding a New Language
-
-1. Add language object to `translations` in `script.js`
-2. Update `currentLang` detection logic
-3. Add language option to toggle button
-
-## Tech Stack
-
-- HTML5 (semantic markup)
-- CSS3 (custom properties, flexbox, grid)
-- Vanilla JavaScript (no dependencies)
-- GitHub Pages (hosting)
-
-## Performance
-
-- No external fonts (uses system font stack)
-- No heavy frameworks
-- Minimal JavaScript
-- Optimized for Core Web Vitals
-
-## Contact
-
-support@petnudge.fr
+The existing GitHub Pages setup publishes the repository root on the configured branch to `petnudge.fr` (`CNAME`). Local edits do not update the public site until committed and pushed to that branch.

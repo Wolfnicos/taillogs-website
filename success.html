@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commande confirmée | PetNudge</title>
-    <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex, follow">
     <link rel="icon" type="image/png" href="logo.webp">
     <link rel="stylesheet" href="styles.css?v=6">
     <link rel="stylesheet" href="shop-styles.css">
     <script defer data-domain="petnudge.fr" src="https://signallensai.com:8443/js/script.js"></script>
+  <link rel="stylesheet" href="/premium.css?v=1">
+  <link rel="stylesheet" href="/secondary.css?v=1">
+  <script src="/premium.js?v=1" defer></script>
+  <meta name="description" content="Votre commande PetNudge est confirmée. Retrouvez les prochaines étapes pour préparer le profil de votre animal et utiliser sa médaille NFC.">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta property="og:title" content="Commande confirmée | PetNudge">
+  <meta property="og:description" content="Votre commande PetNudge est confirmée. Retrouvez les prochaines étapes pour préparer le profil de votre animal et utiliser sa médaille NFC.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PetNudge">
+  <meta property="og:image" content="https://petnudge.fr/images/social-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PetNudge — pet care and NFC identification for iPhone">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Commande confirmée | PetNudge">
+  <meta name="twitter:description" content="Votre commande PetNudge est confirmée. Retrouvez les prochaines étapes pour préparer le profil de votre animal et utiliser sa médaille NFC.">
+  <meta name="twitter:image" content="https://petnudge.fr/images/social-preview.jpg">
 </head>
 <body class="success-page">
     <header class="header">
@@ -27,6 +44,7 @@
                 </ul>
             </nav>
             <div class="header__actions">
+          <a href="https://apps.apple.com/app/id6756539814" class="header-download" target="_blank" rel="noopener"><span data-i18n="sticky.cta">Télécharger l’app</span><span aria-hidden="true">↗</span></a>
                 <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
                     <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10"/>
@@ -59,11 +77,11 @@
             <a href="shop.html" class="mobile-menu__link" data-i18n="nav.shop">Shop</a>
         </nav>
     </div>
-    <div class="success-container">
+    <main class="success-container" id="main">
         <div class="success-content">
             <!-- Success Icon -->
             <div class="success-icon-container">
-                <div class="success-icon">✅</div>
+                <div class="success-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></div>
                 <div class="success-confetti"></div>
             </div>
 
@@ -74,21 +92,21 @@
             <!-- Order Info -->
             <div class="order-info-grid">
                 <div class="order-info-item">
-                    <span class="order-info-icon">📧</span>
+                    <span class="order-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="4"/><path d="M8 3v4m8-4v4M4 11h16m-11 5 2 2 4-4"/></svg></span>
                     <div class="order-info-content">
                         <h4 data-i18n="success.email.title">Email de confirmation</h4>
                         <p data-i18n="success.email.desc">Vous allez recevoir un email avec les détails de votre commande</p>
                     </div>
                 </div>
                 <div class="order-info-item">
-                    <span class="order-info-icon">📦</span>
+                    <span class="order-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="4"/><path d="M8 3v4m8-4v4M4 11h16m-11 5 2 2 4-4"/></svg></span>
                     <div class="order-info-content">
                         <h4 data-i18n="success.shipping.title">Expédition</h4>
                         <p data-i18n="success.shipping.desc">Votre commande sera expédiée sous 24-48h</p>
                     </div>
                 </div>
                 <div class="order-info-item">
-                    <span class="order-info-icon">🚚</span>
+                    <span class="order-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="4"/><path d="M8 3v4m8-4v4M4 11h16m-11 5 2 2 4-4"/></svg></span>
                     <div class="order-info-content">
                         <h4 data-i18n="success.delivery.title">Livraison</h4>
                         <p data-i18n="success.delivery.desc">Réception estimée en 3-5 jours ouvrés</p>
@@ -97,13 +115,14 @@
             </div>
 
             <!-- Action Buttons -->
+            <div class="success-app-next"><span class="secondary-eyebrow" data-i18n="premium.success.next">La prochaine étape</span><h2 data-i18n="premium.success.title">Son profil vous attend.</h2><p data-i18n="premium.success.description">Préparez le profil de votre compagnon dans PetNudge pendant que sa médaille arrive.</p><a class="btn btn--primary" href="https://apps.apple.com/app/id6756539814" target="_blank" rel="noopener"><span data-i18n="premium.download">Télécharger l’app</span> <span aria-hidden="true">↗</span></a></div>
             <div class="success-actions">
                 <a href="shop.html" class="success-btn primary">
-                    <span class="btn-icon">🛒</span>
+
                     <span data-i18n="success.shop">Retour au shop</span>
                 </a>
                 <a href="index.html" class="success-btn secondary">
-                    <span class="btn-icon">🏠</span>
+
                     <span data-i18n="success.home">Retour à l'accueil</span>
                 </a>
             </div>
@@ -120,10 +139,11 @@
             <img src="logo.webp" alt="PetNudge" width="32" height="32">
             <span>PetNudge</span>
         </div>
-    </div>
+    </main>
 
     <script src="script.js" defer></script>
     <script src="shop-translations.js" defer></script>
+    <script src="/premium-translations.js?v=1" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.success-content').classList.add('animate-in');

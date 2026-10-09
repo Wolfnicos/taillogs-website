@@ -2230,7 +2230,7 @@
   // ==========================================
   // State
   // ==========================================
-  let currentLang = localStorage.getItem('petnudge-lang') || detectLanguage();
+  let currentLang = document.documentElement.dataset.pageLanguage || localStorage.getItem('petnudge-lang') || document.documentElement.lang || detectLanguage();
 
   function detectLanguage() {
     const browserLang = navigator.language.toLowerCase();
@@ -2365,6 +2365,7 @@
   }
 
   function setLanguage(lang) {
+    lang = document.documentElement.dataset.pageLanguage || lang;
     if (!translations[lang]) lang = 'en';
     document.documentElement.lang = lang;
 
@@ -2484,12 +2485,13 @@
         const target = document.querySelector(targetId);
         if (target) {
           e.preventDefault();
-          const headerHeight = document.querySelector('.header').offsetHeight;
+          const header = document.querySelector('.header');
+          const headerHeight = header ? header.offsetHeight : 0;
           const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
 
           window.scrollTo({
             top: targetPosition,
-            behavior: 'smooth'
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
           });
         }
       });

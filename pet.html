@@ -649,9 +649,11 @@
         async function resolveTagToProfileID(code) {
             try {
                 const url = `https://api.apple-cloudkit.com/database/1/${CONTAINER_ID}/${ENVIRONMENT}/public/records/lookup?ckAPIToken=${API_TOKEN}`;
+                // text/plain keeps this a "simple" CORS request: CloudKit's preflight
+                // response has no Access-Control-Allow-Headers, so application/json is blocked.
                 const response = await fetch(url, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
                     body: JSON.stringify({ records: [{ recordName: code }] })
                 });
                 const data = await response.json();
@@ -686,10 +688,11 @@
                 // CloudKit Web Services URL
                 const url = `https://api.apple-cloudkit.com/database/1/${CONTAINER_ID}/${ENVIRONMENT}/public/records/lookup?ckAPIToken=${API_TOKEN}`;
 
+                // text/plain: see resolveTagToProfileID (avoids the blocked CORS preflight).
                 const response = await fetch(url, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'text/plain;charset=UTF-8'
                     },
                     body: JSON.stringify({
                         records: [{

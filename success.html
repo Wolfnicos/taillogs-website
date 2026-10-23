@@ -16,7 +16,8 @@
 </script>
   <link rel="stylesheet" href="/premium.css?v=1">
   <link rel="stylesheet" href="/secondary.css?v=1">
-  <script src="/premium.js?v=1" defer></script>
+  <link rel="stylesheet" href="/store-badges.css?v=1">
+  <script src="/premium.js?v=2" defer></script>
   <meta name="description" content="Votre commande PetNudge est confirmée. Retrouvez les prochaines étapes pour préparer le profil de votre animal et utiliser sa médaille NFC.">
   <meta name="theme-color" content="#f6f4ef">
   <meta property="og:title" content="Commande confirmée | PetNudge">
@@ -49,7 +50,7 @@
                 </ul>
             </nav>
             <div class="header__actions">
-          <a href="https://apps.apple.com/app/id6756539814" class="header-download" target="_blank" rel="noopener"><span data-i18n="sticky.cta">Télécharger l’app</span><span aria-hidden="true">↗</span></a>
+          <div class="pn-store-badges pn-store-badges--header"><a class="pn-store-badge pn-store-badge--apple" href="https://apps.apple.com/app/id6756539814" rel="noopener" target="_blank"><img alt="Télécharger dans l’App Store" class="pn-store-badge__apple" height="40" src="/images/badges/app-store-fr.svg" width="127"/></a><a class="pn-store-badge pn-store-badge--web" data-cta="webapp" href="https://app.petnudge.fr" rel="noopener" target="_blank"><svg aria-hidden="true" class="pn-store-badge__icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9M12 3c-2.5 2.7-3.8 5.7-3.8 9s1.3 6.3 3.8 9"></path></svg><span class="pn-store-badge__text"><small data-i18n="premium.webapp.note">Android · PC · Mac</small><strong data-i18n="premium.nav.webapp">App web</strong></span></a></div>
                 <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">
                     <svg class="lang-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10"/>
@@ -81,6 +82,7 @@
             <a href="blog/" class="mobile-menu__link" data-i18n="nav.blog">Blog</a>
             <a href="shop.html" class="mobile-menu__link" data-i18n="nav.shop">Shop</a>
         </nav>
+<div class="pn-store-badges pn-store-badges--menu"><a class="pn-store-badge pn-store-badge--apple" href="https://apps.apple.com/app/id6756539814" rel="noopener" target="_blank"><img alt="Télécharger dans l’App Store" class="pn-store-badge__apple" height="40" src="/images/badges/app-store-fr.svg" width="127"/></a><a class="pn-store-badge pn-store-badge--web" data-cta="webapp" href="https://app.petnudge.fr" rel="noopener" target="_blank"><svg aria-hidden="true" class="pn-store-badge__icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9M12 3c-2.5 2.7-3.8 5.7-3.8 9s1.3 6.3 3.8 9"></path></svg><span class="pn-store-badge__text"><small data-i18n="premium.webapp.note">Android · PC · Mac</small><strong data-i18n="premium.nav.webapp">App web</strong></span></a></div>
     </div>
     <main class="success-container" id="main">
         <div class="success-content">
@@ -120,7 +122,7 @@
             </div>
 
             <!-- Action Buttons -->
-            <div class="success-app-next"><span class="secondary-eyebrow" data-i18n="premium.success.next">La prochaine étape</span><h2 data-i18n="premium.success.title">Son profil vous attend.</h2><p data-i18n="premium.success.description">Préparez le profil de votre compagnon dans PetNudge pendant que sa médaille arrive.</p><a class="btn btn--primary" href="https://apps.apple.com/app/id6756539814" target="_blank" rel="noopener"><span data-i18n="premium.download">Télécharger l’app</span> <span aria-hidden="true">↗</span></a> <a class="btn btn--webapp" data-cta="webapp" href="https://app.petnudge.fr" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9M12 3c-2.5 2.7-3.8 5.7-3.8 9s1.3 6.3 3.8 9"></path></svg><span data-i18n="premium.webapp">Ouvrir l’app web</span></a></div>
+            <div class="success-app-next"><span class="secondary-eyebrow" data-i18n="premium.success.next">La prochaine étape</span><h2 data-i18n="premium.success.title">Son profil vous attend.</h2><p data-i18n="premium.success.description">Préparez le profil de votre compagnon dans PetNudge pendant que sa médaille arrive.</p><div class="pn-store-badges pn-store-badges--card"><a class="pn-store-badge pn-store-badge--apple" href="https://apps.apple.com/app/id6756539814" rel="noopener" target="_blank"><img alt="Télécharger dans l’App Store" class="pn-store-badge__apple" height="40" src="/images/badges/app-store-fr.svg" width="127"/></a><a class="pn-store-badge pn-store-badge--web" data-cta="webapp" href="https://app.petnudge.fr" rel="noopener" target="_blank"><svg aria-hidden="true" class="pn-store-badge__icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9M12 3c-2.5 2.7-3.8 5.7-3.8 9s1.3 6.3 3.8 9"></path></svg><span class="pn-store-badge__text"><small data-i18n="premium.webapp.note">Android · PC · Mac</small><strong data-i18n="premium.nav.webapp">App web</strong></span></a></div></div>
             <div class="success-actions">
                 <a href="shop.html" class="success-btn primary">
 
@@ -147,8 +149,9 @@
     </main>
 
     <script src="script.js?v=20261009-2" defer></script>
-    <script src="shop-translations.js?v=20261009-2" defer></script>
-    <script src="/premium-translations.js?v=20261009-2" defer></script>
+    <script src="shop-translations.js?v=20261023-1" defer></script>
+    <script src="/store-badges.js?v=2" defer></script>
+    <script src="/premium-translations.js?v=20261023-1" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.success-content').classList.add('animate-in');

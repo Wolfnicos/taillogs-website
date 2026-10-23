@@ -30,7 +30,11 @@
       const close = document.createElement('button');close.id = 'menu-close';close.type = 'button';close.className = 'mobile-menu__close';close.setAttribute('aria-label', 'Close menu');close.textContent = '×';
       const nav = document.createElement('nav');nav.className = 'mobile-menu__nav';
       document.querySelectorAll('.header__nav a').forEach(function (link) {const copy = link.cloneNode(true);copy.className = 'mobile-menu__link';nav.append(copy);});
-      menu.append(close, nav);document.body.append(menu);
+      menu.append(close, nav);
+      // The header's store badges are hidden on narrow screens, so the generated menu carries a copy.
+      const badges = document.querySelector('.header__actions .pn-store-badges');
+      if (badges) {const copy = badges.cloneNode(true);copy.classList.remove('pn-store-badges--header');copy.classList.add('pn-store-badges--menu');menu.append(copy);}
+      document.body.append(menu);
       menu.dataset.premiumManaged = 'true';
     }
     if (button && menu) {

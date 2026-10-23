@@ -291,6 +291,10 @@
             margin-bottom: 8px;
         }
 
+        .app-promo .pn-store-badges {
+            justify-content: center;
+        }
+
         .app-promo p {
             font-size: 14px;
             opacity: 0.9;
@@ -320,7 +324,8 @@
 </script>
   <link rel="stylesheet" href="/premium.css?v=1">
   <link rel="stylesheet" href="/secondary.css?v=1">
-  <script src="/premium.js?v=1" defer></script>
+  <link rel="stylesheet" href="/store-badges.css?v=1">
+  <script src="/premium.js?v=2" defer></script>
   <meta name="robots" content="noindex, nofollow, noimageindex">
   <meta name="theme-color" content="#f6f4ef">
   <meta property="og:title" content="Pet ID Profile | PetNudge">
@@ -407,9 +412,7 @@
             <div class="app-promo">
                 <h3 data-i18n="promo.title">Protect Your Pet Too</h3>
                 <p data-i18n="promo.desc">Create smart tags for your pets with PetNudge - free to use!</p>
-                <a href="https://apps.apple.com/app/id6756539814" class="app-store-button" data-i18n="promo.button">
-                    Get PetNudge
-                </a>
+                <div class="pn-store-badges pn-store-badges--card"><a class="pn-store-badge pn-store-badge--apple" href="https://apps.apple.com/app/id6756539814" rel="noopener" target="_blank"><img alt="Download on the App Store" class="pn-store-badge__apple" height="40" src="/images/badges/app-store-en.svg" width="120"/></a><a class="pn-store-badge pn-store-badge--web" data-cta="webapp" href="https://app.petnudge.fr" rel="noopener" target="_blank"><svg aria-hidden="true" class="pn-store-badge__icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9M12 3c-2.5 2.7-3.8 5.7-3.8 9s1.3 6.3 3.8 9"></path></svg><span class="pn-store-badge__text"><small data-i18n="premium.webapp.note">Android · PC · Mac</small><strong data-i18n="premium.nav.webapp">Web app</strong></span></a></div>
             </div>
         </div>
 
@@ -440,6 +443,8 @@
                 'promo.title': 'Protect Your Pet Too',
                 'promo.desc': 'Create smart tags for your pets with PetNudge - free to use!',
                 'promo.button': 'Get PetNudge',
+                'premium.webapp.note': 'Android · PC · Mac',
+                'premium.nav.webapp': 'Web app',
                 'footer.powered': 'Powered by'
             },
             fr: {
@@ -458,6 +463,8 @@
                 'promo.title': 'Protégez votre animal aussi',
                 'promo.desc': 'Créez des médailles intelligentes avec PetNudge - gratuit !',
                 'promo.button': 'Télécharger PetNudge',
+                'premium.webapp.note': 'Android · PC · Mac',
+                'premium.nav.webapp': 'App web',
                 'footer.powered': 'Propulsé par'
             },
             ro: {
@@ -476,6 +483,8 @@
                 'promo.title': 'Protejează-ți și tu animalul',
                 'promo.desc': 'Creează medalii inteligente cu PetNudge - gratuit!',
                 'promo.button': 'Descarcă PetNudge',
+                'premium.webapp.note': 'Android · PC · Mac',
+                'premium.nav.webapp': 'Aplicația web',
                 'footer.powered': 'Creat de'
             },
             es: {
@@ -494,6 +503,8 @@
                 'promo.title': 'Protege a tu mascota también',
                 'promo.desc': '¡Crea placas inteligentes con PetNudge - gratis!',
                 'promo.button': 'Descargar PetNudge',
+                'premium.webapp.note': 'Android · PC · Mac',
+                'premium.nav.webapp': 'App web',
                 'footer.powered': 'Desarrollado por'
             },
             de: {
@@ -512,6 +523,8 @@
                 'promo.title': 'Schützen Sie auch Ihr Tier',
                 'promo.desc': 'Erstellen Sie smarte Marken mit PetNudge - kostenlos!',
                 'promo.button': 'PetNudge herunterladen',
+                'premium.webapp.note': 'Android · PC · Mac',
+                'premium.nav.webapp': 'Web-App',
                 'footer.powered': 'Bereitgestellt von'
             },
             it: {
@@ -530,6 +543,8 @@
                 'promo.title': 'Proteggi anche il tuo animale',
                 'promo.desc': 'Crea medaglie intelligenti con PetNudge - gratis!',
                 'promo.button': 'Scarica PetNudge',
+                'premium.webapp.note': 'Android · PC · Mac',
+                'premium.nav.webapp': 'App web',
                 'footer.powered': 'Offerto da'
             },
             pt: {
@@ -548,6 +563,8 @@
                 'promo.title': 'Proteja seu pet também',
                 'promo.desc': 'Crie tags inteligentes com PetNudge - grátis!',
                 'promo.button': 'Baixar PetNudge',
+                'premium.webapp.note': 'Android · PC · Mac',
+                'premium.nav.webapp': 'App web',
                 'footer.powered': 'Desenvolvido por'
             },
             ja: {
@@ -566,6 +583,8 @@
                 'promo.title': 'あなたのペットも守りましょう',
                 'promo.desc': 'PetNudgeでスマートタグを作成 - 無料！',
                 'promo.button': 'PetNudgeを入手',
+                'premium.webapp.note': 'Android・PC・Mac',
+                'premium.nav.webapp': 'Webアプリ',
                 'footer.powered': '提供：'
             },
             zh: {
@@ -584,6 +603,8 @@
                 'promo.title': '也保护您的宠物',
                 'promo.desc': '使用PetNudge创建智能标签 - 免费！',
                 'promo.button': '下载PetNudge',
+                'premium.webapp.note': '安卓 · 电脑 · Mac',
+                'premium.nav.webapp': '网页版',
                 'footer.powered': '技术支持：'
             }
         };
@@ -638,6 +659,8 @@
         // Show/hide elements
         function show(id) {
             document.getElementById(id).classList.remove('hidden');
+            // The store badges (store-badges.js) size themselves on resize; the profile was hidden when they first measured.
+            if (id === 'profile') window.dispatchEvent(new Event('resize'));
         }
 
         function hide(id) {
@@ -807,5 +830,6 @@
             }
         });
     </script>
+  <script src="/store-badges.js?v=2" defer></script>
 </body>
 </html>

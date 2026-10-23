@@ -29,8 +29,8 @@
 .pn-store-badge--web{box-sizing:border-box;height:var(--badge-h);min-width:calc(var(--badge-h)*2.6);gap:calc(var(--badge-h)*.2);padding:0 calc(var(--badge-h)*.26);background:#000;color:#fff;border:1px solid #a6a6a6;border-radius:calc(var(--badge-h)*.17)}
 .pn-store-badge__icon{width:calc(var(--badge-h)*.5);height:calc(var(--badge-h)*.5);flex:none}
 .pn-store-badge__text{display:flex;flex-direction:column;align-items:flex-start;line-height:1.08;white-space:nowrap}
-.pn-store-badge__text small{font-size:calc(var(--badge-h)*.2);font-weight:400;letter-spacing:.01em}
-.pn-store-badge__text strong{font-size:calc(var(--badge-h)*.38);font-weight:600;letter-spacing:-.01em}
+.pn-store-badge__text small{font-size:calc(var(--badge-h)*.2*var(--badge-text-scale,1));font-weight:400;letter-spacing:.01em}
+.pn-store-badge__text strong{font-size:calc(var(--badge-h)*.38*var(--badge-text-scale,1));font-weight:600;letter-spacing:-.01em}
 .pn-store-badges--header{--badge-h:40px;gap:10px}
 .pn-store-badges--final{justify-content:center;margin-top:8px}
 .pn-store-badges--menu{--badge-h:48px;margin:28px 0 0}

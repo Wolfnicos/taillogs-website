@@ -16,7 +16,16 @@
       var web = group.querySelector('.pn-store-badge--web');
       if (!img || !web) return;
       var width = img.getBoundingClientRect().width;
-      if (width > 0) web.style.width = Math.round(width) + 'px';
+      if (width <= 0) return;
+      web.style.width = Math.round(width) + 'px';
+      // A long label ("Aplicația web", "Webアプリ") shrinks until it fits, never below 60%.
+      var text = web.querySelector('.pn-store-badge__text');
+      var scale = 1;
+      web.style.setProperty('--badge-text-scale', '1');
+      while (text && scale > 0.6 && text.getBoundingClientRect().right > web.getBoundingClientRect().right - width * 0.06) {
+        scale -= 0.04;
+        web.style.setProperty('--badge-text-scale', scale.toFixed(2));
+      }
     });
   }
   function apply() {

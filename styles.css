@@ -378,6 +378,34 @@ ul, ol {
   color: var(--color-white);
 }
 
+/* Web app button, shown beside the App Store button */
+.btn--webapp {
+  background: transparent;
+  color: var(--color-primary-text);
+  border: 1.5px solid var(--color-primary-text);
+}
+
+.btn--webapp:hover {
+  background: var(--color-primary-text);
+  color: var(--color-white);
+}
+
+.btn--webapp svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.hero__actions .btn--webapp svg {
+  width: 21px; /* matches the App Store button height (24px icon, no border) */
+  height: 21px;
+}
+
+.combo-cta .btn--webapp {
+  min-height: 49px; /* rendered height of the App Store badge */
+  padding-block: 0;
+}
+
 .btn--ghost {
   background: transparent;
   color: var(--color-gray-600);

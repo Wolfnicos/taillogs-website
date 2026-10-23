@@ -21,3 +21,27 @@
 
 /* Web app: as visible as the App Store button (2026-10-23) */
 .pn-webapp-button{gap:12px}.pn-webapp-button__text{display:flex;flex-direction:column;align-items:flex-start;line-height:1.15}.pn-webapp-button__text small{font-size:10px;font-weight:400;opacity:.85;letter-spacing:.02em}.header__nav-link--webapp{color:var(--pn-accent);font-weight:500}
+/* Store badges: Apple's official artwork plus a web-app badge of the same size (2026-10-23) */
+.pn-store-badges{--badge-h:54px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.pn-store-badge{display:inline-flex;align-items:center;border-radius:calc(var(--badge-h)*.18);transition:transform .2s,box-shadow .2s;text-decoration:none}
+.pn-store-badge:hover{transform:translateY(-2px);box-shadow:0 8px 18px #20251f24}
+.pn-store-badge__apple{display:block;height:var(--badge-h);width:auto}
+.pn-store-badge--web{box-sizing:border-box;height:var(--badge-h);min-width:calc(var(--badge-h)*3.1);gap:calc(var(--badge-h)*.2);padding:0 calc(var(--badge-h)*.26);background:#000;color:#fff;border:1px solid #a6a6a6;border-radius:calc(var(--badge-h)*.17)}
+.pn-store-badge__icon{width:calc(var(--badge-h)*.5);height:calc(var(--badge-h)*.5);flex:none}
+.pn-store-badge__text{display:flex;flex-direction:column;align-items:flex-start;line-height:1.08;white-space:nowrap}
+.pn-store-badge__text small{font-size:calc(var(--badge-h)*.2);font-weight:400;letter-spacing:.01em}
+.pn-store-badge__text strong{font-size:calc(var(--badge-h)*.38);font-weight:600;letter-spacing:-.01em}
+.pn-store-badges--header{--badge-h:40px;gap:10px}
+.pn-store-badges--final{justify-content:center;margin-top:8px}
+.pn-store-badges--menu{--badge-h:48px;margin:28px 0 0}
+@media(max-width:1099px){.pn-store-badges--header{display:none}}
+@media(max-width:430px){.pn-store-badges--hero,.pn-store-badges--final{--badge-h:46px;gap:10px}}
+/* The companion photo as a tilted polaroid instead of an arch (2026-10-23) */
+.pn-home .pn-companion{border-radius:8px;background:#fffdf7;padding:12px 12px 50px;overflow:visible;box-shadow:0 2px 4px #20251f14,0 26px 44px -14px #26341e4d;transform:rotate(-7deg) translateZ(-25px);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.pn-home .pn-companion img{border-radius:3px}
+.pn-home .pn-companion::after{display:none}
+.pn-home .pn-companion::before{content:'';position:absolute;top:-11px;left:50%;width:74px;height:22px;transform:translateX(-50%) rotate(3deg);background:#ebe4cfd9;box-shadow:0 1px 2px #20251f1f;z-index:2}
+.pn-home .pn-companion figcaption{left:16px;right:16px;bottom:13px;color:var(--pn-ink);font-family:var(--font-display);font-style:italic;font-size:15px}
+.pn-home .pn-companion figcaption span:last-child{font-size:21px;color:var(--pn-accent)}
+.pn-home .pn-scene:hover .pn-companion{transform:rotate(-3deg) translateZ(20px) translateY(-8px)}
+@media(prefers-reduced-motion:reduce){.pn-home .pn-companion{transition:none}.pn-home .pn-scene:hover .pn-companion{transform:rotate(-7deg) translateZ(-25px)}}

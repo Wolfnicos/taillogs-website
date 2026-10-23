@@ -18,3 +18,6 @@
 .pn-home .blog-preview__icon { color: #606a56; }
 .pn-home .pn-screen__banner { background: #bd3028; color: #fff; }
 .pn-home .pn-screen__banner span { color: #fff; opacity: 1; }
+
+/* Web app: as visible as the App Store button (2026-10-23) */
+.pn-webapp-button{gap:12px}.pn-webapp-button__text{display:flex;flex-direction:column;align-items:flex-start;line-height:1.15}.pn-webapp-button__text small{font-size:10px;font-weight:400;opacity:.85;letter-spacing:.02em}.header__nav-link--webapp{color:var(--pn-accent);font-weight:500}
